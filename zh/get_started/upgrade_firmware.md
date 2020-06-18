@@ -67,3 +67,21 @@ kflash -p /dev/ttyUSB0 -b 1500000 -B goE maixpy.bin
 
 
 
+**烧录常见问题FAQ**
+
+如果在使用 `kflash_gui` 烧录出现以下等问题
+
+![Upgrade Error](assets/upgrade_error.png)
+
+可以按照以下顺序进行排查
+
+* 检查`PC`是否有权限打开端口，对于 `win10`，需要以管理员身份运行 `kflash_gui`  。
+* 检查端口是否选择正确（如果出现两个设备端口，通常选择端口号小的那一个）。
+* 检查端口是否被其他应用占用（如`Maixpy IDE`，`putty`等），应当关闭其他程序占用。
+* 检查设备是否选择正确，对于 `Maix Bit2.0`（包括M1n模块），应该选择 `Maix Bit ( with Mic )`。
+
+> 补充说明：对于Maix Bit 2.0两个串口端口的问题
+>
+> * 只有其中一个串口端口有效，用于串口通信与ISP下载程序。
+> * Maix Bit与PC采用串口通信，通过CH552T芯片实现USB虚拟串口功能，而该芯片可以虚拟出两个串口，在Maix Bit（M1n模块底板）中，我们只用到了一个串口，不过有些k210产品两个串口都使用了。
+
