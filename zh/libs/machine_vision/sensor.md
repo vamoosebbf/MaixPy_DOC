@@ -12,14 +12,14 @@ sensor
 重置并初始化单目摄像头
 
 ```python
-sensor.reset([freq=24000000, set_regs=True, dual_buff=False])
+sensor.reset([, freq=24000000[, set_regs=True[, dual_buff=False]]])
 ```
 
 #### 参数
 
 * `freq`: 设置摄像头时钟频率，频率越高帧率越高，但是画质可能更差。默认 `24MHz`， 如果摄像头有彩色斑点（ov7740)，可以适当调低比如 `20MHz`
 * `set_regs`: 允许程序写摄像头寄存器，默认为 `True`。 如果需要自定义复位序列，可以设置为`False`，然后使用`sensor.__write_reg(addr, value)` 函数自定义写寄存器序列
-* `dual_buff`: 允许使用双缓冲，会增高帧率，但是内存占用也会增加（大约为384KiB)
+* `dual_buff`: 默认为`False`。允许使用双缓冲，会增高帧率，但是内存占用也会增加（大约为384KiB)
 
 #### 返回值
 
@@ -157,8 +157,9 @@ sensor.shutdown(enable/select)
 跳过指定帧数或者跳过指定时间内的图像，让相机图像在改变相机设置后稳定下来
 
 ```
-sensor.skip_frames([n,time])
+sensor.skip_frames(n, [, time])
 ```
+
 #### 参数
 
 * `n`: 跳过 n 帧图像
@@ -241,6 +242,7 @@ sensor.get_id()
 ```
 sensor.set_colorbar(enable)
 ```
+
 #### 参数
 
 * `enable`: 1 表示开启彩条测试模式 0 表示关闭彩条测试模式
