@@ -44,6 +44,9 @@ else
     mv ./old ./build
 fi
 
+mkdir -p build/.github/workflows
+cp .github/workflows/main.yml build/.github/workflows/main.yml
+
 cd build
 
 git init
