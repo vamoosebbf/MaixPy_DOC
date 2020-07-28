@@ -46,9 +46,6 @@ fi
 
 cd build
 
-sudo sh -c "echo StrictHostKeyChecking no >>/etc/ssh/ssh_config"
-sshpass -p ${USER_PASSWD} scp -r ./* ${SERVER_USER}@${SERVER_ADDR}:${SERVER_FOLDER_PATH}/
-
 git init
 
 git config user.name $GIT_NAME
