@@ -1,20 +1,35 @@
 {
     "title": "MaixPy DOC",
     "description": "MaixPy documentation",
-    "author":"sipeed",
+    "author": "sipeed",
     "plugins": [
         "my-toolbar",
         "-lunr",
         "-search",
         "-search-title",
+        "terminal",
         "search-pro",
+        "expandable-chapters",
+        "chapter-fold",
+        "tbfed-pagefooter",
+        "back-to-top-button",
         "anchor-navigation-ex",
+        "puml",
+        "popup",
+        "lightbox",
+        "auto-scroll-table",
+        "hide-element",
+        "todo",
         "anchorjs",
         "sharing",
-        "splitter",
+        "prism",
+        "-highlight",
+        "prism-themes",
         "edit-link",
         "ga",
-        "chapter-fold"
+        "hide-element",
+        "pageview-count",
+        "collapsible-chapters"
     ],
     "styles": {
         "website": "./styles/website.css"
@@ -23,11 +38,16 @@
         "github": {
             "url": "https://github.com/sipeed/MaixPy"
         },
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-atom-dark.css"
+            ]
+        },
         "my-toolbar": {
             "buttons": [
                 {
                     "label": "Github",
-                    "text":" ",
+                    "text": " ",
                     "icon": "fa fa-github",
                     "position": "left",
                     "target": "_blank",
@@ -38,7 +58,6 @@
         "search": {
             "maxIndexSize": 1000000000
         },
-
         "lunr": {
             "maxIndexSize": 1000000000
         },
@@ -70,6 +89,11 @@
                 "google",
                 "twitter",
                 "vk"
+            ]
+        },
+        "hide-element": {
+            "elements": [
+                ".gitbook-link"
             ]
         },
         "anchor-navigation-ex": {

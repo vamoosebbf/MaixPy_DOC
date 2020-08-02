@@ -1,27 +1,31 @@
-MaixPy 文档
-======
+# MaixPy 文档简介
 
 <div class="title_pic">
-    <img src="../assets/maixpy.png" height="60">
-    <img src="../assets/micropython.png"><img src="../assets/icon_sipeed2.png"  height="60">
+    <img src="../assets/maixpy/maixpy.png" height="200">
+    <br/>
+    <img src="../assets/sipeed/sipeed_logo_2.png" height="120">
+    <!-- <br/> -->
+    <img src="../assets/maixpy/micropython.png" height="60">
+    <br/>
 </div>
 
+> **MaixPy** 官方文档官网: [**maixpy.sipeed.com**](https://maixpy.sipeed.com)
+>
+> 开发板资料下载: [dl.sipeed.com](http://dl.sipeed.com), [wiki.sipeed.com](https://wiki.sipeed.com)
 
-> 目前唯一文档官网： [maixpy.sipeed.com](https://maixpy.sipeed.com)</br>
-> 开发板资料： [dl.sipeed.com](http://dl.sipeed.com), [wiki.sipeed.com](https://wiki.sipeed.com)
+# 关于 MaixPy
 
-## 什么是 MaixPy
 
-MaixPy 是将 [Micropython](http://micropython.org/) 移植到 [K210](https://kendryte.com/)（ 一款64位双核带硬件FPU、卷积加速器、FFT、sha256的 RISC-V CPU,  ） 的一个项目， 支持 MCU 常规操作， 更集成了机器视觉和麦克风阵列， 以快速开发具有极低成本和体积实用的 `AIOT` 领域智能应用。
+[**MaixPy**](maixpy.sipeed.com) 是将 [Micropython](http://micropython.org/) 移植到 [K210](https://kendryte.com/)（一款 64 位双核带硬件 FPU、卷积加速器、FFT、Sha256 的 RISC-V CPU ） 的一个项目， 支持 MCU 常规操作， 更集成了机器视觉和麦克风阵列， 以快速开发具有极低成本和体积实用的 `AIOT` 领域智能应用。
 
 > MicroPython 是基于 Python3 的语法做的一款解析器，包含了 Python3 的大多数基础语法， 主要运行在性能和内存有限的嵌入式芯片上。（注意 Micropython 不包含 Python3 的所有语法）
 
 > K210 在硬件上集成了机器视觉和机器听觉能力， 是一款定位 AI 和 AIOT 市场的SoC，同时也是一颗方便的MCU， 性能强劲的同时却有着极低的价格。
 
 
-Micropython 让我们在 K210 上编程更加简单快捷， 我们也将源代码开源在 [github](https://github.com/sipeed/MaixPy) 上
+**MaixPy** 让我们在 K210 上编程更加简单快捷， 我们也将源代码开源在 [**Github/MaixPy**](https://github.com/sipeed/MaixPy) 上
 
-比如我们需要寻找**I2C**总线上的设备，只需要使用如下代码即可实现：
+比如我们需要扫描 **I2C** 总线上的设备，只需要使用如下代码即可实现：
 
 ```python
 from machine import I2C
@@ -84,21 +88,12 @@ while True:
 
 首先我们选择一款适合自己的开发板， 目前有如下几款高性价比的开发板（核心板）：
 
-* 使用了 Sipeed M1 模块的 Dan dock
-
-<img src="../assets/Dan_Dock.png" alt="BiT" style="width: 450px;">
-
-* Sipeed Maix BiT
-
-<img src="../assets/BiT.png" alt="BiT" style="width: 500px;">
-
-* Sipeed Maix Go
-
-<img src="../assets/Go.jpg" alt="BiT" style="width: 500px;">
-
-* Sipeed Maixduino
-
-<img src="../assets/maixduino_0.png" alt="Maixduono" style="width: 500px;">
+| | 描述 |
+| --- | --- |
+|<img src="../assets/hardware/maix_dock/dan_dock_1.png" alt="BiT" style="width: 450px;"> | 使用了 Sipeed M1 模块的 Dan dock |
+|<img src="../assets/hardware/maix_bit/BiT.png" alt="BiT" style="width: 500px;"> | Sipeed Maix BiT |
+|<img src="../assets/hardware/maix_go/Go.png" alt="BiT" style="width: 500px;"> | Sipeed Maix Go |
+|<img src="../assets/hardware/maix_duino/maixduino_0.png" alt="Maixduono" style="width: 500px;"> | Sipeed Maixduino |
 
 
 更多硬件的资料请看 [Wiki 开发板介绍](https://wiki.sipeed.com/zh/maix/board/)

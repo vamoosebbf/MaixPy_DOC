@@ -2,8 +2,8 @@
 
 function cp_files(){
     cp -f index.html _book/index.html
-    cp -f assets/favicon.ico _book/gitbook/images/favicon.ico
-    cp -f assets/icon_sipeed.png _book/gitbook/images/apple-touch-icon-precomposed-152.png
+    cp -f assets/sipeed/favicon.ico _book/gitbook/images/favicon.ico
+    cp -f assets/sipeed/icon_sipeed.png _book/gitbook/images/apple-touch-icon-precomposed-152.png
 }
 
 success_str='Serving book on'

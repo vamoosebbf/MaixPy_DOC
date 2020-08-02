@@ -3,7 +3,7 @@ MaixPy Documentation
 
 <div class="title_pic">
     <img src="../assets/maixpy.png" height="60">
-    <img src="../assets/micropython.png"><img src="../assets/icon_sipeed2.png"  height="60">
+    <img src="../assets/micropython.png"><img src="../assets/sipeed/icon_sipeed2.png"  height="60">
 </div>
 
 > Currently the only official document website: [maixpy.sipeed.com](https://maixpy.sipeed.com)</br>
