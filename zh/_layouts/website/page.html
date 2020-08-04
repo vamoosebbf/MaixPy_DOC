@@ -39,6 +39,23 @@
 {% block javascript %}
     {{ super() }}
     <script type="text/javascript">
+    (()=>{
+        const time = new Date().getTime();
+        const check_time = () => (localStorage.getItem('next_ping_time') ?? new Date().getTime()) <= new Date().getTime();
+
+        check_time() && [`https://cn.maixpy.sipeed.com/`, `https://maixpy.sipeed.com/`]
+            .forEach(
+                url => $.get(`${url}ping?time=${time}`)
+                        .always(e => {
+                            check_time() && !location.href.includes(url) &&
+                                (location.href = location.href.replace(/https[:][/][/].+?[/]/, url));
+
+                            localStorage.setItem('next_ping_time', new Date().getTime() + 24 * 60 * 60 * 1000);
+                            console.log(`${url} use time: ${new Date().getTime() - time}`);
+                        })
+            );
+    })();
+
     function toggleLanguage () {
             var path = location.href;
             // console.log(path);
