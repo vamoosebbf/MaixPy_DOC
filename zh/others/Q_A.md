@@ -46,9 +46,7 @@ http://localhost:4000/zh/get_started/how_to_read.html
 比如：下图左边两张卡 MaixPy 的驱动不支持， 中间和右边的都支持， 但是中间的 class10 卡速度最快（最高测过 128GB可用）
 > 另外测试过网上购买的几张闪迪、金士顿、三星的卡，其中发现有一张三星的卡无法使用
 
-![](../../assets/TF.png)
-
-
+![](../../assets/hardware/other/tf_sdcard.png)
 
 
 ## 为什么连接了 IDE 帧率降低了很多
@@ -67,4 +65,19 @@ K210 没有 USB 外设， 因此只能使用串口与 IDE 通信， 速度不如
 
 
 
+## MaixPy 如何安装第三方脚本(第三方库)
 
+- 首先 MaixPy 是基于 micropython 开发的，所以安装第三方脚本(第三方库)的方法与 micropython 一致，根据运行的方式在 MiaxPy 上有两种情况:
+
+1. 运行 flash 的脚本时，库文件的加载路径在 flash
+2. 运行 sd 的脚本时，库文件的加载路径在 sd
+
+>注意: 使用 MaixPy IDE 运行脚本时，脚本调用库文件路径根据当前挂载的路径决定
+
+具体是安装(加载)方式：
+
+1. 开发板连接到 MaixPy IDE 之后, 使用菜单栏中 `Tool`(工具)菜单中的`发送文件`功能来发送库文件
+
+![](../../assets/maixpy/maixpy_ide_tools_1.png)
+
+2. 当使用 sd 运行脚本时，使用方式和 python 一样，直接放置到 boot.py 和 main.py 同级目录即可

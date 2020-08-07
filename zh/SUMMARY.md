@@ -11,13 +11,15 @@
 * 开发板选购指南与开箱验证
   - [开发板选购指南](./develop_kit_board/get_hardware.md)
   - [MaixCube 开箱验证](./develop_kit_board/maix_cube.md)
+  - [MaixAmigo 开箱验证](./develop_kit_board/Maix_amigo.md)
+  - [MaixDunio 开箱验证](./develop_kit_board/maix_duino.md)
 * 开发环境准备
   - [安装驱动](./get_started/env_install_driver.md)
   - [使用串口终端工具](./get_started/env_serial_tools.md)
   - [更新 MaixPy 固件](./get_started/upgrade_maixpy_firmware.md)
-  - [安装 MaixPy IDE](./get_started/env_maixpyide.md)
   - [更新板载 ESP32 固件](./get_started/upgrade_esp32_firmware.md)
   - [更新板载 ESP8285 固件](./get_started/upgrade_esp8285_firmware.md)
+  - [MaixPy IDE 使用说明](./get_started/env_maixpyide.md)
 * 上手
   - [上电](./get_started/get_started_power_on.md)
   - [第一个程序: 点亮 LED](./get_started/get_started_led_blink.md)
@@ -63,6 +65,7 @@
   - [NES](././api_reference/application/nes.md)
 * 图像基本处理
   - [sensor](./application/image/sensor.md)
+  - [basic_operation](./application/image/basic_operation.md)
 ## 深度学习入门
 
 
@@ -104,6 +107,15 @@
   - [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
   - [MaixHub 平台 FAQ](./others/maixhub_faq.md)
 
+-----
+
+* [进阶开发]()
+  * [MaixPy SDK 二次开发](./advanced/compile.md)
+
+* [文档贡献]()
+  - [代码规范](./advanced/code_struct.md)
+  - [文档风格](./advanced/coding_style.md)
+  - [文档找茬悬赏]()
 
 -----
 
