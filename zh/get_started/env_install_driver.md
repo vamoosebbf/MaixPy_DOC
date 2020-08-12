@@ -14,9 +14,9 @@
 |Maix Go    | STM32 | STM32 USB 模拟 FT2232 |
 |Maix Dock  | CH340 | |
 |Maix Duino | CH552 | |
-|Maix Bit | CH552(新版)/CH340(旧版)| |
-|Maix Cube | GD32(新版)/CH552(旧版)| |
-|Maix Amigo | GD32| | |
+|Maix Bit | CH552(新版)/CH340(旧版)| CH552 模拟 FT2232 |
+|Maix Cube | GD32(新版)/CH552(旧版)| CH552 模拟 FT2232 |
+|Maix Amigo | GD32| |GD32 模拟 FT2232 |
 
 
 ### 对于 `Dan Dock` 和 `Maix Bit`（旧版）
@@ -67,4 +67,3 @@ Windows 在网上搜索 `CH340 驱动` 下载安装即可，然后可以在 `设
     ![](../../assets/get_started/drives.gif)
 4. 安装完成之后,可以在设备管理器看到已经识别到两个串口设备了(其中只有一个串口可用)
     ![](../../assets/get_started/win_device_4.png)
-

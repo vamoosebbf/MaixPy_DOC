@@ -2,9 +2,8 @@
 
 ## 概述
 
-  SIPEED MaixAmigo 是基于我们 M1n 模块(主控:Kendryte K210)开发的一款集学习开发和商用一体的人脸识别产品.
-  <br/>MaixAmigo 集成前后摄像头、TF卡槽、用户按键、TFT显示屏、锂电池、扬声器麦克风、扩展接口等, 
-  同时还预留开发调试接口, 也能将其作为一款功能强大的 AI 学习开发板.
+  SIPEED **MaixAmigo** 可开发编程学习套件, MaixAmigo 在硬件上集成前后各 30W 像素摄像头、可扩展 TF 卡槽、用户按键、3.5‘TFT 寸显示屏、520mAh 锂电池、扬声器,麦克风、SPMOD,GROVE 扩展接口等。
+  软件上 MaixAmigo 默认搭载 MaixPy, 用户可以非常轻松的使用 MicroPython 语法快速上手 AI IoT 开发，开发人脸识别，物体识别等 AI 应用，同时还预留开发调试接口，也能将其作为一款功能强大的 AI 学习开发板。
 
 ## MaixAmigo 外观及功能介绍
 
@@ -21,7 +20,7 @@
 - 芯片复位按键
 - 电源按键: 短按开机, 长按 *8S* 关机
 - 三个功能按键
-- Grove 接口: 板载 3 个**Grove** 数字接口, 传感器,控制器扩展无限可能~
+- Grove 接口: 板载 3 个 **Grove** 数字接口, 传感器,控制器扩展无限可能~
 - SP-MOD 接口: 板载 3 个更加强大,更高扩展性的 **SP-MOD** 数字接口, I2C,SPI(标准,双线,四线模式)等接口均可以使用
   - 后续支持乐高手柄功能
 - TF 卡槽: 多媒体资源扩展,支持大容量储存 
@@ -32,6 +31,18 @@
 - 音频驱动 IC: ES8374
   - 支持音频录制,播放
 - 三轴加速度传感器: MSA301
+
+| 项目 | 说明 |
+| ---- | ---- |
+|CPU: |双核 64bit RISC-V / 400MHz* (双精度FPU集成)|
+|内存: |8MiB 64bit 片上 SRAM|
+|存储: |16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB**)|
+|屏幕: |3.5寸 TFT, 电容触摸屏幕分辨率: 320\*480 |
+|摄像头: |OV7740 (后摄)与GC0328(前摄) |
+|电池: |板载可充电锂聚合物电池 (容量520mAh ) |
+|板载扬声器与麦克风| 集成单音频控制器 ES8374 (可播放可录制)                       |
+|板载接口: |USB-C \*2 (K210 调试供电接口+兼容 STM32 核心板 USB 接口)  Grove \*3 & SPMOD\*3 (可拓展模块)|
+|三轴加速度传感器:| MSA301|
 
 ### 板载扩展接口
 
@@ -44,15 +55,15 @@ SP-MOD 即为 sipeed module, simplify PMOD, super module
 
 | 接口 | 接口描述 |
 |---|---|
-|SP-MODE 接口描述|![spmod_interface_1](../assets/hardware/module_spmod/spmod_interface_1.png)|
-|硬件接口|![spmod_interface_2](../assets/hardware/module_spmod/spmod_interface_2.png)|
+|SP-MODE 接口描述|![SP-MODE 接口描述](../../assets/hardware/module_spmod/spmod_interface_1.png)|
+|硬件接口|![硬件接口](../../assets/hardware/module_spmod/spmod_interface_2.png)|
 
 #### Grove 接口
 
 - Grove 模块接口
 
-Grove 接口的线缆有 4 种颜色, 用户可以根据颜色快速区别
-![grove_interface](../assets/hardware/module_grove/grove_interface.jpg)
+Grove 接口的线缆有 4 种颜色，用户可以根据颜色快速区别
+![](../../assets/hardware/module_grove/grove_interface.jpg)
 
 | --- | 颜色 | 描述 |
 | --- | --- | --- |

@@ -9,9 +9,9 @@
 
 ### 外观一览
 
-![MaixDuino](../assets/hardware/maix_duino/maixduino_0.png)
-![MaixDuino](../assets/hardware/maix_duino/maixduino_1.png)
-![MaixDuino](../assets/hardware/maix_duino/maixduino_2.png)
+![MaixDuino](../../assets/hardware/maix_duino/maixduino_4.png)
+![MaixDuino](../../assets/hardware/maix_duino/maixduino_1.png)
+![MaixDuino](../../assets/hardware/maix_duino/maixduino_2.png)
 
 ### 板载功能介绍
 
@@ -24,6 +24,7 @@
 - PA PAM8403A
 
 MaixDuino 引脚图
+
 
 ### 资料相关链接
 
