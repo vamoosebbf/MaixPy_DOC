@@ -3,7 +3,8 @@
 ## 概述
 
   SIPEED **MaixAmigo** 可开发编程学习套件, MaixAmigo 在硬件上集成前后各 30W 像素摄像头、可扩展 TF 卡槽、用户按键、3.5‘TFT 寸显示屏、520mAh 锂电池、扬声器,麦克风、SPMOD,GROVE 扩展接口等。
-  软件上 MaixAmigo 默认搭载 MaixPy, 用户可以非常轻松的使用 MicroPython 语法快速上手 AI IoT 开发，开发人脸识别，物体识别等 AI 应用，同时还预留开发调试接口，也能将其作为一款功能强大的 AI 学习开发板。
+
+  软件上 MaixAmigo 默认搭载 MaixPy, 用户可以非常轻松的使用 MicroPython 语法快速进行人脸识别、物体分类等多种 AIoT 开发，同时还预留开发调试接口，也能将其作为一款功能强大的 AI 学习开发板。
 
 ## MaixAmigo 外观及功能介绍
 
@@ -122,3 +123,92 @@ MaixAmigo 板载 I2C 传感器/IC
 |ES8374|0x08|0x10|D(16)|
 |MSA301|0x13|0x26|D(38)|
 |AXP173|0x68|0x34|D(52)|
+
+
+## 上手把玩
+
+由于 MaixAmigo 出厂自带 GUI 演示界面和示例程序，所以在拿到板子时可以先上手把玩下预设程序，
+在之后那么我们就开始以 MaixAmigo 上手，借助 MaixPy 入门 AIoT.
+
+而在开发之前我们需要了解并准备相关工具，以减少我们后边因为准备不足而走的坑路
+
+上手步骤:
+
+1. 下载需要的驱动，软件
+2. 开发板连接电脑，并安装 USB 驱动
+3. 更新最新固件
+4. 下载并打开最新的 MaixPy IDE
+5. MaixPy IDE 连接开发板 运行 MaixPy 示例程序
+
+#### 软硬件准备
+
+硬件准备:
+
+  - **电脑**一台
+  - **MaixAmigo** 开发板
+  - **可靠**的 USB Type-C 数据线一条: 注意一定要**可靠**的数据线
+
+软件准备:
+
+  - USB 驱动: **FT2232** ->[[下载链接点这里](https://dl.sipeed.com/MAIX/tools/ftdi_vcp_driver)](https://dl.sipeed.com/MAIX/tools/ftdi_vcp_driver)
+  - Kflash_gui: [https://dl.sipeed.com/MAIX/tools/kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui)
+  - MaixPy IDE : [https://dl.sipeed.com/MAIX/MaixPy/ide/_/v0.2.5](https://dl.sipeed.com/MAIX/MaixPy/ide/_/v0.2.5)
+  - 例程程序库: [https://github.com/sipeed/MaixPy_scripts](https://github.com/sipeed/MaixPy_scripts)
+
+####  安装驱动
+
+我们在拿到 Maix Cube 并连接到电脑的时候，可以打开设备管理器查看串口驱动是否已经安装，打开设备管理器的方法有:
+- 此电脑(右键) -> 属性 -> 设备管理器
+- 开始菜单(右键) -> 设备管理器
+- 控制面板 -> (搜索)设备管理器
+
+  <img src="../../assets/get_started/win_device_1.png" height="400">
+
+1. 当我们的系统是 Win10 系统，系统则会帮我们自动安装驱动，而如果是旧版 Win7，win8 系统我们就需要自己手动安装:
+    ![](../../assets/get_started/win_device_2.png)
+
+1. 打开上一节的的链接下载驱动
+    ![](../../assets/get_started/win_device_3.png)
+1. 点击安装
+    ![](../../assets/get_started/drives.gif)
+1. 安装完成之后，可以在设备管理器看到已经识别到两个串口设备了
+    ![](../../assets/get_started/win_device_4.png)
+
+
+### 更新固件到最新版
+
+  用户拿到开发板之后，板载的固件默认或许已经不是最新版的，那么在使用过程中会存在或多或少的 bug，
+  我们这时候就需要更新固件版本到最新版本
+
+  更新方法查看: [更新固件](../get_started/upgrade_maixpy_firmware.md)
+
+
+
+###  运行第一个程序 `Hello World`
+
+
+- LCD 实时预览 Camera
+
+```python
+import sensor, image, time, lcd
+
+sensor.reset()
+sensor.set_pixformat(sensor.RGB565)
+sensor.set_framesize(sensor.QVGA)
+sensor.skip_frames(time = 2000)
+sensor.set_hmirror(1)
+sensor.set_vflip(1)
+
+clock = time.clock()
+
+lcd.init(type=2)
+lcd.rotation(2)
+
+while(True):
+    clock.tick()
+    img = sensor.snapshot()
+    print(clock.fps())
+    img.draw_string(60, lcd.height()-120, "fps:"+str(clock.fps()), lcd.GREEN, scale=2)
+    lcd.display(img)
+
+```

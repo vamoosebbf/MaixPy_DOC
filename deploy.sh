@@ -8,8 +8,8 @@ echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, BRANCH=$BRANCH"
 curr_branch=$TRAVIS_BRANCH
 
 cp -f index.html build/index.html
-cp -f assets/favicon.ico build/gitbook/images/favicon.ico
-cp -f assets/icon_sipeed.png build/gitbook/images/apple-touch-icon-precomposed-152.png
+cp -f assets/sipeed/favicon.ico build/gitbook/images/favicon.ico
+cp -f assets/sipeed/icon_sipeed.png build/gitbook/images/apple-touch-icon-precomposed-152.png
 
 git clone -b gh-pages https://github.com/sipeed/MaixPy_DOC.git ./old
 rm -rf ./old/.git/
