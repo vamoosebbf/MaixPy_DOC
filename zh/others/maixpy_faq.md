@@ -125,7 +125,7 @@ sensor.set_hmirror(enable)
 
 # 设置摄像头垂直镜像
 # `enable`: 1 表示开启垂直镜像 0 表示关闭垂直镜像
-sensor_set_vfilp(enable)
+sensor.set_vfilp(enable)
 ```
 
 - lcd 方向修正：

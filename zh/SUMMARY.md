@@ -57,16 +57,25 @@
   - [Http/https](./api_reference/machine/network.md)
 * 系统配置&&功能
   - [freq](./api_reference/Maix/freq.md)
-  - [gc](./api_reference/standard/gc.md)
+  - [gc 内存回收](./api_reference/standard/gc.md)
 * MaixPy 多媒体功能
   - [sensor](./api_reference/machine_vision/sensor.md)
   - [Audio](./api_reference/Maix/audio.md)
   - [video](./api_reference/machine_vision/video.md)
-  - [NES](././api_reference/application/nes.md)
-* 图像基本处理
+  - [NES 游戏模拟器](././api_reference/application/nes.md)
+* 机器视觉之基础算法
   - [sensor](./application/image/sensor.md)
   - [basic_operation](./application/image/basic_operation.md)
-## 深度学习入门
+  - [Adaptive_Histogram_Equalization_自适应直方图均衡]()
+* 机器听觉之基础算法
+  - [Audio]()
+
+-----
+
+* 常见问题 FAQ
+  - [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
+  - [MaixHub 平台 FAQ](./others/maixhub_faq.md)
+## 机器视觉之深度学习
 
 
 ----
@@ -101,11 +110,6 @@
   - [MaixPy 视觉识别例程解析]()
 
 
------
-
-* 常见问题 FAQ
-  - [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
-  - [MaixHub 平台 FAQ](./others/maixhub_faq.md)
 
 -----
 

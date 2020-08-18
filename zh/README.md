@@ -20,7 +20,7 @@
 
 > MicroPython 是基于 Python3 的语法做的一款解析器，包含了 Python3 的大多数基础语法， 主要运行在性能和内存有限的嵌入式芯片上。（注意 Micropython 不包含 Python3 的所有语法）
 
-> K210 在硬件上集成了机器视觉和机器听觉能力， 是一款定位 AI 和 AIOT 市场的SoC，同时也是一颗方便的MCU， 性能强劲的同时却有着极低的价格。
+> K210 在硬件上集成了机器视觉和机器听觉能力， 是一款定位 AI 和 AIOT 市场的 SoC，同时也是一颗性能强劲的同时却有着极低的价格的 MCU 。
 
 
 **MaixPy** 让我们在 K210 上编程更加简单快捷， 我们也将源代码开源在 [**Github/MaixPy**](https://github.com/sipeed/MaixPy) 上
@@ -98,7 +98,7 @@ while True:
 
 更多硬件的资料请看 [Wiki 开发板介绍](https://wiki.sipeed.com/zh/maix/board/)
 
-要获得这些板子，可以访问Sipeed（矽速）官网[www.sipeed.com](https://sipeed.com/)，或者[官方淘宝店](https://shop365481095.taobao.com/)
+要获得这些板子，可以访问Sipeed（矽速）官网[www.sipeed.com](https://sipeed.com/)，或者[官方淘宝店](https://sipeed.taobao.com/)
 
 
 然后请**仔细查看左边目录**，然后开始使用吧～～
@@ -106,8 +106,8 @@ while True:
 
 ## MaixPy 源码
 
-`MaixPy` 源码是指 运行在 `K210` 上的 `Micropython` 的解析器， 使用 `C语言` 编写，如果只是想使用MaixPy，不需要了解源码；
-如果想参与开发MaixPy的内置功能，可以下载进行开发，欢迎大家提交`PR`
+`MaixPy` 源码是指 运行在 `K210` 上的 `Micropython` 的解析器， 使用 `C语言` 编写，如果只是想使用 MaixPy，不需要了解源码；
+如果想参与开发 MaixPy 的内置功能，可以下载进行开发，欢迎大家提交 `PR`
 
 MaixPy 源码托管在 [github](https://github.com/sipeed/MaixPy)
 

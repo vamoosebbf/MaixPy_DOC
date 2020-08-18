@@ -9,14 +9,14 @@
 
 - 现有开发板板载的 USB 转串口 IC 说明
 
-| 开发板型号 | USB 转 Serail IC | 说明 |
-| --- | --- | --- |
-|Maix Go    | STM32 | STM32 USB 模拟 FT2232 |
-|Maix Dock  | CH340 | |
-|Maix Duino | CH552 | |
-|Maix Bit | CH552(新版)/CH340(旧版)| CH552 模拟 FT2232 |
-|Maix Cube | GD32(新版)/CH552(旧版)| CH552 模拟 FT2232 |
-|Maix Amigo | GD32| |GD32 模拟 FT2232 |
+| 开发板型号 | USB 转 Serail IC        | 说明                  |
+| ---------- | ----------------------- | --------------------- |
+| Maix Go    | STM32                   | STM32 USB 模拟 FT2232 |
+| Maix Dock  | CH340                   |                       |
+| Maix Duino | CH552                   | CH552 模拟 FT2232     |
+| Maix Bit   | CH552(新版)/CH340(旧版) | CH552 模拟 FT2232     |
+| Maix Cube  | GD32(新版)/CH552(旧版)  | CH552 模拟 FT2232     |
+| Maix Amigo | GD32                    | GD32 模拟 FT2232      |
 
 
 ### 对于 `Dan Dock` 和 `Maix Bit`（旧版）
