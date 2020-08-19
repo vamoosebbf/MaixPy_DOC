@@ -40,15 +40,15 @@ kflash -p /dev/ttyUSB0 -b 1500000 -B goE maixpy.bin
 
 固件命名说明：
 
-| 文件名 | 说明 | 备注 |
-| --- | --- | --- |
-| `maixpy_vx.y.z_x_xxx*.bin` | 默认版本的MaixPy固件，包含了大多数功能, 支持连接 `MaixPy IDE`,|  |
-| `maixpy_vx.y.z_x_xxx*_m5stickv.bin` | 针对 M5Stickv 定制的固件, 支持连接 `MaixPy IDE` |  |
-| `maixpy_vx.y.z_x_xxx*_with_lvgl.bin` | MaixPy 固件, 支持连接 `MaixPy IDE`, 带 LVGL 版本.(LVGL是嵌入式 GUI 框架, 写界面的时候需要用到) | |
-| `maixpy_vx.y.z_x_xxx*_minimum.bin` | MaixPy 固件最小集合，不支持 `MaixPy IDE`, 不包含`OpenMV`的相关算法和各种外设模块 | |
+| 文件名                                              | 说明                                                         | 备注                       |
+| --------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
+| `maixpy_vx.y.z_x_xxx*.bin`                          | 默认版本的 MaixPy 固件，包含了大多数功能, 支持连接 `MaixPy IDE`, | 出厂默认固件版本           |
+| `maixpy_vx.y.z_x_xxx*_m5stickv.bin`                 | 针对 M5Stickv 定制的固件, 支持连接 `MaixPy IDE`              | —                          |
+| `maixpy_vx.y.z_x_xxx*_with_lvgl.bin`                | MaixPy 固件, 支持连接 `MaixPy IDE`, 带 LVGL 版本.(LVGL是嵌入式 GUI 框架, 写界面的时候需要用到) | —                          |
+| `maixpy_vx.y.z_x_xxx*_minimum.bin`                  | MaixPy 固件最小集合，不支持 `MaixPy IDE`, 不包含`OpenMV`的相关算法和各种外设模块 | —                          |
 | `maixpy_vx.y.z_x_xxx*_minimum_with_ide_support.bin` | MaixPy 固件最小集合, 支持连接 `MaixPy IDE`, 不包含`OpenMV`的相关算法和各种外设模块 | 运行各种模型，建议使用这个 |
-| `elf_maixpy_vx.y.z_x_xxx*.7z` | elf 文件，普通用户不用关心，用于死机调试 | |
-| `face_model_at_0x300000.kfpkg` | 人脸模型，放置在地址位 0x300000, 可以和`.bin`分开多次下载，不冲突 | |
+| `elf_maixpy_vx.y.z_x_xxx*.7z`                       | elf 文件，普通用户不用关心，用于死机调试                     | —                          |
+| `face_model_at_0x300000.kfpkg`                      | 人脸模型，放置在地址位 0x300000, 可以和`.bin`分开多次下载，不冲突 | —                          |
 
 
 
@@ -56,7 +56,7 @@ kflash -p /dev/ttyUSB0 -b 1500000 -B goE maixpy.bin
 
 * 打开 `kflash_gui` 应用
 
-* 然后选择固件、设置选项, 点击下载即可, 更多特性介绍、使用说明见[kflash_gui 项目主页](https://github.com/sipeed/kflash_gui)
+* 然后选择固件、设置选项, 点击下载即可, 更多特性介绍、使用说明见 [kflash_gui 项目主页](https://github.com/sipeed/kflash_gui)
 
 使用时注意串口不能被其它软件占用，选择正确的开发板和串口号，可以适当降低波特率和使用低速模式来提高下载成功率
 

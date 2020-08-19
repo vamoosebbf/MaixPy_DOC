@@ -58,5 +58,5 @@ MaixPy 系列的开发板中 采用 M1W 模块的开发板中 ESP WIFI SOC，在
 5. 点击 **Start** 更新固件，并等待完成更新
 6. 验证更新是否完成
    1. 使用 XCOM, 打开 ESP8285 串口，点击 RST 复位 ESP，如图即刷入成功
-   2.![96e955badd7450e7b5ba58230ae12c48.png](../../assets/hardware/module_esp8285/image-20200504164747839.png)
+   2.![.png](../../assets/hardware/module_esp8285/image-20200504164747839.png)
    
