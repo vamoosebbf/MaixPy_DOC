@@ -5,13 +5,19 @@
     <br/>
     <img src="../assets/sipeed/sipeed_logo_2.png" height="120">
     <!-- <br/> -->
-    <img src="../assets/maixpy/micropython.png" height="60">
+    <img src="../assets/maixpy/micropython.png" height="45">
     <br/>
 </div>
 
 > **MaixPy** 官方文档官网: [**maixpy.sipeed.com**](https://maixpy.sipeed.com)
 >
-> 开发板资料下载: [dl.sipeed.com](http://dl.sipeed.com), [wiki.sipeed.com](https://wiki.sipeed.com)
+> **MaixPy** 官方文档中文镜像站: [**cn.maixpy.sipeed.com**](https://cn.maixpy.sipeed.com)
+>
+> **MaixPy** 例程仓库: [**Github: maixpy_script**](https://github.com/sipeed/MaixPy_scripts)
+> 
+> 开发板资料下载: [**dl.sipeed.com**](http://dl.sipeed.com)
+>
+> Sipeed WIKI [**wiki.sipeed.com**](https://wiki.sipeed.com)
 
 # 关于 MaixPy
 

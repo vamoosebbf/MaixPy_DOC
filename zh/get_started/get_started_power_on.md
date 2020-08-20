@@ -39,7 +39,11 @@ MicroPython v0.5.0-12-g284ce83 on 2019-12-31; Sipeed_M1 with kendryte-k210
 Type "help()" for more information.
 ```
 
-这里版本是`v0.5.0-12-g284ce83`， 也可以使用下面的代码查看版本
+**查看版本号：**
+
+  这里版本是`v0.5.0-12-g284ce83`， 也可以使用下面的代码查看版本
+
+> **注：** 固件可以从下载站 dl.sipeed.com 中获取
 
 ```python
 import sys

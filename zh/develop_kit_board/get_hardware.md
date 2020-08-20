@@ -2,7 +2,7 @@
 ========
 
 要开始使用 MaixPy,  必须需要一款 K210 开发板, 可以从 Sipeed 官方淘宝店获得心仪的硬件： 
-[淘宝](https://sipeed.taobao.com/)
+[Sipeed 官方淘宝店](https://sipeed.taobao.com/)
 
 ## 需要的硬件
 
@@ -10,21 +10,20 @@
 
 由于 MaixPy 早期产品线比较多，具体开发板及参数列表如下，用户可以根据自己的动手能力和需求选购对应开发板
 
-| 名称       | 预览图 | RAM                       | ROM(Flash) | WIFI                  | pin  |
-| ---------- | ------ | ------------------------- | ---------- | --------------------- | ---- |
-| Maix Dock  |        | 6MB(通用) + 2MB(KPU 专用) | 16MB       | Maix Dock(M1) 无 WIFI |      |
-| Maix Bit   |        | 6MB(通用) + 2MB(KPU 专用) |            |                       |      |
-|            |        |                           |            |                       |      |
-| Maix Nano  |        | 6MB(通用) + 2MB(KPU 专用) | 16MB       |                       |      |
-|            |        |                           |            |                       |      |
-| Maix Duino |        | 6MB(通用) + 2MB(KPU 专用) | 16MB       |                       |      |
-|            |        |                           |            |                       |      |
-| Maix Amigo |        | 6MB(通用) + 2MB(KPU 专用) | 16MB       |                       |      |
-| Maix Cube  |        | 6MB(通用) + 2MB(KPU 专用) | 16MB       |                       |      |
-|            |        |                           |            |                       |      |
+>  MaixPy 系类开发板板载的 ROM 均为 16MB SPI FLASH, RAM: 6MB(通用) + 2MB(KPU 专用)
 
-
-
+| 名称       | 实物图                                                       | 差异说明                                                     |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Maix Dock  | <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1.jpg" height="200"><img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1w.jpg" height="200"> | - Maix Dock(M1) 无 WIFI<br />- Maix Dock(M1W) 板载 ESP8285 WIFI，<br />- 全引脚引出 |
+| Maix Bit   | <img src="../../assets/hardware/maix_bit/sipeed_maix_bit_400x400.jpg" height="200"> | - 全引脚引出                                                 |
+|            |                                                              |                                                              |
+| Maix Nano  | <img src="../../assets/hardware/m1n/sipeed_maix_m1n_400x400.jpg" height="200"><img src="../../assets/hardware/m1n/sipeed_maix_nano_400x400.jpg" height="200"> | - 全引脚引出<br />-                                          |
+|            |                                                              |                                                              |
+| Maix Go    | <img src="../../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200"> |                                                              |
+| Maix Duino | <img src="../../assets/hardware/maix_go/sipeed_maix_duino_400x400.jpg" height="200"> |                                                              |
+| Maix Cube  | <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200"> |  |
+| Maix Amigo | <img src="../../assets/hardware/maix_go/sipeed_maix_amigo_400x400.jpg" height="200"> |                                                              |
+|            |                                                              |                                                              |
 
 
 开发板详细资料请看 [Wiki](https://wiki.sipeed.com/zh/maix/board/),  选择一款合适自己的开发板～
@@ -80,7 +79,7 @@
 
 ### ST-Link (用来给开发板 Maix Go 上的 STM32 更新固件) (可选)
 
-如果购买的是 `Maix Go`,  上面集成了一颗 `STM32` 芯片,  用来模拟 `USB转串口` 工具,  以及模拟 `JTAG`, 如果想后期自行更新其固件, 建议购买一个 `ST-Link` 备用; 如果不需要`JTAG`功能可以不用购买
+如果购买的是 `Maix Go`,  上面集成了一颗 `STM32` 芯片,  用来模拟 `USB转串口` 工具,  以及模拟 `JTAG`, 如果想后期自行更新其固件, 建议购买一个 `ST-Link` 备用; 如果不需要`JTAG` 功能可以不用购买
 
 ### JTAG 调试器 (可选)
 

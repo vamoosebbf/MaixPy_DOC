@@ -1,7 +1,7 @@
-安装驱动
+安装 USB 驱动
 =====
 
-正式使用 MaixPy 之前我们需要先安装好串口驱动，才可进行下一步的开发与使用；因为板子是通过 USB 转串口设备与电脑连接（K210 没有 USB 硬件支持功能）。
+正式使用 MaixPy 之前，我们需要先安装好串口驱动，才可进行下一步的开发与使用；因为板子是通过 USB 转串口设备与电脑连接（K210 没有 USB 硬件支持功能）。
 根据板子的 USB 转串口芯片型号装驱动。
 
 > 在 `Linux` 或者 `Mac` 下操作串口， 如果不想每次都使用 `sudo` 命令， 执行 `sudo usermod -a -G dialout $(whoami)` 将自己添加到 `dialout` 用户组即可，可能需要注销或者重启才能生效
@@ -9,7 +9,7 @@
 
 - 现有开发板板载的 USB 转串口 IC 说明
 
-| 开发板型号 | USB 转 Serail IC        | 说明                  |
+| 开发板型号 | USB 转串口 IC        | 说明                  |
 | ---------- | ----------------------- | --------------------- |
 | Maix Go    | STM32                   | STM32 USB 模拟 FT2232 |
 | Maix Dock  | CH340                   |                       |
@@ -18,6 +18,7 @@
 | Maix Cube  | GD32(新版)/CH552(旧版)  | CH552 模拟 FT2232     |
 | Maix Amigo | GD32                    | GD32 模拟 FT2232      |
 
+> 使用 CH340 IC 的板子直接装 CH340 的驱动即可，其他的均使用 FT2232 的驱动程序
 
 ### 对于 `Dan Dock` 和 `Maix Bit`（旧版）
 
@@ -56,14 +57,17 @@ Windows 在网上搜索 `CH340 驱动` 下载安装即可，然后可以在 `设
 - 开始菜单(右键) -> 设备管理器
 - 控制面板 -> (搜索)设备管理器
 
-  <img src="../../assets/get_started/win_device_1.png" height="400">
+<img src="../../assets/get_started/win_device_1.png" height="400">
 
-1. 当我们的系统是 Win10 系统,系统则会帮我们自动安装驱动,而如果是旧版 Win7, win8 系统我们就需要自己手动安装:
+1. 当我们的系统是 Windows 10 系统,系统则会帮我们自动安装驱动，而如果是旧版 Win7，win8 系统，我们就需要自己手动安装 USB 驱动:
     ![](../../assets/get_started/win_device_2.png)
 
 2. 打开上一节的的链接下载驱动
     ![](../../assets/get_started/win_device_3.png)
+
 3. 点击安装
     ![](../../assets/get_started/drives.gif)
+
 4. 安装完成之后,可以在设备管理器看到已经识别到两个串口设备了(其中只有一个串口可用)
     ![](../../assets/get_started/win_device_4.png)
+

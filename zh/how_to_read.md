@@ -31,5 +31,5 @@ http://localhost:4000/zh/how_to_read.html
 
 * 另外在 github 或者论坛提问时需要**注意**： 提问要尽量提供完整的问题复现步骤，方便开发者测试问题并解决！
 
-* 常见问题请见[常见问题](../others/Q_A.md)
+* 常见问题请见[常见问题](./others/maixpy_faq.md)
 

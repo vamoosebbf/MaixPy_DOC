@@ -24,7 +24,7 @@
   - [上电](./get_started/get_started_power_on.md)
   - [第一个程序: 点亮 LED](./get_started/get_started_led_blink.md)
   - [编辑并运行文件](./get_started/get_started_edit_file.md)
-  - [上传脚本到开发板](./get_started/get_started_upload_script.md)
+  - [上传脚本&模块到开发板](./get_started/get_started_upload_script.md)
   - [开机自动运行脚本](./get_started/get_started_boot.md)
   - [上手视频教程](./get_started/maixpy_get_started_video.md)
 * 基础知识

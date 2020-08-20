@@ -1,9 +1,15 @@
-MaixPy IDE
+MaixPy IDE 安装与使用
 =======
+
+![maixpy_ide_start](../../assets/maixpy/maixpy_ide_start.png)
+
+## 关于 MaixPy IDE
+
+
 
 ![MaixPy IDE](../../assets/maixpy/maixpy_ide.png)
 
-首先需要弄清： `MaixPy` 使用 `Micropython` 脚本语法，所以不像 `C` 语言 一样需要编译，其实不用 `IDE` 也能愉快使用： 使用串口终端工具，前面已经安装了
+首先需要弄清： **MaixPy** 使用 `Micropython` 脚本语法，所以不像 `C` 语言 一样需要编译，其实不用 `IDE` 也能愉快使用： 使用串口终端工具，前面已经安装了
 
 使用 `IDE` 则会方便在电脑上实时编辑脚本并上传到开发板以及直接在开发板上执行脚本，以及在电脑上实时查看摄像头图像、保存文件到开发板等
 
@@ -15,13 +21,11 @@ MaixPy IDE
 
 要使用 `MaixPy IDE` , 固件必须是 `v0.3.1` 版本以上, 否则MaixPyIDE 上会连接不上， 使用前尽量检查固件版本和 IDE 版本，都更新到最新版以保障能正常使用
 
-
 ## 下载安装包
 
 [dl.sipeed.com](http://dl.sipeed.com/MAIX/MaixPy/ide/)
 
 文件列表等说明 请看 最新版本文件夹下的 `readme.txt` 文件， 如果下载速度慢请使用 cdn 链接下载
-
 
 ## 安装
 
@@ -64,7 +68,7 @@ chmod +x setup.sh
 
 ## 测试运行
 
-打开IDE, 上方工具栏里面选择开发板的型号.
+打开 MaixPy IDE, 上方工具栏里面选择开发板的型号.
 
 `Tool-> Select Board` (工具->选择开发板)
 
@@ -84,10 +88,9 @@ chmod +x setup.sh
 
 再次点击运行按钮(红色), 停止运行当前代码．
 
-
 ## 上传文件
 
-在 `Tool` 选项中可以选择发送文件
+在 **Tool/工具** 菜单中可以选择发送文件
 
 
 ## 注意

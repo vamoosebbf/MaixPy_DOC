@@ -109,7 +109,7 @@ with open("hello.py") as f:
     exec(f.read())
 ```
 
-### 方法三： 使用 `MaixPy IDE` 来执行
+### 方法三： 使用 **MaixPy IDE** 来执行
 
 打开文件, 然后点击执行按钮来执行
 

@@ -13,7 +13,7 @@
 ## 获得升级工具
 
 * 下载 [kflash_gui](https://github.com/sipeed/kflash_gui/releases), 会得到一个压缩包
-> kflash_gui 是跨平台的，可以在多个系统下工作（包括 Windows、Linux、MacOS、甚至树莓派)
+> kflash_gui 是跨平台的，可以在多个系统下工作（包括 Windows、Linux、MacOS、甚至树莓派）
 > 使用勘智（Kendryte）的`Windows`版本可能部分开发版无法下载成功，请使用 `kflash_gui` 这个软件来下载
 
 * 解压到一个文件夹，双击 `kflash_gui.exe`(/`kflsh_gui`) 即可运行, `Windows`下建议右键`固定到开始页面` 或者`固定到任务栏`, `Linux` 下可以自己新建一个[kflash_gui.desktop](https://github.com/sipeed/kflash_gui/blob/master/kflash_gui.desktop), 修改文件地址, 使用管理员身份复制到`/usr/share/application`目录，然后在系统菜单界面就可以看到`kflash_gui`这款应用了
