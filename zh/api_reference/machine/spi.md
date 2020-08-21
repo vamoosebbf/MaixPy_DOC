@@ -9,7 +9,7 @@ SPI（Serial Peripheral Interface） 是一个同步串行协议，由主机和�
 
 * 共有 4 个 SPI 设备， 其中 SPI0 、SPI1、 SPI3 只能工作在主机模式下， SPI2 只能工作在从机模式时下， 在 MaixPy 上， SPI3已经用来连接了 SPI Flash， 暂时保留， 以后如果有必要再考虑开放接口与 SPI Flash 分时复用
 * 支持 1/2/4/8 线全双工模式， 在 MaixPy 中， 目前只支持标准（摩托罗拉）4线全双工模式（即 SCK， MOSI， MISO， CS 四个引脚）
-* 最高传输速率45M
+* 最高传输速率45M：1/2主频，约200Mbps
 * 支持DMA
 * 4个可配置任意引脚的硬件片选
 

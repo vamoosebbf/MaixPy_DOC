@@ -67,9 +67,30 @@ http://localhost:4000/zh/get_started/how_to_read.html
 ## Micro SD 卡读取不到
 
 
-把 Micro SD 格式化为 FAT(或者 FAT32) 再尝试
+Micro SD 读取不到现象及解决方法:
 
-目前硬件只能支持 SPI 协议读取， 尽量购买正规的卡
+1. 确认 SD 能否在电脑上正常使用，如果不能即 SD 已损坏，
+
+2. 电脑能够正常使用，读取 SD，但 MaixPy 开发板无法使用：
+
+  SD 卡未格式化为 FAT/FAT32 格式，把 Micro SD 格式化为 FAT(或者 FAT32) 再尝试
+
+3. 电脑能够正常使用 SD 卡，也确认 SD 卡的磁盘格式为 FAT(或者 FAT32)，但 MaixPy 开发板依旧无法使用：
+
+  可能存在的原因：部分 SD 出厂时，sd 中没有磁盘分区表，或者磁盘分区表类型不是 MBR
+
+  解决的方法：使用第三方磁盘管理软件，将 sd 分区表类型转换为 MBR, 并且将 sd 格式格式化为 FAT(或者 FAT32)
+
+> 这里使用 **Diskgenius** 来转换磁盘分区表格式
+
+![Diskgenius](../../assets/other/diskgenius.png)
+
+
+![GPT 类型转 MBR](../../assets/other/diskgenius_sd_gpt_to_mbr.png)
+
+![MBR 类型](../../assets/other/diskgenius_sd.png)
+
+> 目前硬件只能支持 SPI 协议读取， 尽量购买正规的卡
 
 比如：下图左边两张卡 MaixPy 的驱动不支持， 中间和右边的都支持， 但是中间的 class10 卡速度最快（最高测过 128GB可用）
 > 另外测试过网上购买的几张闪迪、金士顿、三星的卡，其中发现有一张三星的卡无法使用

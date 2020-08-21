@@ -11,8 +11,12 @@
 * 开发板选购指南与开箱验证
   - [开发板选购指南](./develop_kit_board/get_hardware.md)
   - [MaixCube 开箱验证](./develop_kit_board/maix_cube.md)
-  - [MaixAmigo 开箱验证](./develop_kit_board/Maix_amigo.md)
+  - [MaixAmigo 开箱验证](./develop_kit_board/maix_amigo.md)
   - [MaixDuino 开箱验证](./develop_kit_board/maix_duino.md)
+  - [MaixDock 开箱验证](./develop_kit_board/maix_dock.md)
+  - [MaixGo 开箱验证](./develop_kit_board/maix_go.md)
+  - [MaixNano 开箱验证](./develop_kit_board/maix_nano.md)
+  - [MaixBit 开箱验证](./develop_kit_board/maix_bit.md)
 * 开发环境准备
   - [安装驱动](./get_started/env_install_driver.md)
   - [使用串口终端工具](./get_started/env_serial_tools.md)
@@ -69,6 +73,7 @@
   - [Adaptive_Histogram_Equalization_自适应直方图均衡]()
 * 机器听觉之基础算法
   - [Audio]()
+  - [关键词语音识别 - Speech Recognizer]()
 
 -----
 
