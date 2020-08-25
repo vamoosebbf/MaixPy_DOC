@@ -64,7 +64,7 @@ Grove 接口的线缆有 4 种颜色，用户可以根据颜色快速区别
 | pin 1 | 黄色 | (例如，I2C Grove Connectors上的SCL) |
 | pin 2 | 白色 | (例如，I2C Grove Connectors上的SDA) |
 | pin 3 | 红色 | VCC (所有的Grove接口红色都是VCC)    |
-| pin 4 | 黑色 | GND (所有的Grove接口红色都是GND)    |
+| pin 4 | 黑色 | GND (所有的Grove接口黑色都是GND)    |
 
 Grove模块主要有 4 种接口:
 

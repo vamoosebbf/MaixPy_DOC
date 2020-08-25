@@ -10,7 +10,9 @@
 
 ### 外观一览
 
-![MaixAmigo](../../assets/hardware/maxi_amigo/maix_amigo_0.png)
+![MaixAmigo](../../assets/hardware/maix_amigo/maix_amigo_0.png)
+
+![MaixAmigo](../../assets/hardware/maix_amigo/sipeed_maix_amigo_vi.png)
 
 <!-- ![maix_amigo_0](maix_amigo.assets/maix_amigo_0.png) -->
 
@@ -55,47 +57,7 @@ Grove 接口的线缆有 4 种颜色，用户可以根据颜色快速区别
 | pin 1 | 黄色 | (例如, I2C Grove Connectors上的SCL) |
 | pin 2 | 白色 | (例如, I2C Grove Connectors上的SDA) |
 | pin 3 | 红色 |   VCC (所有的Grove接口红色都是VCC) |
-| pin 4 | 黑色 |   GND (所有的Grove接口红色都是GND) |
-
-Grove模块主要有 4 种接口:
-
-1. Grove Digital 数字接口:<br/>
-    Grove 数字接口由 Grove 插头的四条标准线组成.<br/>
-    两条信号线通常称为 D0 和 D1 .<br/>
-    大多数模块只使用 D0, 但有些(像LED Bar Grove显示屏)使用两者.通常核心板会将板卡上的第一个Grove连接头称为 D0, 第二个称为 D1.第一个接头会连接到主控芯片的 DO/D1 管脚, 第二个连接头会连接到主控芯片的D1/D2引脚, 后面的连接头以此类推.
-
-|pin  |Function | Note |
-| ---|---|---|
-|pin1 | Dn 第一个数字输入 |
-|pin2 | Dn+1 第二个数字输入 |
-|pin3 | VCC 供电引脚 5V/3.3V |
-|pin4 | GND 地 |
-
-
-1. Grove UART :<br/>
-    The Grove UART 是特殊的一种数字输入输出接口.<br/>
-    它使用引脚 1 和引脚 2 进行串行输入和发送. <br/>
-    引脚1是 RX 线(用于接收数据, 因此是输入), 
-    其中引脚 2 是 TX 线(用于向 Grove 模块传输数据).
-
-|pin  |Function|Note|
-| ---|---|---|
-|pin1 |RX|串行接收|
-|pin2 |TX|串行发送|
-|pin3 |VCC|供电引脚 5V/3.3V|
-|pin4 |GND |地|
-
-1. Grove I2C:<br/>
-    有许多类型的 I2C Grove 传感器可用.<br/>MaixAmigo 上的 Grove 只支持 3.3V 传感器
-
-  Grove I2C 连接器具有标准布局.引脚 1 是SCL信号, 引脚 2 是SDA信号
-
-|pin  | Function | Note |
-| ---|---|---|
-|pin1 | SCL |I2C 时钟 |
-|pin2 | SDA |I2C 数据 |
-|pin3 | VCC |供电引脚, 5V/3.3V |
-|pin4 | GND |地 |
+| pin 4 | 黑色 |   GND (所有的Grove接口黑色都是GND) |
 
 ### 板载 I2C 设备
 
@@ -173,26 +135,82 @@ MaixAmigo 板载 I2C 传感器/IC
 
 - LCD 实时预览 Camera
 
+
 ```python
-import sensor, image, time, lcd
+# -*- coding: UTF-8 -*-
+# Amigo_sensor - By: Echo - 周五 4月 2 2020
+# start of pmu_axp173.py
+import sensor, image, time, utime, lcd
+from machine import I2C, Timer
+from fpioa_manager import fm
+from Maix import GPIO
 
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.QVGA)
-sensor.skip_frames(time = 2000)
-sensor.set_hmirror(1)
-sensor.set_vflip(1)
+'''
+说明: 该例程为 Amigo 前后摄像头切换的 example.
 
-clock = time.clock()
+注意事项: 由于 Amigo 电源管理电路的设计 需要配置 PMU AXP173 的输出电压, 才可以正常使用摄像头
+'''
 
-lcd.init(type=2)
-lcd.rotation(2)
+# -------------
+class AXP173:
+    class PMUError(Exception):
+        pass
+    class OutOfRange(PMUError):
+        pass
+    def __init__(self, i2c_dev=None, i2c_addr=0x34):
+        from machine import I2C
+        if i2c_dev is None:
+            try:
+                self.i2cDev = I2C(I2C.I2C0, freq=400000, scl=24, sda=27)
+            except Exception:
+                raise PMUError("Unable to init I2C0 as Master")
+        else:
+            self.i2cDev = i2c_dev
+        self.i2cDev.scan()
+        self.axp173Addr = i2c_addr
+    def __write_reg(self, reg_address, value):
+        self.i2cDev.writeto_mem(
+            self.axp173Addr, reg_address, value, mem_size=8)
+    def writeREG(self, regaddr, value):
+        self.__write_reg(regaddr, value)
 
-while(True):
-    clock.tick()
-    img = sensor.snapshot()
-    print(clock.fps())
-    img.draw_string(60, lcd.height()-120, "fps:"+str(clock.fps()), lcd.GREEN, scale=2)
-    lcd.display(img)
+# end of pmu_axp173.py
+# ------------------------
+
+# i2cDev = I2C(I2C.I2C0, freq=400000, scl=24, sda=27)
+# print(i2cDev.scan())
+axp173 = AXP173()
+axp173.writeREG(0x27, 0x20)
+axp173.writeREG(0x28, 0x0C)
+
+
+
+lcd.init(freq=20000000)
+
+while True:
+    try:
+        sensor.reset(choice=1)
+        sensor.set_pixformat(sensor.YUV422)
+        sensor.set_framesize(sensor.QVGA)
+        sensor.skip_frames(time=2000)
+        for i in range(50):
+            img = sensor.snapshot()
+            lcd.display(img)
+    except Exception as e:
+        print(e)
+
+    try:
+        sensor.reset(choice=2)
+        sensor.set_pixformat(sensor.YUV422)
+        sensor.set_framesize(sensor.QVGA)
+        sensor.skip_frames(time=2000)
+        for i in range(50):
+            img = sensor.snapshot()
+            lcd.display(img)
+
+    except Exception as e:
+        print(e)
 
 ```
+
+

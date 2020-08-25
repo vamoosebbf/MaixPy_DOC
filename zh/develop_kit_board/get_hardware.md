@@ -1,5 +1,4 @@
 如何选购开发板
-========
 
 要开始使用 MaixPy,  必须需要一款 K210 开发板, 可以从 Sipeed 官方淘宝店获得心仪的硬件： 
 [Sipeed 官方淘宝店](https://sipeed.taobao.com/)
@@ -21,8 +20,8 @@
 |            |                                                              |                                                              |
 | Maix Go    | <img src="../../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200"> |                                                              |
 | Maix Duino | <img src="../../assets/hardware/maix_go/sipeed_maix_duino_400x400.jpg" height="200"> |                                                              |
-| Maix Cube  | <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200"> |  |
-| Maix Amigo | <img src="../../assets/hardware/maix_go/sipeed_maix_amigo_400x400.jpg" height="200"> |                                                              |
+| Maix Cube  | <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200"> |                                                              |
+| Maix Amigo | <img src="../../assets/hardware/maix_amigo/sipeed_maix_amigo_400x400.jpg" height="200"> |                                                              |
 |            |                                                              |                                                              |
 
 
@@ -52,9 +51,9 @@
 | OV7740  | 0x7742  | 30W  | 支持度较好           |      |
 | OV3660  | 0x3660  | 300W | 兼容运行             |      |
 | GC0328  | 0x9d    | 30W  | 支持度较好           |      |
-| GC2145  | 0x45    | 200W | 兼容运行             |      |
+| GC2145  | 0x2145  | 200W | 兼容运行             |      |
 | MT9D111 | 0x1519  | 200W | 可以运行，支持不完整 |      |
-| OV5640  | 0x5640  | 500W | 完整实现,支持自动变焦 |      |
+| OV5640  | 0x5640  | 500W | 完整实现,支持自动变焦 | --- |
 
 
 截止至固件版本 `MicroPython v0.5.0-173` 相关摄像头测试情况如下:
@@ -63,7 +62,7 @@
 | -------------------------------------- | -------------------------------------- |
 | M1/M1W 模组系列（Maixduino、Dock、Go） | OV2640、GC0328、OV7740、GC2145、OV5640 |
 | M1n 模组系列（Nano、Cube）             | OV2640、GC0328、OV7740、GC2145、OV5640 |
-| Maix Amigo（前、后摄像头）                  | OV7740、OV0328                         |
+| Maix Amigo（前、后摄像头）                  | OV7740、GC0328                       |
 
 - 目前摄像头的颜色模式
 
@@ -71,7 +70,7 @@
 | ------ | --------------- |
 | OV2640 | OV5640          |
 | OV7740 | GC2145          |
-| GC0328 |                 |
+| GC0328 | --- |
 
 
 
@@ -108,8 +107,6 @@
 `K210` 这款芯片支持 `JTAG` 调试,  如果需要调试功能,  需要使用 `JTAG` 调试器,  请在 `Sipeed` 官方淘宝店咨询购买。
 
 如果是 `Maix Go` 开发板,  可以不用另外购买 `JTAG` 调试器,  `Maix Go` 开发板上面集成了一个 `STM32`芯片,  可以模拟 `JTAG`(`STM32` 使用 `CMSIS-DAP` 或者 `open-ec` 固件),  `open-ec` 固件目前还不支持, 后续会支持, 请以 `open-ec` github 项目主页说明为准
-
-
 
 
 
