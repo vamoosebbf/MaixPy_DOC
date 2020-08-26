@@ -147,7 +147,6 @@ from Maix import GPIO
 
 '''
 说明: 该例程为 Amigo 前后摄像头切换的 example.
-
 注意事项: 由于 Amigo 电源管理电路的设计 需要配置 PMU AXP173 的输出电压, 才可以正常使用摄像头
 '''
 
@@ -182,8 +181,6 @@ class AXP173:
 axp173 = AXP173()
 axp173.writeREG(0x27, 0x20)
 axp173.writeREG(0x28, 0x0C)
-
-
 
 lcd.init(freq=20000000)
 
