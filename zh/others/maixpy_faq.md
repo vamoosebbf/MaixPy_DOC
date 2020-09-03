@@ -46,13 +46,13 @@ MaixPy 是基于 Micropython 的脚本语言， 不需要编译，在运行时�
 
 ## 文档网页打不开，速度慢
 
-如果遇到有些页面无法访问， 请检查一下网址（路径）是否正确， 可以回到首页 (`maixpy.sipeed.com`) 重新进入即可。 
+如果遇到有些页面无法访问， 请检查一下网址（路径）是否正确， 可以回到首页 (`maixpy.sipeed.com`) 重新进入即可。
 
-比如这个网址就是由于点击过快导致的： 
+比如这个网址就是由于点击过快导致的：
 ```
 http://localhost:4000/zh/zh/get_started/how_to_read.html
 ```
-正确的网址应该是： 
+正确的网址应该是：
 ```
 http://localhost:4000/zh/get_started/how_to_read.html
 ```
@@ -146,7 +146,7 @@ sensor.set_hmirror(enable)
 
 # 设置摄像头垂直镜像
 # `enable`: 1 表示开启垂直镜像 0 表示关闭垂直镜像
-sensor.set_vfilp(enable)
+sensor.set_vflip(enable)
 ```
 
 - lcd 方向修正：
@@ -205,4 +205,3 @@ kflash_gui 配置选项
   - 烧录空间选错
 - 波特率&下载速度模式
   - 下载波特率过高
-

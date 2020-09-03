@@ -172,7 +172,7 @@ sensor.width()
 
 
 
-### 分辨率高度 
+### 分辨率高度
 
 获取摄像头分辨率高度
 
@@ -337,7 +337,7 @@ sensor.set_hmirror(enable)
 设置摄像头垂直翻转
 
 ```
-sensor.set_vfilp(enable)
+sensor.set_vflip(enable)
 ```
 
 #### 参数
@@ -394,7 +394,7 @@ sensor.__read_reg(address)
 ```python
 # 单目摄像头
 
-import sensor	
+import sensor
 import lcd
 
 lcd.init()

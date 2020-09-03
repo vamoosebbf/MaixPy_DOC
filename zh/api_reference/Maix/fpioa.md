@@ -29,7 +29,7 @@ K210 支持每个外设随意映射到任意引脚， 使用 FPIOA 功能来实�
 
 * `func`： 外设名（功能/编号），可以不传参， 则以表格的形式显示所有外设名即简要描述，这个表格也可以在本页的末尾找到（[附录：外设表](#附录：-外设表)）；</br>
    如果传参，则传一个整型值， 找到该编号对应的外设后会打印外设名和描述，</br>
-   比如 `FPIOA.JTAG_TCLK` 或者 `fm.fpioa.JTAG_TCLK`（`fm`在本页后面介绍） 或者 `0` 
+   比如 `FPIOA.JTAG_TCLK` 或者 `fm.fpioa.JTAG_TCLK`（`fm`在本页后面介绍） 或者 `0`
 
 比如：
 
@@ -292,7 +292,3 @@ if pin == board_info.LED_G:
 |  TIMER2_TOGGLE4   |  TIMER2 Toggle Output 4          |
 |  CLK_SPI2         |  Clock SPI2                      |
 |  CLK_I2C2         |  Clock I2C2                      |
-
-
-
-

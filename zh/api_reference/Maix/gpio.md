@@ -1,9 +1,9 @@
 GPIO
 =========
 
-General Purpose Input Output （通用输入/输出）简称为GPIO，或总线扩展器。
+General Purpose Input Output （通用输入/输出）简称为 GPIO，或总线扩展器。
 
-K210上有高速gpio和通用gpio
+K210上有高速 GPIO(GPIOHS) 和通用 GPIO
 在 K210 上， GPIO 有一下特征：
 * 高速 GPIO：
 
@@ -40,28 +40,28 @@ K210上有高速gpio和通用gpio
 ## 构造函数
 
 ```python
-class GPIO(ID,MODE,PULL,VALUE)
+class GPIO(ID, MODE, PULL, VALUE)
 ```
 
 通过指定的参数新建一个 SPI 对象
 
 ### 参数
 
-* `ID`： 使用的GPIO引脚(一定要使用GPIO里带的常量来指定)
+* `ID`： 使用的 GPIO 引脚(一定要使用 GPIO 里带的常量来指定)
 
 * `MODE`： GPIO模式
 
-  ​	• GPIO.IN就是输入模式
+  • GPIO.IN就是输入模式
 
-  ​	• GPIO.OUT就是输出模式
+  • GPIO.OUT就是输出模式
 
 * `PULL`： GPIO上下拉模式
-*
-  ​	• GPIO.PULL_UP 上拉
 
-  ​	• GPIO.PULL_DOWN 下拉
+  • GPIO.PULL_UP 上拉
 
-  ​	• GPIO.PULL_NONE  即不上拉也不下拉
+  ​• GPIO.PULL_DOWN 下拉
+
+  ​• GPIO.PULL_NONE  即不上拉也不下拉
 
 
 ## 方法
@@ -69,7 +69,7 @@ class GPIO(ID,MODE,PULL,VALUE)
 
 ### value
 
-修改/读取GPIO引脚状态
+修改/读取 GPIO 引脚状态
 
 ```python
 GPIO.value([value])
@@ -77,12 +77,12 @@ GPIO.value([value])
 
 #### 参数
 
-* `[value]`： 可选参数，如果此参数不为空，则返回当前GPIO引脚状态
+* `[value]`： 可选参数，如果此参数不为空，则返回当前 GPIO 引脚状态
 
 
 #### 返回值
 
-如果`[value]`参数不为空，则返回当前GPIO引脚状态
+如果 `[value]` 参数不为空，则返回当前 GPIO 引脚状态
 
 
 ### irq
@@ -98,15 +98,15 @@ GPIO.irq(CALLBACK_FUNC,TRIGGER_CONDITION,GPIO.WAKEUP_NOT_SUPPORT,PRORITY)
 
 * `CALLBACK_FUNC`：中断回调函数，当中断触发的时候被调用，一个入口函数 `pin_num`
 
-  ​	• PIN_NUM 返回的是触发中断的 GPIO 引脚号(只有GPIOHS支持中断，所以这里的引脚号也是GPIOHS的引脚号)
+  ​• PIN_NUM 返回的是触发中断的 GPIO 引脚号(只有GPIOHS支持中断，所以这里的引脚号也是GPIOHS的引脚号)
 
 * `TRIGGER_CONDITION`：GPIO 引脚的中断触发模式
 
-  ​	• GPIO.IRQ_RISING 上升沿触发
+  ​• GPIO.IRQ_RISING 上升沿触发
 
-  ​	• GPIO.IRQ_FALLING 下降沿触发
+  ​• GPIO.IRQ_FALLING 下降沿触发
 
-  ​	• GPIO.IRQ_BOTH  上升沿和下降沿都触发
+  ​• GPIO.IRQ_BOTH  上升沿和下降沿都触发
 
 
 #### 返回值
@@ -141,9 +141,9 @@ GPIO.mode(MODE)
 
 * MODE
 
-  ​	• `GPIO.IN` 就是输入模式
+  • `GPIO.IN` 就是输入模式
 
-  ​	• `GPIO.OUT` 就是输出模式
+  • `GPIO.OUT` 就是输出模式
 
 #### 返回值
 
@@ -161,11 +161,11 @@ GPIO.pull(PULL)
 
 * PULL
 
-  ​	• `GPIO.IRQ_RISING` 上升沿触发
+  • `GPIO.IRQ_RISING` 上升沿触发
 
-  ​	• `GPIO.IRQ_FALLING` 下降沿触发
+  • `GPIO.IRQ_FALLING` 下降沿触发
 
-  ​	• `GPIO.IRQ_BOTH`  上升沿和下降沿都触发
+  • `GPIO.IRQ_BOTH`  上升沿和下降沿都触发
 
 #### 返回值
 
@@ -221,7 +221,6 @@ GPIO.pull(PULL)
 * `GPIO.IRQ_RISING`: 上升沿触发
 * `GPIO.IRQ_FALLING`:下降沿触发
 * `GPIO.IRQ_BOTH`: 上升沿和下降沿都触发
-
 
 
 ### DEMO1: 点亮 LED
@@ -290,4 +289,3 @@ utime.sleep_ms(3000) # 在 3 秒内等待触发
 key.disirq() # 禁用中断
 fm.unregister(board_info.BOOT_KEY,fm.fpioa.GPIOHS0)
 ```
-
