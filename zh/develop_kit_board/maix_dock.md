@@ -1,4 +1,4 @@
-# Maix Nano
+# Maix Dock
 
 
 | 项目 | 说明 |

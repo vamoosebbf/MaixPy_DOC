@@ -1,4 +1,4 @@
-# 1MaixAmigo
+# MaixAmigo
 
 ## 概述
 
@@ -26,12 +26,12 @@
 |屏幕: |3.5寸 TFT 显示屏, 分辨率: 320\*480, 支持电容触摸(FT6X36) |
 |摄像头: |OV7740 (后摄)与GC0328(前摄) |
 |电池: |板载可充电锂聚合物电池 (容量520mAh ) |
-|板载扬声器与麦克风| 集成单音频控制器 ES8374 1W 8|
+|板载扬声器与麦克风| 集成单音频控制器 ES8374 1W 8Ω 扬声器|
 |板载接口: |USB-C \*2 (K210 调试供电接口+兼容 STM32 核心板 USB 接口)  Grove \*3 & SPMOD\*3 (可拓展模块)|
 |三轴加速度传感器:| MSA301|
 |电池:| 520mAh 锂电池 |
 
-### 板载扩展接口
+### 硬件板载扩展接口
 
 MaixAmigo 对用户开放了两个高度扩展的接口: SP-MOD 与 Grove 接口,
 用户可以很方便的进行 DIY
@@ -45,6 +45,19 @@ SP-MOD 即为 sipeed module, simplify PMOD, super module
 |SP-MODE 接口描述|![SP-MODE 接口描述](../../assets/hardware/module_spmod/spmod_interface_1.png)|
 |硬件接口|![硬件接口](../../assets/hardware/module_spmod/spmod_interface_2.png)|
 
+MaixAmigo 板载了三个 SPMOD 接口
+
+| PIN\NO.1 | SP-MOD 1 | SP-MOD2 | SP-MOD3(游戏手柄) |
+| --- | --- | --- | --- |
+| 1 | GND | GND | GND |
+| 2 | 12  | 29  | --- |
+| 3 | 6   | 28  | --- |
+| 4 | 24  | 22  | IO24 |
+| 5 | 27  | 25  | IO27 |
+| 6 | 10  | 30  | --- |
+| 7 | 11  | 8   | --- |
+| 8 | 3V3 | 3V3 | 3V3 |
+
 #### Grove 接口
 
 - Grove 模块接口
@@ -52,12 +65,21 @@ SP-MOD 即为 sipeed module, simplify PMOD, super module
 Grove 接口的线缆有 4 种颜色，用户可以根据颜色快速区别
 ![](../../assets/hardware/module_grove/grove_interface.jpg)
 
-| --- | 颜色 | 描述 |
+| Pin | 颜色 | 描述 |
 | --- | --- | --- |
-| pin 1 | 黄色 | (例如, I2C Grove Connectors上的SCL) |
-| pin 2 | 白色 | (例如, I2C Grove Connectors上的SDA) |
-| pin 3 | 红色 |   VCC (所有的Grove接口红色都是VCC) |
-| pin 4 | 黑色 |   GND (所有的Grove接口黑色都是GND) |
+| 1 | 黄色 | (例如, I2C Grove Connectors 上的SCL) |
+| 2 | 白色 | (例如, I2C Grove Connectors 上的SDA) |
+| 3 | 红色 |   VCC (所有的Grove接口红色都是VCC) |
+| 4 | 黑色 |   GND (所有的Grove接口黑色都是GND) |
+
+MaixAmigo 板载了三个 GROVE 接口
+
+| PIN | GROVE 1 | GROVE 2 | GROVE 3 |
+| --- | --- | --- | --- |
+| 1 | GND | GND | GND |
+| 2 | 3V3 | 3V3 | 3V3 |
+| 3 | IO5 | IO3 | IO1 |
+| 4 | IO4 | IO2 | IO0 |
 
 ### 板载 I2C 设备
 
@@ -209,5 +231,3 @@ while True:
         print(e)
 
 ```
-
-
