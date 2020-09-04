@@ -1,6 +1,6 @@
 如何选购开发板
 
-要开始使用 MaixPy,  必须需要一款 K210 开发板, 可以从 Sipeed 官方淘宝店获得心仪的硬件： 
+要开始使用 MaixPy,  必须需要一款 K210 开发板, 可以从 Sipeed 官方淘宝店获得心仪的硬件：
 [Sipeed 官方淘宝店](https://sipeed.taobao.com/)
 
 ## 需要的硬件
@@ -11,19 +11,79 @@
 
 >  MaixPy 系类开发板板载的 ROM 均为 16MB SPI FLASH, RAM: 6MB(通用) + 2MB(KPU 专用)
 
-| 名称       | 实物图                                                       | 差异说明                                                     |
-| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Maix Dock  | <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1.jpg" height="200"><img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1w.jpg" height="200"> | - Maix Dock(M1) 无 WIFI<br />- Maix Dock(M1W) 板载 ESP8285 WIFI，<br />- 全引脚引出 |
-| Maix Bit   | <img src="../../assets/hardware/maix_bit/sipeed_maix_bit_400x400.jpg" height="200"> | - 全引脚引出                                                 |
-|            |                                                              |                                                              |
-| Maix Nano  | <img src="../../assets/hardware/m1n/sipeed_maix_m1n_400x400.jpg" height="200"><img src="../../assets/hardware/m1n/sipeed_maix_nano_400x400.jpg" height="200"> | - 全引脚引出<br />-                                          |
-|            |                                                              |                                                              |
-| Maix Go    | <img src="../../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200"> |                                                              |
-| Maix Duino | <img src="../../assets/hardware/maix_go/sipeed_maix_duino_400x400.jpg" height="200"> |                                                              |
-| Maix Cube  | <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200"> |                                                              |
-| Maix Amigo | <img src="../../assets/hardware/maix_amigo/sipeed_maix_amigo_400x400.jpg" height="200"> |                                                              |
-|            |                                                              |                                                              |
-
+<table border="2">
+    <tr>
+        <th colspan=3>MaixPy 系列开发板</th>
+    </tr>
+    <tr>
+        <td>描述</td>
+        <td>实物图</td>
+        <td>说明</td>
+    </tr>
+        <td>Maix Amigo</td>
+        <td>
+            <img src="../../assets/hardware/maix_amigo/sipeed_maix_amigo_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Amigo</a>
+        </td>
+        <td></td>
+    <tr>
+        <td>Maix Cube</td>
+        <td>
+            <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Cube</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Maix Dock(M1W)</td>
+        <td>
+            <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1w.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1W)</a>
+            </td>
+        <td>全引脚引出</td>
+    </tr>
+    <tr>
+        <td>Maix Dock(M1)</td>
+        <td>
+            <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1)</a>
+        </td>
+        <td>全引脚引出</td>
+    </tr>
+    <tr>
+        <td>Maix Bit</td>
+        <td>
+            <img src="../../assets/hardware/maix_bit/sipeed_maix_bit_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Bit</a>
+        </td>
+        <td>全引脚引出</td>
+    </tr>
+    <tr>
+        <td>Maix Duino</td>
+        <td>
+            <img src="../../assets/hardware/maix_duino/sipeed_maix_duino_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Duino</a>
+        </td>
+        <td>兼容 Arduino</td>
+    </tr>
+    <tr>
+        <td>Maix GO</td>
+        <td>
+            <img src="../../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix GO</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Maix Nano</td>
+        <td>
+            <img src="../../assets/hardware/m1n/sipeed_maix_m1n_400x400.jpg" height="200"></br>
+            <img src="../../assets/hardware/m1n/sipeed_maix_nano_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Nano</a>
+        </td>
+        <td>核心开发板</td>
+    </tr>
+</table>
 
 开发板详细资料请看 [Wiki](https://wiki.sipeed.com/zh/maix/board/),  选择一款合适自己的开发板～
 
@@ -42,6 +102,8 @@
 从淘宝官方购买可以询问是否包含，为了开发方便尽量买屏幕
 
 ### 摄像头
+
+在售的有：OV2640(常规，M12)、OV7740、GC0328
 
 截至 MaixPy 固件版本: `MaixPy 0.5.0_160` ,支持的摄像头型号如下表
 
@@ -73,7 +135,6 @@
 | GC0328 | --- |
 
 
-
 从淘宝官方购买可以询问型号, OV7740 帧率相对高一点; OV2640 比较古老, 画质稍不如 GC0328
 
 > 注：很多用户一上来就问哪款支持的帧率最高，其实帧率除了硬件上会有差异，而且在你使用的程序，由于程序的处理流程不同，帧率也是会有差异的，所以这里无法标注（以免误导用户）具体最高帧率。
@@ -82,7 +143,7 @@
 
 不使用 Micro SD 卡也是可以操作文件的,  在内部 Flash 上已经保留一部分来作为文件系统了, 只是 Flash 速度很慢！
 
-为了方便图片文件快速操作, 可以选择购买一张 `Micro SD` 卡, 　 MaixPy　内置了 SPI SD卡协议驱动, 
+为了方便图片文件快速操作, 可以选择购买一张 `Micro SD` 卡, 　 MaixPy　内置了 SPI SD卡协议驱动,
 
 购买时尽量选择速度快协议新的 Micro SD 卡,  比如 SD 2代协议,  Class10 的内存卡
 
@@ -102,11 +163,9 @@
 ### JTAG 调试器 (可选)
 
 - **注意：**
-> 烧录过 ken_gen.bin 之后将永久禁用 K210 的 JTAG 调试功能
+
+**烧录过 ken_gen.bin 之后将永久禁用 K210 的 JTAG 调试功能**
 
 `K210` 这款芯片支持 `JTAG` 调试,  如果需要调试功能,  需要使用 `JTAG` 调试器,  请在 `Sipeed` 官方淘宝店咨询购买。
 
 如果是 `Maix Go` 开发板,  可以不用另外购买 `JTAG` 调试器,  `Maix Go` 开发板上面集成了一个 `STM32`芯片,  可以模拟 `JTAG`(`STM32` 使用 `CMSIS-DAP` 或者 `open-ec` 固件),  `open-ec` 固件目前还不支持, 后续会支持, 请以 `open-ec` github 项目主页说明为准
-
-
-

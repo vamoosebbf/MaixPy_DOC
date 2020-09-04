@@ -8,6 +8,8 @@
 |存储: |16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB**)|
 |屏幕: |3.5寸 TFT, 电容触摸屏幕分辨率: 320\*480 |
 
+[Maix Nano](../../assets/hardware/m1n/sipeed_maix_nano.png)
+
 ### 硬件板载扩展接口
 
 Maix Nano 预留了一个 SPMOD 接口

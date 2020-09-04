@@ -9,7 +9,7 @@
 ## 新手必看指南
 
 * 开发板选购指南与开箱验证
-  - [开发板选购指南](./develop_kit_board/get_hardware.md)
+  - [开发板&&配件选购指南](./develop_kit_board/get_hardware.md)
   - [MaixCube 开箱验证](./develop_kit_board/maix_cube.md)
   - [MaixAmigo 开箱验证](./develop_kit_board/maix_amigo.md)
   - [MaixDuino 开箱验证](./develop_kit_board/maix_duino.md)
@@ -69,11 +69,12 @@
   - [NES 游戏模拟器](././api_reference/application/nes.md)
 * 机器视觉之基础算法
   - [sensor](./application/image/sensor.md)
+  - [二维码识别](./application/image/qrcode.md)
   - [basic_operation](./application/image/basic_operation.md)
   - [Adaptive_Histogram_Equalization_自适应直方图均衡]()
 * 机器听觉之基础算法
   - [Audio]()
-  - [关键词语音识别 - Speech Recognizer]()
+  - [关键词语音识别 - Speech Recognizer](./machine_learning/speech_recognizer.md)
 
 -----
 
@@ -92,10 +93,10 @@
   - [声场成像]()
 * 机器视觉
   - [深度学习及 KPU 基础知识](./deep_learning/README.md)
+  - [mnist 手写数字识别](./deep_learning/mnist.md)
   - [基于 KPU 加速的图像处理(模糊/锐化/边缘检测)]()
   - [Iris 花卉分类]()
   - [HAR 人体运动识别]()
-  - [mnist 手写数字识别]()
   - [cifar10 基础图像分类]()
   - [mobilenet 1000物体分类]()
   - [基于mbnet 的自学习物体分类]()
@@ -114,8 +115,6 @@
   - [MaixPy 基本例程解析]()
   - [MaixPy 视觉识别例程解析]()
 
-
-
 -----
 
 * [进阶开发]()
@@ -129,7 +128,7 @@
 -----
 
 * [MaixPy API 使用手册](./api_reference/README.md)
-  * [标准库](./api_reference/standard/README.md)
+  * [MaixPy 标准库](./api_reference/standard/README.md)
     - [cmath](./api_reference/standard/cmath.md)
     - [gc](./api_reference/standard/gc.md)
     - [math](./api_reference/standard/math.md)
@@ -182,4 +181,3 @@
     - [Micropython Editor](./api_reference/application/pye.md)
     - [nes](./api_reference/application/nes.md)
     - [lvgl](./api_reference/application/lvgl.md)
-

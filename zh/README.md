@@ -14,7 +14,7 @@
 > **MaixPy** 官方文档中文镜像站: [**cn.maixpy.sipeed.com**](https://cn.maixpy.sipeed.com)
 >
 > **MaixPy** 例程仓库: [**Github: maixpy_script**](https://github.com/sipeed/MaixPy_scripts)
-> 
+>
 > 开发板资料下载: [**dl.sipeed.com**](http://dl.sipeed.com)
 >
 > Sipeed WIKI [**wiki.sipeed.com**](https://wiki.sipeed.com)
@@ -94,12 +94,80 @@ while True:
 
 首先我们选择一款适合自己的开发板， 目前有如下几款高性价比的开发板（核心板）：
 
-| | 描述 |
-| --- | --- |
-|<img src="../assets/hardware/maix_dock/dan_dock_1.png" alt="BiT" style="width: 450px;"> | 使用了 Sipeed M1 模块的 Dan dock |
-|<img src="../assets/hardware/maix_bit/BiT.png" alt="BiT" style="width: 500px;"> | Sipeed Maix BiT |
-|<img src="../assets/hardware/maix_go/Go.png" alt="BiT" style="width: 500px;"> | Sipeed Maix Go |
-|<img src="../assets/hardware/maix_duino/maixduino_0.png" alt="Maixduono" style="width: 500px;"> | Sipeed Maixduino |
+<table border="2">
+    <tr>
+        <th colspan=3>MaixPy 系列开发板</th>
+    </tr>
+    <tr>
+        <td>描述</td>
+        <td>实物图</td>
+        <td>说明</td>
+    </tr>
+        <td>Maix Amigo</td>
+        <td>
+            <img src="../../assets/hardware/maix_amigo/sipeed_maix_amigo_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Amigo</a>
+        </td>
+        <td></td>
+    <tr>
+        <td>Maix Cube</td>
+        <td>
+            <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Cube</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Maix Dock(M1W)</td>
+        <td>
+            <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1w.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1W)</a>
+            </td>
+        <td>全引脚引出</td>
+    </tr>
+    <tr>
+        <td>Maix Dock(M1)</td>
+        <td>
+            <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1)</a>
+        </td>
+        <td>全引脚引出</td>
+    </tr>
+    <tr>
+        <td>Maix Bit</td>
+        <td>
+            <img src="../../assets/hardware/maix_bit/sipeed_maix_bit_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Bit</a>
+        </td>
+        <td>全引脚引出</td>
+    </tr>
+    <tr>
+        <td>Maix Duino</td>
+        <td>
+            <img src="../../assets/hardware/maix_duino/sipeed_maix_duino_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Duino</a>
+        </td>
+        <td>兼容 Arduino</td>
+    </tr>
+    <tr>
+        <td>Maix GO</td>
+        <td>
+            <img src="../../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix GO</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Maix Nano</td>
+        <td>
+            <img src="../../assets/hardware/m1n/sipeed_maix_m1n_400x400.jpg" height="200"></br>
+            <img src="../../assets/hardware/m1n/sipeed_maix_nano_400x400.jpg" height="200">
+            </p><a href="https://sipeed.taobao.com/">点击购买 Maix Nano</a>
+        </td>
+        <td>核心开发板</td>
+    </tr>
+</table>
+
 
 
 更多硬件的资料请看 [Wiki 开发板介绍](https://wiki.sipeed.com/zh/maix/board/)
@@ -122,7 +190,7 @@ MaixPy 源码托管在 [github](https://github.com/sipeed/MaixPy)
 | master |  [![Build Status](https://travis-ci.org/sipeed/MaixPy.svg?branch=master)](https://travis-ci.org/sipeed/MaixPy)   |
 
 
-本项目主要由 &copy;<a href="https://www.sipeed.com" style="color: #f14c42">Sipeed</a> Co.,Ltd. 维护， 并接受来自开源社区的贡献， 具体贡献这见[贡献者列表](https://github.com/sipeed/MaixPy/graphs/contributors)
+本项目主要由 &copy;</p><a href="https://www.sipeed.com" style="color: #f14c42">Sipeed</a> Co.,Ltd. 维护， 并接受来自开源社区的贡献， 具体贡献这见[贡献者列表](https://github.com/sipeed/MaixPy/graphs/contributors)
 
 ## MaixPy 文档源码
 
@@ -130,14 +198,12 @@ MaixPy 源码托管在 [github](https://github.com/sipeed/MaixPy)
 
 文档源码托管在 [github](https://github.com/sipeed/MaixPy_DOC)，如果文档有错别字或者改进可以提交PR，
 
-注意： 在编辑文档前**必须**看[文档编写规范](contribute/doc_convention.md) 
+注意： 在编辑文档前**必须**看[文档编写规范](contribute/doc_convention.md)
 
 |   分支     |   文档自动构建状态  |
 | --------- | --------------- |
 | master |[![Build Status](https://travis-ci.org/sipeed/MaixPy_DOC.svg?branch=master)](https://travis-ci.org/sipeed/MaixPy_DOC) |
 | dev    |[![Build Status](https://travis-ci.org/sipeed/MaixPy_DOC.svg?branch=dev)](https://travis-ci.org/sipeed/MaixPy_DOC)    |
-
-
 
 
 ## 反馈
@@ -147,6 +213,3 @@ MaixPy 源码托管在 [github](https://github.com/sipeed/MaixPy)
 * [反馈](https://github.com/sipeed/MaixPy/issues)
 
 ------------
-
-
-
