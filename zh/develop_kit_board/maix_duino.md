@@ -10,8 +10,10 @@
 ### 外观一览
 
 ![MaixDuino](../../assets/hardware/maix_duino/maixduino_4.png)
-![MaixDuino](../../assets/hardware/maix_duino/maixduino_1.png)
-![MaixDuino](../../assets/hardware/maix_duino/maixduino_2.png)
+
+- 引脚一览
+
+![MaixDuino](../../assets/hardware/maix_duino/sipeed_maixduin_pins.png)
 
 ### 板载功能介绍
 
@@ -29,4 +31,3 @@ MaixDuino 引脚图
 ### 资料相关链接
 
 - [MaixDuino 原理图](https://dl.sipeed.com/MAIX/HDK/Sipeed-Maixduino)
-

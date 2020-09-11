@@ -41,7 +41,7 @@ Type "help()" for more information.
 
 **查看版本号：**
 
-  这里版本是`v0.5.0-12-g284ce83`， 也可以使用下面的代码查看版本
+  这里版本是 `v0.5.0-12-g284ce83`， 也可以使用下面的代码查看版本
 
 > **注：** 固件可以从下载站 dl.sipeed.com 中获取
 
@@ -53,8 +53,9 @@ sys.implementation.version
 ## 执行代码
 
 * 打开串口终端后，按开发板的复位按钮就可以看到打印的开机信息了，会输出
+
 ```shell
->>> 
+>>>
 ```
 即在等待我们输入代码，如果没有这个符号，可能是有开机自动运行的程序正在运行，可以按`Ctrl+C`来取消正在运行的程序
 
@@ -63,7 +64,7 @@ sys.implementation.version
 ```python
 >>> print("hello world")
 hello world
->>> 
+>>>
 ```
 
 ## 粘贴执行多行代码
@@ -76,22 +77,19 @@ print(f)
 ```
 
 * 先复制好代码
-* 串口终端按`Ctrl+E`
+* 串口终端按 `Ctrl+E`
 * 粘贴代码
-* 按`Ctrl+D`(注意如果之前没有按`Ctrl+E`则是软件复位命令，MaixPy会软复位)，然后就可以看到所有代码执行了
+* 按 `Ctrl+D`（注意如果之前没有按 `Ctrl+E` 则是软件复位命令，MaixPy 会软复位），然后就可以看到所有代码执行了
 
 ```python
->>> 
+>>>
 paste mode; Ctrl-C to cancel, Ctrl-D to finish
 === import os
 === f = os.listdir()
 === print(f)
 ['boot.py','main.py', 'freq.conf']
->>> 
+>>>
 
 ```
 
 > 如果数据量比较大，串口可能丢失数据，会导致提示语法错误，可以多试几次
-
-
-

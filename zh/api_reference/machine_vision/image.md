@@ -21,10 +21,10 @@ green_threshold   = (0,   80,  -70,   -10,   -0,   30)
 while True:
 	img=sensor.snapshot()
 	blobs = img.find_blobs([green_threshold])
-	if blobs:	
+	if blobs:
 		for b in blobs:
-			tmp=img.draw_rectangle(b[0:4]) 
-			tmp=img.draw_cross(b[5], b[6]) 
+			tmp=img.draw_rectangle(b[0:4])
+			tmp=img.draw_cross(b[5], b[6])
 			c=img.get_pixel(b[5], b[6])
 	lcd.display(img)
 ```
@@ -1679,7 +1679,7 @@ thresholds 必须是元组列表。 [(lo, hi), (lo, hi), ..., (lo, hi)] 定义�
 
 注解
 
-获取所跟踪对象的阈值，只需在IDE帧缓冲区中选择（单击并拖动）跟踪对象。 直方图会相应地更新到所在区域。然后只需写下颜色分布在每个直方图通道中起始与下降位置。 这些将是 thresholds 的低值和高值。 由于上下四分位数据相差微小，故手动确定阈值为佳。
+获取所跟踪对象的阈值，只需在 IDE 帧缓冲区中选择（单击并拖动）跟踪对象。 直方图会相应地更新到所在区域。然后只需写下颜色分布在每个直方图通道中起始与下降位置。 这些将是 thresholds 的低值和高值。 由于上下四分位数据相差微小，故手动确定阈值为佳。
 
 您还可以通过进入OpenMV IDE中的 工具 ->机器视觉 ->阈值编辑器 并从GUI窗口中拖动滑块来确定颜色阈值。
 
@@ -1692,6 +1692,7 @@ mask 是另一个用作绘图操作的像素级掩码的图像。掩码应该是
 返回图像对象，以便您可以使用 . 表示法调用另一个方法。
 
 不支持压缩图像和bayer图像。
+
 
 #### image.invert()
 
@@ -1941,7 +1942,7 @@ mask 是另一个用作绘图操作的像素级掩码的图像。掩码应该是
 
 #### image.difference(image[, mask=None])
 
-将两个图像彼此按像素取绝对值。例：对于每个颜色通道而言，将每个像素替换为ABS(this.pixel-image.pixel)。
+将两个图像彼此按像素取绝对值。例：对于每个颜色通道而言，将每个像素��换为ABS(this.pixel-image.pixel)。
 
 image 可以是图像对象，未压缩图像文件的路径(bmp/pgm/ppm)，也可以是标量值。 如果标量值，该值可以是RGB888元组或基础像素值(例如，灰度图像的8位灰度级或RGB图像的字节反转RGB565值)。
 
@@ -2766,15 +2767,3 @@ CODE93条形码类型枚举。
 ### image.CODE128
 
 CODE128条形码类型枚举。
-
-
-
-
-
-
-
-
-
-
-
-

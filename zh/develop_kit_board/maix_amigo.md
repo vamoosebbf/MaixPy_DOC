@@ -14,8 +14,6 @@
 
 ![MaixAmigo](../../assets/hardware/maix_amigo/sipeed_maix_amigo_vi.png)
 
-<!-- ![maix_amigo_0](maix_amigo.assets/maix_amigo_0.png) -->
-
 ### 板载硬件功能介绍
 
 | 项目 | 说明 |
@@ -24,7 +22,7 @@
 |内存: |8MiB 64bit 片上 SRAM|
 |存储: |16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB**)|
 |屏幕: |3.5寸 TFT 显示屏, 分辨率: 320\*480, 支持电容触摸(FT6X36) |
-|摄像头: |OV7740 (后摄)与GC0328(前摄) |
+|摄像头: |OV7740 (后摄)与GC0328(前摄) 各 30W 像素(最大分辨率 VGA:640\*480)|
 |电池: |板载可充电锂聚合物电池 (容量520mAh ) |
 |板载扬声器与麦克风| 集成单音频控制器 ES8374 1W 8Ω 扬声器|
 |板载接口: |USB-C \*2 (K210 调试供电接口+兼容 STM32 核心板 USB 接口)  Grove \*3 & SPMOD\*3 (可拓展模块)|
@@ -43,11 +41,11 @@ SP-MOD 即为 sipeed module, simplify PMOD, super module
 | 接口 | 接口描述 |
 |---|---|
 |SP-MODE 接口描述|![SP-MODE 接口描述](../../assets/hardware/module_spmod/spmod_interface_1.png)|
-|硬件接口|![硬件接口](../../assets/hardware/module_spmod/spmod_interface_2.png)|
+|硬件接口(举例)|![硬件接口](../../assets/hardware/module_spmod/spmod_interface_2.png)|
 
 MaixAmigo 板载了三个 SPMOD 接口
 
-| PIN\NO.1 | SP-MOD 1 | SP-MOD2 | SP-MOD3(游戏手柄) |
+| PIN\NO. | SP-MOD1 | SP-MOD2 | SP-MOD3(游戏手柄) |
 | --- | --- | --- | --- |
 | 1 | GND | GND | GND |
 | 2 | 12  | 29  | --- |
@@ -92,6 +90,7 @@ MaixAmigo 板载 I2C 传感器/IC
 |MSA301|0x13|0x26|D(38)|
 |AXP173|0x68|0x34|D(52)|
 
+----
 
 ## 上手把玩
 
@@ -125,7 +124,7 @@ MaixAmigo 板载 I2C 传感器/IC
 
 ####  安装驱动
 
-我们在拿到 MaixAmigo 并连接到电脑的时候，可以打开设备管理器查看串口驱动是否已经安装，打开设备管理器的方法有:
+我们在拿到 Maix Amigo 并连接到电脑的时候，可以打开设备管理器查看串口驱动是否已经安装，打开设备管理器的方法有:
 - 此电脑(右键) -> 属性 -> 设备管理器
 - 开始菜单(右键) -> 设备管理器
 - 控制面板 -> (搜索)设备管理器

@@ -1,13 +1,13 @@
 machine.UART
 =============
 
-uart模块主要用于驱动开发板上的异步串口，可以自由对uart进行配置。k210一共有3个uart，每个uart可以进行自由的引脚映射。
+uart 模块主要用于驱动开发板上的异步串口，可以自由对 uart 进行配置。k210 一共有3个 uart，每个 uart 可以进行自由的引脚映射。
 
 ## 构造
 
 ### 引脚映射
 
-在使用uart前，我们需要使用fm来对芯片引脚进行映射和管理。如下所示，将PIN10设置为uart2的发送引脚，PIN11设置为uart2的接收引脚
+在使用 uart 前，我们需要使用 fm 来对芯片引脚进行映射和管理。如下所示，将 PIN10 设置为 uart2 的发送引脚，PIN11 设置为 uart2 的接收引脚
 ```
 fm.register(board_info.PIN10,fm.fpioa.UART2_TX)
 fm.register(board_info.PIN11,fm.fpioa.UART2_RX)
@@ -23,7 +23,7 @@ uart = machine.UART(uart,baudrate,bits,parity,stop,timeout, read_buf_len)
 
 #### 参数
 
-* `uart` UART号，使用指定的UART，可以通过 `machine.UART.` 按tab键来补全
+* `uart` UART 号，使用指定的 UART，可以通过 `machine.UART.` 按tab键来补全
 * `baudrate`: UART 波特率
 * `bits`: UART 数据宽度，支持 `5/6/7/8` (默认的 REPL 使用的串口（UARTHS）只支持 8 位模式)， 默认 `8`
 * `parity`: 奇偶校验位，支持 `None`, `machine.UART.PARITY_ODD`,  `machine.UART.PARITY_EVEN` （默认的 REPL 使用的串口（UARTHS）只支持 None）， 默认 `None`
@@ -39,10 +39,11 @@ uart = machine.UART(uart,baudrate,bits,parity,stop,timeout, read_buf_len)
 
 ### init
 
-用于初始化uart，一般在构造对象时已经初始化，这里用在重新初始化uart
+用于初始化 uart，一般在构造对象时已经初始化，这里用在重新初始化 uart
 ```
 uart.init(baudrate,bits,parity,stop,timeout, read_buf_len)
 ```
+
 #### 参数
 
 同构造函数，但不需要第一个UART号
@@ -161,7 +162,7 @@ fm.register(board_info.WIFI_RX,fm.fpioa.UART2_TX)
 fm.register(board_info.WIFI_TX,fm.fpioa.UART2_RX)
 uart = machine.UART(machine.UART.UART2,115200,timeout=1000, read_buf_len=4096)
 ```
-### 例程 3 
+### 例程 3
 
 修改 REPL 串口波特率
 
@@ -171,7 +172,7 @@ repl = UART.repl_uart()
 repl.init(1500000, 8, None, 1, read_buf_len=2048)
 ```
 
-### 例程 3 
+### 例程 3
 
 修改 REPL 串口
 

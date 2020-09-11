@@ -23,4 +23,3 @@
 | Maix Bit <img src="../../assets/dk_board/maix_bit/BiT.png" width="260"> | CH552/CH340 | --- | --- | --- | --- |
 | Maix Cube <img src="../../assets/dk_board/maix_cube/maixcube_2020-06-13_06-31-29.png" width="260">  | GD32/CH552 | M1n | --- | --- | --- |
 |Maix Amigo <img src="" width="260"> | GD32 | M1n | --- | --- | --- |
-
