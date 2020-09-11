@@ -105,14 +105,14 @@ while True:
     </tr>
         <td>Maix Amigo</td>
         <td>
-            <img src="../../assets/hardware/maix_amigo/sipeed_maix_amigo_400x400.jpg" height="200">
+            <img src="../assets/hardware/maix_amigo/sipeed_maix_amigo_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Amigo</a>
         </td>
         <td></td>
     <tr>
         <td>Maix Cube</td>
         <td>
-            <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200">
+            <img src="../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Cube</a>
         </td>
         <td></td>
@@ -120,7 +120,7 @@ while True:
     <tr>
         <td>Maix Dock(M1W)</td>
         <td>
-            <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1w.jpg" height="200">
+            <img src="../assets/hardware/maix_dock/sipeed_maix_dock_m1w.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1W)</a>
             </td>
         <td>全引脚引出</td>
@@ -128,7 +128,7 @@ while True:
     <tr>
         <td>Maix Dock(M1)</td>
         <td>
-            <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1.jpg" height="200">
+            <img src="../assets/hardware/maix_dock/sipeed_maix_dock_m1.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1)</a>
         </td>
         <td>全引脚引出</td>
@@ -136,7 +136,7 @@ while True:
     <tr>
         <td>Maix Bit</td>
         <td>
-            <img src="../../assets/hardware/maix_bit/sipeed_maix_bit_400x400.jpg" height="200">
+            <img src="../assets/hardware/maix_bit/sipeed_maix_bit_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Bit</a>
         </td>
         <td>全引脚引出</td>
@@ -144,7 +144,7 @@ while True:
     <tr>
         <td>Maix Duino</td>
         <td>
-            <img src="../../assets/hardware/maix_duino/sipeed_maix_duino_400x400.jpg" height="200">
+            <img src="../assets/hardware/maix_duino/sipeed_maix_duino_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Duino</a>
         </td>
         <td>兼容 Arduino</td>
@@ -152,7 +152,7 @@ while True:
     <tr>
         <td>Maix GO</td>
         <td>
-            <img src="../../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200">
+            <img src="../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix GO</a>
         </td>
         <td></td>
@@ -160,19 +160,19 @@ while True:
     <tr>
         <td>Maix Nano</td>
         <td>
-            <img src="../../assets/hardware/m1n/sipeed_maix_m1n_400x400.jpg" height="200"></br>
-            <img src="../../assets/hardware/m1n/sipeed_maix_nano_400x400.jpg" height="200">
+            <img src="../assets/hardware/m1n/sipeed_maix_m1n_400x400.jpg" height="200"></br>
+            <img src="../assets/hardware/m1n/sipeed_maix_nano_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Nano</a>
         </td>
         <td>核心开发板</td>
     </tr>
 </table>
 
-
+要获得这些板子，可以访问Sipeed（矽速）官网[www.sipeed.com](https://sipeed.com/)，或者[官方淘宝店](https://sipeed.taobao.com/)
 
 更多硬件的资料请看 [Wiki 开发板介绍](https://wiki.sipeed.com/zh/maix/board/)
 
-要获得这些板子，可以访问Sipeed（矽速）官网[www.sipeed.com](https://sipeed.com/)，或者[官方淘宝店](https://sipeed.taobao.com/)
+
 
 
 然后请**仔细查看左边目录**，然后开始使用吧～～

@@ -14,8 +14,6 @@ M1W 是带 WiFi(esp8285) 版本
 | M1W | ES8285 | 16MiB | 8MiB | --- |
 | M1n | 无 | 16MiB | 8MiB | --- |
 
-
-
 1. M1n
 
 ![M1n](./../../assets/hardware/m1n/M1n.png)

@@ -3,8 +3,6 @@
 ![image-20200812191240724](kernel-filter.assets/image-20200812191240724.png)
 
 
-
-
 例程
 
 ```python

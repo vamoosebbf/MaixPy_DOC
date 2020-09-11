@@ -208,4 +208,3 @@ if ( x <= y )
 - AliOS-Things -- [《AliOS Things Coding Style Guide》](https://github.com/alibaba/AliOS-Things/wiki/AliOS-Things-Coding-Style-Guide)
 
 - RT-Thread -- [《RT-Thread 编程风格》](https://github.com/RT-Thread/rt-thread/blob/master/documentation/coding_style_cn.md)
-

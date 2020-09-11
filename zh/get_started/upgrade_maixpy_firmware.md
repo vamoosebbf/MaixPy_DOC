@@ -1,9 +1,18 @@
 更新 MaixPy 固件
 ===========
 
-## 连接硬件
+## 准备
 
-连接 Type C 线, 一端到开发板, 一端到电脑
+硬件:
+
+- USB Type-C 数据线
+- MaixPy 开发板
+- PC(电脑)
+
+软件:
+
+- MaixPy 开发板 USB 驱动程序
+- kflash_gui
 
 ## 确认驱动已经正确安装
 
@@ -60,13 +69,13 @@ kflash -p /dev/ttyUSB0 -b 1500000 -B goE maixpy.bin
 
 使用时注意串口不能被其它软件占用，选择正确的开发板和串口号，可以适当降低波特率和使用低速模式来提高下载成功率
 
-![](../../assets/kflash_gui_screenshot_1.png)
+![](../../assets/kflash_gui/kflash_gui_download.png)
 
 ![](../../assets/kflash_gui_screenshot_download.png)
 
 
 > 对于最早期的 `Maix Go`, 如果确认选项是对的，仍然无法下载, 可以尝试将三相拨轮按键拨向 `Down` 的位置并保持再下载
-![Go Key Down](../../assets/hardware/maix_go/Go_Key_Down.png)
+![Go Key Down](../../assets/hardware/maix_go/go_key_down.png)
 
 ### Sipeed RV JATG 调试器
 
@@ -77,7 +86,7 @@ kflash -p /dev/ttyUSB0 -b 1500000 -B goE maixpy.bin
 
 如果在使用 `kflash_gui` 烧录出现以下等问题
 
-![Upgrade Error](../../assets/other/upgrade_error.png)
+![Upgrade Error](../../assets/kflash_gui/kflash_gui_upgrade_error.png)
 
 可以按照以下顺序进行排查
 
@@ -90,4 +99,3 @@ kflash -p /dev/ttyUSB0 -b 1500000 -B goE maixpy.bin
 >
 > * 只有其中一个串口端口有效，用于串口通信与ISP下载程序。
 > * Maix Bit与PC采用串口通信，通过CH552T芯片实现USB虚拟串口功能，而该芯片可以虚拟出两个串口，在Maix Bit（M1n模块底板）中，我们只用到了一个串口，不过有些k210产品两个串口都使用了。
-

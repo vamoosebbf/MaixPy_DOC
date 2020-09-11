@@ -10,8 +10,8 @@
 
 * 开发板选购指南与开箱验证
   - [开发板&&配件选购指南](./develop_kit_board/get_hardware.md)
-  - [MaixCube 开箱验证](./develop_kit_board/maix_cube.md)
   - [MaixAmigo 开箱验证](./develop_kit_board/maix_amigo.md)
+  - [MaixCube 开箱验证](./develop_kit_board/maix_cube.md)
   - [MaixDuino 开箱验证](./develop_kit_board/maix_duino.md)
   - [MaixDock 开箱验证](./develop_kit_board/maix_dock.md)
   - [MaixGo 开箱验证](./develop_kit_board/maix_go.md)
@@ -69,12 +69,12 @@
   - [NES 游戏模拟器](././api_reference/application/nes.md)
 * 机器视觉之基础算法
   - [sensor](./application/image/sensor.md)
-  - [二维码识别](./application/image/qrcode.md)
+  - [qrcode](./application/image/qrcode.md)
   - [basic_operation](./application/image/basic_operation.md)
-  - [Adaptive_Histogram_Equalization_自适应直方图均衡]()
+  - [Adaptive_Histogram_Equalization]()
 * 机器听觉之基础算法
   - [Audio]()
-  - [关键词语音识别 - Speech Recognizer](./machine_learning/speech_recognizer.md)
+  - [Speech Recognizer](./machine_learning/speech_recognizer.md)
 
 -----
 
@@ -112,6 +112,7 @@
   - [模型分享]()
   - [MaixPy 固件在线编译平台]()
 * MaixPy 例程解析
+  - [MaixPy_script]()
   - [MaixPy 基本例程解析]()
   - [MaixPy 视觉识别例程解析]()
 

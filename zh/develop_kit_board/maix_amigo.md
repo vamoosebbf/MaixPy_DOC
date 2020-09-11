@@ -45,7 +45,7 @@ SP-MOD 即为 sipeed module, simplify PMOD, super module
 
 MaixAmigo 板载了三个 SPMOD 接口
 
-| PIN\NO.1 | SP-MOD 1 | SP-MOD2 | SP-MOD3(游戏手柄) |
+| PIN\NO. | SP-MOD1 | SP-MOD2 | SP-MOD3(游戏手柄) |
 | --- | --- | --- | --- |
 | 1 | GND | GND | GND |
 | 2 | 12  | 29  | --- |
@@ -124,7 +124,7 @@ MaixAmigo 板载 I2C 传感器/IC
 
 ####  安装驱动
 
-我们在拿到 Maix Cube 并连接到电脑的时候，可以打开设备管理器查看串口驱动是否已经安装，打开设备管理器的方法有:
+我们在拿到 Maix Amigo 并连接到电脑的时候，可以打开设备管理器查看串口驱动是否已经安装，打开设备管理器的方法有:
 - 此电脑(右键) -> 属性 -> 设备管理器
 - 开始菜单(右键) -> 设备管理器
 - 控制面板 -> (搜索)设备管理器

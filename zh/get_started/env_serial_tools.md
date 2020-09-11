@@ -16,6 +16,31 @@
 
 ## 使用串口工具
 
+### Windows
+
+Windows 常用的串口终端软件有 [putty](https://www.putty.org/), [mobaxterm](https://mobaxterm.mobatek.net/) [xshell](https://xshell.en.softonic.com/) 等工具
+
+- Putty
+
+然后选择串口模式， 然后设置串口和波特率，打开串口。
+
+![](../../assets/get_started/putty.png)
+
+然后点击回车键，即可看到 MaixPy 的交互界面了
+
+`>>>`
+
+输入 `help()`，可以查看帮助
+
+> 上图来源： [laurentopia 的上手教程](https://github.com/laurentopia/Learning-AI/wiki/MaixPy)
+
+- Mobaxterm
+
+[MobaXterm](https://mobaxterm.mobatek.net/) 是 Windows 下一款非常好用的多功能终端软件（当然也包括串口终端）
+
+![Mobaxterm](../../assets/get_started/mobaxterm_serail_port.png)
+![Mobaxterm](../../assets/get_started/mobaxterm.png)
+
 
 ### Linux
 
@@ -58,30 +83,3 @@ sudo minicom
 要退出`minicom`， 按 `Ctrl+A` `X`，按 `Enter` 确认退出即可
 
 > 另外，在开发过程中可能串口号会变， 可以在执行 minicom 的时候指定串口号，这样就不用每次串口号变了都设置一遍了，比如：` minicom -D /dev/ttyUSB1 -b 115200`
-
-
-### Windows
-
-使用如 [putty](https://www.putty.org/), [mobaxterm](https://mobaxterm.mobatek.net/) [xshell](https://xshell.en.softonic.com/) 等工具
-
-- Putty
-
-然后选择串口模式， 然后设置串口和波特率，打开串口。
-
-![](../../assets/get_started/putty.png)
-
-然后点击回车键，即可看到 MaixPy 的交互界面了
-
-`>>>`
-
-输入 `help()`，可以查看帮助
-
-> 上图来源： [laurentopia 的上手教程](https://github.com/laurentopia/Learning-AI/wiki/MaixPy)
-
-- Mobaxterm
-
-![Mobaxterm](../../assets/get_started/mobaxterm.png)
-
-
-
-

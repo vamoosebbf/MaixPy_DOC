@@ -52,4 +52,4 @@ Firmware naming instructions:
 ![](../../assets/kflash_gui_screenshot_download.png)
 
 > For the early `Maix Go`， if the download fails, try holding the three-phase dial to the `down` location during the download procedure.
-![Go Key Down](../../assets/Go_Key_Down.png)
+![Go Key Down](../../assets/go_key_down.png)
