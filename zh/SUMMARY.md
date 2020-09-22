@@ -38,12 +38,11 @@
   - [MaixPy 音频处理知识](./get_started/knowledge_audio.md)
 
 
-## MaixPy 典型应用
-
+## MaixPy 应用上手
 
 ----
 
-* MaixPy 基础外设
+* MaixPy 基础外设应用
   - [FPIOA](./api_reference/Maix/fpioa.md)
   - [GPIO](./api_reference/Maix/gpio.md)
   - [I2S](./api_reference/Maix/i2s.md)
@@ -53,38 +52,33 @@
   - [Timer](./api_reference/machine/timer.md)
   - [UART](./api_reference/machine/uart.md)
 * MaixPy GUI
-  - [LCD](./api_reference/machine_vision/lcd.md)
   - [Lvgl](./api_reference/application/lvgl.md)
-  - [Maix GUI]()
-* 网络功能
+  - [Maix GUI](./api_reference/application/maixui.md)
+* 网络功能(ESP8266/ESP32)
   - [usocket](./api_reference/standard/usocket.md)
   - [Http/https](./api_reference/machine/network.md)
+  - [ESP32 ADC](./api_reference/machine/network.md)
 * 系统配置&&功能
   - [freq](./api_reference/Maix/freq.md)
   - [gc 内存回收](./api_reference/standard/gc.md)
 * MaixPy 多媒体功能
-  - [sensor](./api_reference/machine_vision/sensor.md)
+  - [Lcd](./api_reference/machine_vision/lcd.md)
+  - [Sensor](./api_reference/machine_vision/sensor.md)
   - [Audio](./api_reference/Maix/audio.md)
   - [video](./api_reference/machine_vision/video.md)
-  - [NES 游戏模拟器](././api_reference/application/nes.md)
-* 机器视觉之基础算法
+  - [NES 游戏模拟器](./api_reference/application/nes.md)
+* MaixPy 图形处理应用(传统算法)
   - [sensor](./application/image/sensor.md)
   - [qrcode](./application/image/qrcode.md)
   - [basic_operation](./application/image/basic_operation.md)
   - [Adaptive_Histogram_Equalization]()
-* 机器听觉之基础算法
+* MaixPy 音频处理应用(传统算法)
   - [Audio]()
   - [Speech Recognizer](./machine_learning/speech_recognizer.md)
 
 -----
 
-* 常见问题 FAQ
-  - [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
-  - [MaixHub 平台 FAQ](./others/maixhub_faq.md)
 ## 机器视觉之深度学习
-
-
-----
 
 * MaixPy 音频处理
   - [频谱显示]()
@@ -95,15 +89,19 @@
   - [深度学习及 KPU 基础知识](./deep_learning/README.md)
   - [mnist 手写数字识别](./deep_learning/mnist.md)
   - [基于 KPU 加速的图像处理(模糊/锐化/边缘检测)]()
-  - [Iris 花卉分类]()
+  - [Iris 花卉分类](./deep_learning/iris_classification.md)
   - [HAR 人体运动识别]()
   - [cifar10 基础图像分类]()
-  - [mobilenet 1000物体分类]()
-  - [基于mbnet 的自学习物体分类]()
-  - [基于yolo 的人脸检测]()
-  - [基于yolo 的 20 类物体检测]()
+  - [mobilenet 1000 物体分类]()
+  - [基于 mbnet 的自学习物体分类]()
+  - [基于 yolo 的人脸检测](./deep_learning/)
+  - [基于 yolo 的 20 类物体检测]()
 * 机器听觉
   - [深度学习关键词识别]()
+* MaixPy 例程解析
+  - [MaixPy_script]()
+  - [MaixPy 基本例程解析]()
+  - [MaixPy 视觉识别例程解析]()
 
 * MaixHub 模型平台
   - [模型下载使用](./maixhub/maixhub_platform.md)
@@ -111,20 +109,6 @@
   - [检测模型训练]()
   - [模型分享]()
   - [MaixPy 固件在线编译平台]()
-* MaixPy 例程解析
-  - [MaixPy_script]()
-  - [MaixPy 基本例程解析]()
-  - [MaixPy 视觉识别例程解析]()
-
------
-
-* [进阶开发]()
-  * [MaixPy SDK 二次开发](./advanced/compile.md)
-
-* [文档贡献]()
-  - [项目结构](./advanced/code_struct.md)
-  - [代码规范](./advanced/coding_style.md)
-  - [文档找茬悬赏]()
 
 -----
 
@@ -182,3 +166,19 @@
     - [Micropython Editor](./api_reference/application/pye.md)
     - [nes](./api_reference/application/nes.md)
     - [lvgl](./api_reference/application/lvgl.md)
+
+-----
+
+* [进阶开发]()
+  * [MaixPy SDK 二次开发](./contribute/compile.md)
+
+* [文档贡献]()
+  - [项目结构](./contribute/code_struct.md)
+  - [代码规范](./contribute/coding_style.md)
+  - [文档找茬悬赏](./contribute/README.md)
+  - [文档模板](./contribute/contribute/app_doc_template.md)
+
+
+* 常见问题 FAQ
+  - [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
+  - [MaixHub 平台 FAQ](./others/maixhub_faq.md)

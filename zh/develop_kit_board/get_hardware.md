@@ -25,14 +25,14 @@
             <img src="../../assets/hardware/maix_amigo/sipeed_maix_amigo_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Amigo</a>
         </td>
-        <td></td>
+        <td>3.5寸 大屏幕， 预留三个 Grove 接口，三个 SPMOD 接口(其中一个为游戏手柄接口)</td>
     <tr>
         <td>Maix Cube</td>
         <td>
             <img src="../../assets/hardware/maix_cube/sipeed_maix_cube_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Cube</a>
         </td>
-        <td></td>
+        <td>迷你开发板，引出 Grove/Spmod 接口</td>
     </tr>
     <tr>
         <td>Maix Dock(M1W)</td>

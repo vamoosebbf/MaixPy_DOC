@@ -7,8 +7,6 @@
 
 主要有以下几个方面可以参与进来：
 
-* [文档修改](doc_convention.md)
+* [文档修改](./doc_convention.md)
 
-* [MaixPy 固件 Bug 修复、功能优化、功能新增等](code_convention.md)
-
-
+* [MaixPy 固件 Bug 修复、功能优化、功能新增等](./code_convention.md)
