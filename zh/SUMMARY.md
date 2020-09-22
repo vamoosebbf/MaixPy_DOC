@@ -94,7 +94,7 @@
   - [cifar10 基础图像分类]()
   - [mobilenet 1000 物体分类]()
   - [基于 mbnet 的自学习物体分类]()
-  - [基于 yolo 的人脸检测](./deep_learning/)
+  - [基于 yolo 的人脸检测]()
   - [基于 yolo 的 20 类物体检测]()
 * 机器听觉
   - [深度学习关键词识别]()
@@ -176,7 +176,7 @@
   - [项目结构](./contribute/code_struct.md)
   - [代码规范](./contribute/coding_style.md)
   - [文档找茬悬赏](./contribute/README.md)
-  - [文档模板](./contribute/contribute/app_doc_template.md)
+  - [文档模板](./contribute/app_doc_template.md)
 
 
 * 常见问题 FAQ
