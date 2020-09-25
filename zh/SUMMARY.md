@@ -37,7 +37,6 @@
   - [MaixPy 图像处理知识](./get_started/knowledge_image.md)
   - [MaixPy 音频处理知识](./get_started/knowledge_audio.md)
 
-
 ## MaixPy 应用上手
 
 ----
@@ -51,6 +50,8 @@
   - [SPI](./api_reference/machine/spi.md)
   - [Timer](./api_reference/machine/timer.md)
   - [UART](./api_reference/machine/uart.md)
+* MaixPy 外设配件使用
+  - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
 * MaixPy GUI
   - [Lvgl](./api_reference/application/lvgl.md)
   - [Maix GUI](./api_reference/application/maixui.md)
@@ -62,7 +63,7 @@
   - [freq](./api_reference/Maix/freq.md)
   - [gc 内存回收](./api_reference/standard/gc.md)
 * MaixPy 多媒体功能
-  - [Lcd](./api_reference/machine_vision/lcd.md)
+  - [LCD](./api_reference/machine_vision/lcd.md)
   - [Sensor](./api_reference/machine_vision/sensor.md)
   - [Audio](./api_reference/Maix/audio.md)
   - [video](./api_reference/machine_vision/video.md)
@@ -75,10 +76,15 @@
 * MaixPy 音频处理应用(传统算法)
   - [Audio]()
   - [Speech Recognizer](./machine_learning/speech_recognizer.md)
+* MaixPy 例程解析
+  - [MaixPy_script]()
+  - [MaixPy 基本例程解析]()
+  - [MaixPy 视觉识别例程解析]()
+
 
 -----
 
-## 机器视觉之深度学习
+## MaixPy 深度学习
 
 * MaixPy 音频处理
   - [频谱显示]()
@@ -98,10 +104,6 @@
   - [基于 yolo 的 20 类物体检测]()
 * 机器听觉
   - [深度学习关键词识别]()
-* MaixPy 例程解析
-  - [MaixPy_script]()
-  - [MaixPy 基本例程解析]()
-  - [MaixPy 视觉识别例程解析]()
 
 * MaixHub 模型平台
   - [模型下载使用](./maixhub/maixhub_platform.md)
