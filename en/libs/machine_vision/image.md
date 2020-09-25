@@ -170,7 +170,7 @@ Class image.similarity
 
 Call the image.get_similarity() function to create this object.
 
-####方法
+### Methods
 
 ##### similarity.mean()
 Returns the mean of the similarity difference in 8x8 pixel block structure. Range [-1/+1], where -1 is completely different and +1 is identical.
@@ -207,7 +207,7 @@ Class image.histogram
 
 Please call the `image.get_histogram()` function to create this object.
 
-###方法
+### Methods
 
 #### histogram.bins()
 
@@ -255,7 +255,7 @@ Class image.percentile
 
 Call the histogram.get_percentile() function to create this object.
 
-###方法
+### Methods
 
 #### percentile.value()
 
@@ -295,7 +295,7 @@ Class image.threshold
 
 Call the histogram.get_threshold() function to create this object.
 
-####方法
+### Methods
 
 #### threhsold.value()
 
@@ -334,7 +334,7 @@ The RGB565 percentage value has three channels. Use the l_* , a_* , and b_* meth
 Class image.statistics
 Call the histogram.get_statistics() or image.get_statistics() function to create this object.
 
-###方法
+### Methods
 
 #### statistics.mean()
 
@@ -538,7 +538,7 @@ Class image.blob
 
 Call the image.find_blobs() function to create this object.
 
-###方法
+### Methods
 
 #### blob.rect()
 
@@ -621,7 +621,7 @@ Class image.line
 
 Call the image.find_lines(), image.find_line_segments(), or image.get_regression() function to create this object.
 
-###方法
+### Methods
 
 #### line.line()
 
@@ -685,7 +685,7 @@ Class image.circle
 
 Call the image.find_circles() function to create this object.
 
-###方法
+### Methods
 
 #### circle.x()
 
@@ -721,7 +721,7 @@ Class image.rect
 
 Call the image.find_rects() function to create this object.
 
-###方法
+### Methods
 
 #### rect.corners()
 
@@ -771,7 +771,7 @@ Class image.qrcode
 
 Call the image.find_qrcodes() function to create this object.
 
-###方法
+### Methods
 
 #### qrcode.corners()
 
@@ -857,7 +857,7 @@ Returns True if the data type of the QR code is binary. If you are dealing with 
 
 Returns True if the data type of the QR code is Japanese Kanji. When set to True, you need to decode the string yourself, because the Japanese character is 10 digits per character, and MicroPython does not support parsing such text.
 
-##AprilTag类 – AprilTag object
+## AprilTag Class – AprilTag object
 
 The AprilTag object is returned by `image.find_apriltags`.
 
@@ -867,7 +867,7 @@ Class image.apriltag
 
 Call the image.find_apriltags() function to create this object.
 
-###方法
+### Methods
 
 #### apriltag.corners()
 
@@ -1030,7 +1030,7 @@ Class image.datamatrix
 
 Call the image.find_datamatrices() function to create this object.
 
-###方法
+### Methods
 
 #### datamatrix.corners()
 
@@ -1110,7 +1110,7 @@ Class image.barcode
 
 Call the image.find_barcodes() function to create this object.
 
-###方法
+### Methods
 
 #### barcode.corners()
 
@@ -1197,7 +1197,7 @@ Class image.displacement
 
 Call the image.find_displacement() function to create this object.
 
-###方法
+### Methods
 
 #### displacement.x_translation()
 
@@ -1239,7 +1239,7 @@ Class image.kptmatch
 
 Please call the image.match_descriptor() function to create this object.
 
-###方法
+### Methods
 
 #### kptmatch.rect()
 
@@ -1309,7 +1309,7 @@ Class image.ImageWriter(path)
 
 Create an ImageWriter object and you can write uncompressed images to disk in a simple file format for OpenMV Cams. The uncompressed image can then be re-read using ImageReader.
 
-###method
+### Methods
 
 #### imagewriter.size()
 
@@ -1333,7 +1333,7 @@ Class image.ImageReader(path)
 
 Create an ImageReader object to play back the image data written by the ImageWriter object. Frames played back by the ImageWriter object are played back under the same FPS as when writing to disk.
 
-###method
+### Methods
 
 #### imagereader.size()
 
@@ -1370,7 +1370,7 @@ For JPEG images, "[]" gives you access to JPEG image patches in the form of comp
 
 The image also supports read buffer operations. You can use the image as a section array object and enter the image into all types of MicroPython functions. If you want to transfer an image, you can pass it to the UART / SPI / I2C write function for automatic transfer.
 
-###method
+### Methods
 
 #### image.width()
 
