@@ -7,12 +7,52 @@ Documentation Of MaixPy
 
 [![Build Status](https://travis-ci.org/sipeed/MaixPy_DOC.svg?branch=master)](https://travis-ci.org/sipeed/MaixPy_DOC)
 
+## Usage
+
+* `git clone https://github.com/sipeed/MaixPy_DOC.git`
+* Just change `.md` file, and document's side bar is `SUMMARY.md`
+* If you want to see rendered document page, see below `Build Doc`, or just ignore this step
+   but it's recommended to preview check format error before you commit
+* Commit changes by `git add -A && git commit -m "udpate doc: your comment"`
+* Push to github by `git push origin master`
+* All thing is done, just wait page update, you can see build progress [here](https://travis-ci.org/github/sipeed/MaixPy_DOC), you can see your changes on [maixpy.sipeed.com](https://maixpy.sipeed.com) once build is passed
+
 
 
 -----------------------------------------------------------------------
 
-## Build Doc
+## Build Doc(preview locally)
 
+There's two ways to preview locally:
+
+### 1. Use docker(recommend)
+
+* First install docker
+
+* Then:
+
+```
+docker build -t gitbook .
+docker run -it -p 4000:4000 --network host -v $(pwd):/gitbook --name book0 gitbook /bin/bash
+cd /gitbook
+gitbook install
+./serve.sh
+```
+next time start by:
+```
+docker start book0
+docker attatch book0
+./serve.sh
+```
+stop by:
+```
+docker stop book0
+```
+
+* Finally visit http://localhost:4000
+
+
+### 2. Download gitbook-cli to build
 
 This documentation site is powered by GitBook. You can check out the online version here.
 
