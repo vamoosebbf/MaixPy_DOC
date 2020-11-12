@@ -25,7 +25,9 @@
         <script language="javascript" type="text/javascript">
             var JsSrc =(navigator.language || navigator.browserLanguage).toLowerCase();
             if(JsSrc.indexOf('zh-cn') >= 0 && window.location.href.indexOf('cn.maixpy.sipeed.com') < 0){
-                window.location.href = 'https://cn.maixpy.sipeed.com/zh/';
+                if (window.location.hostname != "127.0.0.1"){
+                    window.location.href = 'https://cn.maixpy.sipeed.com/zh/';
+                }
             }
         </script>
         <div class="book-langs-index" role="navigation">

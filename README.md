@@ -86,3 +86,10 @@ chmod +x serve.sh
 
 Then visit http://localhost:4000
 
+## Contribution
+
+* fork to your repository
+* update doc and commit in your repository
+* create a new pull request(PR) and describe what you update in detail. PR help see [here](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork), [创建合并请求中文教程](https://docs.github.com/cn/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
+
+

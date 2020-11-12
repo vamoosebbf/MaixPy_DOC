@@ -2,12 +2,12 @@
 
 * [简介](README.md)
   - [MaixPy 能做哪些事](./what_maix_do.md)
-  - [如何正确阅读本文档](./how_to_read.md)
 
 ----
 
-## 新手必看指南
+## 入门必看指南
 
+* [如何正确阅读本文档(重要！！！)](./how_to_read.md)
 * 开发板选购指南与开箱验证
   - [开发板&&配件选购指南](./develop_kit_board/get_hardware.md)
   - [MaixAmigo 开箱验证](./develop_kit_board/maix_amigo.md)
@@ -17,41 +17,69 @@
   - [MaixGo 开箱验证](./develop_kit_board/maix_go.md)
   - [MaixNano 开箱验证](./develop_kit_board/maix_nano.md)
   - [MaixBit 开箱验证](./develop_kit_board/maix_bit.md)
+* 基础知识
+  - [如何提问]()
+  - [MicroPython 基础知识](./get_started/knowledge_micropython.md)
+  - [MaixPy 图像基础知识](./get_started/knowledge_image.md)
+  - [MaixPy 音频基础知识](./get_started/knowledge_audio.md)
+  - 深度神经网络基础知识
 * 开发环境准备
   - [安装驱动](./get_started/env_install_driver.md)
-  - [使用串口终端工具](./get_started/env_serial_tools.md)
   - [更新 MaixPy 固件](./get_started/upgrade_maixpy_firmware.md)
+  - [使用串口终端工具](./get_started/env_serial_tools.md)
+  - [MaixPy IDE 使用说明](./get_started/env_maixpyide.md)
   - [更新板载 ESP32 固件](./get_started/upgrade_esp32_firmware.md)
   - [更新板载 ESP8285 固件](./get_started/upgrade_esp8285_firmware.md)
-  - [MaixPy IDE 使用说明](./get_started/env_maixpyide.md)
 * 上手
   - [上电](./get_started/get_started_power_on.md)
-  - [第一个程序: 点亮 LED](./get_started/get_started_led_blink.md)
-  - [编辑并运行文件](./get_started/get_started_edit_file.md)
-  - [上传脚本&模块到开发板](./get_started/get_started_upload_script.md)
+  - [第一个程序: 使用屏幕和摄像头]()
+  - [第二个程序: 点亮 LED](./get_started/get_started_led_blink.md)
+  - [编辑并运行脚本](./get_started/get_started_edit_file.md)
   - [开机自动运行脚本](./get_started/get_started_boot.md)
+  - [上传脚本到开发板](./get_started/get_started_upload_script.md)
+  - [开发板配置文件]()
   - [上手视频教程](./get_started/maixpy_get_started_video.md)
-* 基础知识
-  - [基础知识](./get_started/knowledge_prepare.md)
-  - [MicroPython 基础知识](./get_started/knowledge_micropython.md)
-  - [MaixPy 图像处理知识](./get_started/knowledge_image.md)
-  - [MaixPy 音频处理知识](./get_started/knowledge_audio.md)
-
-## MaixPy 应用上手
+* 固件定制
+  - [为什么需要定制固件]()
+  - [在线编译]()
+  - [源码编译]()
 
 ----
 
-* MaixPy 基础外设应用
-  - [FPIOA](./api_reference/Maix/fpioa.md)
-  - [GPIO](./api_reference/Maix/gpio.md)
-  - [I2S](./api_reference/Maix/i2s.md)
-  - [I2C](./api_reference/machine/i2c.md)
-  - [PWM](./api_reference/machine/pwm.md)
-  - [SPI](./api_reference/machine/spi.md)
-  - [Timer](./api_reference/machine/timer.md)
-  - [UART](./api_reference/machine/uart.md)
-* MaixPy 外设配件使用
-  - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
+## MaixPy 手把手教程
+
+* 基本图像处理
+  * 基本画图、写字
+  * 图像变换
+  * 硬件加速的图像处理
+* MaixPy AI
+  * 深度神经网络基础知识
+  * MaixPy AI 硬件加速基础知识
+  * 图像处理
+    * 人脸检测
+    * 物体分类
+    * 人脸识别
+    * 自学习分类
+  * 音频处理
+    * 语音识别
+* 模型训练
+  * 训练自己的分类和检测模型
+    * MaixHub 云端训练
+    * 本地训练
+  * 自定义新的模型
+
+* 外设
+  * MaixPy 基础外设应用
+    - [FPIOA](./api_reference/Maix/fpioa.md)
+    - [GPIO](./api_reference/Maix/gpio.md)
+    - [I2S](./api_reference/Maix/i2s.md)
+    - [I2C](./api_reference/machine/i2c.md)
+    - [PWM](./api_reference/machine/pwm.md)
+    - [SPI](./api_reference/machine/spi.md)
+    - [Timer](./api_reference/machine/timer.md)
+    - [UART](./api_reference/machine/uart.md)
+  * MaixPy 外设配件使用
+    - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
 * MaixPy GUI
   - [Lvgl](./api_reference/application/lvgl.md)
   - [Maix GUI](./api_reference/application/maixui.md)
@@ -76,15 +104,7 @@
 * MaixPy 音频处理应用(传统算法)
   - [Audio]()
   - [Speech Recognizer](./machine_learning/speech_recognizer.md)
-* MaixPy 例程解析
-  - [MaixPy_script]()
-  - [MaixPy 基本例程解析]()
-  - [MaixPy 视觉识别例程解析]()
 
-
------
-
-## MaixPy 深度学习
 
 * MaixPy 音频处理
   - [频谱显示]()
@@ -114,8 +134,10 @@
 
 -----
 
+## API手册
+
 * [MaixPy API 使用手册](./api_reference/README.md)
-  * [MaixPy 标准库](./api_reference/standard/README.md)
+  * [标准库](./api_reference/standard/README.md)
     - [cmath](./api_reference/standard/cmath.md)
     - [gc](./api_reference/standard/gc.md)
     - [math](./api_reference/standard/math.md)
@@ -171,16 +193,25 @@
 
 -----
 
-* [进阶开发]()
-  * [MaixPy SDK 二次开发](./contribute/compile.md)
+## 常见问题 FAQ
 
-* [文档贡献]()
-  - [项目结构](./contribute/code_struct.md)
-  - [代码规范](./contribute/coding_style.md)
-  - [文档找茬悬赏](./contribute/README.md)
-  - [文档模板](./contribute/app_doc_template.md)
+* [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
+* [MaixHub 平台 FAQ](./others/maixhub_faq.md)
 
+-----
 
-* 常见问题 FAQ
-  - [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
-  - [MaixHub 平台 FAQ](./others/maixhub_faq.md)
+## 进阶
+
+* 进阶开发
+  * [如何添加一个 C 模块]()
+
+* 参与贡献
+  - [参与文档编写（规范）](./contribute/README.md)
+  - [源码目录结构]()
+  - [代码编写规范](./contribute/coding_style.md)
+  - [共享例程或]()
+
+* 其它
+  - [教程分享]()
+  - [开源项目]()
+
