@@ -45,7 +45,7 @@
     - [更新板载 ESP32 固件](./get_started/upgrade_esp32_firmware.md)
     - [更新板载 ESP8285 固件](./get_started/upgrade_esp8285_firmware.md)
 * 上手
-  - [上电](./get_started/get_started_power_on.md)
+  - [上电](/get_started/get_started_power_on.md)
   - [第一个程序: 使用屏幕和摄像头]
   - [第二个程序: 点亮 LED](./get_started/get_started_led_blink.md)
   - [文件系统介绍]
