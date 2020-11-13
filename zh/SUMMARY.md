@@ -1,7 +1,7 @@
 # Summary
 
 * [简介](README.md)
-  - [MaixPy 能做哪些事](./what_maix_do.md)
+* [MaixPy 能做哪些事](./what_maix_do.md)
 
 ----
 
@@ -49,6 +49,9 @@
 ## MaixPy 手把手教程
 
 * 基本图像处理
+  * 图像获取和显示
+    * 图像获取
+    * 图像显示
   * 基本画图、写字
   * 图像变换
   * 硬件加速的图像处理
@@ -58,79 +61,48 @@
   * 图像处理
     * 人脸检测
     * 物体分类
+    * [mnist 手写数字识别](./deep_learning/mnist.md)
     * 人脸识别
     * 自学习分类
   * 音频处理
+    * 关键词识别
     * 语音识别
 * 模型训练
   * 训练自己的分类和检测模型
     * MaixHub 云端训练
     * 本地训练
   * 自定义新的模型
-
+* 传统算法
+  * 图像处理
+    - [寻找色块]()
+    - [二维码识别](./application/image/qrcode.md)
+  * 音频处理
+    - [FFT频谱图]
+    - [声场成像]
+    - [关键词识别](speech_recognizer)
+    - [语音识别]
 * 外设
-  * MaixPy 基础外设应用
-    - [FPIOA](./api_reference/Maix/fpioa.md)
-    - [GPIO](./api_reference/Maix/gpio.md)
-    - [I2S](./api_reference/Maix/i2s.md)
-    - [I2C](./api_reference/machine/i2c.md)
-    - [PWM](./api_reference/machine/pwm.md)
-    - [SPI](./api_reference/machine/spi.md)
-    - [Timer](./api_reference/machine/timer.md)
-    - [UART](./api_reference/machine/uart.md)
-  * MaixPy 外设配件使用
+  * 芯片外设
+  * 配件使用
     - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
-* MaixPy GUI
-  - [Lvgl](./api_reference/application/lvgl.md)
-  - [Maix GUI](./api_reference/application/maixui.md)
-* 网络功能(ESP8266/ESP32)
-  - [usocket](./api_reference/standard/usocket.md)
-  - [Http/https](./api_reference/machine/network.md)
-  - [ESP32 ADC](./api_reference/machine/network.md)
-* 系统配置&&功能
-  - [freq](./api_reference/Maix/freq.md)
-  - [gc 内存回收](./api_reference/standard/gc.md)
-* MaixPy 多媒体功能
-  - [LCD](./api_reference/machine_vision/lcd.md)
-  - [Sensor](./api_reference/machine_vision/sensor.md)
-  - [Audio](./api_reference/Maix/audio.md)
-  - [video](./api_reference/machine_vision/video.md)
-  - [NES 游戏模拟器](./api_reference/application/nes.md)
-* MaixPy 图形处理应用(传统算法)
-  - [sensor](./application/image/sensor.md)
-  - [qrcode](./application/image/qrcode.md)
-  - [basic_operation](./application/image/basic_operation.md)
-  - [Adaptive_Histogram_Equalization]()
-* MaixPy 音频处理应用(传统算法)
-  - [Audio]()
-  - [Speech Recognizer](./machine_learning/speech_recognizer.md)
+* 其它内置功能
+  * 系统
+    - [内存控制]()
+    - [主频、复位等]()
+  * GUI
+    - [Maix GUI](./api_reference/application/maixui.md)
+    - [Lvgl](./api_reference/application/lvgl.md)
+  * 网络(ESP8266/ESP32)
+    - [socket]()
+    - [http/https]()
+    - [ESP32 ADC]()
+  
+  * 多媒体
+    - [Audio](./api_reference/Maix/audio.md)
+    - [video](./api_reference/machine_vision/video.md)
+  * 游戏
+    - [NES 游戏模拟器](./api_reference/application/nes.md)
 
-
-* MaixPy 音频处理
-  - [频谱显示]()
-  - [声谱图]()
-  - [传统关键词识别]()
-  - [声场成像]()
-* 机器视觉
-  - [深度学习及 KPU 基础知识](./deep_learning/README.md)
-  - [mnist 手写数字识别](./deep_learning/mnist.md)
-  - [基于 KPU 加速的图像处理(模糊/锐化/边缘检测)]()
-  - [Iris 花卉分类](./deep_learning/iris_classification.md)
-  - [HAR 人体运动识别]()
-  - [cifar10 基础图像分类]()
-  - [mobilenet 1000 物体分类]()
-  - [基于 mbnet 的自学习物体分类]()
-  - [基于 yolo 的人脸检测]()
-  - [基于 yolo 的 20 类物体检测]()
-* 机器听觉
-  - [深度学习关键词识别]()
-
-* MaixHub 模型平台
-  - [模型下载使用](./maixhub/maixhub_platform.md)
-  - [分类模型训练]()
-  - [检测模型训练]()
-  - [模型分享]()
-  - [MaixPy 固件在线编译平台]()
 
 -----
 
