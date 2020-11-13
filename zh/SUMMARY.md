@@ -28,6 +28,7 @@
     - [其它]
 * 基础知识
   - [MaixPy 语法基础知识](./get_started/knowledge_micropython.md)
+  - [git 和 github]
   - [MaixPy 图像基础知识](./get_started/knowledge_image.md)
   - [MaixPy 音频基础知识](./get_started/knowledge_audio.md)
   - 深度神经网络基础知识
