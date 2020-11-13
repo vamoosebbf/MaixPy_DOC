@@ -6,8 +6,6 @@
 * [致谢]()
 
 
-----
-
 ## 入门必看指南
 
 * [如何正确阅读本文档(重要！！！)](./how_to_read.md)
@@ -61,7 +59,6 @@
   - [在线编译]()
   - [源码编译]()
 
-----
 
 ## MaixPy 手把手教程
 
@@ -132,73 +129,69 @@
     - [NES 游戏模拟器](./api_reference/application/nes.md)
 
 
------
 
 ## API手册
 
-* [MaixPy API 使用手册](./api_reference/README.md)
-  * [标准库](./api_reference/standard/README.md)
-    - [cmath](./api_reference/standard/cmath.md)
-    - [gc](./api_reference/standard/gc.md)
-    - [math](./api_reference/standard/math.md)
-    - [sys](./api_reference/standard/sys.md)
-    - [ubinascii](./api_reference/standard/ubinascii.md)
-    - [ucollections](./api_reference/standard/ucollections.md)
-    - [uctypes](./api_reference/standard/uctypes.md)
-    - [uerrno](./api_reference/standard/uerrno.md)
-    - [uhashlib](./api_reference/standard/uhashlib.md)
-    - [uheapq](./api_reference/standard/uheapq.md)
-    - [ujson](./api_reference/standard/ujson.md)
-    - [uos](./api_reference/standard/uos.md)
-    - [ure](./api_reference/standard/ure.md)
-    - [uselect](./api_reference/standard/uselect.md)
-    - [usocket](./api_reference/standard/usocket.md)
-    - [ustruct](./api_reference/standard/ustruct.md)
-    - [utime](./api_reference/standard/utime.md)
-    - [uzlib](./api_reference/standard/uzlib.md)
-  * [machine](./api_reference/machine/README.md)
-    - [I2C](./api_reference/machine/i2c.md)
-    - [PWM](./api_reference/machine/pwm.md)
-    - [SPI](./api_reference/machine/spi.md)
-    - [Timer](./api_reference/machine/timer.md)
-    - [UART](./api_reference/machine/uart.md)
-    - [network](./api_reference/machine/network.md)
-  * [Maix](./api_reference/Maix/README.md)
-    - [FPIOA](./api_reference/Maix/fpioa.md)
-    - [GPIO](./api_reference/Maix/gpio.md)
-    - [KPU](./api_reference/Maix/kpu.md)
-    - [FFT](./api_reference/Maix/fft.md)
-    - [I2S](./api_reference/Maix/i2s.md)
-    - [Audio](./api_reference/Maix/audio.md)
-    - [freq](./api_reference/Maix/freq.md)
-    - [utils](./api_reference/Maix/utils.md)
-  * [内置类](./api_reference/builtin_py/README.md)
-    - [fpioa_manager](./api_reference/builtin_py/fm.md)
-    - [board_info](./api_reference/builtin_py/board_info.md)
-  * [机器视觉](./api_reference/machine_vision/README.md)
-    - [lcd](./api_reference/machine_vision/lcd.md)
-    - [sensor](./api_reference/machine_vision/sensor.md)
-    - [image](./api_reference/machine_vision/image.md)
-    - [video](./api_reference/machine_vision/video.md)
-  * [MaixPy 附加外设模块](./api_reference/peripheral_modules/README.md)
-    - [touchscreen](./api_reference/peripheral_modules/touchscreen.md)
-    - [modules.ultrasonic](./api_reference/peripheral_modules/ultrasonic.md)
-    - [modules.ws2812](./api_reference/peripheral_modules/ws2812.md)
-    - [modules.htpa](./api_reference/peripheral_modules/htpa.md)
-    - [Grove RGB LED](./api_reference/peripheral_modules/grove_chainable_rgb_led.md)
-  * [内置应用](./api_reference/application/README.md)
-    - [Micropython Editor](./api_reference/application/pye.md)
-    - [nes](./api_reference/application/nes.md)
-    - [lvgl](./api_reference/application/lvgl.md)
+* [标准库](./api_reference/standard/README.md)
+  - [cmath](./api_reference/standard/cmath.md)
+  - [gc](./api_reference/standard/gc.md)
+  - [math](./api_reference/standard/math.md)
+  - [sys](./api_reference/standard/sys.md)
+  - [ubinascii](./api_reference/standard/ubinascii.md)
+  - [ucollections](./api_reference/standard/ucollections.md)
+  - [uctypes](./api_reference/standard/uctypes.md)
+  - [uerrno](./api_reference/standard/uerrno.md)
+  - [uhashlib](./api_reference/standard/uhashlib.md)
+  - [uheapq](./api_reference/standard/uheapq.md)
+  - [ujson](./api_reference/standard/ujson.md)
+  - [uos](./api_reference/standard/uos.md)
+  - [ure](./api_reference/standard/ure.md)
+  - [uselect](./api_reference/standard/uselect.md)
+  - [usocket](./api_reference/standard/usocket.md)
+  - [ustruct](./api_reference/standard/ustruct.md)
+  - [utime](./api_reference/standard/utime.md)
+  - [uzlib](./api_reference/standard/uzlib.md)
+* [machine](./api_reference/machine/README.md)
+  - [I2C](./api_reference/machine/i2c.md)
+  - [PWM](./api_reference/machine/pwm.md)
+  - [SPI](./api_reference/machine/spi.md)
+  - [Timer](./api_reference/machine/timer.md)
+  - [UART](./api_reference/machine/uart.md)
+  - [network](./api_reference/machine/network.md)
+* [Maix](./api_reference/Maix/README.md)
+  - [FPIOA](./api_reference/Maix/fpioa.md)
+  - [GPIO](./api_reference/Maix/gpio.md)
+  - [KPU](./api_reference/Maix/kpu.md)
+  - [FFT](./api_reference/Maix/fft.md)
+  - [I2S](./api_reference/Maix/i2s.md)
+  - [Audio](./api_reference/Maix/audio.md)
+  - [freq](./api_reference/Maix/freq.md)
+  - [utils](./api_reference/Maix/utils.md)
+* [内置类](./api_reference/builtin_py/README.md)
+  - [fpioa_manager](./api_reference/builtin_py/fm.md)
+  - [board_info](./api_reference/builtin_py/board_info.md)
+* [机器视觉](./api_reference/machine_vision/README.md)
+  - [lcd](./api_reference/machine_vision/lcd.md)
+  - [sensor](./api_reference/machine_vision/sensor.md)
+  - [image](./api_reference/machine_vision/image.md)
+  - [video](./api_reference/machine_vision/video.md)
+* [MaixPy 附加外设模块](./api_reference/peripheral_modules/README.md)
+  - [touchscreen](./api_reference/peripheral_modules/touchscreen.md)
+  - [modules.ultrasonic](./api_reference/peripheral_modules/ultrasonic.md)
+  - [modules.ws2812](./api_reference/peripheral_modules/ws2812.md)
+  - [modules.htpa](./api_reference/peripheral_modules/htpa.md)
+  - [Grove RGB LED](./api_reference/peripheral_modules/grove_chainable_rgb_led.md)
+* [内置应用](./api_reference/application/README.md)
+  - [Micropython Editor](./api_reference/application/pye.md)
+  - [nes](./api_reference/application/nes.md)
+  - [lvgl](./api_reference/application/lvgl.md)
 
------
 
 ## 常见问题 FAQ
 
 * [MaixPy 常见问题 FAQ](./others/maixpy_faq.md)
 * [MaixHub 平台 FAQ](./others/maixhub_faq.md)
 
------
 
 ## 进阶
 
@@ -211,7 +204,9 @@
   - [代码编写规范](./contribute/coding_style.md)
   - [共享例程或]()
 
-* 其它
-  - [教程分享]()
-  - [开源项目]()
+
+## 社区 & 分享
+
+- [精选教程分享]()
+- [开源项目]()
 

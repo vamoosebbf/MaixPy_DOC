@@ -175,4 +175,15 @@
   top:100px;
 }
 
+.book-summary > nav {
+  padding-bottom: 200px;
+}
+
+.book-summary ul.summary li.header {
+  padding: 10px 15px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  color: #868686;
+  border-top: solid 1px #e6e6e6;
+}
 
