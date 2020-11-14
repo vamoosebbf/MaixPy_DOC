@@ -1,50 +1,55 @@
-# MaixPy 文档简介
+MaixPy 文档简介
+=====
 
 <div class="title_pic">
     <img src="../assets/maixpy/maixpy.png" height="200">
     <br/>
-    <img src="../assets/sipeed/sipeed_logo_2.png" height="120">
+    <img src="../assets/sipeed/sipeed_logo_2.png">
     <!-- <br/> -->
-    <img src="../assets/maixpy/micropython.png" height="45">
+    <img src="../assets/maixpy/micropython.png">
     <br/>
 </div>
 
-> **MaixPy** 官方文档官网: [**maixpy.sipeed.com**](https://maixpy.sipeed.com)
+> **MaixPy** 唯一官方文档官网: [**maixpy.sipeed.com**](https://maixpy.sipeed.com)
 >
 > **MaixPy** 官方文档中文镜像站: [**cn.maixpy.sipeed.com**](https://cn.maixpy.sipeed.com)
 >
 > **MaixPy** 例程仓库: [**Github: maixpy_script**](https://github.com/sipeed/MaixPy_scripts)
 >
-> 开发板资料下载: [**dl.sipeed.com**](http://dl.sipeed.com)
+> 开发板资料下载: [**dl.sipeed.com**](http://dl.sipeed.com/MAIX/HDK)
 >
 > Sipeed WIKI [**wiki.sipeed.com**](https://wiki.sipeed.com)
 
-# 关于 MaixPy
+## 关于 MaixPy
 
 
-[**MaixPy**](maixpy.sipeed.com) 是将 [Micropython](http://micropython.org/) 移植到 [K210](https://kendryte.com/)（一款 64 位双核带硬件 FPU、卷积加速器、FFT、Sha256 的 RISC-V CPU ） 的一个项目， 支持 MCU 常规操作， 更集成了机器视觉和麦克风阵列， 以快速开发具有极低成本和体积实用的 `AIOT` 领域智能应用。
+[**MaixPy**](maixpy.sipeed.com) 是将 [Micropython](http://micropython.org/) 移植到 [K210](https://kendryte.com/)（一款 64 位双核带硬件 FPU、卷积加速器、FFT、Sha256 的 RISC-V CPU ） 的一个项目， 支持 MCU 常规操作， 更集成了硬件加速的 `AI` 机器视觉和麦克风阵列，`1TOPS` 算力 核心模块却不到`￥50`， 以快速开发具有极低成本和体积实用的 `AIOT` 领域智能应用。
 
 > MicroPython 是基于 Python3 的语法做的一款解析器，包含了 Python3 的大多数基础语法， 主要运行在性能和内存有限的嵌入式芯片上。（注意 Micropython 不包含 Python3 的所有语法）
 
-> K210 在硬件上集成了机器视觉和机器听觉能力， 是一款定位 AI 和 AIOT 市场的 SoC，同时也是一颗性能强劲的同时却有着极低的价格的 MCU 。
 
 
-**MaixPy** 让我们在 K210 上编程更加简单快捷， 我们也将源代码开源在 [**Github/MaixPy**](https://github.com/sipeed/MaixPy) 上
+**MaixPy** 让我们在 K210 上编程更加简单快捷， 我们也将源代码开源在 [**Github**](https://github.com/sipeed/MaixPy) 上
 
-比如我们需要扫描 **I2C** 总线上的设备，只需要使用如下代码即可实现：
+使用 MaixPy 可以做很多有趣的事情， 具体可以<a href= "what_maix_do.html" target="_blank">看这里</a>
+
+## 简洁的代码实例
+
+比如我们需要扫描 **I2C** 总线上的设备，不需要复杂的开发环境和工程，只需要通过串口发送如下代码即可实现：
 
 ```python
-from machine import I2C
+from machine import I2C                          # 导入内置库
 
-i2c = I2C(I2C.I2C0, freq=100000, scl=28, sda=29)
-devices = i2c.scan()
-print(devices)
+i2c = I2C(I2C.I2C0, freq=100000, scl=28, sda=29) # 定义一个I2C对象， 使用I2C0, 频率100kHz，SCL引脚是IO28, SDA 引脚是IO29
+devices = i2c.scan()                             # 调用函数扫描设备
+print(devices)                                   # 打印设备
 ```
 
 同样，我们需要实现一个**呼吸灯**，只需要如下代码：
 
 ```python
 from machine import Timer,PWM
+from board import board_info
 import time
 
 tim = Timer(Timer.TIMER0, Timer.CHANNEL0, mode=Timer.MODE_PWM)
@@ -89,47 +94,36 @@ while True:
 * 如何选择并得到一款合适自己的模块或者开发板
 * 如何开始上手使用
 * 库和接口（API）文档查询
+* 详细的一步一步手把手教程
+* 来自社区的分享（教程或开源项目）
+
+**为了在学习过程中避免遇到难以解决的问题，请务必按照左边目录结构从上到下阅读，特别是写在前面的章节，不要跳过**
+
 
 ## 可以运行MaixPy的开发板
 
-首先我们需要选择一款适合自己的开发板，各个型号的 MaixPy 型号请点击：[开发板与配件选购指南](./develop_kit_board/get_hardware.md)
+首先我们需要选择一款适合自己的开发板，各个型号的 MaixPy 型号请点击：[开发板与配件选购指南](./develop_kit_board/get_hardware.md)，同时目录下也有对应开发板的硬件参数和资料
 
 要获得这些板子，可以访问Sipeed（矽速）官网[www.sipeed.com](https://sipeed.com/)，或者[官方淘宝店](https://sipeed.taobao.com/)
 
-更多硬件的资料请看 [Wiki 开发板介绍](https://wiki.sipeed.com/zh/maix/board/)
-
-
-
-
-然后请**仔细查看左边目录**，然后开始使用吧～～
 
 
 ## MaixPy 源码
 
-`MaixPy` 源码是指 运行在 `K210` 上的 `Micropython` 的解析器， 使用 `C语言` 编写，如果只是想使用 MaixPy，不需要了解源码；
+`MaixPy` 源码是指 运行在 `K210` 上的 `Micropython` 语法解析器， 使用 `C语言` 编写，如果只是想使用 MaixPy，不需要了解源码；
 如果想参与开发 MaixPy 的内置功能，可以下载进行开发，欢迎大家提交 `PR`
 
 MaixPy 源码托管在 [github](https://github.com/sipeed/MaixPy)
-
-|   分支     |   自动构建状态  |
-| --------- | --------------- |
-| master |  [![Build Status](https://travis-ci.org/sipeed/MaixPy.svg?branch=master)](https://travis-ci.org/sipeed/MaixPy)   |
-
 
 本项目主要由 &copy;</p><a href="https://www.sipeed.com" style="color: #f14c42">Sipeed</a> Co.,Ltd. 维护， 并接受来自开源社区的贡献， 具体贡献这见[贡献者列表](https://github.com/sipeed/MaixPy/graphs/contributors)
 
 ## MaixPy 文档源码
 
-修改代码后，文档也会随之更新，
 
-文档源码托管在 [github](https://github.com/sipeed/MaixPy_DOC)，如果文档有错别字或者改进可以提交PR，
+文档源码托管在 [github](https://github.com/sipeed/MaixPy_DOC)，如果文档有错别字或者改进可以提交PR，PR通过后，文档也会随之更新
 
-注意： 在编辑文档前**必须**看[文档编写规范](contribute/doc_convention.md)
+注意： 在编辑文档前**必须**看[文档编写规范](contribute/doc_convention.md)， 只有符合文档规范的修改才会被通过
 
-|   分支     |   文档自动构建状态  |
-| --------- | --------------- |
-| master |[![Build Status](https://travis-ci.org/sipeed/MaixPy_DOC.svg?branch=master)](https://travis-ci.org/sipeed/MaixPy_DOC) |
-| dev    |[![Build Status](https://travis-ci.org/sipeed/MaixPy_DOC.svg?branch=dev)](https://travis-ci.org/sipeed/MaixPy_DOC)    |
 
 
 ## 反馈
