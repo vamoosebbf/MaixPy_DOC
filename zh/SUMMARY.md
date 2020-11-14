@@ -2,8 +2,8 @@
 
 * [简介](README.md)
 * [MaixPy 能做哪些事](./what_maix_do.md)
-* [MaixPy 发展历程]
-* [致谢]()
+* [MaixPy 发展历程](./maixpy_history.md)
+* [致谢](./thanks.md)
 
 
 ## 入门必看指南
@@ -21,18 +21,18 @@
     - [Maix Go](./develop_kit_board/maix_go.md)
     - [Maix Nano](./develop_kit_board/maix_nano.md)
   - 外设模组（配件）
-    - [SP-MOD]
-    - [Grove]
-    - [其它]
+    - [SP-MOD](./modules/sp_mode/README.md)
+    - [Grove](./modules/grove/README.md)
+    - [其它](./modules/others/README.md)
 * 基础知识
   - [MaixPy 语法基础知识](./get_started/knowledge_micropython.md)
-  - [git 和 github]
+  - [git 和 github](./get_started/knowledge_git_github.md)
   - [MaixPy 图像基础知识](./get_started/knowledge_image.md)
   - [MaixPy 音频基础知识](./get_started/knowledge_audio.md)
-  - 深度神经网络基础知识
+  - [深度神经网络基础知识](./dnn/dnn_basic.md)
 * 开发环境准备
   - [安装驱动](./get_started/env_install_driver.md)
-    - [Maix Dock]
+    - [Maix Dock](./get_started/install_driver/dock.md)
     - [Maix Bit]
     - [Maix Amigo]
     - [Maix Cube]
@@ -200,7 +200,7 @@
 
 * 参与贡献
   - [参与文档编写（规范）](./contribute/README.md)
-  - [提交经验分享贴]
+  - [提交经验分享贴](./contribute/app_doc_template.md)
   - [源码目录结构]()
   - [代码编写规范](./contribute/coding_style.md)
   - [共享例程或]()
