@@ -9,7 +9,7 @@ MaixPy 发展历程
 
 ## 2018 年 9 月
 
-MaixPy 项目成立，契机是 K210 芯片流片完成。
+MaixPy 项目启动，契机是 K210 芯片流片完成。
 
 于是大家想着做一套让更多人在嵌入式使用的 AI 开发的易使用的软件套件， 因为 Micropython 的易用性，而且 k210 有 6+2MiB 内存，主频 400MHz，完全能够驾驭 Micropython， 故选择了 Micropython 作为编程语法
 
@@ -60,7 +60,7 @@ wipping 退出项目组， zepan 和 xel 专注到其它项目组
 
 ## 2019 年 12 月
 
-Maixhub 上线， 用于在线模型训练，只需要上传数据集无须编写代码
+[Maixhub](https://www.maixhub.com) 上线， 用于在线模型训练，只需要上传数据集无须编写代码
 
 硬件更新： 上线 M1N 模块， 金手指模块
 
