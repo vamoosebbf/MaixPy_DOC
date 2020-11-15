@@ -23,7 +23,7 @@ git 会在目录下创建一个`.git`隐藏文件夹， 所有更改记录保存
 
 ## 什么是 github
 
-github 是一个 分享代码 的 **网站**。
+[github](http://github.com/) 是一个 分享代码 的 **网站**。
 
 可以在这个网站上注册， 然后建立仓库（repository），往这个仓库里面放代码公开分享，让更多地人来使用， 甚至一起修改，一起优化代码， 这就是**开源**。
 
@@ -39,16 +39,30 @@ github 的[帮助](https://docs.github.com/en/free-pro-team@latest/github), 中�
 一个是一个软件， 一个是一个网站。
 只不过这个网站用到了 git 这个技术来管理仓库。
 
+## 什么是 star
+
+在 github 上， 每个公开的仓库大家都可以去点赞收藏，也就是 star，在 github 右上角 ⭐ 形状的按钮
+![](/assets/other/github_star.jpg)
+如果你觉得项目不错，请给个 star，这样会鼓励开发者花更多时间维护仓库，同时也告诉第一次来的访问者这是个不错的项目，值得关注。
+
+star 后， 可以在个人资料里面找到自己的 star 仓库，方便下一次找到
+
 
 ## 什么是 issue
 
 也就是问题的意思， 在github 上， 每个仓库有一个专门用来提问的地方， 比如 [MaixPy的issue](https://github.com/sipeed/MaixPy/issues)
 大家在这里提问， 类似论坛一样， 都会被记录下来，方便后面的人查阅
 
+## 什么是 fork
+
+在 github 上， 仓库页面右上角有一个 fork 按钮
+![](/assets/other/github_star.jpg)
+点击可以将仓库 fork 到自己的仓库，就相当于是一份拷贝，叫 fork 的原因是你在 fork 成自己的仓库后，可以对自己这个仓库进行随意修改，算是原来被 fork 仓库的一个发展分支，源自它但是可以不与它相同
+
 
 ## 什么是 PR
 
-即 github 上的 pull request 功能， 就是参与一个仓库的代码更新， 具体方法可自行学习
+即 github 上的 pull request 功能， 就是参与一个仓库的代码更新， 就是先 fork 成自己的仓库，然后修改，修改后提交合并到被 fork 的源仓库， 具体方法可自行学习
 
 
 

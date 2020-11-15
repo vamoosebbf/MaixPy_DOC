@@ -29,7 +29,6 @@
   - [git 和 github](./get_started/knowledge_git_github.md)
   - [MaixPy 图像基础知识](./get_started/knowledge_image.md)
   - [MaixPy 音频基础知识](./get_started/knowledge_audio.md)
-  - [深度神经网络基础知识](./dnn/dnn_basic.md)
 * 开发环境准备
   - [安装驱动](./get_started/env_install_driver.md)
     - [Maix Dock](./get_started/install_driver/dock.md)
@@ -71,7 +70,7 @@
   * 图像变换
   * 硬件加速的图像处理
 * MaixPy AI
-  * 深度神经网络基础知识
+  * [深度神经网络基础知识](./dnn/dnn_basic.md)
   * MaixPy AI 硬件加速基础知识
   * 图像处理
     * 人脸检测
