@@ -6,7 +6,8 @@
 |CPU: |双核 64bit RISC-V / 400MHz* (双精度FPU集成)|
 |内存: |8MiB 64bit 片上 SRAM|
 |存储: |16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB**)|
-|屏幕: |3.5寸 TFT, 电容触摸屏幕分辨率: 320\*480 |
+|屏幕: | 无屏幕 |
+|摄像头（套餐）: | 30W 像素 GC0328 摄像头 |
 
 [Maix Nano](../../assets/hardware/m1n/sipeed_maix_nano.png)
 
