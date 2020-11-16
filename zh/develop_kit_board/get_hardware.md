@@ -40,7 +40,7 @@
             <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1w.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1W)</a>
             </td>
-        <td>全引脚引出</td>
+        <td>全引脚引出，采用 M1W 模块 (内部集成 ESP8285)</td>
     </tr>
     <tr>
         <td>Maix Dock(M1)</td>
@@ -48,7 +48,7 @@
             <img src="../../assets/hardware/maix_dock/sipeed_maix_dock_m1.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Dock(M1)</a>
         </td>
-        <td>全引脚引出</td>
+        <td>全引脚引出，采用 M1 模块 </td>
     </tr>
     <tr>
         <td>Maix Bit</td>
@@ -56,7 +56,7 @@
             <img src="../../assets/hardware/maix_bit/sipeed_maix_bit_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Bit</a>
         </td>
-        <td>全引脚引出</td>
+        <td>全引脚引出，2x20pin，最小系统板</td>
     </tr>
     <tr>
         <td>Maix Duino</td>
@@ -64,7 +64,7 @@
             <img src="../../assets/hardware/maix_duino/sipeed_maix_duino_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix Duino</a>
         </td>
-        <td>兼容 Arduino</td>
+        <td>兼容 Arduino，支持 ESP32 WIFI，支持 ESP32 5个 ADC 通道的读取</td>
     </tr>
     <tr>
         <td>Maix GO</td>
@@ -72,7 +72,7 @@
             <img src="../../assets/hardware/maix_go/sipeed_maix_go_400x400.jpg" height="200">
             </p><a href="https://sipeed.taobao.com/">点击购买 Maix GO</a>
         </td>
-        <td></td>
+        <td>已停产</td>
     </tr>
     <tr>
         <td>Maix Nano</td>
@@ -104,7 +104,7 @@
 | ------------------- | ----------- | ---------- | ------------ | ---- |
 | Maix Cube(IPS)      | ST7789      | 240\*240   | 不支持       | ---  |
 | Maix Amigo          | ILI9486     | 320\*480   | 支持(FT6X36) | ---  |
-| ~~Maix Amigo(IPS 版)~~  | ~~XXX~~         | ~~320\*480~~   | ~~支持(FT6X36)~~ | ---  |
+| Maix Amigo(IPS 版)  | ILI9486     | 320\*480   | 支持(FT6X36) | ---  |
 | Maix Nano(不带屏幕) | ---         | ---        | ---          | ---  |
 | Maix Dock           | ST7789      | 320\*240   | 不支持       | ---  |
 | Maix Bit            | ST7789      | 320\*240   | 不支持       | ---  |
