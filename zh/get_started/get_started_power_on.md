@@ -3,6 +3,10 @@ MaixPy 开发板上电
 
 当我们拿到 MaixPy 开发板之后
 
+## 检查硬件
+
+检查硬件是否有损坏， 以及摄像头和屏幕是否接好，排线千万不要接反了，根据前面的开发板描述操作
+
 
 ## 连接硬件
 
@@ -10,15 +14,16 @@ MaixPy 开发板上电
 
 查看设备是否已经正确识别：
 
+在 Windows 下可以打开设备管理器来查看
+
 在 Linux 下可以通过 `ls /dev/ttyUSB*` 或者 `ls /dev/ttyACM*` 来查看， 如果没有可以 `ls /dev` 来找找，具体的设备名跟串口芯片和驱动有关
 
-在 Windows 下可以打开设备管理器来查看
 
 如果没有发现设备， 需要确认有没有装驱动以及接触是否良好
 
 ## 检查固件版本
 
-使用串口终端打开串口，然后复位，看输出的版本信息，与[github](https://github.com/sipeed/MaixPy/releases) 或者 [master 分支](http://dl.sipeed.com/MAIX/MaixPy/release/master/) 的固件版本对比，根据当前版本情况考虑升级到最新版本
+使用**串口终端**打开串口，然后复位，看输出的版本信息，与[github](https://github.com/sipeed/MaixPy/releases) 或者 [master 分支](http://dl.sipeed.com/MAIX/MaixPy/release/master/) 的固件版本对比，根据当前版本情况考虑升级到最新版本
 
 比如：
 
@@ -43,12 +48,14 @@ Type "help()" for more information.
 
   这里版本是 `v0.5.0-12-g284ce83`， 也可以使用下面的代码查看版本
 
-> **注：** 固件可以从下载站 dl.sipeed.com 中获取
+> **注：** 固件可以从下载站 [dl.sipeed.com](http://dl.sipeed.com/MAIX/MaixPy/release/master/) 中获取
 
 ```python
 import sys
 sys.implementation.version
 ```
+
+如果你在开发过程中遇到了问题， 也可以先尝试更新固件到最新版本
 
 ## 执行代码
 

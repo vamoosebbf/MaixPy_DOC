@@ -45,39 +45,38 @@
     - [更新板载 ESP8285 固件](./get_started/upgrade_esp8285_firmware.md)
 * 上手
   - [上电](/get_started/get_started_power_on.md)
-  - [第一个程序: 使用屏幕和摄像头]
+  - [第一个程序: 使用屏幕和摄像头](./get_started/get_started_cam_lcd.md)
   - [第二个程序: 点亮 LED](./get_started/get_started_led_blink.md)
-  - [文件系统介绍]
+  - [文件系统介绍](./get_started/get_started_fs.md)
   - [编辑并运行脚本](./get_started/get_started_edit_file.md)
   - [上传脚本到开发板](./get_started/get_started_upload_script.md)
   - [开机自动运行脚本](./get_started/get_started_boot.md)
-  - [开发板配置文件]()
+  - [开发板配置文件]
   - [上手视频教程](./get_started/maixpy_get_started_video.md)
 * 固件定制
-  - [为什么需要定制固件]()
-  - [在线编译]()
-  - [源码编译]()
+  - [为什么需要定制固件](/firmware/why_customize_firware.md)
+  - [在线编译](/firmware/online_compile.md)
+  - [源码编译](/firmware/compile.md)
 
 
 ## MaixPy 手把手教程
 
-* 教程说明
+* [教程说明](/course/readme.md)
 * 基本图像处理
   * 图像获取和显示
-    * 图像获取
-    * 图像显示
-  * 基本画图、写字
-  * 图像变换
-  * 硬件加速的图像处理
+    * [图像获取](/course/basic/image/get_images.md)
+    * [图像显示](/course/basic/image/display_images.md)
+  * [基本画图、写字](/course/basic/image/draw.md)
+  * [图像变换]
+  * [硬件加速的图像处理](/course/basic/image/acc_image_deal.md)
 * MaixPy AI
-  * [深度神经网络基础知识](./dnn/dnn_basic.md)
-  * MaixPy AI 硬件加速基础知识
+  * [深度神经网络基础知识](/course/ai/basic/dnn_basic.md)
+  * [MaixPy AI 硬件加速基础知识](/course/ai/basic/maixpy_hardware_ai_basic.md)
   * 图像处理
-    * 人脸检测
-    * 物体分类
-    * [mnist 手写数字识别](./deep_learning/mnist.md)
-    * 人脸识别
-    * 自学习分类
+    * [人脸检测](/course/ai/image/face_detect.md)
+    * [1000 种物体分类](/course/ai/image/1000_type_classifier.md)
+    * [人脸识别](/course/ai/image/face_recognization.md)
+    * [自学习分类](/course/ai/image/self_learn_classifier.md)
   * 音频处理
     * 语音识别
 * 模型训练
@@ -111,10 +110,10 @@
     - [舵机]
     - [ESP32 ADC]()
 * 其它功能
-  * [编辑器 pye]
+  * [编辑器 pye](/course/others/pye.md)
   * 系统
-    - [内存控制]()
-    - [主频、复位等]()
+    - [主频、复位等](/course/others/system/readme.md)
+    - [内存控制](/course/others/system/mem.md)
   * GUI
     - [Maix GUI](./api_reference/application/maixui.md)
     - [Lvgl](./api_reference/application/lvgl.md)

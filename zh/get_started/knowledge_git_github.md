@@ -47,6 +47,12 @@ github 的[帮助](https://docs.github.com/en/free-pro-team@latest/github), 中�
 
 star 后， 可以在个人资料里面找到自己的 star 仓库，方便下一次找到
 
+说到这里，大家觉得 [MaixPy](https://github.com/sipeed/maixpy) 不错的话，可以 star 一个哦～
+
+## 什么是 Master 分支
+
+在每个仓库中， 可以存在很多个分支，不同分支可以有不同的代码，而且不同的分支之间还可以互相合并，方便保存代码的不同版本，以及方便团队合作， master 分支就是指主分支，也就是最重要的分支，通常仓库默认展示的就是 master 分支。
+
 
 ## 什么是 issue
 

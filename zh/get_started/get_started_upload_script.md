@@ -72,10 +72,14 @@ cp ./test.py /flash/ #复制电脑当前目录的文件 test.py 到开发板 fla
 使用 `ampy run file_in_PC.py` 命令还可以不上传脚本到板子而是直接在板子上运行该脚本
 
 
-## TF 卡拷贝
+## SD（TF） 直接运行
 
-拷贝到 TF 卡后， 在终端中执行 `import 文件名` 来运行脚本
+拷贝到 SD 卡后， 在终端中执行 `import 文件名` 或者`exec()`来运行脚本
 
+## SD 卡自动拷贝到 Flash 文件系统
+
+
+为了方便将 SD 卡的内容拷贝到 Flash 文件系统， 只需要将要拷贝到 Flash 文件系统的文件重命名为`cover.boot.py` 或者`cover.main.py`, 然后放到`SD`卡根目录， 开发板断电插入`SD`卡，然后开发板上电， 程序就会自动将这两个文件拷贝到`/flash/boot.py`或者`/flash/main.py`，这样就算后面取出了`SD`卡，程序已经在 `/flash/boot.py`或者`/flash/main.py`了
 
 
 
