@@ -31,6 +31,12 @@
 
 文档源码托管在 [github](https://github.com/sipeed/MaixPy_DOC)
 
+本地预览方法见 文档源码的 [README.md](https://github.com/sipeed/MaixPy_DOC/blob/master/README.md)
+
+文档有两种语言， 中文和英文，分别放在`zh`和`en`文件夹中， 其中的`SUMMARY.md`是文档左边的目录项，其它`md`文件时具体的文档文件，根目录下的`assets`目录放两种语言公用的图片资源文件
+
+
+
 ## Markdown 语法
 
 Markdown 的基础语法如果没接触过， 请花半个小时进行学习， 推荐github的教程： [github Markdown 教程](https://guides.github.com/features/mastering-markdown/)
