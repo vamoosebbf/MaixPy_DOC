@@ -193,19 +193,20 @@
 ## 进阶
 
 * 进阶开发
-  * [如何添加一个 C 模块]()
+  - [源码目录结构](./course/advance/project_framework.md)
+  * [如何添加一个 C 模块](./course/advance/add_c_module.md)
+  * [打包文件系统](./course/advance/pack_fs.md)
 
 * 参与贡献
-  - [参与文档编写（规范）](./contribute/README.md)
-  - [提交经验分享贴](./contribute/app_doc_template.md)
-  - [源码目录结构]()
-  - [代码编写规范](./contribute/coding_style.md)
-  - [共享例程或]()
+  - [参与文档编写（规范）](./contribute/doc_convention.md)
+  - [代码编写规范](./contribute/code_convention.md)
+  - [共享 demo]
 
 
 ## 社区 & 分享
 
-- [精选教程]()
-- [开源项目]()
-- [经验分享]()
+- [精选教程](./share/recommend_articles.md)
+- [开源项目](./share/open_projects.md)
+- 大家的经验分享
+  * [参与经验分享/分享模板](./share/my_share/README.md)
 
