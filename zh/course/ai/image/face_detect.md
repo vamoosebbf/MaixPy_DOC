@@ -31,8 +31,9 @@ kpu.init_yolo2(task, 0.5, 0.3, 5, anchor)
 code = kpu.run_yolo2(task, img)
 ```
 
-得到结果， 详细例程看[这里](https://github.com/sipeed/MaixPy_scripts/blob/master/machine_vision/demo_find_face.py)
+得到结果， 完整例程看[这里](https://github.com/sipeed/MaixPy_scripts/blob/master/machine_vision/face_find/demo_find_face.py)
 
+API 文档看 [Maix.KPU](/api_reference/Maix/kpu.md)
 
 
 

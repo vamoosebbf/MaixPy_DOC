@@ -39,6 +39,17 @@ github 的[帮助](https://docs.github.com/en/free-pro-team@latest/github), 中�
 一个是一个软件， 一个是一个网站。
 只不过这个网站用到了 git 这个技术来管理仓库。
 
+## 为什么我无法访问 github， 或者访问速度很慢
+
+github 是国外的网站， 因为距离远，线路问题导致某些运营商的某些线路可能访问慢甚至无法访问，
+比如 github 用来存放源文件的域名 `https://raw.githubusercontent.com/` 可能无法访问
+
+解决方法：
+* 换个线路， 也就是换个网络， 比如你用电信网， 可以换移动或者联通试试， 换手机流量，或者换个地方等方法
+* 使用 VPN 类软件，这里不教，请注意合法使用
+
+
+
 ## 什么是 star
 
 在 github 上， 每个公开的仓库大家都可以去点赞收藏，也就是 star，在 github 右上角 ⭐ 形状的按钮
