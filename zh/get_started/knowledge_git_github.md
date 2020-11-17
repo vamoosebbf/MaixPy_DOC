@@ -34,6 +34,10 @@ MaixPy 的源码的地址是： [https://github.com/sipeed/maixpy](https://githu
 
 github 的[帮助](https://docs.github.com/en/free-pro-team@latest/github), 中文 [帮助](https://docs.github.com/cn/free-pro-team@latest/github)
 
+
+另外，国内也有几家不过的类似`github`的网站， 比如[gitee](https://gitee.com/)
+
+
 ## git 和 github 的区别
 
 一个是一个软件， 一个是一个网站。
@@ -63,6 +67,55 @@ star 后， 可以在个人资料里面找到自己的 star 仓库，方便下�
 ## 什么是 Master 分支
 
 在每个仓库中， 可以存在很多个分支，不同分支可以有不同的代码，而且不同的分支之间还可以互相合并，方便保存代码的不同版本，以及方便团队合作， master 分支就是指主分支，也就是最重要的分支，通常仓库默认展示的就是 master 分支。
+
+
+## 什么是提交
+
+提交，英文叫`commit`， 就是每次更改仓库的代码， 都提交一次，就会被记录到提交历史记录里面，后面随时都可以看这次提交了什么内容，也可以将代码回滚到这次提交
+
+每个提交都有一个独立的`commit ID`， 比如`d28cb7ac7db5ad61c0738df95d733717deefda1d`， 简写成`d28cb7a`
+
+## 什么是子模块
+
+子模块， 英文叫`submodule`， 就是在仓库中可以引用其它仓库，相当于是一个软链接， 不需要在仓库放实际的代码， 只需要放一个链接即可。
+这样的好处是多个仓库可以分开管理， 比如`仓库1`引用了`仓库2`作为子模块， 如果`仓库2`代码更新了， `仓库1`可以选择继续使用旧版的`仓库2`的代码， 也可以选择使用`仓库2`最新的代码，只是更新一下子模块链接
+
+比如`MaixPy`用了`kendryte-standalone-sdk`作为子模块,看[这里](https://github.com/sipeed/MaixPy/tree/master/components/kendryte_sdk)
+![submodule](../../assets/get_started/github_submodule.jpg)
+
+可以看到这里文件夹的图标不太一样，它只是一个链接，点击就会跳到相应的仓库而不是直接打开文件夹
+
+所以 **MaixPy 使用了子模块**
+
+
+
+## 什么是克隆
+
+在`github`上面的仓库，如果需要下载到本地来， 就需要使用克隆， 使用
+```
+git clone 地址
+```
+就可以吧仓库克隆到本地了， 克隆的本地的仓库名副其实就是 github 上面的一份克隆， 完全一样，也保留了历史记录等
+
+当然也可以不用克隆，网页有点击下载的按钮，但是下载的缺陷就是不会包含提交代码的历史记录，根据自己的情况选择
+
+需要注意的是， 在克隆包含有子模块的仓库时， 因为克隆默认只会将子模块的链接克隆下来， 子模块的代码没有克隆到本地， 你需要这样克隆
+```
+git clone 地址 --recursive
+```
+
+或者
+```
+git clone 地址 project_name
+cd project_name
+git submodule update --init --recursive
+```
+
+比如:
+```
+git clone https://github.com/sipeed/MaixPy --recursive
+```
+
 
 
 ## 什么是 issue

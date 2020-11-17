@@ -25,7 +25,7 @@ lcd.display(img)
 
 ```
 
-更多的函数和参数，可以看 [image API 手册](/api_reference/machine_vision/image.md)
+更多的函数和参数，可以看 [image API 手册](/api_reference/machine_vision/image.md) , 在页面搜索`image.draw` 可以找到所有画图函数
 
 
 

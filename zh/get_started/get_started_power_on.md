@@ -21,6 +21,8 @@ MaixPy 开发板上电
 
 如果没有发现设备， 需要确认有没有装驱动以及接触是否良好
 
+上电后， 如果是新出厂的开发板， 可能会显示红色背景，前景是简单的 MaixPy 介绍，包括官网地址，画面是静止的，需要通过接下来的编程让它改变。
+
 ## 检查固件版本
 
 使用**串口终端**打开串口，然后复位，看输出的版本信息，与[github](https://github.com/sipeed/MaixPy/releases) 或者 [master 分支](http://dl.sipeed.com/MAIX/MaixPy/release/master/) 的固件版本对比，根据当前版本情况考虑升级到最新版本

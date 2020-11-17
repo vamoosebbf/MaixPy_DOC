@@ -66,8 +66,8 @@
   * 图像获取和显示
     * [图像获取](/course/basic/image/get_images.md)
     * [图像显示](/course/basic/image/display_images.md)
+  * [MaixPy 图像及常用操作](/course/basic/image/vary.md)
   * [基本画图、写字](/course/basic/image/draw.md)
-  * [图像变换]
   * [硬件加速的图像处理](/course/basic/image/acc_image_deal.md)
 * MaixPy AI
   * [深度神经网络基础知识](/course/ai/basic/dnn_basic.md)
@@ -78,12 +78,11 @@
     * [人脸识别](/course/ai/image/face_recognization.md)
     * [自学习分类](/course/ai/image/self_learn_classifier.md)
   * 音频处理
-    * 语音识别
+    * [语音识别]
 * 模型训练
   * 训练自己的分类和检测模型
-    * MaixHub 云端训练
-    * 本地训练
-  * 自定义新的模型
+    * [MaixHub 云端训练](./course/ai/train/maixhub.md)
+    * [本地训练](./course/ai/train/local.md)
 * 传统算法
   * 图像处理
     - [寻找色块]()

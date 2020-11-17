@@ -91,7 +91,7 @@ img = sensor.snapshot()
 (1) `RGB565`内存块， 图像以 `RGB565`的形式存放在一块内存中，方便图像处理的函数使用，注意在内存中的排序是`[像素1 RGB, 像素2 RGB...]`
 (2) `RGB888`内存块， 图像以`R8G8B8`的形式存放在另一块内存中，注意在内存中的排序是`[所有像素 R, 所有像素 G， 所有像素 B]`, 我们也称之为`AI`内存
 
-**其中，实际上作为 KPU 输入的数据是`RGB888`区域**
+**其中，实际上作为 KPU 输入的数据是`RGB888`区域**， 这个在前面的文档 [MaixPy 图像及常用操作](/course/basic/image/vary.md) 章节中有仔细讲解过
 
 * 从文件读取，或者修改过的摄像头图像
 
@@ -99,7 +99,7 @@ img = sensor.snapshot()
 比如：
 ```python
 img = sensor.snapshot()
-img = img.resize((240, 240))
+img = img.resize(240, 240)
 img.pix_to_ai()
 ```
 
