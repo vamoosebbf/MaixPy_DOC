@@ -2,7 +2,7 @@ board_info
 ===============
 board_info：主要用于方便用户使用开发板引脚配置，其中内置了对人友好的命名及接口，可以使用户减少对电器连接原理图的依赖。
 
-board_info 是内部定义的一个 Board_Info 全局变量， 使用 `MicroPython` 语法编写， 源码见 [board.py](https://github.com/sipeed/MaixPy/blob/master/ports/k210-freertos/mpy_support/builtin-py/board.py)
+board_info 是内部定义的一个 Board_Info 全局变量， 使用 `MicroPython` 语法编写， 源码见 [board.py](https://github.com/sipeed/MaixPy_scripts/blob/master/board/board.py)
 
 
 ## 成员
