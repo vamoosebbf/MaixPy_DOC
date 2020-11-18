@@ -205,7 +205,7 @@
 
 ## 社区 & 分享
 
-- [精选教程](./share/recommend_articles.md)
+- [精选文章](./share/recommend_articles.md)
 - [开源项目](./share/open_projects.md)
 - 大家的经验分享
   * [参与经验分享/分享模板](./share/my_share/README.md)
