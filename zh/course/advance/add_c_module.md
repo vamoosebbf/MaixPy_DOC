@@ -8,7 +8,7 @@
 
 需要先知道 module，type， function， class 分别是什么，有什么关系和区别 
 
-1. module（模块）
+* module（模块）
 
 在`MaixPy`中，把每个类别的功能放到一个 模块 中，
 比如内置的 `uos`,`usys`,`machine`，
@@ -21,13 +21,13 @@ import test
 ```
 > 在 C 源码中就是 `mp_type_module`
 
-2. type（类型）
+* type（类型）
 
 用来表示一个基本的类型， 它可以包含一些方法或者变量
 
 > 在 C 源码中就是 `mp_type_type`
 
-3. class（类）
+* class（类）
 
 一个 class 其实就是一个 `type`，比如
 ```python
