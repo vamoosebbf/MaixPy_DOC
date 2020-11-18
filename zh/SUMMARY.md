@@ -200,7 +200,6 @@
 * 参与贡献
   - [参与文档编写（规范）](./contribute/doc_convention.md)
   - [代码编写规范](./contribute/code_convention.md)
-  - [共享 demo]
 
 
 ## 社区 & 分享
