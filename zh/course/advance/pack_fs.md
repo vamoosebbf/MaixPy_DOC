@@ -5,7 +5,11 @@
 
 详情请看使用说明： [pack SPIFFS for MaixPy](https://github.com/sipeed/MaixPy/tree/master/tools/spiffs)
 
+操作示例 GIF：
 ![pack fs](https://cdn.sipeed.com/pack_spiffs_ops.gif)
+
+GIF 备用链接： [pack_spiffs_ops.gif](../../../assets/course/advance/pack_spiffs_ops.gif)
+
 
 
 

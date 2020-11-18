@@ -54,9 +54,9 @@
   - [开发板配置文件]
   - [上手视频教程](./get_started/maixpy_get_started_video.md)
 * 固件定制
-  - [为什么需要定制固件](/firmware/why_customize_firware.md)
-  - [在线编译](/firmware/online_compile.md)
-  - [源码编译](/firmware/compile.md)
+  - [为什么需要定制固件](./firmware/why_customize_firware.md)
+  - [在线编译](./firmware/online_compile.md)
+  - [源码编译](./firmware/compile.md)
 
 
 ## MaixPy 手把手教程

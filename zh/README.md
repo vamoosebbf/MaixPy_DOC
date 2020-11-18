@@ -14,7 +14,11 @@ MaixPy 文档简介
 >
 > **MaixPy** 官方文档中文镜像站: [**cn.maixpy.sipeed.com**](https://cn.maixpy.sipeed.com)
 >
-> **MaixPy** 例程仓库: [**Github: maixpy_script**](https://github.com/sipeed/MaixPy_scripts)
+> **MaixPy** 例程仓库: [**github: maixpy_script**](https://github.com/sipeed/MaixPy_scripts)
+>
+> **MaixPy** 例程仓库中文镜像 [**gitee: maixpy_scripts**](https://gitee.com/Sipeed/maixpy_scripts)
+>
+> MaixPy 源码： [**github: MaixPy**](https://github.com/sipeed/MaixPy) 
 >
 > 开发板资料下载: [**dl.sipeed.com**](http://dl.sipeed.com/MAIX/HDK)
 >
@@ -29,7 +33,7 @@ MaixPy 文档简介
 
 
 
-**MaixPy** 让我们在 K210 上编程更加简单快捷， 我们也将源代码开源在 [**Github**](https://github.com/sipeed/MaixPy) 上
+**MaixPy** 让我们在 K210 上编程更加简单快捷， 我们也将源代码开源在 [**github**](https://github.com/sipeed/MaixPy) 上
 
 使用 MaixPy 可以做很多有趣的事情， 具体可以<a href= "what_maix_do.html" target="_blank">看这里</a>
 
