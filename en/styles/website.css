@@ -1,6 +1,16 @@
 .navigation {
   top: 90px;
 }
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.limit_width {
+  min-width: 65px;
+  display: inline-block;
+}
 .book-summary nav.autoshow a,
 .book-summary nav.autoshow a:hover {
   color: inherit;

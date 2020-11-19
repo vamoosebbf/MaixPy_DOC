@@ -10,19 +10,41 @@ MaixPy 文档简介
     <br/>
 </div>
 
-> **MaixPy** 唯一官方文档官网: [**maixpy.sipeed.com**](https://maixpy.sipeed.com)
->
-> **MaixPy** 官方文档中文镜像站: [**cn.maixpy.sipeed.com**](https://cn.maixpy.sipeed.com)
->
-> **MaixPy** 例程仓库: [**github: maixpy_script**](https://github.com/sipeed/MaixPy_scripts)
->
-> **MaixPy** 例程仓库中文镜像 [**gitee: maixpy_scripts**](https://gitee.com/Sipeed/maixpy_scripts)
->
-> MaixPy 源码： [**github: MaixPy**](https://github.com/sipeed/MaixPy) 
->
-> 开发板资料下载: [**dl.sipeed.com**](http://dl.sipeed.com/MAIX/HDK)
->
-> Sipeed WIKI [**wiki.sipeed.com**](https://wiki.sipeed.com)
+
+<table role="table" class="left">
+    <thead>
+        <tr>
+            <th>网站导航</th>
+            <th>地址</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>MaixPy</strong> 唯一官方文档官网</td>
+            <td><span class="limit_width">官网:</span> <span class=""><a href="https://maixpy.sipeed.com" rel="nofollow"><strong>maixpy.sipeed.com</strong></a></span><br><span class="limit_width">中文站: </span><span class=""><a href="https://cn.maixpy.sipeed.com" rel="nofollow"><strong>cn.maixpy.sipeed.com</strong></a></span></td>
+        </tr>
+        <tr>
+            <td><strong>MaixPy</strong> 例程仓库</td>
+            <td><span class="limit_width">github：</span> <span class=""><a href="https://github.com/sipeed/MaixPy_scripts"><strong>github/maixpy_script</strong></a></span> <br><span class="limit_width">国内：</span><span class=""><a href="https://gitee.com/Sipeed/maixpy_scripts" rel="nofollow"><strong>gitee/maixpy_scripts</strong></a></span></td>
+        </tr>
+        <tr>
+            <td>MaixPy 源码</td>
+            <td><span class="limit_width"></span><span class=""><a href="https://github.com/sipeed/MaixPy"><strong>github: MaixPy</strong></a></span></td>
+        </tr>
+        <tr>
+            <td>开发板资料下载</td>
+            <td><span class="limit_width"></span><span class=""><a href="http://dl.sipeed.com/MAIX/HDK" rel="nofollow"><strong>dl.sipeed.com</strong></a></span></td>
+        </tr>
+        <tr>
+            <td>Sipeed WIKI</td>
+            <td><span class="limit_width"></span><span class=""><a href="https://wiki.sipeed.com" rel="nofollow"><strong>wiki.sipeed.com</strong></a></span></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
 
 ## 关于 MaixPy
 
@@ -135,5 +157,49 @@ MaixPy 源码托管在 [github](https://github.com/sipeed/MaixPy)
 关于本文档或者功能或者源码方面的问题，也欢迎提交issue:
 
 * [反馈](https://github.com/sipeed/MaixPy/issues)
+
+
+## 交流
+
+有问题尽量到上面的反馈地址提交`issue`，方便留下记录，其他人也可以查阅，提交前搜索一下是否有人提过相同问题
+
+以下交流方式提供辅助：
+
+<table role="table">
+    <thead>
+        <tr>
+            <th>交流方式</th>
+            <th>地址</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>issue</td>
+            <td><a href="https://github.com/sipeed/MaixPy/issues">https://github.com/sipeed/MaixPy/issues</a></td>
+        </tr>
+        <tr>
+            <td>BBS</td>
+            <td><a href="https://bbs.sipeed.com" rel="nofollow">https://bbs.sipeed.com</a></td>
+        </tr>
+        <tr>
+            <td>MaixPy AI QQ 交流群</td>
+            <td>878189804</td>
+        </tr>
+        <tr>
+            <td>MaixPy AI QQ 交流群(二群)</td>
+            <td>1129095405</td>
+        </tr>
+        <tr>
+            <td>telgram</td>
+            <td><a href="https://t.me/sipeed" rel="nofollow">https://t.me/sipeed</a></td>
+        </tr>
+        <tr>
+            <td>E-mail(商业合作)</td>
+            <td><a target="_blank" rel="noopener noreferrer" href="../assets/sipeed/support_email.jpg"><img src="../assets/sipeed/support_email.jpg" alt="email" style="max-width:100%;"></a></td>
+        </tr>
+    </tbody>
+</table>
+
+
 
 ------------

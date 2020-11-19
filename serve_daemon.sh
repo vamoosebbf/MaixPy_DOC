@@ -19,4 +19,7 @@ elif [[ "x$b" != "x" ]]; then
     exit 0
 fi
 sleep 1s
+if ! [[ -f serve.tmp ]]; then
+    exit 0
+fi
 done
