@@ -54,9 +54,9 @@
   - [开发板配置文件]
   - [上手视频教程](./get_started/maixpy_get_started_video.md)
 * 固件定制
-  - [为什么需要定制固件](/firmware/why_customize_firware.md)
-  - [在线编译](/firmware/online_compile.md)
-  - [源码编译](/firmware/compile.md)
+  - [为什么需要定制固件](./firmware/why_customize_firware.md)
+  - [在线编译](./firmware/online_compile.md)
+  - [源码编译](./firmware/compile.md)
 
 
 ## MaixPy 手把手教程
@@ -200,12 +200,11 @@
 * 参与贡献
   - [参与文档编写（规范）](./contribute/doc_convention.md)
   - [代码编写规范](./contribute/code_convention.md)
-  - [共享 demo]
 
 
 ## 社区 & 分享
 
-- [精选教程](./share/recommend_articles.md)
+- [精选文章](./share/recommend_articles.md)
 - [开源项目](./share/open_projects.md)
 - 大家的经验分享
   * [参与经验分享/分享模板](./share/my_share/README.md)

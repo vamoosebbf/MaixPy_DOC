@@ -4,7 +4,7 @@
 开发板有配套的摄像头和屏幕，请在上电前检查硬件连接是否正确
 
 然后上电，打开串口终端， 按键盘`Ctrl+E`,然后粘贴以下代码：
-```ptyhon
+```python
 import sensor, lcd
 
 sensor.reset()
