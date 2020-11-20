@@ -4,7 +4,7 @@ MaixPy 文档简介
 <div class="title_pic">
     <img src="../assets/maixpy/maixpy.png" height="200">
     <br/>
-    <img src="../assets/sipeed/sipeed_logo_2.png">
+    <img src="../assets/sipeed/sipeed_logo_4.svg" height=64>
     <!-- <br/> -->
     <img src="../assets/maixpy/micropython.png">
     <br/>
