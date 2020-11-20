@@ -94,8 +94,7 @@ MaixAmigo 板载 I2C 传感器/IC
 
 ## 上手把玩
 
-由于 MaixAmigo 出厂自带 GUI 演示界面和示例程序，所以在拿到板子时可以先上手把玩下预设程序，
-在之后那么我们就开始以 MaixAmigo 上手，借助 MaixPy 入门 AIoT.
+MaixAmigo 同样使用 MaixPy 入门 AIoT ，由于硬件特殊性，请在[配置 amigo 硬件](https://github.com/sipeed/MaixPy_scripts/blob/master/board/config_maix_amigo.py) 后再使用 MaixPy 。
 
 而在开发之前我们需要了解并准备相关工具，以减少我们后边因为准备不足而走的坑路
 
@@ -159,10 +158,8 @@ MaixAmigo 板载 I2C 传感器/IC
 
 ```python
 # -*- coding: UTF-8 -*-
-# Amigo_sensor - By: Echo - 周五 4月 2 2020
-# start of pmu_axp173.py
 import sensor, image, time, utime, lcd
-from machine import I2C, Timer
+from machine import I2C
 from fpioa_manager import fm
 from Maix import GPIO
 
@@ -172,36 +169,15 @@ from Maix import GPIO
 '''
 
 # -------------
-class AXP173:
-    class PMUError(Exception):
-        pass
-    class OutOfRange(PMUError):
-        pass
-    def __init__(self, i2c_dev=None, i2c_addr=0x34):
-        from machine import I2C
-        if i2c_dev is None:
-            try:
-                self.i2cDev = I2C(I2C.I2C0, freq=400000, scl=24, sda=27)
-            except Exception:
-                raise PMUError("Unable to init I2C0 as Master")
-        else:
-            self.i2cDev = i2c_dev
-        self.i2cDev.scan()
-        self.axp173Addr = i2c_addr
-    def __write_reg(self, reg_address, value):
-        self.i2cDev.writeto_mem(
-            self.axp173Addr, reg_address, value, mem_size=8)
-    def writeREG(self, regaddr, value):
-        self.__write_reg(regaddr, value)
-
-# end of pmu_axp173.py
-# ------------------------
-
-# i2cDev = I2C(I2C.I2C0, freq=400000, scl=24, sda=27)
-# print(i2cDev.scan())
-axp173 = AXP173()
-axp173.writeREG(0x27, 0x20)
-axp173.writeREG(0x28, 0x0C)
+try:
+  from machine import I2C
+  axp173 = I2C(I2C.I2C3, freq=100000, scl=24, sda=27)
+  axp173.writeto_mem(0x34, 0x27, 0x20, mem_size=8)
+  axp173.writeto_mem(0x34, 0x28, 0x0C, mem_size=8)
+  axp173.writeto_mem(0x34, 0x36, 0xCC, mem_size=8)
+  del axp173
+except Exception as e:
+  print(e)
 
 lcd.init(freq=20000000)
 
