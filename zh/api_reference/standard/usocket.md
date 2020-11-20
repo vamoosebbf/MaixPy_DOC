@@ -136,15 +136,15 @@ IP协议号。可用性取决于特定的`MicroPython端口`。注意，在调�
 
 套接字在被垃圾收集时会自动关闭，但建议你在完成它们之后立即“关闭”它们。
 
-#### socket.bind(address)
+#### (maixpy 未实现)socket.bind(address)
 
 将套接字绑定到地址。套接字必须尚未绑定。
 
-#### socket.listen([backlog])
+#### (maixpy 未实现)socket.listen([backlog])
 
 使服务器接受连接。如果指定了积压，则必须至少为0（如果低，则将其设置为0）;并指定在拒绝新连接之前系统将允许的未接受连接数。如果未指定，则选择默认的合理值。
 
-#### socket.accept()
+#### (maixpy 未实现)socket.accept()
 
 接受连接。套接字必须绑定到一个地址并侦听连接。返回值是一对（conn，address），其中conn是可用于在连接上发送和接收数据的新套接字对象，address是绑定到连接另一端的套接字的地址。
 
