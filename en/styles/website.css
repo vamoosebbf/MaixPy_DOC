@@ -196,5 +196,17 @@
   color: #868686;
   border-top: solid 1px #e6e6e6;
 }
+.logo_maixpy {
+  margin-bottom: 15px; 
+}
+.logo_maixpy img {
+  height: 200px;
+}
+.logo_sipeed img {
+  height: 43px;
+}
+.logo_mpy img {
+  height: 45px;
+}
 
 

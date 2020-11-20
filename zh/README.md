@@ -2,11 +2,15 @@ MaixPy 文档简介
 =====
 
 <div class="title_pic">
-    <img src="../assets/maixpy/maixpy.png" height="200">
-    <br/>
-    <img src="../assets/sipeed/sipeed_logo_4.svg" height=64>
-    <!-- <br/> -->
-    <img src="../assets/maixpy/micropython.png">
+    <div class="logo_maixpy">
+    <img src="../assets/maixpy/maixpy.png" alt="maixpy logo">
+    </div>
+    <span class="logo_sipeed">
+    <img src="../assets/sipeed/sipeed_logo_4.svg" alt="sipeed logo">
+    </span>
+    <span class="logo_mpy">
+    <img src="../assets/maixpy/micropython.png" alt="micropython logo">
+    </span>
     <br/>
 </div>
 
