@@ -1,68 +1,85 @@
-board_info
-===============
-board_info：主要用于方便用户使用开发板引脚配置，其中内置了对人友好的命名及接口，可以使用户减少对电器连接原理图的依赖。
+Board
+=======
 
-board_info 是内部定义的一个 Board_Info 全局变量， 使用 `MicroPython` 语法编写， 源码见 [board.py](https://github.com/sipeed/MaixPy/blob/master/ports/k210-freertos/mpy_support/builtin-py/board.py)
+> **本文档在 MaixPy 0.5.1-128 版本测试通过。**
 
+这是一个 MaixPy 板级配置模块，它可以在用户层统一 Python 代码，从而屏蔽许多硬件的引脚差异。
 
-## 成员
-
-board_info拥有许多个引脚索引和一个列表
-
-### pin_name列表
-
-列表主要是用于类内部使用，用户不对其进行操作
-
-### 引脚索引
-引脚索引主要是将数字转换为人类友好的字符串，让用户方便编程
-
-输入以下，请注意不要忽略 `.` 号，然后按下 `tab键` 进行补全，可以看到板级相关的引脚功能
-
-```
-board_info.
-```
-
-比如输入以下代码，将返回数字 `8`，代表的是开发板的第8号引脚，其电器连接是wifi模块的使能引脚
-
-```
-board_info.WIFI_EN
-```
-
-## 方法
-
-### 查找方法
-
-当用户不清楚引脚电器连接时，可以使用该方法查找
-
-```
-board_info.pin_map(pin_num)
-```
-#### 参数
-
-该方法不传入参数或者传入一个参数
-
-* `pin_num`: 引脚编号，范围[6,47]
-
-当不传入参数时，将打印所有引脚的板级电气连接信息
-
-传入参数时，仅打印指定引脚的板级电气连接信息
-
-#### 返回值
-
-* 参数错误返回 `False`
-* 未知错误返回 `False`
-* 查找成功返回 信息
-
-## 例程
-
-### 例程 1
+效果如下：
 
 ```python
-
 from board import board_info
-
-wifi_en_pin = board_info.WIFI_EN
-print(wifi_en_pin)#输出为8
-board_info.pin_map()#打印所有
-board_info.pin_map(8)#只打印8号引脚的信息
+print(board_info.LED_R)
+led_r = GPIO(GPIO.GPIO0, GPIO.OUT)
+led_r.value(0)
 ```
+
+而这份代码同时支持 MaixPy 所有硬件运行，并且打印的 board_info.LED_R 都不尽相同，通过它保证示例代码的一致性。
+
+### board 的配置方法
+
+调用『指定硬件』的配置代码，完成对『指定硬件』配置项（config.json）的导入。
+
+### Maix Bit
+
+[config_maix_bit.py](https://github.com/sipeed/MaixPy_scripts/tree/master/board/config_maix_bit.py)
+
+### Maix Dock
+
+[config_maix_dock.py](https://github.com/sipeed/MaixPy_scripts/tree/master/board/config_maix_dock.py)
+
+### Maix Go
+
+[config_maix_go.py](https://github.com/sipeed/MaixPy_scripts/tree/master/board/config_maix_go.py)
+
+### Maix Duino
+
+[config_maix_duino.py](https://github.com/sipeed/MaixPy_scripts/tree/master/board/config_maix_duino.py)
+
+### Maix Cube
+
+[config_maix_cube.py](https://github.com/sipeed/MaixPy_scripts/tree/master/board/config_maix_cube.py)
+
+### Maix Amigo
+
+[config_maix_amigo.py](https://github.com/sipeed/MaixPy_scripts/tree/master/board/config_maix_amigo.py)
+
+### Maix Nano
+
+> 这个没有硬件外设.....所以不要问为什么没有它的配置代码了。
+
+### 你的专属硬件
+
+你可以借助该接口代码适配你的硬件，配置方法参考 [MaixPy_scripts/board](https://github.com/sipeed/MaixPy_scripts/tree/master/board) 里面有供你参考的配置文件。
+
+### board 的使用方法
+
+导入配置：
+
+```python
+from board import board_info
+board_info.load({
+    'PIN10': 10,
+    'BOOT_KEY': 16,
+    'WIFI_TX': 6,
+    'WIFI_RX': 7,
+    'WIFI_EN': 8,
+})
+print('PIN10:', board_info.PIN10)
+print('BOOT_KEY:', board_info.BOOT_KEY)
+print('WIFI_TX:', board_info.WIFI_TX)
+print('WIFI_RX:', board_info.WIFI_RX)
+print('WIFI_EN:', board_info.WIFI_EN)
+```
+
+调用结果：
+
+```shell
+PIN10: 10
+BOOT_KEY: 16
+WIFI_TX: 6
+WIFI_RX: 7
+WIFI_EN: 8
+```
+
+> 就这样。

@@ -7,13 +7,13 @@ K210 支持每个外设随意映射到任意引脚， 使用 FPIOA 功能来实�
 
 以下 GPIOHS 默认已经被使用， 程序中如非必要尽量不要使用：
 
-| GPIOHS | 功能|
-| ------ | --- |
-| GPIOHS31 | LCD_DC      |
-| GPIOHS30 | LCD_RST     |
-| GPIOHS29 | SD_CS       |
-| GPIOHS28 | MIC_LED_CLK |
-| GPIOHS27 | MIC_LED_DATA |
+| GPIOHS | 功能| 描述 |
+| ------ | --- | --- |
+| GPIOHS5 | LCD_DC      | LCD 读写信号引脚 |
+| GPIOHS4 | LCD_RST     | LCD 复位芯片脚 |
+| GPIOHS29 | SD_CS       | SD 卡 SPI 片选 |
+| GPIOHS28 | MIC_LED_CLK | SK9822_DAT |
+| GPIOHS27 | MIC_LED_DATA | SK9822_CLK |
 
 
 
