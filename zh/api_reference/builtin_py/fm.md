@@ -3,11 +3,11 @@ fpioa_manager
 
 > **本文档在 MaixPy 0.5.1-128 版本测试通过。**
 
-fpioa_manager：简称`fm`，该模块用于注册芯片内部功能和引脚，帮助用户管理内部功能和引脚， MaixPy 在 Python 上提供了更易用的 [fpioa_manager.py](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/fpioa_manager.py) 功能模块。
+fpioa_manager：简称`fm`，该模块用于注册芯片内部功能和引脚，帮助用户管理内部功能和引脚的功能模块。
 
 ## 使用方法
 
-调用 register 函数将 pin 引脚与具体的硬件功能(GPIO/I2C/UART/I2S/SPI)绑定起来，在不使用的时候调用 unregister 释放引脚所绑定的硬件功能（或称 **function** ），这不同于传统单片机的理解， K210 可以在有限范围内的引脚任意交换具体操作的硬件功能。
+调用 register 函数将 pin 引脚与具体的硬件功能(GPIO/I2C/UART/I2S/SPI)绑定起来，在不使用的时候调用 unregister 释放引脚所绑定的硬件功能（或称 **function** ），这不同于传统单片机的理解， K210 可以将一定范围内的引脚映射到具体的硬件功能。
 
 如下代码所示：
 
