@@ -78,7 +78,7 @@
     * [人脸识别](/course/ai/image/face_recognization.md)
     * [自学习分类](/course/ai/image/self_learn_classifier.md)
   * 音频处理
-    * [语音识别]
+    * [语音识别](./application/speech_recognizer/cnn.md)
 * 模型训练
   * 训练自己的分类和检测模型
     * [MaixHub 云端训练](./course/ai/train/maixhub.md)
@@ -90,7 +90,7 @@
   * 音频处理
     - [FFT频谱图]
     - [声场成像]
-    - [关键词识别](speech_recognizer)
+    - [关键词识别](./application/speech_recognizer/mfcc.md)
 * [外设]
   * [片上外设]
   * SP-MOD
