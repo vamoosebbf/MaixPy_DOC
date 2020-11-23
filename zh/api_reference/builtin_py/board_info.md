@@ -8,8 +8,11 @@ Board
 效果如下：
 
 ```python
+from Maix import GPIO
+from fpioa_manager import fm
 from board import board_info
 print(board_info.LED_R)
+fm.register(board_info.LED_R, fm.fpioa.GPIO0, force=True)
 led_r = GPIO(GPIO.GPIO0, GPIO.OUT)
 led_r.value(0)
 ```
