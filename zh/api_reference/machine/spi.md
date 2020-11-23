@@ -7,7 +7,7 @@ SPI（Serial Peripheral Interface） 是一个同步串行协议，由主机和�
 
 在 K210 上， SPI 有一下特征：
 
-* 共有 4 个 SPI 设备， 其中 SPI0 、SPI1、 SPI3 只能工作在主机模式下， SPI2 只能工作在从机模式时下， 在 MaixPy 上， SPI3已经用来连接了 SPI Flash， 暂时保留， 以后如果有必要再考虑开放接口与 SPI Flash 分时复用
+* 共有 4 个 SPI 设备， 其中 SPI0 、SPI1、 SPI3 只能工作在主机模式下， SPI2 只能工作在从机模式时下， 在 MaixPy 上， SPI3 已经用来连接了 SPI Flash 作为保留硬件资源。
 * 支持 1/2/4/8 线全双工模式， 在 MaixPy 中， 目前只支持标准（摩托罗拉）4线全双工模式（即 SCK， MOSI， MISO， CS 四个引脚）
 * 最高传输速率 45M：1/2主频，约 200Mbps
 * 支持 DMA
@@ -25,7 +25,7 @@ class machine.SPI(id, mode=SPI.MODE_MASTER, baudrate=500000, polarity=0, phase=0
 
 ### 参数
 
-* `id`： SPI ID， 取值范围[0,3]， 目前只支持 0 和 1， 并且只能是主机模式， 2 只能作为从机，目前未实现， 3 保留
+* `id`： SPI ID， 取值范围[0,4]， 目前只支持 0 和 1 、4 ， 并且只能是主机模式， 2 只能作为从机，目前未实现， 3 保留, 4 使用软模拟 SPI（.SPI_SOFT）
 * `mode`： SPI  模式， `MODE_MASTER` 或者`MODE_MASTER_2`或者`MODE_MASTER_4`或者`MODE_MASTER_8`或者`MODE_SLAVE`， 目前只支持`MODE_MASTER`
 * `baudrate`： SPI 波特率（频率）
 * `polarity`： 极性， 取值为 0 或 1， 表示 SPI 在空闲时的极性， 0 代表低电平， 1 代表高电平

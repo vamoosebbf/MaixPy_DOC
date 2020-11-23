@@ -21,7 +21,7 @@ class machine.I2C(id, mode=I2C.MODE_MASTER, scl=None, sda=None, freq=400000, tim
 
 ### 参数
 
-* `id`： I2C ID, [0~2] \(I2C.I2C0~I2C.I2C2\)
+* `id`： I2C ID, [0~2] \(I2C.I2C0~I2C.I2C2\) [3~5] \(I2C.I2C3~I2C.I2C5\) 是软模拟 I2C 的编号
 * `mode`： 模式， 主机(`I2C.MODE_MASTER`)和从机（`I2C.MODE_SLAVE`)模式
 * `scl`： SCL 引脚，直接传引脚编号即可，取值范围： [0,47]。 可以不设置，而是使用 [fm](../builtin_py/fm.md) 统一管理引脚映射。
 * `sda`： SDA 引脚，直接传引脚编号即可，取值范围： [0,47]。 可以不设置，而是使用 [fm](../builtin_py/fm.md) 统一管理引脚映射。
