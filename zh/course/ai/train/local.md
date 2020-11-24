@@ -2,7 +2,7 @@
 ==========
 
 
-本地模型训练使用 [sipeed/train_scripts](https://github.com/sipeed/train_scripts) 这份代码进行， 使用了 Tensorflow 作为训练框架
+本地模型训练使用 [sipeed/maix_train](https://github.com/sipeed/maix_train) 这份代码进行， 使用了 Tensorflow 作为训练框架
 
 主要支持：
 * 物体分类模型（使用 Mobilenet V1）： 只识别图片中的物体是什么
@@ -29,19 +29,19 @@
 > GPU 使用可以参考 Tensorflow 官方 [GPU 使用教程](https://tensorflow.google.cn/install/gpu)， 如果你显卡驱动遇到了问题，可以参考[这里](https://neucrack.com/p/252)， 另外如果你用 [docker 安装](https://tensorflow.google.cn/install/docker )遇到了问题， 也可以看[这里](https://neucrack.com/p/116)
 
 
-接下来的使用方法摘抄于仓库的 [README](https://github.com/sipeed/train_scripts/blob/master/README.md), 如果有出入， 以仓库的`README`为准，注意分辨
+接下来的使用方法摘抄于仓库的 [README](https://github.com/sipeed/maix_train/blob/master/README.md), 如果有出入， 以仓库的`README`为准，注意分辨
 
 
 * 将训练代码克隆到本地
 
 ```
-git clone https://github.com/sipeed/train_scripts --recursive
+git clone https://github.com/sipeed/maix_train --recursive
 ```
 
 * 安装依赖
 
 ```
-cd train_scripts
+cd maix_train
 pip3 install -r requirements.txt
 ```
 中国用户可以使用阿里云或者清华的源， 下载速度更快
@@ -49,7 +49,7 @@ pip3 install -r requirements.txt
 pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 ```
 
-* 下载 [nncase v0.1.0-rc5](https://github.com/kendryte/nncase/releases/tag/v0.1.0-rc5) 并解压到 `train_scripts/tools/ncc/ncc_v0.1`, 保证可执行文件的路径是 `train_scripts/tools/ncc/ncc_v0.1/ncc`
+* 下载 [nncase v0.1.0-rc5](https://github.com/kendryte/nncase/releases/tag/v0.1.0-rc5) 并解压到 `maix_train/tools/ncc/ncc_v0.1`, 保证可执行文件的路径是 `maix_train/tools/ncc/ncc_v0.1/ncc`
 
 * 配置工程
 
@@ -57,11 +57,11 @@ pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 ```
 python3 train.py init
 ```
-然后根据你的硬件情况，编辑`train_scripts/instance/config.py`配置
+然后根据你的硬件情况，编辑`maix_train/instance/config.py`配置
 
 ## 准备数据集
 
-准备数据集， 图片大小为 `224x224`， 格式可以参考`train_scripts/datasets`下的数据集示例
+准备数据集， 图片大小为 `224x224`， 格式可以参考`maix_train/datasets`下的数据集示例
 
 也可以看 [Maxhub 的数据集要求](https://www.maixhub.com/index/mtrain/help.html)
 
