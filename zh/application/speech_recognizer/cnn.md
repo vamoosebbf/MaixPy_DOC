@@ -15,6 +15,8 @@ maix asr
 
 从这里获取声学模型[maix_asr_2900k_0x500000](https://github.com/sipeed/MaixPy_scripts/blob/master/multimedia/speech_recognizer/maix_asr_2900k_0x500000.kmodel), 烧录到 0x500000 地址即可。
 
+> 没有烧模型就加载模块会 core dump ，不要跑来问怎么报错了。
+
 - 创建录音设备
 
 本模块支持所有 Maix 系列硬件使用，我们只需要配置一个 I2S.DEVICE_0 设备，并设置 CHANNEL_0 通道到录音输入就可以了，如果是 Cube 和 amigo 则需要先配置具体的音频解码芯片，再打开 I2C 录音设备。
@@ -131,5 +133,83 @@ finally:
 
 ## 模块接口
 
-### class asr
+### class maix_asr
 
+该模块由继承 asr 模块而来的辅助类，实现已经在【示例代码】提供，成员函数如下：
+
+```shell
+>>> maix_asr.
+__class__       __module__      __name__        __qualname__
+get             set             stop            __del__
+config          recognize       result          run
+state           asr_vocab       get_asr_list    get_asr_string
+unit_test
+```
+
+#### function config()
+
+可以配置语音识别的所需要的词汇列表，最大不超过 6 个音符，超了会忽略，参数为 `'xiao-ai-ya' : 0.3` 对应的 中文拼音字符串 和 匹配的最低概率（门限），且注意它不区分音调，所以 `你-好-鸭` 和 `尼-浩-雅` 没有区别，所以设计的时候要注意词汇的语调是否会形成新词。
+
+```python
+  t.config({
+    'xiao-ai-ya' : 0.3,
+    'hao-de-ya' : 0.2,
+    'ni-hao-ya' : 0.3,
+  })
+```
+
+#### function recognize()
+
+将会识别 config 函数中所配置的词汇。
+
+用例如下：
+
+```python
+tmp = t.recognize()
+# print(tmp)
+if tmp != None:
+    print(tmp)
+```
+
+返回结果：
+
+```python
+{
+    'xiao-ai-ya' : 0.9,
+    'xiao-ai' : 0.2,
+}
+```
+
+跟 config 时的参数一样，只是作为返回值给出，可以见到此处出现 `小-爱-鸭` 和 `小-爱` 两个匹配结果。
+
+#### function state()
+
+期望保持在 100ms 内能够执行 asr 模块，它会返回当前模块状态，可以忽略返回结果，用法如下：
+
+```python
+from machine import Timer
+
+def on_timer(timer):
+  #print("time up:",timer)
+  #print("param:",timer.callback_arg())
+  timer.callback_arg().state()
+
+# default: maix dock / maix duino set shift=0
+t = maix_asr(0x500000, I2S.DEVICE_0, 3, shift=0) # maix bit set shift=1
+tim = Timer(Timer.TIMER0, Timer.CHANNEL0, mode=Timer.MODE_PERIODIC, period=64, callback=on_timer, arg=t)
+tim.start()
+```
+
+可见 on_timer 会在 64 ms 的周期内执行 timer.callback_arg().state() 函数，其中 timer.callback_arg() 为 maix_asr 类的实例。
+
+#### function run()
+
+控制模块运行（录音）。
+
+#### function stop()
+
+控制模块停止（录音）。
+
+#### function __del__()
+
+主动调用可释放模块，可被 gc.collect() 主动回收。
