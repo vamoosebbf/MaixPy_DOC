@@ -11,203 +11,20 @@ KPU是通用的神经网络处理器，它可以在低功耗的情况下实现�
   * 实时工作时最大支持神经网络参数大小为 5.5MiB 到 5.9MiB
   * 非实时工作时最大支持网络参数大小为（Flash 容量-软件体积）
 
-## 模块方法
-
-### 加载模型
-
-从flash或者文件系统中加载模型
-
-```python
-import KPU as kpu
-task = kpu.load(offset or file_path)
-```
-
-#### 参数
-
-* `offtset`: 模型在 flash 中的偏移大小，如 `0xd00000` 表示模型烧录在13M起始的地方
-* `file_path`: 模型在文件系统中为文件名， 如 `“/sd/xxx.kmodel”`
-
-##### 返回
-
-* `kpu_net`: kpu 网络对象
-
-### 初始化yolo2网络
-
-为yolo2网络模型传入初始化参数
-
-```python
-import KPU as kpu
-task = kpu.load(offset or file_path)
-anchor = (1.889, 2.5245, 2.9465, 3.94056, 3.99987, 5.3658, 5.155437, 6.92275, 6.718375, 9.01025)
-kpu.init_yolo2(task, 0.5, 0.3, 5, anchor)
-```
-
-#### 参数
-
-* `kpu_net`: kpu 网络对象
-
-* `threshold`: 概率阈值
-
-* `nms_value`: box_iou 门限
-
-* `anchor_num`: 锚点数
-
-* `anchor`: 锚点参数与模型参数一致
-
-### 反初始化
-
-```python
-import KPU as kpu
-task = kpu.load(offset or file_path)
-kpu.deinit(task)
-```
-
-#### 参数
-
-`kpu_net`: kpu_load 返回的 kpu_net 对象
 
 
-### 运行yolo2网络
-
-```python
-import KPU as kpu
-import image
-task = kpu.load(offset or file_path)
-anchor = (1.889, 2.5245, 2.9465, 3.94056, 3.99987, 5.3658, 5.155437, 6.92275, 6.718375, 9.01025)
-kpu.init_yolo2(task, 0.5, 0.3, 5, anchor)
-img = image.Image()
-kpu.run_yolo2(task, img) #此处不对，请参考例程
-```
-
-#### 参数
-
-* `kpu_net`: kpu_load 返回的 kpu_net 对象
-* `image_t`：从 sensor 采集到的图像
-
-##### 返回
-
-* `list`: kpu_yolo2_find 的列表 
-
-### 网络前向运算(forward)
-
-计算已加载的网络模型到指定层数，输出目标层的特征图
-
-```python
-import KPU as kpu
-task = kpu.load(offset or file_path)
-……
-fmap=kpu.forward(task,img,3)
-```
-
-#### 参数
-
-* `kpu_net`: kpu_net 对象
-* `image_t`: 从 sensor 采集到的图像
-* `int`: 指定计算到网络的第几层
-
-##### 返回
-
-* `fmap`: 特征图对象，内含当前层所有通道的特征图
-
-
-### fmap 特征图
-
-取特征图的指定通道数据到image对象
-
-```python
-img=kpu.fmap(fmap,1)
-```
-
-#### 参数
-
-* `fmap`: 特征图 对象
-* `int`: 指定特征图的通道号
-
-##### 返回
-
-* `img_t`: 特征图对应通道生成的灰度图
-
-
-### fmap_free 释放特征图
-
-释放特征图对象
-
-```python
-kpu.fmap_free(fmap)
-```
-
-#### 参数
-
-* `fmap`: 特征图 对象
-
-##### 返回
-
-* 无
-
-### netinfo 
-
-获取模型的网络结构信息
-
-```python
-info=kpu.netinfo(task)
-layer0=info[0]
-```
-
-#### 参数
-
-* `kpu_net`: kpu_net 对象
-
-##### 返回
-
-* `netinfo list`：所有层的信息list, 包含信息为：
-```
-index：当前层在网络中的层数
-wi：输入宽度
-hi：输入高度
-wo：输出宽度
-ho：输出高度
-chi：输入通道数
-cho：输出通道数
-dw：是否为depth wise layer
-kernel_type：卷积核类型，0为1x1， 1为3x3
-pool_type：池化类型，0不池化; 1：2x2 max pooling; 2:...
-para_size：当前层的卷积参数字节数
-```
 
 ## 例程
 
-#### 运行人脸识别demo
+### 运行人脸检测
 
-模型下载地址：http://dl.sipeed.com/MAIX/MaixPy/model/face_model_at_0x300000.kfpkg
+模型下载地址：[http://dl.sipeed.com/MAIX/MaixPy/model](http://dl.sipeed.com/MAIX/MaixPy/model) , 下载`face_model_at_0x300000.kfpkg`
 
-```python
-import sensor
-import image
-import lcd
-import KPU as kpu
+完整例程： [face_find](https://github.com/sipeed/MaixPy_scripts/tree/master/machine_vision/face_find)
 
-lcd.init()
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.QVGA)
-sensor.run(1)
-task = kpu.load(0x300000) #使用kfpkg将 kmodel 与 maixpy 固件打包下载到 flash
-anchor = (1.889, 2.5245, 2.9465, 3.94056, 3.99987, 5.3658, 5.155437, 6.92275, 6.718375, 9.01025)
-a = kpu.init_yolo2(task, 0.5, 0.3, 5, anchor)
-while(True):
-    img = sensor.snapshot()
-    code = kpu.run_yolo2(task, img)
-    if code:
-        for i in code:
-            print(i)
-            a = img.draw_rectangle(i.rect())
-    a = lcd.display(img)
-a = kpu.deinit(task)
-```
+### 运行特征图
 
-#### 运行特征图
-
-模型下载地址：http://dl.sipeed.com/MAIX/MaixPy/model/face_model_at_0x300000.kfpkg
+模型下载地址：[http://dl.sipeed.com/MAIX/MaixPy/model](http://dl.sipeed.com/MAIX/MaixPy/model) , 下载`face_model_at_0x300000.kfpkg`
 
 该模型是8bit定点模型，约380KB大小，层信息为：
 ```
@@ -251,3 +68,250 @@ while True:
 	   lcd.display(img_lcd)
    	kpu.fmap_free(fmap)
 ```
+
+-----------------------------
+
+
+## 模块方法
+
+### load
+
+从flash或者文件系统中加载模型
+
+```python
+KPU.load(offset, file_path)
+```
+
+#### 参数
+
+`offset` 和 `file_path` 参数只能二选一，不需要关键词，直接传参即可
+
+* `offset`: 模型在 flash 中的偏移大小，如 `0xd00000` 表示模型烧录在13M起始的地方, `0x300000`表示在 `Flash` `3M`的地方
+* `file_path`: 模型在文件系统中为文件名， 如 `“/sd/xxx.kmodel”`
+
+##### 返回
+
+如果正确加载，会返回返回值， 否则会抛出错误， 请看抛出的错误提示， 另外错误代码参考[这里](https://github.com/sipeed/MaixPy/blob/fa3cf2c96353fa698e9386e42be8b3c9cf495114/components/kendryte_sdk/include/sipeed_kpu.h#L6-L23)
+
+如果发现错误代码是小于 `2000` 的值， 则是固件版本太低，需要更新固件版本
+
+* `kpu_net`: kpu 网络对象
+
+
+
+### init_yolo2
+
+
+为`yolo2`网络模型传入初始化参数， 只有使用`yolo2`时使用
+
+```python
+KPU.init_yolo2(kpu_net, threshold, nms_value, anchor_num, anchor)
+```
+
+比如：
+
+```python
+import KPU as kpu
+task = kpu.load(0x300000)
+anchor = (1.889, 2.5245, 2.9465, 3.94056, 3.99987, 5.3658, 5.155437, 6.92275, 6.718375, 9.01025)
+kpu.init_yolo2(task, 0.5, 0.3, 5, anchor)
+```
+
+#### 参数
+
+* `kpu_net`: kpu 网络对象, 即加载的模型对象, `KPU.load()`的返回值
+* `threshold`: 概率阈值， 只有是这个物体的概率大于这个值才会输出结果， 取值范围：[0, 1]
+* `nms_value`: box_iou 门限, 为了防止同一个物体被框出多个框，当在同一个物体上框出了两个框，这两个框的交叉区域占两个框总占用面积的比例 如果小于这个值时， 就取其中概率最大的一个框
+* `anchor_num`: anchor 的锚点数， 这里固定为 `len(anchors)//2`
+* `anchor`: 锚点参数与模型参数一致，同一个模型这个参数是固定的，和模型绑定的（训练模型时即确定了）， 不能改成其它值。
+
+#### 返回值
+
+* `success`： `bool`类型， 是否成功
+
+
+### deinit
+
+释放模型占用的内存， 立即释放， 但是变量还在，可以使用`del kpu_net_object` 的方式删除，
+另外也可以直接只使用`del kpu_net_object`来标记对象已被删除，下一次`GC`进行内存回收或者手动调用`gc.collect()`时，会自动释放内存
+
+```python
+KPU.deinit(kpu_net)
+```
+
+比如：
+
+```python
+import KPU as kpu
+import gc
+task = kpu.load(0x300000)
+kpu.deinit(task)
+del task
+gc.collect()
+```
+
+或者：
+
+```python
+import KPU as kpu
+import gc
+task = kpu.load(0x300000)
+del task
+gc.collect()
+```
+
+
+#### 参数
+
+`kpu_net`: `KPU.load()` 返回的 `kpu_net` 对象
+
+#### 返回值
+
+* `success`： `bool` 类型， 是否成功
+
+
+### init_yolo2
+
+```python
+import KPU as kpu
+import image
+task = kpu.load(offset or file_path)
+anchor = (1.889, 2.5245, 2.9465, 3.94056, 3.99987, 5.3658, 5.155437, 6.92275, 6.718375, 9.01025)
+kpu.init_yolo2(task, 0.5, 0.3, 5, anchor)
+img = image.Image()
+kpu.run_yolo2(task, img) #此处不对，请参考例程
+```
+
+#### 参数
+
+* `kpu_net`: kpu_load 返回的 kpu_net 对象
+* `image_t`：从 sensor 采集到的图像
+
+##### 返回
+
+* `list`: kpu_yolo2_find 的列表 
+
+### forward
+
+计算已加载的网络模型到指定层数，输出目标层的特征图
+
+```python
+fmap=KPU.forward(kpu_net, img, end_layer)
+```
+
+```python
+import KPU as kpu
+task = kpu.load(offset or file_path)
+……
+fmap=kpu.forward(task,img, 3)
+```
+
+#### 参数
+
+* `kpu_net`: kpu_net 对象
+* `img`: 图像 `image.Image` 对象
+* `end_layer`: 指定计算到网络的第几层， 取值从`0`开始
+
+##### 返回
+
+* `fmap`: 特征图对象，内含当前层所有通道的特征图
+
+
+### fmap
+
+取特征图的指定通道数据到`image.Image`对象
+
+```python
+img=KPU.fmap(fmap, channel)
+```
+
+#### 参数
+
+* `fmap`: 特征图 对象
+* `channel`: 指定特征图的通道号, 从`0`开始
+
+##### 返回
+
+* `img`: 特征图对应通道生成的灰度图，类型`image.Image`
+
+
+### fmap_free
+
+释放特征图对象
+
+```python
+KPU.fmap_free(fmap)
+```
+
+#### 参数
+
+* `fmap`: 特征图 对象
+
+##### 返回
+
+* 无
+
+### netinfo 
+
+获取模型的网络结构信息
+
+```python
+info_list = kpu.netinfo(task)
+```
+
+#### 参数
+
+* `kpu_net`: kpu_net 对象, `KPU.load()`返回值
+
+##### 返回
+
+* `info_list`：所有层的信息list, 包含信息为：
+  * `index`：当前层在网络中的层数
+  * `wi`：输入宽度
+  * `hi`：输入高度
+  * `wo`：输出宽度
+  * `ho`：输出高度
+  * `chi`：输入通道数
+  * `cho`：输出通道数
+  * `dw`：是否为depth wise layer
+  * `kernel_type`：卷积核类型，0为1x1， 1为3x3
+  * `pool_type`：池化类型，0不池化; 1：2x2 max pooling; 2:...
+  * `para_size`：当前层的卷积参数字节数
+
+
+### set_outputs
+
+```python
+success = set_outputs(kput_net, out_idx, width, height, channel)
+```
+
+手动设置输出层形状， 对于 nncase v0.2.0 转换出来的 V4 的 kmodel 模型，
+在 `load` 之后需要调用此函数手动设置输出层形状， V3 模型不需要
+
+
+#### 参数
+
+* `kpu_net`: kpu_net 对象
+* `out_idx`: 输出层下表， 从 `0` 开始， 比如第一层输出层是`0`
+* `width`： 层宽度， 如果是一维输出，则为`1`
+* `height`: 层高度， 如果是一维输出，则为`1`
+* `channnel`： 层通道数，如果是一维输出，则这里为一维输出的长度
+
+##### 返回
+
+* `success`： 是否设置成功， 如果不成功，注意看输出的提示信息， 参考[错误代码](https://github.com/sipeed/MaixPy/blob/fa3cf2c96353fa698e9386e42be8b3c9cf495114/components/kendryte_sdk/include/sipeed_kpu.h#L6-L23)
+
+
+### memtest
+
+打印内存使用情况，包括`GC`内存和系统堆内存
+
+* 注意执行这个函数会自动先执行`gc.collect()`进行内存回收一次，再打印`GC`剩余内存
+* 系统堆内存只做参考，不一定准确，有时可能出现已经释放了内存，但是显示依然没有释放，以实际能不能分配到内存为准
+
+```python
+KPU.memtest()
+```
+
+
+
