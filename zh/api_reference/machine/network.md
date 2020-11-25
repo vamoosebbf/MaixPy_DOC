@@ -230,6 +230,7 @@ ESP32_Module
 
 如果传入参数数量不对，会返回错误
 
+**注意** 想要在 maixduino 上 SPI 和 SD 不冲突，需要设置 ESP32_SPI 为硬件 SPI 配置。
 
 ### 参数
 
