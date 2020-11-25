@@ -101,31 +101,30 @@
     - [超声波]
     - [RGB LED 链]
     - [ws2812 灯条]
-  * 其它外设
+  * 更多外设
     - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
     - [双摄模块]
     - [MLX90640 串口红外镜头模块]
     - [HTPA 红外镜头]
     - [舵机]
     - [ESP32 ADC]()
-* 其它功能
+* 更多功能
   * [编辑器 pye](/course/others/pye.md)
   * 系统
     - [主频、复位等](/course/others/system/readme.md)
-    - [内存控制](/course/others/system/mem.md)
+    - [内存配置与查看](/course/others/system/mem.md)
+    - [Flash 分区表](/course/others/system/flash.md)
   * GUI
-    - [Maix GUI](./api_reference/application/maixui.md)
-    - [Lvgl](./api_reference/application/lvgl.md)
-  * 网络(ESP8266/ESP32)
-    - [socket]()
-    - [http/https]()
+    - [Maix GUI](./application/maixui.md)
+    - [Lvgl](./application/lvgl.md)
+  * 网络(ESP8266/ESP32/W5X00)
+    - [配置 network 网卡](./application/network/network_config.py)
+    - [使用 socket 通信](./application/network/socket_usage.py)
   * 多媒体
     - [Audio](./api_reference/Maix/audio.md)
-    - [video](./api_reference/machine_vision/video.md)
+    - [video](./application/Maix/video.md)
   * 游戏
-    - [NES 游戏模拟器](./api_reference/application/nes.md)
-
-
+    - [NES 游戏机](./api_reference/application/nes.md)
 
 ## API手册
 
