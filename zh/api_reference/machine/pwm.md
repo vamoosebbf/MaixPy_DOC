@@ -8,7 +8,7 @@ PWM： 脉宽调制模块， 硬件支持的PWM， 可以指定任意引脚（0�
 ## 构造函数
 
 ```python
-class machine.PWM(tim, freq, duty, pin, enable=True)
+pwm = machine.PWM(tim, freq, duty, pin, enable=True)
 ```
 
 通过指定的参数新建一个 PWM 对象
@@ -28,7 +28,7 @@ class machine.PWM(tim, freq, duty, pin, enable=True)
 类似构造函数
 
 ```python
-PWM.init(tim, freq, duty, pin, enable=True)
+pwm.init(tim, freq, duty, pin, enable=True)
 ```
 
 #### 参数
@@ -45,7 +45,7 @@ PWM.init(tim, freq, duty, pin, enable=True)
 获取或者设置 PWM 频率
 
 ```python
-PWM.freq(freq)
+pwm.freq(freq)
 ```
 
 #### 参数
@@ -62,7 +62,7 @@ PWM.freq(freq)
 获取或者设置 PWM 占空比
 
 ```python
-PWM.duty(duty)
+pwm.duty(duty)
 ```
 
 #### 参数
@@ -79,7 +79,7 @@ PWM.duty(duty)
 使能 PWM 输出， 使指定的引脚上立即产生波形
 
 ```python
-PWM.enable()
+pwm.enable()
 ```
 
 #### 参数
@@ -95,7 +95,7 @@ PWM.enable()
 失能 PWM 输出， 指定的引脚不再产生波形
 
 ```python
-PWM.disable()
+pwm.disable()
 ```
 
 #### 参数
@@ -111,7 +111,7 @@ PWM.disable()
 注销 PWM 硬件，释放占用的资源，关闭 PWM 时钟
 
 ```python
-PWM.deinit()
+pwm.deinit()
 ```
 
 #### 参数

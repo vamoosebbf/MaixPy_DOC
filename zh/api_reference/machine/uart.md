@@ -101,7 +101,7 @@ uart.write(buf)
 注销 UART 硬件，释放占用的资源
 
 ```
-UART.deinit()
+uart.deinit()
 ```
 
 #### 参数

@@ -18,7 +18,7 @@ SPI（Serial Peripheral Interface） 是一个同步串行协议，由主机和�
 ## 构造函数
 
 ```python
-class machine.SPI(id, mode=SPI.MODE_MASTER, baudrate=500000, polarity=0, phase=0, bits=8, firstbit=SPI.MSB, sck, mosi, miso, cs0, cs1, cs2, cs3)
+spi = machine.SPI(id, mode=SPI.MODE_MASTER, baudrate=500000, polarity=0, phase=0, bits=8, firstbit=SPI.MSB, sck, mosi, miso, cs0, cs1, cs2, cs3)
 ```
 
 通过指定的参数新建一个 SPI 对象
@@ -48,7 +48,7 @@ class machine.SPI(id, mode=SPI.MODE_MASTER, baudrate=500000, polarity=0, phase=0
 类似构造函数
 
 ```python
-SPI.init(id, mode=SPI.MODE_MASTER, baudrate=500000, polarity=0, phase=0, bits=8, firstbit=SPI.MSB, sck, mosi, miso, cs0)
+spi.init(id, mode=SPI.MODE_MASTER, baudrate=500000, polarity=0, phase=0, bits=8, firstbit=SPI.MSB, sck, mosi, miso, cs0)
 ```
 
 #### 参数
@@ -66,7 +66,7 @@ SPI.init(id, mode=SPI.MODE_MASTER, baudrate=500000, polarity=0, phase=0, bits=8,
 读取数据
 
 ```python
-SPI.read(nbytes, write=0x00, cs=SPI.CS0)
+spi.read(nbytes, write=0x00, cs=SPI.CS0)
 ```
 
 #### 参数
@@ -86,7 +86,7 @@ SPI.read(nbytes, write=0x00, cs=SPI.CS0)
 读取数据，并放到指定变量中
 
 ```python
-SPI.readinto(buf, write=0x00, cs=SPI.CS0)
+spi.readinto(buf, write=0x00, cs=SPI.CS0)
 ```
 
 #### 参数
@@ -106,7 +106,7 @@ SPI.readinto(buf, write=0x00, cs=SPI.CS0)
 发送数据
 
 ```python
-SPI.write(buf, cs=SPI.CS0)
+spi.write(buf, cs=SPI.CS0)
 ```
 
 #### 参数
@@ -123,7 +123,7 @@ SPI.write(buf, cs=SPI.CS0)
 发送数据，同时读取数据到变量，即全双工
 
 ```python
-SPI.write(write_buf, read_buf, cs=SPI.CS0)
+spi.write(write_buf, read_buf, cs=SPI.CS0)
 ```
 
 #### 参数
@@ -141,7 +141,7 @@ SPI.write(write_buf, read_buf, cs=SPI.CS0)
 注销 SPI，释放硬件，关闭 SPI 时钟
 
 ```python
-SPI.deinit()
+spi.deinit()
 ```
 
 #### 参数
@@ -187,12 +187,12 @@ del spi
 ```python
 from machine import SPI
 
-spi1 = SPI(SPI.SPI1, mode=SPI.MODE_MASTER, baudrate=10000000, polarity=0, phase=0, bits=8, firstbit=SPI.MSB, sck=28, mosi=29, miso=30, cs0=27)
+spi = SPI(SPI.SPI1, mode=SPI.MODE_MASTER, baudrate=10000000, polarity=0, phase=0, bits=8, firstbit=SPI.MSB, sck=28, mosi=29, miso=30, cs0=27)
 w = b'1234'
 r = bytearray(4)
-spi1.write(w)
-spi1.write(w, cs=SPI.CS0)
-spi1.write_readinto(w, r)
-spi1.read(5, write=0x00)
-spi1.readinto(r, write=0x00)
+spi.write(w)
+spi.write(w, cs=SPI.CS0)
+spi.write_readinto(w, r)
+spi.read(5, write=0x00)
+spi.readinto(r, write=0x00)
 ```

@@ -40,7 +40,7 @@ class machine.I2C(id, mode=I2C.MODE_MASTER, scl=None, sda=None, freq=400000, tim
 类似构造函数
 
 ```python
-I2C.init(id, mode=Timer.MODE_MASTER, scl, sda, freq=400000, timeout=1000, addr=0, addr_size=7, on_recieve=None, on_transmit=None, on_event=None)
+i2c = I2C.init(id, mode=Timer.MODE_MASTER, scl, sda, freq=400000, timeout=1000, addr=0, addr_size=7, on_recieve=None, on_transmit=None, on_event=None)
 ```
 
 #### 参数
@@ -59,7 +59,7 @@ I2C.init(id, mode=Timer.MODE_MASTER, scl, sda, freq=400000, timeout=1000, addr=0
 扫描I2C总线上的从机
 
 ```python
-I2C.scan()
+i2c.scan()
 ```
 
 #### 参数
@@ -76,7 +76,7 @@ list 对象， 包含了所有扫描到的从机地址
 从总线读取数据
 
 ```python
-I2C.readfrom(addr, len, stop=True)
+i2c.readfrom(addr, len, stop=True)
 ```
 
 #### 参数
@@ -94,7 +94,7 @@ I2C.readfrom(addr, len, stop=True)
 读取数据并放到制定变量中
 
 ```python
-I2C.readfrom_into(addr, buf, stop=True)
+i2c.readfrom_into(addr, buf, stop=True)
 ```
 
 #### 参数
@@ -112,7 +112,7 @@ I2C.readfrom_into(addr, buf, stop=True)
 发送数据到从机
 
 ```python
-I2C.writeto(addr, buf, stop=True)
+i2c.writeto(addr, buf, stop=True)
 ```
 
 #### 参数
@@ -131,7 +131,7 @@ I2C.writeto(addr, buf, stop=True)
 读取从机寄存器
 
 ```python
-I2C.readfrom_mem(addr, memaddr, nbytes, mem_size=8)
+i2c.readfrom_mem(addr, memaddr, nbytes, mem_size=8)
 ```
 
 #### 参数
@@ -151,7 +151,7 @@ I2C.readfrom_mem(addr, memaddr, nbytes, mem_size=8)
 读取从机寄存器值到指定变量中
 
 ```python
-I2C.readfrom_mem_into(addr, memaddr, buf, mem_size=8)
+i2c.readfrom_mem_into(addr, memaddr, buf, mem_size=8)
 ```
 
 #### 参数
@@ -171,7 +171,7 @@ I2C.readfrom_mem_into(addr, memaddr, buf, mem_size=8)
 写数据到从机寄存器
 
 ```python
-I2C.writeto_mem(addr, memaddr, buf, mem_size=8)
+i2c.writeto_mem(addr, memaddr, buf, mem_size=8)
 ```
 
 #### 参数
@@ -191,7 +191,7 @@ I2C.writeto_mem(addr, memaddr, buf, mem_size=8)
 注销I2C硬件，释放占用的资源，关闭I2C时钟
 
 ```python
-I2C.deinit()
+i2c.deinit()
 ```
 
 #### 参数

@@ -1,8 +1,28 @@
-## 如何使用
+如何显示中文
+============
+
+MaixPy 支持加载 Unicode 字库，Unicode（ 统一码、万国码、单一码）是计算机科学领域里的一项业界标准。
+
+有如下语种支持：
+
+* A 大写拉丁字母"A" A
+* ß 小写拉丁字母"Sharp S" ß
+* þ 小写拉丁字母"Thorn" þ （小字库不支持）
+* Δ 大写希腊字母"Delta" Δ
+* Й 大写斯拉夫字母"Short I" Й
+* ק 希伯来字母"Qof" ק
+* م 阿拉伯字母 "Meem" م
+* ๗ 泰文数字 7 ๗
+* ቐ 埃塞俄比亚音节文字"Qha" ቐ
+* あ 日语平假名 "A" あ
+* ア 日语片假名 "A" ア
+* 叶 简体汉字 "叶" 叶
+* 轉 繁体汉字 "轉" 轉
+* 엽 韩国音节文字 " Yeob" 엽
 
 该功能接口均使用 `image.Image()` 对象完成，MaixPy 固件请使用最新版本 2020年9月2日。
 
-### 字模接口
+## 字模接口
 
 使用 draw_font 打印字模字符串，类似 `img.draw_font(10, 20, 8, 8,  b'/x20/xFC/xFC/x2C/xAC/x4C/x4D/xA3')`。
 
@@ -17,7 +37,7 @@ lcd.display(img)
 
 范例参考 [image_draw_font.py](image_draw_font.py) 。
 
-### 字库接口
+## 字库接口
 
 请先使用 font_load / font_free 加载或释放字库，这将提升 draw_string 的功能，支持从  `xx.Dzk` 文件 与 Flash 地址加载，这之后后 draw_string 将通过字库打印字符串，目前只支持 `ASCII` / `UTF-8` 编码 。
 
@@ -36,31 +56,31 @@ lcd.display(img)
 
 范例参考 [image_draw_string.py](image_draw_string.py) 。
 
-### 显示效果
+## 显示效果
 
-![view_image_font](./readme.assets/view_image_font.jpg)
+![view_image_font](./assets/view_image_font.jpg)
 
-### 字库工具
+## 字库工具
 
 我们将使用根目录下的 [FontGenerator.zip](./tools/FontGenerator.zip) 导出字体对应的字库，请看下图完成导出操作。
 
 1. 选择字库编码类型为 Unicode 编码，这将支持绝大多数国家的语言。
 
-   ![image-20200902180913322](./readme.assets/image-20200902180913322.png)
+   ![image-20200902180913322](./assets/image-20200902180913322.png)
 
 2. 选择扫描模式，为 5 横向、先上下后左右的字模的扫描打印方向。
 
-   ![image-20200902181130459](./readme.assets/image-20200902181130459.png)
+   ![image-20200902181130459](./assets/image-20200902181130459.png)
 
 3. 如下图配置所需要的字体样式后创建字库。
 
-   ![image-20200902181311553](./readme.assets/image-20200902181311553.png)
+   ![image-20200902181311553](./assets/image-20200902181311553.png)
 
 4. 保存成 DZK 格式即可，字模数据访问方法如图文字说明
 
-   ![image-20200902181442677](./readme.assets/image-20200902181442677.png)
+   ![image-20200902181442677](./assets/image-20200902181442677.png)
 
-### 字模工具
+## 字模工具
 
 > 警告：不推荐使用字模工具，不了解的人请不要使用。
 
@@ -68,21 +88,21 @@ lcd.display(img)
 
 1. 确认软件为字符模式。
 
-![image-20200902175614964](./readme.assets/image-20200902175614964.png)
+![image-20200902175614964](./assets/image-20200902175614964.png)
 
 
 
 2. 设置如图即可导出想要的字符串。
 
-   ​	![image-20200902180153452](./readme.assets/image-20200902180153452.png)
+   ​	![image-20200902180153452](./assets/image-20200902180153452.png)
 
 3. 填入文字后点击生成字模。
 
-   ![image-20200902175948599](./readme.assets/image-20200902175948599.png)
+   ![image-20200902175948599](./assets/image-20200902175948599.png)
 
 4. 提取字模字符串即可使用。
 
-   ![image-20200902180505263](./readme.assets/image-20200902180505263.png)
+   ![image-20200902180505263](./assets/image-20200902180505263.png)
 
 ```
  这(0) 是(1) 测(2) 试(3)
@@ -95,4 +115,4 @@ lcd.display(img)
 
 > 可以使用图形模式绘制自己喜欢的字模图形，支持 32 * 32 的图形。
 >
-> ![image-20200902181645277](./readme.assets/image-20200902181645277.png)
+> ![image-20200902181645277](./assets/image-20200902181645277.png)
