@@ -174,6 +174,8 @@ for ap_info in info:
 
 ### enable_ap(ssid, key, chl=5, ecn=3)
 
+* **警告：截止 2020年11月26日前， MaixPy 的 socket 还未实现 listen / bind / accpet 等函数操作。**
+
 打开热点
 
 #### 参数
