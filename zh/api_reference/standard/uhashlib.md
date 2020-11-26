@@ -10,6 +10,14 @@ SHA256-SHA2系列的最新现代哈希算法。它适用于密码安全的目的
 
 在 K210 中有硬件加速，不是软件计算
 
+[例程](https://github.com/sipeed/MaixPy_scripts/blob/master/basic/demo_sha256.py)：
+```python
+a = bytes([0]*65)
+b = hashlib.sha256(a)
+c = b.digest()
+print(c)
+```
+
 ## 构造函数
 
 ## 类 uhashlib.sha256([data])
@@ -26,6 +34,18 @@ SHA256-SHA2系列的最新现代哈希算法。它适用于密码安全的目的
 ### hash.digest()
 
 返回通过哈希传递的所有数据的哈希，作为字节对象。调用此方法后，无法再将更多数据馈入哈希。
+
+**注意**： 在`micropython`中， 使用此函数会完成最后的计算， 不是单纯的将结果显示出来， 所以只能调用一次， 如果你要多次使用这个值， 请保存到变量
+```python
+c = b.digest()
+print(c)
+```
+多次调用会发现返回值不相同
+```python
+c = b.digest()
+d = b.digest()
+print(c == d) # False
+```
 
 ### hash.hexdigest()
 
