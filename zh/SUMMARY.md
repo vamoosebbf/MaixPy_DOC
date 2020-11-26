@@ -78,7 +78,7 @@
     * [人脸识别](/course/ai/image/face_recognization.md)
     * [自学习分类](/course/ai/image/self_learn_classifier.md)
   * 音频处理
-    * [语音识别](./application/speech_recognizer/cnn.md)
+    * [语音识别](./course/speech/recognizer_cnn.md)
 * 模型训练
   * 训练自己的分类和检测模型
     * [MaixHub 云端训练](./course/ai/train/maixhub.md)
@@ -86,11 +86,11 @@
 * 传统算法
   * 图像处理
     - [寻找色块]()
-    - [二维码识别](./application/image/qrcode.md)
+    - [二维码识别](./course/image/qrcode.md)
   * 音频处理
     - [FFT频谱图]
     - [声场成像]
-    - [关键词识别](./application/speech_recognizer/mfcc.md)
+    - [关键词识别](./course/speech/recognizer_mfcc.md)
 * [外设]
   * [片上外设]
   * SP-MOD
@@ -109,22 +109,22 @@
     - [舵机]
     - [ESP32 ADC]()
 * 更多功能
-  * [编辑器 pye](/course/others/pye.md)
   * 系统
-    - [主频、复位等](/course/others/system/readme.md)
-    - [内存配置与查看](/course/others/system/mem.md)
-    - [Flash 分区表](/course/others/system/flash.md)
+    - [主频、复位等](/course/others/system.md)
+    - [内存配置与查看](/course/others/mem.md)
+    - [Flash 分区表](/course/others/flash.md)
   * GUI
-    - [Maix GUI](./application/maixui.md)
-    - [Lvgl](./application/lvgl.md)
+    - [Maix UI](./course/others/maixui.md)
+    - [Lvgl](./course/others/lvgl.md)
+    - [编辑器 pye](/course/others/pye.md)
   * 网络(ESP8266/ESP32/W5X00)
-    - [配置 network 网卡](./application/network/network_config.py)
-    - [使用 socket 通信](./application/network/socket_usage.py)
+    - [配置 network 网卡](./course/network/network_config.py)
+    - [使用 socket 通信](./course/network/socket_usage.py)
   * 多媒体
     - [Audio](./api_reference/Maix/audio.md)
-    - [video](./application/Maix/video.md)
+    - [video](./course/others/video.md)
   * 游戏
-    - [NES 游戏机](./api_reference/application/nes.md)
+    - [NES 游戏机](./course/others/nes.md)
 
 ## API手册
 
