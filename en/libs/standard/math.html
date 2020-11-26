@@ -1,0 +1,1551 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>math · MaixPy DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sys.html" />
+    
+    
+    <link rel="prev" href="gc.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../others/what_maix_do.html">
+            
+                <a href="../../others/what_maix_do.html">
+            
+                    
+                    What can MaixPy do?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../get_started/how_to_read.html">
+            
+                <a href="../../get_started/how_to_read.html">
+            
+                    
+                    Before read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Prepare</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../get_started/get_hardware.html">
+            
+                <a href="../../get_started/get_hardware.html">
+            
+                    
+                    Get Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../get_started/prepare_knowledge.html">
+            
+                <a href="../../get_started/prepare_knowledge.html">
+            
+                    
+                    Prepare knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../get_started/install_driver.html">
+            
+                <a href="../../get_started/install_driver.html">
+            
+                    
+                    Install driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../get_started/upgrade_firmware.html">
+            
+                <a href="../../get_started/upgrade_firmware.html">
+            
+                    
+                    Upgrade firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../get_started/serial_tools.html">
+            
+                <a href="../../get_started/serial_tools.html">
+            
+                    
+                    terminal tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../get_started/maixpyide.html">
+            
+                <a href="../../get_started/maixpyide.html">
+            
+                    
+                    Install MaixPyIDE(optional)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../get_started/power_on.html">
+            
+                <a href="../../get_started/power_on.html">
+            
+                    
+                    Power on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../get_started/led_blink.html">
+            
+                <a href="../../get_started/led_blink.html">
+            
+                    
+                    LED blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../get_started/edit_file.html">
+            
+                <a href="../../get_started/edit_file.html">
+            
+                    
+                    Edit and execute files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../get_started/upload_script.html">
+            
+                <a href="../../get_started/upload_script.html">
+            
+                    
+                    Upload script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../get_started/boot.html">
+            
+                <a href="../../get_started/boot.html">
+            
+                    
+                    Auto start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Modules/Libs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Standard library
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="cmath.html">
+            
+                <a href="cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="gc.html">
+            
+                <a href="gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.3" data-path="math.html">
+            
+                <a href="math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="sys.html">
+            
+                <a href="sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="ubinascii.html">
+            
+                <a href="ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="ucollections.html">
+            
+                <a href="ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="uctypes.html">
+            
+                <a href="uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="uerrno.html">
+            
+                <a href="uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="uhashlib.html">
+            
+                <a href="uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="uheapq.html">
+            
+                <a href="uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="ujson.html">
+            
+                <a href="ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="uos.html">
+            
+                <a href="uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="ure.html">
+            
+                <a href="ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="uselect.html">
+            
+                <a href="uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" data-path="usocket.html">
+            
+                <a href="usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="ustruct.html">
+            
+                <a href="ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="utime.html">
+            
+                <a href="utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="uzlib.html">
+            
+                <a href="uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../machine/">
+            
+                <a href="../machine/">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../machine/i2c.html">
+            
+                <a href="../machine/i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../machine/pwm.html">
+            
+                <a href="../machine/pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../machine/spi.html">
+            
+                <a href="../machine/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../machine/timer.html">
+            
+                <a href="../machine/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../machine/uart.html">
+            
+                <a href="../machine/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../machine/network.html">
+            
+                <a href="../machine/network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Maix/">
+            
+                <a href="../Maix/">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../Maix/fpioa.html">
+            
+                <a href="../Maix/fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../Maix/gpio.html">
+            
+                <a href="../Maix/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../Maix/kpu.html">
+            
+                <a href="../Maix/kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../Maix/fft.html">
+            
+                <a href="../Maix/fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../Maix/i2s.html">
+            
+                <a href="../Maix/i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../Maix/audio.html">
+            
+                <a href="../Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../Maix/freq.html">
+            
+                <a href="../Maix/freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../Maix/utils.html">
+            
+                <a href="../Maix/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../builtin_py/">
+            
+                <a href="../builtin_py/">
+            
+                    
+                    Built-in class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../builtin_py/fm.html">
+            
+                <a href="../builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../builtin_py/board_info.html">
+            
+                <a href="../builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../machine_vision/">
+            
+                <a href="../machine_vision/">
+            
+                    
+                    Machine vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../machine_vision/lcd.html">
+            
+                <a href="../machine_vision/lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../machine_vision/sensor.html">
+            
+                <a href="../machine_vision/sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../machine_vision/image.html">
+            
+                <a href="../machine_vision/image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../machine_vision/video.html">
+            
+                <a href="../machine_vision/video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../peripheral_modules/">
+            
+                <a href="../peripheral_modules/">
+            
+                    
+                    Peripheral modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../peripheral_modules/touchscreen.html">
+            
+                <a href="../peripheral_modules/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../peripheral_modules/ultrasonic.html">
+            
+                <a href="../peripheral_modules/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../peripheral_modules/ws2812.html">
+            
+                <a href="../peripheral_modules/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../peripheral_modules/htpa.html">
+            
+                <a href="../peripheral_modules/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                <a href="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../application/">
+            
+                <a href="../../application/">
+            
+                    
+                    Integrated Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../../application/pye.html">
+            
+                <a href="../../application/pye.html">
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../../application/nes.html">
+            
+                <a href="../../application/nes.html">
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="../../application/lvgl.html">
+            
+                <a href="../../application/lvgl.html">
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced 1 - Custom Firmware</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../advanced/compile.html">
+            
+                <a href="../../advanced/compile.html">
+            
+                    
+                    Custom Firmware-Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../advanced/code_struct.html">
+            
+                <a href="../../advanced/code_struct.html">
+            
+                    
+                    Code structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../advanced/pack_fs.html">
+            
+                <a href="../../advanced/pack_fs.html">
+            
+                    
+                    Pack SPIFFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/sipeed/MaixPy_scripts">
+            
+                    
+                    Demo scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../others/Q_A.html">
+            
+                <a href="../../others/Q_A.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../contribute/">
+            
+                <a href="../../contribute/">
+            
+                    
+                    Contribute
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../contribute/doc_convention.html">
+            
+                <a href="../../contribute/doc_convention.html">
+            
+                    
+                    Doc convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../../contribute/code_convention.html">
+            
+                <a href="../../contribute/code_convention.html">
+            
+                    
+                    Code convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../others/open_projects.html">
+            
+                <a href="../../others/open_projects.html">
+            
+                    
+                    Related projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >math</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#math-&#x2013;-mathematical-functions"><b> </b>math &#x2013; mathematical functions</a></li><ul><li><span class="title-icon "></span><a href="#functions"><b>1. </b>Functions</a></li><ul><li><span class="title-icon "></span><a href="#mathacosx"><b>1.1. </b>math.acos(x)</a></li><li><span class="title-icon "></span><a href="#mathacoshx"><b>1.2. </b>math.acosh(x)</a></li><li><span class="title-icon "></span><a href="#mathasinx"><b>1.3. </b>math.asin(x)</a></li><li><span class="title-icon "></span><a href="#mathasinhx"><b>1.4. </b>math.asinh(x)</a></li><li><span class="title-icon "></span><a href="#mathatanx"><b>1.5. </b>math.atan(x)</a></li><li><span class="title-icon "></span><a href="#mathatan2y-x"><b>1.6. </b>math.atan2(y, x)</a></li><li><span class="title-icon "></span><a href="#mathatanhx"><b>1.7. </b>math.atanh(x)</a></li><li><span class="title-icon "></span><a href="#mathceilx"><b>1.8. </b>math.ceil(x)</a></li><li><span class="title-icon "></span><a href="#mathcopysignx-y"><b>1.9. </b>math.copysign(x, y)</a></li><li><span class="title-icon "></span><a href="#mathcosx"><b>1.10. </b>math.cos(x)</a></li><li><span class="title-icon "></span><a href="#mathcoshx"><b>1.11. </b>math.cosh(x)</a></li><li><span class="title-icon "></span><a href="#mathdegreesx"><b>1.12. </b>math.degrees(x)</a></li><li><span class="title-icon "></span><a href="#matherfx"><b>1.13. </b>math.erf(x)</a></li><li><span class="title-icon "></span><a href="#matherfcx"><b>1.14. </b>math.erfc(x)</a></li><li><span class="title-icon "></span><a href="#mathexpx"><b>1.15. </b>math.exp(x)</a></li><li><span class="title-icon "></span><a href="#mathexpm1x"><b>1.16. </b>math.expm1(x)</a></li><li><span class="title-icon "></span><a href="#mathfabsx"><b>1.17. </b>math.fabs(x)</a></li><li><span class="title-icon "></span><a href="#mathfloorx"><b>1.18. </b>math.floor(x)</a></li><li><span class="title-icon "></span><a href="#mathfmodx-y"><b>1.19. </b>math.fmod(x, y)</a></li><li><span class="title-icon "></span><a href="#mathfrexpx"><b>1.20. </b>math.frexp(x)</a></li><li><span class="title-icon "></span><a href="#mathgammax"><b>1.21. </b>math.gamma(x)</a></li><li><span class="title-icon "></span><a href="#mathisfinitex"><b>1.22. </b>math.isfinite(x)</a></li><li><span class="title-icon "></span><a href="#mathisinfx"><b>1.23. </b>math.isinf(x)</a></li><li><span class="title-icon "></span><a href="#mathisnanx"><b>1.24. </b>math.isnan(x)</a></li><li><span class="title-icon "></span><a href="#mathldexpx-exp"><b>1.25. </b>math.ldexp(x, exp)</a></li><li><span class="title-icon "></span><a href="#mathlgammax"><b>1.26. </b>math.lgamma(x)</a></li><li><span class="title-icon "></span><a href="#mathlogx"><b>1.27. </b>math.log(x)</a></li><li><span class="title-icon "></span><a href="#mathlog10x"><b>1.28. </b>math.log10(x)</a></li><li><span class="title-icon "></span><a href="#mathlog2x"><b>1.29. </b>math.log2(x)</a></li><li><span class="title-icon "></span><a href="#mathmodfx"><b>1.30. </b>math.modf(x)</a></li><li><span class="title-icon "></span><a href="#mathpowx-y"><b>1.31. </b>math.pow(x, y)</a></li><li><span class="title-icon "></span><a href="#mathradiansx"><b>1.32. </b>math.radians(x)</a></li><li><span class="title-icon "></span><a href="#mathsinx"><b>1.33. </b>math.sin(x)</a></li><li><span class="title-icon "></span><a href="#mathsinhx"><b>1.34. </b>math.sinh(x)</a></li><li><span class="title-icon "></span><a href="#mathsqrtx"><b>1.35. </b>math.sqrt(x)</a></li><li><span class="title-icon "></span><a href="#mathtanx"><b>1.36. </b>math.tan(x)</a></li><li><span class="title-icon "></span><a href="#mathtanhx"><b>1.37. </b>math.tanh(x)</a></li><li><span class="title-icon "></span><a href="#mathtruncx"><b>1.38. </b>math.trunc(x)</a></li></ul><li><span class="title-icon "></span><a href="#constants"><b>2. </b>Constants</a></li><ul><li><span class="title-icon "></span><a href="#mathe"><b>2.1. </b>math.e</a></li><li><span class="title-icon "></span><a href="#mathpi"><b>2.2. </b>math.pi</a></li></ul></ul></ul></div><a href="#math-&#x2013;-mathematical-functions" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="math-&#x2013;-mathematical-functions"><a name="math-&#x2013;-mathematical-functions" class="anchor-navigation-ex-anchor" href="#math-&#x2013;-mathematical-functions"><i class="fa fa-link" aria-hidden="true"></i></a> math &#x2013; mathematical functions</h1>
+<p>This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: <a href="https://docs.python.org/3.5/library/math.html#module-math" target="_blank">math</a>.</p>
+<p>The <code>math</code> module provides some basic mathematical functions for working with floating-point numbers.</p>
+<p>Note: On the pyboard, floating-point numbers have 32-bit precision.</p>
+<p>Availability: not available on WiPy. Floating point support required for this module.</p>
+<h2 id="functions"><a name="functions" class="anchor-navigation-ex-anchor" href="#functions"><i class="fa fa-link" aria-hidden="true"></i></a>1. Functions</h2>
+<h3 id="mathacosx"><a name="mathacosx" class="anchor-navigation-ex-anchor" href="#mathacosx"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. math.acos(x)</h3>
+<p>Return the inverse cosine of <code>x</code>.</p>
+<h3 id="mathacoshx"><a name="mathacoshx" class="anchor-navigation-ex-anchor" href="#mathacoshx"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. math.acosh(x)</h3>
+<p>Return the inverse hyperbolic cosine of <code>x</code>.</p>
+<h3 id="mathasinx"><a name="mathasinx" class="anchor-navigation-ex-anchor" href="#mathasinx"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. math.asin(x)</h3>
+<p>Return the inverse sine of <code>x</code>.</p>
+<h3 id="mathasinhx"><a name="mathasinhx" class="anchor-navigation-ex-anchor" href="#mathasinhx"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. math.asinh(x)</h3>
+<p>Return the inverse hyperbolic sine of <code>x</code>.</p>
+<h3 id="mathatanx"><a name="mathatanx" class="anchor-navigation-ex-anchor" href="#mathatanx"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. math.atan(x)</h3>
+<p>Return the inverse tangent of <code>x</code>.</p>
+<h3 id="mathatan2y-x"><a name="mathatan2y-x" class="anchor-navigation-ex-anchor" href="#mathatan2y-x"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. math.atan2(y, x)</h3>
+<p>Return the principal value of the inverse tangent of <code>y</code>/<code>x</code>.</p>
+<h3 id="mathatanhx"><a name="mathatanhx" class="anchor-navigation-ex-anchor" href="#mathatanhx"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. math.atanh(x)</h3>
+<p>Return the inverse hyperbolic tangent of <code>x</code>.</p>
+<h3 id="mathceilx"><a name="mathceilx" class="anchor-navigation-ex-anchor" href="#mathceilx"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. math.ceil(x)</h3>
+<p>Return an integer, being <code>x</code> rounded towards positive infinity.</p>
+<h3 id="mathcopysignx-y"><a name="mathcopysignx-y" class="anchor-navigation-ex-anchor" href="#mathcopysignx-y"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. math.copysign(x, y)</h3>
+<p>Return <code>x</code> with the sign of <code>y</code>.</p>
+<h3 id="mathcosx"><a name="mathcosx" class="anchor-navigation-ex-anchor" href="#mathcosx"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. math.cos(x)</h3>
+<p>Return the cosine of <code>x</code>.</p>
+<h3 id="mathcoshx"><a name="mathcoshx" class="anchor-navigation-ex-anchor" href="#mathcoshx"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. math.cosh(x)</h3>
+<p>Return the hyperbolic cosine of <code>x</code>.</p>
+<h3 id="mathdegreesx"><a name="mathdegreesx" class="anchor-navigation-ex-anchor" href="#mathdegreesx"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. math.degrees(x)</h3>
+<p>Return radians <code>x</code> converted to degrees.</p>
+<h3 id="matherfx"><a name="matherfx" class="anchor-navigation-ex-anchor" href="#matherfx"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. math.erf(x)</h3>
+<p>Return the error function of <code>x</code>.</p>
+<h3 id="matherfcx"><a name="matherfcx" class="anchor-navigation-ex-anchor" href="#matherfcx"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. math.erfc(x)</h3>
+<p>Return the complementary error function of <code>x</code>.</p>
+<h3 id="mathexpx"><a name="mathexpx" class="anchor-navigation-ex-anchor" href="#mathexpx"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. math.exp(x)</h3>
+<p>Return the exponential of <code>x</code>.</p>
+<h3 id="mathexpm1x"><a name="mathexpm1x" class="anchor-navigation-ex-anchor" href="#mathexpm1x"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. math.expm1(x)</h3>
+<p>Return <code>exp(x) - 1</code>.</p>
+<h3 id="mathfabsx"><a name="mathfabsx" class="anchor-navigation-ex-anchor" href="#mathfabsx"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. math.fabs(x)</h3>
+<p>Return the absolute value of <code>x</code>.</p>
+<h3 id="mathfloorx"><a name="mathfloorx" class="anchor-navigation-ex-anchor" href="#mathfloorx"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. math.floor(x)</h3>
+<p>Return an integer, being <code>x</code> rounded towards negative infinity.</p>
+<h3 id="mathfmodx-y"><a name="mathfmodx-y" class="anchor-navigation-ex-anchor" href="#mathfmodx-y"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. math.fmod(x, y)</h3>
+<p>Return the remainder of <code>x</code>/<code>y</code>.</p>
+<h3 id="mathfrexpx"><a name="mathfrexpx" class="anchor-navigation-ex-anchor" href="#mathfrexpx"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. math.frexp(x)</h3>
+<p>Decomposes a floating-point number into its mantissa and exponent. The returned value is the tuple <code>(m, e)</code> such that <code>x == m * 2**e</code> exactly. If <code>x == 0</code> then the function returns <code>(0.0, 0)</code>, otherwise the relation <code>0.5 &lt;= abs(m) &lt; 1</code> holds.</p>
+<h3 id="mathgammax"><a name="mathgammax" class="anchor-navigation-ex-anchor" href="#mathgammax"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. math.gamma(x)</h3>
+<p>Return the gamma function of <code>x</code>.</p>
+<h3 id="mathisfinitex"><a name="mathisfinitex" class="anchor-navigation-ex-anchor" href="#mathisfinitex"><i class="fa fa-link" aria-hidden="true"></i></a>1.22. math.isfinite(x)</h3>
+<p>Return True if <code>x</code> is finite.</p>
+<h3 id="mathisinfx"><a name="mathisinfx" class="anchor-navigation-ex-anchor" href="#mathisinfx"><i class="fa fa-link" aria-hidden="true"></i></a>1.23. math.isinf(x)</h3>
+<p>Return True if <code>x</code> is infinite.</p>
+<h3 id="mathisnanx"><a name="mathisnanx" class="anchor-navigation-ex-anchor" href="#mathisnanx"><i class="fa fa-link" aria-hidden="true"></i></a>1.24. math.isnan(x)</h3>
+<p>Return True if <code>x</code> is not-a-number</p>
+<h3 id="mathldexpx-exp"><a name="mathldexpx-exp" class="anchor-navigation-ex-anchor" href="#mathldexpx-exp"><i class="fa fa-link" aria-hidden="true"></i></a>1.25. math.ldexp(x, exp)</h3>
+<p>Return <code>x * (2**exp)</code>.</p>
+<h3 id="mathlgammax"><a name="mathlgammax" class="anchor-navigation-ex-anchor" href="#mathlgammax"><i class="fa fa-link" aria-hidden="true"></i></a>1.26. math.lgamma(x)</h3>
+<p>Return the natural logarithm of the gamma function of <code>x</code>.</p>
+<h3 id="mathlogx"><a name="mathlogx" class="anchor-navigation-ex-anchor" href="#mathlogx"><i class="fa fa-link" aria-hidden="true"></i></a>1.27. math.log(x)</h3>
+<p>Return the natural logarithm of <code>x</code>.</p>
+<h3 id="mathlog10x"><a name="mathlog10x" class="anchor-navigation-ex-anchor" href="#mathlog10x"><i class="fa fa-link" aria-hidden="true"></i></a>1.28. math.log10(x)</h3>
+<p>Return the base-10 logarithm of <code>x</code>.</p>
+<h3 id="mathlog2x"><a name="mathlog2x" class="anchor-navigation-ex-anchor" href="#mathlog2x"><i class="fa fa-link" aria-hidden="true"></i></a>1.29. math.log2(x)</h3>
+<p>Return the base-2 logarithm of <code>x</code>.</p>
+<h3 id="mathmodfx"><a name="mathmodfx" class="anchor-navigation-ex-anchor" href="#mathmodfx"><i class="fa fa-link" aria-hidden="true"></i></a>1.30. math.modf(x)</h3>
+<p>Return a tuple of two floats, being the fractional and integral parts of <code>x</code>. Both return values have the same sign as <code>x</code>.</p>
+<h3 id="mathpowx-y"><a name="mathpowx-y" class="anchor-navigation-ex-anchor" href="#mathpowx-y"><i class="fa fa-link" aria-hidden="true"></i></a>1.31. math.pow(x, y)</h3>
+<p>Returns <code>x</code> to the power of <code>y</code>.</p>
+<h3 id="mathradiansx"><a name="mathradiansx" class="anchor-navigation-ex-anchor" href="#mathradiansx"><i class="fa fa-link" aria-hidden="true"></i></a>1.32. math.radians(x)</h3>
+<p>Return degrees <code>x</code> converted to radians.</p>
+<h3 id="mathsinx"><a name="mathsinx" class="anchor-navigation-ex-anchor" href="#mathsinx"><i class="fa fa-link" aria-hidden="true"></i></a>1.33. math.sin(x)</h3>
+<p>Return the sine of <code>x</code>.</p>
+<h3 id="mathsinhx"><a name="mathsinhx" class="anchor-navigation-ex-anchor" href="#mathsinhx"><i class="fa fa-link" aria-hidden="true"></i></a>1.34. math.sinh(x)</h3>
+<p>Return the hyperbolic sine of <code>x</code>.</p>
+<h3 id="mathsqrtx"><a name="mathsqrtx" class="anchor-navigation-ex-anchor" href="#mathsqrtx"><i class="fa fa-link" aria-hidden="true"></i></a>1.35. math.sqrt(x)</h3>
+<p>Return the square root of <code>x</code>.</p>
+<h3 id="mathtanx"><a name="mathtanx" class="anchor-navigation-ex-anchor" href="#mathtanx"><i class="fa fa-link" aria-hidden="true"></i></a>1.36. math.tan(x)</h3>
+<p>Return the tangent of <code>x</code>.</p>
+<h3 id="mathtanhx"><a name="mathtanhx" class="anchor-navigation-ex-anchor" href="#mathtanhx"><i class="fa fa-link" aria-hidden="true"></i></a>1.37. math.tanh(x)</h3>
+<p>Return the hyperbolic tangent of <code>x</code>.</p>
+<h3 id="mathtruncx"><a name="mathtruncx" class="anchor-navigation-ex-anchor" href="#mathtruncx"><i class="fa fa-link" aria-hidden="true"></i></a>1.38. math.trunc(x)</h3>
+<p>Return an integer, being <code>x</code> rounded towards 0.</p>
+<h2 id="constants"><a name="constants" class="anchor-navigation-ex-anchor" href="#constants"><i class="fa fa-link" aria-hidden="true"></i></a>2. Constants</h2>
+<h3 id="mathe"><a name="mathe" class="anchor-navigation-ex-anchor" href="#mathe"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. math.e</h3>
+<p>base of the natural logarithm</p>
+<h3 id="mathpi"><a name="mathpi" class="anchor-navigation-ex-anchor" href="#mathpi"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. math.pi</h3>
+<p>the ratio of a circle&#x2019;s circumference to its diameter</p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-26 20:02:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gc.html" class="navigation navigation-prev " aria-label="Previous page: gc">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sys.html" class="navigation navigation-next " aria-label="Next page: sys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"math","level":"4.1.3","depth":2,"next":{"title":"sys","level":"4.1.4","depth":2,"path":"libs/standard/sys.md","ref":"libs/standard/sys.md","articles":[]},"previous":{"title":"gc","level":"4.1.2","depth":2,"path":"libs/standard/gc.md","ref":"libs/standard/gc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"code","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"MaixPy DOC","language":"en","gitbook":"*","description":"MaixPy documentation"},"file":{"path":"libs/standard/math.md","mtime":"2020-11-26T12:02:14.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-26T12:03:10.728Z"},"basePath":"../..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+

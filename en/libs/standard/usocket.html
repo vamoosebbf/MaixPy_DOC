@@ -1,0 +1,1696 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>usocket · MaixPy DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ustruct.html" />
+    
+    
+    <link rel="prev" href="uselect.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../others/what_maix_do.html">
+            
+                <a href="../../others/what_maix_do.html">
+            
+                    
+                    What can MaixPy do?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../get_started/how_to_read.html">
+            
+                <a href="../../get_started/how_to_read.html">
+            
+                    
+                    Before read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Prepare</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../get_started/get_hardware.html">
+            
+                <a href="../../get_started/get_hardware.html">
+            
+                    
+                    Get Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../get_started/prepare_knowledge.html">
+            
+                <a href="../../get_started/prepare_knowledge.html">
+            
+                    
+                    Prepare knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../get_started/install_driver.html">
+            
+                <a href="../../get_started/install_driver.html">
+            
+                    
+                    Install driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../get_started/upgrade_firmware.html">
+            
+                <a href="../../get_started/upgrade_firmware.html">
+            
+                    
+                    Upgrade firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../get_started/serial_tools.html">
+            
+                <a href="../../get_started/serial_tools.html">
+            
+                    
+                    terminal tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../get_started/maixpyide.html">
+            
+                <a href="../../get_started/maixpyide.html">
+            
+                    
+                    Install MaixPyIDE(optional)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../get_started/power_on.html">
+            
+                <a href="../../get_started/power_on.html">
+            
+                    
+                    Power on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../get_started/led_blink.html">
+            
+                <a href="../../get_started/led_blink.html">
+            
+                    
+                    LED blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../get_started/edit_file.html">
+            
+                <a href="../../get_started/edit_file.html">
+            
+                    
+                    Edit and execute files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../get_started/upload_script.html">
+            
+                <a href="../../get_started/upload_script.html">
+            
+                    
+                    Upload script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../get_started/boot.html">
+            
+                <a href="../../get_started/boot.html">
+            
+                    
+                    Auto start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Modules/Libs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Standard library
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="cmath.html">
+            
+                <a href="cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="gc.html">
+            
+                <a href="gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="math.html">
+            
+                <a href="math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="sys.html">
+            
+                <a href="sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="ubinascii.html">
+            
+                <a href="ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="ucollections.html">
+            
+                <a href="ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="uctypes.html">
+            
+                <a href="uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="uerrno.html">
+            
+                <a href="uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="uhashlib.html">
+            
+                <a href="uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="uheapq.html">
+            
+                <a href="uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="ujson.html">
+            
+                <a href="ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="uos.html">
+            
+                <a href="uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="ure.html">
+            
+                <a href="ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="uselect.html">
+            
+                <a href="uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.15" data-path="usocket.html">
+            
+                <a href="usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="ustruct.html">
+            
+                <a href="ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="utime.html">
+            
+                <a href="utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="uzlib.html">
+            
+                <a href="uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../machine/">
+            
+                <a href="../machine/">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../machine/i2c.html">
+            
+                <a href="../machine/i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../machine/pwm.html">
+            
+                <a href="../machine/pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../machine/spi.html">
+            
+                <a href="../machine/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../machine/timer.html">
+            
+                <a href="../machine/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../machine/uart.html">
+            
+                <a href="../machine/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../machine/network.html">
+            
+                <a href="../machine/network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Maix/">
+            
+                <a href="../Maix/">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../Maix/fpioa.html">
+            
+                <a href="../Maix/fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../Maix/gpio.html">
+            
+                <a href="../Maix/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../Maix/kpu.html">
+            
+                <a href="../Maix/kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../Maix/fft.html">
+            
+                <a href="../Maix/fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../Maix/i2s.html">
+            
+                <a href="../Maix/i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../Maix/audio.html">
+            
+                <a href="../Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../Maix/freq.html">
+            
+                <a href="../Maix/freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../Maix/utils.html">
+            
+                <a href="../Maix/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../builtin_py/">
+            
+                <a href="../builtin_py/">
+            
+                    
+                    Built-in class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../builtin_py/fm.html">
+            
+                <a href="../builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../builtin_py/board_info.html">
+            
+                <a href="../builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../machine_vision/">
+            
+                <a href="../machine_vision/">
+            
+                    
+                    Machine vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../machine_vision/lcd.html">
+            
+                <a href="../machine_vision/lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../machine_vision/sensor.html">
+            
+                <a href="../machine_vision/sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../machine_vision/image.html">
+            
+                <a href="../machine_vision/image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../machine_vision/video.html">
+            
+                <a href="../machine_vision/video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../peripheral_modules/">
+            
+                <a href="../peripheral_modules/">
+            
+                    
+                    Peripheral modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../peripheral_modules/touchscreen.html">
+            
+                <a href="../peripheral_modules/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../peripheral_modules/ultrasonic.html">
+            
+                <a href="../peripheral_modules/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../peripheral_modules/ws2812.html">
+            
+                <a href="../peripheral_modules/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../peripheral_modules/htpa.html">
+            
+                <a href="../peripheral_modules/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                <a href="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../application/">
+            
+                <a href="../../application/">
+            
+                    
+                    Integrated Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../../application/pye.html">
+            
+                <a href="../../application/pye.html">
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../../application/nes.html">
+            
+                <a href="../../application/nes.html">
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="../../application/lvgl.html">
+            
+                <a href="../../application/lvgl.html">
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced 1 - Custom Firmware</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../advanced/compile.html">
+            
+                <a href="../../advanced/compile.html">
+            
+                    
+                    Custom Firmware-Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../advanced/code_struct.html">
+            
+                <a href="../../advanced/code_struct.html">
+            
+                    
+                    Code structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../advanced/pack_fs.html">
+            
+                <a href="../../advanced/pack_fs.html">
+            
+                    
+                    Pack SPIFFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/sipeed/MaixPy_scripts">
+            
+                    
+                    Demo scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../others/Q_A.html">
+            
+                <a href="../../others/Q_A.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../contribute/">
+            
+                <a href="../../contribute/">
+            
+                    
+                    Contribute
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../contribute/doc_convention.html">
+            
+                <a href="../../contribute/doc_convention.html">
+            
+                    
+                    Doc convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../../contribute/code_convention.html">
+            
+                <a href="../../contribute/code_convention.html">
+            
+                    
+                    Code convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../others/open_projects.html">
+            
+                <a href="../../others/open_projects.html">
+            
+                    
+                    Related projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >usocket</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#usocket-&#x2013;-socket-module"><b> </b>usocket &#x2013; socket module</a></li><ul><li><span class="title-icon "></span><a href="#socket-address-formats"><b>1. </b>Socket address format(s)</a></li><li><span class="title-icon "></span><a href="#functions"><b>2. </b>Functions</a></li><ul><li><span class="title-icon "></span><a href="#usocketsocketafafinet-typesockstream-protoipprototcp"><b>2.1. </b>usocket.socket(af=AF_INET, type=SOCK_STREAM, proto=IPPROTO_TCP)</a></li><li><span class="title-icon "></span><a href="#usocketgetaddrinfohost-port-af0-type0-proto0-flags0"><b>2.2. </b>usocket.getaddrinfo(host, port, af=0, type=0, proto=0, flags=0)</a></li><li><span class="title-icon "></span><a href="#usocketinetntopaf-binaddr"><b>2.3. </b>usocket.inet_ntop(af, bin_addr)</a></li><li><span class="title-icon "></span><a href="#usocketinetptonaf-txtaddr"><b>2.4. </b>usocket.inet_pton(af, txt_addr)</a></li></ul><li><span class="title-icon "></span><a href="#constants"><b>3. </b>Constants</a></li><ul><li><span class="title-icon "></span><a href="#usocketafinet-usocketafinet6"><b>3.1. </b>usocket.AF_INET usocket.AF_INET6</a></li><li><span class="title-icon "></span><a href="#usocketsockstream-usocketsockdgram"><b>3.2. </b>usocket.SOCK_STREAM usocket.SOCK_DGRAM</a></li><li><span class="title-icon "></span><a href="#usocketipprotoudp-usocketipprototcp"><b>3.3. </b>usocket.IPPROTO_UDP usocket.IPPROTO_TCP</a></li><li><span class="title-icon "></span><a href="#usocketsol"><b>3.4. </b>usocket.SOL_*</a></li><li><span class="title-icon "></span><a href="#usocketso"><b>3.5. </b>usocket.SO_*</a></li><li><span class="title-icon "></span><a href="#usocketipprotosec"><b>3.6. </b>usocket.IPPROTO_SEC</a></li></ul><li><span class="title-icon "></span><a href="#class-socket"><b>4. </b>class socket</a></li><ul><li><span class="title-icon "></span><a href="#methods"><b>4.1. </b>Methods</a></li></ul><li><span class="title-icon "></span><a href="#demo"><b>5. </b>Demo</a></li><ul><li><span class="title-icon "></span><a href="#demo-1-download-picture-and-display-on-lcd"><b>5.1. </b>Demo 1: Download picture and display on LCD</a></li><li><span class="title-icon "></span><a href="#demo-2-send-picture"><b>5.2. </b>Demo 2: Send picture</a></li></ul></ul></ul></div><a href="#usocket-&#x2013;-socket-module" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="usocket-&#x2013;-socket-module"><a name="usocket-&#x2013;-socket-module" class="anchor-navigation-ex-anchor" href="#usocket-&#x2013;-socket-module"><i class="fa fa-link" aria-hidden="true"></i></a> usocket &#x2013; socket module</h1>
+<p>This module implements a subset of the corresponding CPython module, as described below. For more information, refer to the original CPython documentation: <a href="https://docs.python.org/3.5/library/socket.html#module-socket" target="_blank">socket</a>.</p>
+<p>This module provides access to the BSD socket interface.</p>
+<blockquote>
+<p><strong>Difference to CPython</strong> </p>
+<p>For efficiency and consistency, socket objects in MicroPython implement a <code>stream</code> (file-like) interface directly. In CPython, you need to convert a socket to a file-like object using <code>makefile()</code> method. This method is still supported by MicroPython (but is a no-op), so where compatibility with CPython matters, be sure to use it.</p>
+</blockquote>
+<h2 id="socket-address-formats"><a name="socket-address-formats" class="anchor-navigation-ex-anchor" href="#socket-address-formats"><i class="fa fa-link" aria-hidden="true"></i></a>1. Socket address format(s)</h2>
+<p>The native socket address format of the <code>usocket</code> module is an opaque data type returned by getaddrinfo function, which must be used to resolve textual address (including numeric addresses):</p>
+<pre class="language-"><code class="lang-python">sockaddr <span class="token operator">=</span> usocket<span class="token punctuation">.</span>getaddrinfo<span class="token punctuation">(</span><span class="token string">&apos;www.micropython.org&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token comment"># You must use getaddrinfo() even for numeric addresses</span>
+sockaddr <span class="token operator">=</span> usocket<span class="token punctuation">.</span>getaddrinfo<span class="token punctuation">(</span><span class="token string">&apos;127.0.0.1&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token comment"># Now you can use that address</span>
+sock<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>addr<span class="token punctuation">)</span>
+</code></pre>
+<p>Using <code>getaddrinfo</code> is the most efficient (both in terms of memory and processing power) and portable way to work with addresses.</p>
+<p>However, <code>socket</code> module (note the difference with native MicroPython <code>usocket</code> module described here) provides CPython-compatible way to specify addresses using tuples, as described below. Note that depending on a <code>MicroPython port</code>, socket module can be builtin or need to be installed from <code>micropython-lib</code> (as in the case of <code>MicroPython Unix port</code>), and some ports still accept only numeric addresses in the tuple format, and require to use <code>getaddrinfo</code> function to resolve domain names.</p>
+<p>Summing up:</p>
+<ul>
+<li>Always use <code>getaddrinfo</code> when writing portable applications.</li>
+<li>Tuple addresses described below can be used as a shortcut for quick hacks and interactive use, if your port supports them.</li>
+</ul>
+<p>Tuple address format for <code>socket</code> module:</p>
+<ul>
+<li><p>IPv4: (ipv4_address, port), where ipv4_address is a string with dot-notation numeric IPv4 address, e.g. &quot;8.8.8.8&quot;, and port is and integer port number in the range 1-65535. Note the domain names are not accepted as ipv4_address, they should be resolved first using usocket.getaddrinfo().</p>
+</li>
+<li><p>IPv6: (ipv6_address, port, flowinfo, scopeid), where ipv6_address is a string with colon-notation numeric IPv6 address, e.g. <code>&quot;2001:db8::1&quot;</code>, and port is an integer port number in the range 1-65535. flowinfo must be 0. scopeid is the interface scope identifier for link-local addresses. Note the domain names are not accepted as ipv6_address, they should be resolved first using <code>usocket.getaddrinfo()</code>. Availability of IPv6 support depends on a <code>MicroPython port</code>.</p>
+</li>
+</ul>
+<h2 id="functions"><a name="functions" class="anchor-navigation-ex-anchor" href="#functions"><i class="fa fa-link" aria-hidden="true"></i></a>2. Functions</h2>
+<h3 id="usocketsocketafafinet-typesockstream-protoipprototcp"><a name="usocketsocketafafinet-typesockstream-protoipprototcp" class="anchor-navigation-ex-anchor" href="#usocketsocketafafinet-typesockstream-protoipprototcp"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. usocket.socket(af=AF_INET, type=SOCK_STREAM, proto=IPPROTO_TCP)</h3>
+<p>Create a new socket using the given address family, socket type and protocol number. Note that specifying proto in most cases is not required (and not recommended, as some MicroPython ports may omit <code>IPPROTO_*</code> constants). Instead, type argument will select needed protocol automatically:</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># Create STREAM TCP socket</span>
+socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span> SOCK_STREAM<span class="token punctuation">)</span>
+<span class="token comment"># Create DGRAM UDP socket</span>
+socket<span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span> SOCK_DGRAM<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="usocketgetaddrinfohost-port-af0-type0-proto0-flags0"><a name="usocketgetaddrinfohost-port-af0-type0-proto0-flags0" class="anchor-navigation-ex-anchor" href="#usocketgetaddrinfohost-port-af0-type0-proto0-flags0"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. usocket.getaddrinfo(host, port, af=0, type=0, proto=0, flags=0)</h3>
+<p>Translate the host/port argument into a sequence of 5-tuples that contain all the necessary arguments for creating a socket connected to that service. Arguments af, type, and proto (which have the same meaning as for the <code>socket()</code> function) can be used to filter which kind of addresses are returned. If a parameter is not specified or zero, all combinations of addresses can be returned (requiring filtering on the user side).</p>
+<p>The resulting list of 5-tuples has the following structure:</p>
+<pre class="language-"><code class="lang-python"><span class="token punctuation">(</span>family<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">,</span> proto<span class="token punctuation">,</span> canonname<span class="token punctuation">,</span> sockaddr<span class="token punctuation">)</span>
+</code></pre>
+<p>The following example shows how to connect to a given url:</p>
+<pre class="language-"><code class="lang-python">s <span class="token operator">=</span> usocket<span class="token punctuation">.</span>socket<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># This assumes that if &quot;type&quot; is not specified, an address for</span>
+<span class="token comment"># SOCK_STREAM will be returned, which may be not true</span>
+s<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>usocket<span class="token punctuation">.</span>getaddrinfo<span class="token punctuation">(</span><span class="token string">&apos;www.micropython.org&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Recommended use of filtering params:</p>
+<pre class="language-"><code class="lang-python">s <span class="token operator">=</span> usocket<span class="token punctuation">.</span>socket<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Guaranteed to return an address which can be connect&apos;ed to for</span>
+<span class="token comment"># stream operation.</span>
+s<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>usocket<span class="token punctuation">.</span>getaddrinfo<span class="token punctuation">(</span><span class="token string">&apos;www.micropython.org&apos;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> SOCK_STREAM<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>Difference to CPython</p>
+<p>CPython raises a <code>socket.gaierror</code> exception (<code>OSError</code> subclass) in case of error in this function. MicroPython doesn&#x2019;t have <code>socket.gaierror</code> and raises OSError directly. Note that error numbers of <code>getaddrinfo()</code> form a separate namespace and may not match error numbers from the <code>uerrno</code> module. To distinguish <code>getaddrinfo()</code> errors, they are represented by negative numbers, whereas standard system errors are positive numbers (error numbers are accessible using <code>e.args[0]</code> property from an exception object). The use of negative values is a provisional detail which may change in the future.</p>
+</blockquote>
+<h3 id="usocketinetntopaf-binaddr"><a name="usocketinetntopaf-binaddr" class="anchor-navigation-ex-anchor" href="#usocketinetntopaf-binaddr"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. usocket.inet_ntop(af, bin_addr)</h3>
+<p>Convert a binary network address bin_addr of the given address family af to a textual representation:</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> usocket<span class="token punctuation">.</span>inet_ntop<span class="token punctuation">(</span>usocket<span class="token punctuation">.</span>AF_INET<span class="token punctuation">,</span> <span class="token string">b&quot;\x7f\0\0\1&quot;</span><span class="token punctuation">)</span>
+<span class="token string">&apos;127.0.0.1&apos;</span>
+</code></pre>
+<h3 id="usocketinetptonaf-txtaddr"><a name="usocketinetptonaf-txtaddr" class="anchor-navigation-ex-anchor" href="#usocketinetptonaf-txtaddr"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. usocket.inet_pton(af, txt_addr)</h3>
+<p>Convert a textual network address txt_addr of the given address family af to a binary representation:</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> usocket<span class="token punctuation">.</span>inet_pton<span class="token punctuation">(</span>usocket<span class="token punctuation">.</span>AF_INET<span class="token punctuation">,</span> <span class="token string">&quot;1.2.3.4&quot;</span><span class="token punctuation">)</span>
+<span class="token string">b&apos;\x01\x02\x03\x04&apos;</span>
+</code></pre>
+<h2 id="constants"><a name="constants" class="anchor-navigation-ex-anchor" href="#constants"><i class="fa fa-link" aria-hidden="true"></i></a>3. Constants</h2>
+<h3 id="usocketafinet-usocketafinet6"><a name="usocketafinet-usocketafinet6" class="anchor-navigation-ex-anchor" href="#usocketafinet-usocketafinet6"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. usocket.AF_INET usocket.AF_INET6</h3>
+<p>Address family types. Availability depends on a particular <code>MicroPython port</code>.</p>
+<h3 id="usocketsockstream-usocketsockdgram"><a name="usocketsockstream-usocketsockdgram" class="anchor-navigation-ex-anchor" href="#usocketsockstream-usocketsockdgram"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. usocket.SOCK_STREAM usocket.SOCK_DGRAM</h3>
+<p>Socket types.</p>
+<h3 id="usocketipprotoudp-usocketipprototcp"><a name="usocketipprotoudp-usocketipprototcp" class="anchor-navigation-ex-anchor" href="#usocketipprotoudp-usocketipprototcp"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. usocket.IPPROTO_UDP usocket.IPPROTO_TCP</h3>
+<p>IP protocol numbers. Availability depends on a particular <code>MicroPython port</code>. Note that you don&#x2019;t need to specify these in a call to <code>usocket.socket()</code>, because <code>SOCK_STREAM</code> socket type automatically selects <code>IPPROTO_TCP</code>, and <code>SOCK_DGRAM</code> - <code>IPPROTO_UDP</code>. Thus, the only real use of these constants is as an argument to <code>setsockopt()</code>.</p>
+<h3 id="usocketsol"><a name="usocketsol" class="anchor-navigation-ex-anchor" href="#usocketsol"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. usocket.SOL_*</h3>
+<p>Socket option levels (an argument to <code>setsockopt()</code>). The exact inventory depends on a <code>MicroPython port</code>.</p>
+<h3 id="usocketso"><a name="usocketso" class="anchor-navigation-ex-anchor" href="#usocketso"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. usocket.SO_*</h3>
+<p>Socket options (an argument to <code>setsockopt()</code>). The exact inventory depends on a <code>MicroPython port</code>.</p>
+<p>Constants specific to WiPy:</p>
+<h3 id="usocketipprotosec"><a name="usocketipprotosec" class="anchor-navigation-ex-anchor" href="#usocketipprotosec"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. usocket.IPPROTO_SEC</h3>
+<p>Special protocol value to create SSL-compatible socket.</p>
+<h2 id="class-socket"><a name="class-socket" class="anchor-navigation-ex-anchor" href="#class-socket"><i class="fa fa-link" aria-hidden="true"></i></a>4. class socket</h2>
+<h3 id="methods"><a name="methods" class="anchor-navigation-ex-anchor" href="#methods"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. Methods</h3>
+<h4 id="socketclose"><a name="socketclose" class="anchor-navigation-ex-anchor" href="#socketclose"><i class="fa fa-link" aria-hidden="true"></i></a>socket.close()</h4>
+<p>Mark the socket closed and release all resources. Once that happens, all future operations on the socket object will fail. The remote end will receive EOF indication if supported by protocol.</p>
+<p>Sockets are automatically closed when they are garbage-collected, but it is recommended to <code>close()</code> them explicitly as soon you finished working with them.</p>
+<h4 id="socketbindaddress"><a name="socketbindaddress" class="anchor-navigation-ex-anchor" href="#socketbindaddress"><i class="fa fa-link" aria-hidden="true"></i></a>socket.bind(address)</h4>
+<p>Bind the socket to address. The socket must not already be bound.</p>
+<h4 id="socketlistenbacklog"><a name="socketlistenbacklog" class="anchor-navigation-ex-anchor" href="#socketlistenbacklog"><i class="fa fa-link" aria-hidden="true"></i></a>socket.listen([backlog])</h4>
+<p>Enable a server to accept connections. If backlog is specified, it must be at least 0 (if it&#x2019;s lower, it will be set to 0); and specifies the number of unaccepted connections that the system will allow before refusing new connections. If not specified, a default reasonable value is chosen.</p>
+<h4 id="socketaccept"><a name="socketaccept" class="anchor-navigation-ex-anchor" href="#socketaccept"><i class="fa fa-link" aria-hidden="true"></i></a>socket.accept()</h4>
+<p>Accept a connection. The socket must be bound to an address and listening for connections. The return value is a pair (conn, address) where conn is a new socket object usable to send and receive data on the connection, and address is the address bound to the socket on the other end of the connection.</p>
+<h4 id="socketconnectaddress"><a name="socketconnectaddress" class="anchor-navigation-ex-anchor" href="#socketconnectaddress"><i class="fa fa-link" aria-hidden="true"></i></a>socket.connect(address)</h4>
+<p>Connect to a remote socket at address.</p>
+<h4 id="socketsendbytes"><a name="socketsendbytes" class="anchor-navigation-ex-anchor" href="#socketsendbytes"><i class="fa fa-link" aria-hidden="true"></i></a>socket.send(bytes)</h4>
+<p>Send data to the socket. The socket must be connected to a remote socket. Returns number of bytes sent, which may be smaller than the length of data (&#x201C;short write&#x201D;).</p>
+<h4 id="socketsendallbytes"><a name="socketsendallbytes" class="anchor-navigation-ex-anchor" href="#socketsendallbytes"><i class="fa fa-link" aria-hidden="true"></i></a>socket.sendall(bytes)</h4>
+<p>Send all data to the socket. The socket must be connected to a remote socket. Unlike <code>send()</code>, this method will try to send all of data, by sending data chunk by chunk consecutively.</p>
+<p>The behavior of this method on non-blocking sockets is undefined. Due to this, on MicroPython, it&#x2019;s recommended to use <code>write()</code> method instead, which has the same &#x201C;no short writes&#x201D; policy for blocking sockets, and will return number of bytes sent on non-blocking sockets.</p>
+<h4 id="socketrecvbufsize"><a name="socketrecvbufsize" class="anchor-navigation-ex-anchor" href="#socketrecvbufsize"><i class="fa fa-link" aria-hidden="true"></i></a>socket.recv(bufsize)</h4>
+<p>Receive data from the socket. The return value is a bytes object representing the data received. The maximum amount of data to be received at once is specified by bufsize.</p>
+<h4 id="socketsendtobytes-address"><a name="socketsendtobytes-address" class="anchor-navigation-ex-anchor" href="#socketsendtobytes-address"><i class="fa fa-link" aria-hidden="true"></i></a>socket.sendto(bytes, address)</h4>
+<p>Send data to the socket. The socket should not be connected to a remote socket, since the destination socket is specified by address.</p>
+<h4 id="socketrecvfrombufsize"><a name="socketrecvfrombufsize" class="anchor-navigation-ex-anchor" href="#socketrecvfrombufsize"><i class="fa fa-link" aria-hidden="true"></i></a>socket.recvfrom(bufsize)</h4>
+<p>Receive data from the socket. The return value is a pair (bytes, address) where bytes is a bytes object representing the data received and address is the address of the socket sending the data.</p>
+<h4 id="socketsetsockoptlevel-optname-value"><a name="socketsetsockoptlevel-optname-value" class="anchor-navigation-ex-anchor" href="#socketsetsockoptlevel-optname-value"><i class="fa fa-link" aria-hidden="true"></i></a>socket.setsockopt(level, optname, value)</h4>
+<p>Set the value of the given socket option. The needed symbolic constants are defined in the socket module (SO_* etc.). The value can be an integer or a bytes-like object representing a buffer.</p>
+<h4 id="socketsettimeoutvalue"><a name="socketsettimeoutvalue" class="anchor-navigation-ex-anchor" href="#socketsettimeoutvalue"><i class="fa fa-link" aria-hidden="true"></i></a>socket.settimeout(value)</h4>
+<p>Note: Not every port supports this method, see below.</p>
+<p>Set a timeout on blocking socket operations. The value argument can be a nonnegative floating point number expressing seconds, or None. If a non-zero value is given, subsequent socket operations will raise an <code>OSError</code> exception if the timeout period value has elapsed before the operation has completed. If zero is given, the socket is put in non-blocking mode. If None is given, the socket is put in blocking mode.</p>
+<p>Not every <code>MicroPython port</code> supports this method. A more portable and generic solution is to use <code>uselect.poll</code> object. This allows to wait on multiple objects at the same time (and not just on sockets, but on generic <code>stream</code> objects which support polling). Example:</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># Instead of:</span>
+s<span class="token punctuation">.</span>settimeout<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span>  <span class="token comment"># time in seconds</span>
+s<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># may timeout</span>
+
+<span class="token comment"># Use:</span>
+poller <span class="token operator">=</span> uselect<span class="token punctuation">.</span>poll<span class="token punctuation">(</span><span class="token punctuation">)</span>
+poller<span class="token punctuation">.</span>register<span class="token punctuation">(</span>s<span class="token punctuation">,</span> uselect<span class="token punctuation">.</span>POLLIN<span class="token punctuation">)</span>
+res <span class="token operator">=</span> poller<span class="token punctuation">.</span>poll<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span>  <span class="token comment"># time in milliseconds</span>
+<span class="token keyword">if</span> <span class="token keyword">not</span> res<span class="token punctuation">:</span>
+    <span class="token comment"># s is still not ready for input, i.e. operation timed out</span>
+</code></pre>
+<blockquote>
+<p>Difference to CPython</p>
+<p>CPython raises a <code>socket.timeout</code> exception in case of timeout, which is an OSError subclass. MicroPython raises an <code>OSError</code> directly instead. If you use <code>except OSError</code>: to catch the exception, your code will work both in MicroPython and CPython.</p>
+</blockquote>
+<h4 id="socketsetblockingflag"><a name="socketsetblockingflag" class="anchor-navigation-ex-anchor" href="#socketsetblockingflag"><i class="fa fa-link" aria-hidden="true"></i></a>socket.setblocking(flag)</h4>
+<p>Set blocking or non-blocking mode of the socket: if flag is false, the socket is set to non-blocking, else to blocking mode.</p>
+<p>This method is a shorthand for certain <code>settimeout()</code> calls:</p>
+<p><code>sock.setblocking(True)</code> is equivalent to <code>sock.settimeout(None)</code>
+<code>sock.setblocking(False)</code> is equivalent to <code>sock.settimeout(0)</code></p>
+<h4 id="socketmakefilemoderb-buffering0"><a name="socketmakefilemoderb-buffering0" class="anchor-navigation-ex-anchor" href="#socketmakefilemoderb-buffering0"><i class="fa fa-link" aria-hidden="true"></i></a>socket.makefile(mode=&apos;rb&apos;, buffering=0)</h4>
+<p>Return a file object associated with the socket. The exact returned type depends on the arguments given to makefile(). The support is limited to binary modes only (&#x2018;rb&#x2019;, &#x2018;wb&#x2019;, and &#x2018;rwb&#x2019;). CPython&#x2019;s arguments: encoding, errors and newline are not supported.</p>
+<blockquote>
+<p>Difference to CPython</p>
+<p>As MicroPython doesn&#x2019;t support buffered streams, values of buffering parameter is ignored and treated as if it was 0 (unbuffered).</p>
+<p>Difference to CPython</p>
+<p>Closing the file object returned by makefile() WILL close the original socket as well.</p>
+</blockquote>
+<h4 id="socketreadsize"><a name="socketreadsize" class="anchor-navigation-ex-anchor" href="#socketreadsize"><i class="fa fa-link" aria-hidden="true"></i></a>socket.read([size])</h4>
+<p>Read up to size bytes from the socket. Return a bytes object. If size is not given, it reads all data available from the socket until EOF; as such the method will not return until the socket is closed. This function tries to read as much data as requested (no &#x201C;short reads&#x201D;). This may be not possible with non-blocking socket though, and then less data will be returned.</p>
+<h4 id="socketreadintobuf-nbytes"><a name="socketreadintobuf-nbytes" class="anchor-navigation-ex-anchor" href="#socketreadintobuf-nbytes"><i class="fa fa-link" aria-hidden="true"></i></a>socket.readinto(buf[, nbytes])</h4>
+<p>Read bytes into the buf. If nbytes is specified then read at most that many bytes. Otherwise, read at most len(buf) bytes. Just as read(), this method follows &#x201C;no short reads&#x201D; policy.</p>
+<p>Return value: number of bytes read and stored into buf.</p>
+<h4 id="socketreadline"><a name="socketreadline" class="anchor-navigation-ex-anchor" href="#socketreadline"><i class="fa fa-link" aria-hidden="true"></i></a>socket.readline()</h4>
+<p>Read a line, ending in a newline character.</p>
+<p>Return value: the line read.</p>
+<h4 id="socketwritebuf"><a name="socketwritebuf" class="anchor-navigation-ex-anchor" href="#socketwritebuf"><i class="fa fa-link" aria-hidden="true"></i></a>socket.write(buf)</h4>
+<p>Write the buffer of bytes to the socket. This function will try to write all data to a socket (no &#x201C;short writes&#x201D;). This may be not possible with a non-blocking socket though, and returned value will be less than the length of buf.</p>
+<p>Return value: number of bytes written.</p>
+<h4 id="exception-usocketerror"><a name="exception-usocketerror" class="anchor-navigation-ex-anchor" href="#exception-usocketerror"><i class="fa fa-link" aria-hidden="true"></i></a>exception usocket.error</h4>
+<p>MicroPython does NOT have this exception.</p>
+<blockquote>
+<p>Difference to CPython</p>
+<p>CPython used to have a <code>socket.error</code> exception which is now deprecated, and is an alias of <code>OSError</code>. In MicroPython, use <code>OSError</code> directly.</p>
+</blockquote>
+<h2 id="demo"><a name="demo" class="anchor-navigation-ex-anchor" href="#demo"><i class="fa fa-link" aria-hidden="true"></i></a>5. Demo</h2>
+<h3 id="demo-1-download-picture-and-display-on-lcd"><a name="demo-1-download-picture-and-display-on-lcd" class="anchor-navigation-ex-anchor" href="#demo-1-download-picture-and-display-on-lcd"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. Demo 1: Download picture and display on LCD</h3>
+<blockquote>
+<p>attention set WiFi SSID and password first in code</p>
+</blockquote>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> socket
+<span class="token keyword">import</span> network
+<span class="token keyword">import</span> gc
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> lcd<span class="token punctuation">,</span> image
+
+fm<span class="token punctuation">.</span>register<span class="token punctuation">(</span>board_info<span class="token punctuation">.</span>WIFI_RX<span class="token punctuation">,</span>fm<span class="token punctuation">.</span>fpioa<span class="token punctuation">.</span>UART2_TX<span class="token punctuation">)</span>
+fm<span class="token punctuation">.</span>register<span class="token punctuation">(</span>board_info<span class="token punctuation">.</span>WIFI_TX<span class="token punctuation">,</span>fm<span class="token punctuation">.</span>fpioa<span class="token punctuation">.</span>UART2_RX<span class="token punctuation">)</span>
+uart <span class="token operator">=</span> machine<span class="token punctuation">.</span>UART<span class="token punctuation">(</span>machine<span class="token punctuation">.</span>UART<span class="token punctuation">.</span>UART2<span class="token punctuation">,</span><span class="token number">115200</span><span class="token punctuation">,</span>timeout<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">,</span> read_buf_len<span class="token operator">=</span><span class="token number">4096</span><span class="token punctuation">)</span>
+nic<span class="token operator">=</span>network<span class="token punctuation">.</span>ESP8285<span class="token punctuation">(</span>uart<span class="token punctuation">)</span>
+nic<span class="token punctuation">.</span>connect<span class="token punctuation">(</span><span class="token string">&quot;Sipeed_2.4G&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;------&quot;</span><span class="token punctuation">)</span>
+
+sock <span class="token operator">=</span> socket<span class="token punctuation">.</span>socket<span class="token punctuation">(</span><span class="token punctuation">)</span>
+addr <span class="token operator">=</span> socket<span class="token punctuation">.</span>getaddrinfo<span class="token punctuation">(</span><span class="token string">&quot;dl.sipeed.com&quot;</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+sock<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>addr<span class="token punctuation">)</span>
+sock<span class="token punctuation">.</span>send<span class="token punctuation">(</span><span class="token triple-quoted-string string">&apos;&apos;&apos;GET /MAIX/MaixPy/assets/Alice.bmp HTTP/1.1
+Host: dl.sipeed.com
+cache-control: no-cache
+
+&apos;&apos;&apos;</span><span class="token punctuation">)</span>
+
+img <span class="token operator">=</span> <span class="token string">b&quot;&quot;</span>
+sock<span class="token punctuation">.</span>settimeout<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> sock<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">4096</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;rcv:&quot;</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    img <span class="token operator">=</span> img <span class="token operator">+</span> data
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">)</span>
+img <span class="token operator">=</span> img<span class="token punctuation">[</span>img<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">b&quot;\r\n\r\n&quot;</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;save to /sd/Alice.bmp&quot;</span><span class="token punctuation">)</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;/sd/Alice.bmp&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;wb&quot;</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;save ok&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;display&quot;</span><span class="token punctuation">)</span>
+img <span class="token operator">=</span> image<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token string">&quot;/sd/Alice.bmp&quot;</span><span class="token punctuation">)</span>
+lcd<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+lcd<span class="token punctuation">.</span>display<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="demo-2-send-picture"><a name="demo-2-send-picture" class="anchor-navigation-ex-anchor" href="#demo-2-send-picture"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. Demo 2: Send picture</h3>
+<pre class="language-"><code class="lang-python">
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> socket
+<span class="token keyword">import</span> network
+<span class="token keyword">import</span> gc
+
+fm<span class="token punctuation">.</span>register<span class="token punctuation">(</span>board_info<span class="token punctuation">.</span>WIFI_RX<span class="token punctuation">,</span>fm<span class="token punctuation">.</span>fpioa<span class="token punctuation">.</span>UART2_TX<span class="token punctuation">)</span>
+fm<span class="token punctuation">.</span>register<span class="token punctuation">(</span>board_info<span class="token punctuation">.</span>WIFI_TX<span class="token punctuation">,</span>fm<span class="token punctuation">.</span>fpioa<span class="token punctuation">.</span>UART2_RX<span class="token punctuation">)</span>
+uart <span class="token operator">=</span> machine<span class="token punctuation">.</span>UART<span class="token punctuation">(</span>machine<span class="token punctuation">.</span>UART<span class="token punctuation">.</span>UART2<span class="token punctuation">,</span><span class="token number">115200</span><span class="token punctuation">,</span>timeout<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">,</span> read_buf_len<span class="token operator">=</span><span class="token number">4096</span><span class="token punctuation">)</span>
+nic<span class="token operator">=</span>network<span class="token punctuation">.</span>ESP8285<span class="token punctuation">(</span>uart<span class="token punctuation">)</span>
+nic<span class="token punctuation">.</span>connect<span class="token punctuation">(</span><span class="token string">&quot;Sipeed_2.4G&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;-------&quot;</span><span class="token punctuation">)</span>
+
+addr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">&quot;192.168.0.183&quot;</span><span class="token punctuation">,</span> <span class="token number">3456</span><span class="token punctuation">)</span>
+sock <span class="token operator">=</span> socket<span class="token punctuation">.</span>socket<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sock<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>addr<span class="token punctuation">)</span>
+sock<span class="token punctuation">.</span>settimeout<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;/sd/Alice.bmp&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;rb&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    img <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> img <span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+    sock<span class="token punctuation">.</span>send<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sock<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-26 20:02:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="uselect.html" class="navigation navigation-prev " aria-label="Previous page: uselect">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ustruct.html" class="navigation navigation-next " aria-label="Next page: ustruct">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"usocket","level":"4.1.15","depth":2,"next":{"title":"ustruct","level":"4.1.16","depth":2,"path":"libs/standard/ustruct.md","ref":"libs/standard/ustruct.md","articles":[]},"previous":{"title":"uselect","level":"4.1.14","depth":2,"path":"libs/standard/uselect.md","ref":"libs/standard/uselect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"code","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"MaixPy DOC","language":"en","gitbook":"*","description":"MaixPy documentation"},"file":{"path":"libs/standard/usocket.md","mtime":"2020-11-26T12:02:14.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-26T12:03:10.728Z"},"basePath":"../..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+

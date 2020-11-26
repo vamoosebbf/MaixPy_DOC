@@ -1,0 +1,1701 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>sensor · MaixPy DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="image.html" />
+    
+    
+    <link rel="prev" href="lcd.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../others/what_maix_do.html">
+            
+                <a href="../../others/what_maix_do.html">
+            
+                    
+                    What can MaixPy do?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../get_started/how_to_read.html">
+            
+                <a href="../../get_started/how_to_read.html">
+            
+                    
+                    Before read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Prepare</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../get_started/get_hardware.html">
+            
+                <a href="../../get_started/get_hardware.html">
+            
+                    
+                    Get Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../get_started/prepare_knowledge.html">
+            
+                <a href="../../get_started/prepare_knowledge.html">
+            
+                    
+                    Prepare knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../get_started/install_driver.html">
+            
+                <a href="../../get_started/install_driver.html">
+            
+                    
+                    Install driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../get_started/upgrade_firmware.html">
+            
+                <a href="../../get_started/upgrade_firmware.html">
+            
+                    
+                    Upgrade firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../get_started/serial_tools.html">
+            
+                <a href="../../get_started/serial_tools.html">
+            
+                    
+                    terminal tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../get_started/maixpyide.html">
+            
+                <a href="../../get_started/maixpyide.html">
+            
+                    
+                    Install MaixPyIDE(optional)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../get_started/power_on.html">
+            
+                <a href="../../get_started/power_on.html">
+            
+                    
+                    Power on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../get_started/led_blink.html">
+            
+                <a href="../../get_started/led_blink.html">
+            
+                    
+                    LED blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../get_started/edit_file.html">
+            
+                <a href="../../get_started/edit_file.html">
+            
+                    
+                    Edit and execute files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../get_started/upload_script.html">
+            
+                <a href="../../get_started/upload_script.html">
+            
+                    
+                    Upload script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../get_started/boot.html">
+            
+                <a href="../../get_started/boot.html">
+            
+                    
+                    Auto start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Modules/Libs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../standard/">
+            
+                <a href="../standard/">
+            
+                    
+                    Standard library
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../standard/cmath.html">
+            
+                <a href="../standard/cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../standard/gc.html">
+            
+                <a href="../standard/gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../standard/math.html">
+            
+                <a href="../standard/math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../standard/sys.html">
+            
+                <a href="../standard/sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../standard/ubinascii.html">
+            
+                <a href="../standard/ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../standard/ucollections.html">
+            
+                <a href="../standard/ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../standard/uctypes.html">
+            
+                <a href="../standard/uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../standard/uerrno.html">
+            
+                <a href="../standard/uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../standard/uhashlib.html">
+            
+                <a href="../standard/uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../standard/uheapq.html">
+            
+                <a href="../standard/uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../standard/ujson.html">
+            
+                <a href="../standard/ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../standard/uos.html">
+            
+                <a href="../standard/uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="../standard/ure.html">
+            
+                <a href="../standard/ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="../standard/uselect.html">
+            
+                <a href="../standard/uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" data-path="../standard/usocket.html">
+            
+                <a href="../standard/usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="../standard/ustruct.html">
+            
+                <a href="../standard/ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="../standard/utime.html">
+            
+                <a href="../standard/utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="../standard/uzlib.html">
+            
+                <a href="../standard/uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../machine/">
+            
+                <a href="../machine/">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../machine/i2c.html">
+            
+                <a href="../machine/i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../machine/pwm.html">
+            
+                <a href="../machine/pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../machine/spi.html">
+            
+                <a href="../machine/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../machine/timer.html">
+            
+                <a href="../machine/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../machine/uart.html">
+            
+                <a href="../machine/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../machine/network.html">
+            
+                <a href="../machine/network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Maix/">
+            
+                <a href="../Maix/">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../Maix/fpioa.html">
+            
+                <a href="../Maix/fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../Maix/gpio.html">
+            
+                <a href="../Maix/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../Maix/kpu.html">
+            
+                <a href="../Maix/kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../Maix/fft.html">
+            
+                <a href="../Maix/fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../Maix/i2s.html">
+            
+                <a href="../Maix/i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../Maix/audio.html">
+            
+                <a href="../Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../Maix/freq.html">
+            
+                <a href="../Maix/freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../Maix/utils.html">
+            
+                <a href="../Maix/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../builtin_py/">
+            
+                <a href="../builtin_py/">
+            
+                    
+                    Built-in class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../builtin_py/fm.html">
+            
+                <a href="../builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../builtin_py/board_info.html">
+            
+                <a href="../builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Machine vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="lcd.html">
+            
+                <a href="lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.5.2" data-path="sensor.html">
+            
+                <a href="sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="image.html">
+            
+                <a href="image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="video.html">
+            
+                <a href="video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../peripheral_modules/">
+            
+                <a href="../peripheral_modules/">
+            
+                    
+                    Peripheral modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../peripheral_modules/touchscreen.html">
+            
+                <a href="../peripheral_modules/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../peripheral_modules/ultrasonic.html">
+            
+                <a href="../peripheral_modules/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../peripheral_modules/ws2812.html">
+            
+                <a href="../peripheral_modules/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../peripheral_modules/htpa.html">
+            
+                <a href="../peripheral_modules/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                <a href="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../application/">
+            
+                <a href="../../application/">
+            
+                    
+                    Integrated Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../../application/pye.html">
+            
+                <a href="../../application/pye.html">
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../../application/nes.html">
+            
+                <a href="../../application/nes.html">
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="../../application/lvgl.html">
+            
+                <a href="../../application/lvgl.html">
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced 1 - Custom Firmware</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../advanced/compile.html">
+            
+                <a href="../../advanced/compile.html">
+            
+                    
+                    Custom Firmware-Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../advanced/code_struct.html">
+            
+                <a href="../../advanced/code_struct.html">
+            
+                    
+                    Code structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../advanced/pack_fs.html">
+            
+                <a href="../../advanced/pack_fs.html">
+            
+                    
+                    Pack SPIFFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/sipeed/MaixPy_scripts">
+            
+                    
+                    Demo scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../others/Q_A.html">
+            
+                <a href="../../others/Q_A.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../contribute/">
+            
+                <a href="../../contribute/">
+            
+                    
+                    Contribute
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../contribute/doc_convention.html">
+            
+                <a href="../../contribute/doc_convention.html">
+            
+                    
+                    Doc convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../../contribute/code_convention.html">
+            
+                <a href="../../contribute/code_convention.html">
+            
+                    
+                    Code convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../others/open_projects.html">
+            
+                <a href="../../others/open_projects.html">
+            
+                    
+                    Related projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >sensor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#sensor"><b> </b>Sensor</a></li><ul><li><span class="title-icon "></span><a href="#method"><b>1. </b>method</a></li><ul><li><span class="title-icon "></span><a href="#reset-function"><b>1.1. </b>Reset function</a></li><li><span class="title-icon "></span><a href="#start-function"><b>1.2. </b>Start function</a></li><li><span class="title-icon "></span><a href="#setting-the-frame-size"><b>1.3. </b>Setting the frame size</a></li><li><span class="title-icon "></span><a href="#setting-the-frame-format"><b>1.4. </b>Setting the frame format</a></li><li><span class="title-icon "></span><a href="#starting-image-capture"><b>1.5. </b>Starting image capture</a></li><li><span class="title-icon "></span><a href="#getting-images"><b>1.6. </b>Getting images</a></li><li><span class="title-icon "></span><a href="#close-the-camera"><b>1.7. </b>Close the camera</a></li><li><span class="title-icon "></span><a href="#frame-skipping"><b>1.8. </b>Frame skipping</a></li><li><span class="title-icon "></span><a href="#resolution-width"><b>1.9. </b>Resolution width</a></li><li><span class="title-icon "></span><a href="#resolution-height"><b>1.10. </b>Resolution Height</a></li><li><span class="title-icon "></span><a href="#get-frame-buffer"><b>1.11. </b>Get frame buffer</a></li><li><span class="title-icon "></span><a href="#get-id"><b>1.12. </b>Get ID</a></li><li><span class="title-icon "></span><a href="#setting-color-bar-mode"><b>1.13. </b>Setting color bar mode</a></li><li><span class="title-icon "></span><a href="#setting-the-contrast"><b>1.14. </b>Setting the contrast</a></li><li><span class="title-icon "></span><a href="#setting-brightness"><b>1.15. </b>Setting brightness</a></li><li><span class="title-icon "></span><a href="#setting-the-saturation"><b>1.16. </b>Setting the saturation</a></li><li><span class="title-icon "></span><a href="#setting-automatic-gain"><b>1.17. </b>Setting automatic gain</a></li><li><span class="title-icon "></span><a href="#get-the-gain-value"><b>1.18. </b>Get the gain value</a></li><li><span class="title-icon "></span><a href="#setting-up-horizontal-mirroring"><b>1.19. </b>Setting up horizontal mirroring</a></li><li><span class="title-icon "></span><a href="#write-register"><b>1.20. </b>Write register</a></li><li><span class="title-icon "></span><a href="#read-register"><b>1.21. </b>Read register</a></li></ul><li><span class="title-icon "></span><a href="#routine"><b>2. </b>Routine</a></li><ul><li><span class="title-icon "></span><a href="#routine-1"><b>2.1. </b>Routine 1</a></li></ul></ul></ul></div><a href="#sensor" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sensor"><a name="sensor" class="anchor-navigation-ex-anchor" href="#sensor"><i class="fa fa-link" aria-hidden="true"></i></a> Sensor</h1>
+<p>Sensor module for camera configuration and image capture, etc., used to control the development board camera to complete the camera task</p>
+<h2 id="method"><a name="method" class="anchor-navigation-ex-anchor" href="#method"><i class="fa fa-link" aria-hidden="true"></i></a>1. method</h2>
+<h3 id="reset-function"><a name="reset-function" class="anchor-navigation-ex-anchor" href="#reset-function"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Reset function</h3>
+<p>Reset and initialize the camera. This will automatically scan and get the camera address</p>
+<pre class="language-"><code class="lang-python">sensor<span class="token punctuation">.</span>reset<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">,</span> freq<span class="token operator">=</span><span class="token number">24000000</span><span class="token punctuation">[</span><span class="token punctuation">,</span> set_regs<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">[</span><span class="token punctuation">,</span> dual_buff<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="parameters"><a name="parameters" class="anchor-navigation-ex-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>freq</code>: Set the clock frequency of sensor. The higher the frequency, the higher the frame rate, but the picture quality may be worse. The default is <code>24MHz</code>. If the camera has colored spots (ov7740), you can lower it appropriately, such as<code>20MHz</code></li>
+<li><code>set_regs</code>: Allows the program to write camera registers. The default is<code>True</code>. If you need a custom reset sequence, you can set it to False, and then use the <code>sensor.__ write_reg(addr, value)</code> function to customize the write register sequence</li>
+<li><code>dual_buff</code>: The default is<code>False</code>.Allowing double buffering will increase the frame rate, but the memory footprint will also increase (about 384KiB)</li>
+</ul>
+<h4 id="return-value"><a name="return-value" class="anchor-navigation-ex-anchor" href="#return-value"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<p>no</p>
+<h3 id="start-function"><a name="start-function" class="anchor-navigation-ex-anchor" href="#start-function"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Start function</h3>
+<p>Start or stop the camera</p>
+<pre class="language-"><code>sensor.run(enbale)
+</code></pre><h4 id="parameters_1"><a name="parameters_1" class="anchor-navigation-ex-anchor" href="#parameters_1"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>enbale: 1 means open, 0 means stop</li>
+</ul>
+<h4 id="return-value_1"><a name="return-value_1" class="anchor-navigation-ex-anchor" href="#return-value_1"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li>return: returns 1</li>
+</ul>
+<h3 id="setting-the-frame-size"><a name="setting-the-frame-size" class="anchor-navigation-ex-anchor" href="#setting-the-frame-size"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Setting the frame size</h3>
+<p>It is used to set the camera output frame size. The k210 supports VGA format at most. If it is larger than VGA, it will not be able to acquire images.
+The screen of the MaixPy development board is 320*240 resolution, and the recommended setting is QVGA format.</p>
+<pre class="language-"><code>sensor.set_framesize(framesize[, set_regs=True])
+</code></pre><h4 id="parameters_2"><a name="parameters_2" class="anchor-navigation-ex-anchor" href="#parameters_2"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>framesize</code>: frame size</li>
+<li><code>set_regs</code>: Allows the program to write camera registers. The default is<code>True</code>. If you need a custom sequence, you can set it to False, and then use the <code>sensor.__ write_reg(addr, value)</code> function to customize the write register sequence</li>
+</ul>
+<h4 id="return-value_2"><a name="return-value_2" class="anchor-navigation-ex-anchor" href="#return-value_2"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>True</code> : set successfully</li>
+<li><code>False</code>: setting error</li>
+</ul>
+<h3 id="setting-the-frame-format"><a name="setting-the-frame-format" class="anchor-navigation-ex-anchor" href="#setting-the-frame-format"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Setting the frame format</h3>
+<p>Used to set the camera output format, k210 supports rgb565 and yuv422 formats. The screen of the MaixPy development board configuration is set using rgb565, and the recommended setting is RGB565 format.</p>
+<pre class="language-"><code>sensor.set_pixformat(format[, set_regs=True])
+</code></pre><h4 id="parameters_3"><a name="parameters_3" class="anchor-navigation-ex-anchor" href="#parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>format</code>: frame format</li>
+<li><code>set_regs</code>: Allows the program to write camera registers. The default is<code>True</code>. If you need a custom sequence, you can set it to False, and then use the <code>sensor.__ write_reg(addr, value)</code> function to customize the write register sequence</li>
+</ul>
+<h4 id="return-value_3"><a name="return-value_3" class="anchor-navigation-ex-anchor" href="#return-value_3"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>True</code> : set successfully</li>
+<li><code>False</code>: setting error</li>
+</ul>
+<h3 id="starting-image-capture"><a name="starting-image-capture" class="anchor-navigation-ex-anchor" href="#starting-image-capture"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Starting image capture</h3>
+<p>Turn on image capture</p>
+<pre class="language-"><code>sensor.run(enable)
+</code></pre><h4 id="parameters_4"><a name="parameters_4" class="anchor-navigation-ex-anchor" href="#parameters_4"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>enable</code>: 1 means start grabbing image 0 means stop grabbing image</li>
+</ul>
+<h4 id="return-value_4"><a name="return-value_4" class="anchor-navigation-ex-anchor" href="#return-value_4"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>True</code> : set successfully</li>
+<li><code>False</code>: setting error</li>
+</ul>
+<h3 id="getting-images"><a name="getting-images" class="anchor-navigation-ex-anchor" href="#getting-images"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Getting images</h3>
+<p>Control camera capture image</p>
+<pre class="language-"><code>img = sensor.snapshot()
+</code></pre><h4 id="parameters_5"><a name="parameters_5" class="anchor-navigation-ex-anchor" href="#parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>no</p>
+<h4 id="return-value_5"><a name="return-value_5" class="anchor-navigation-ex-anchor" href="#return-value_5"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>img</code>: returned image object</li>
+</ul>
+<h3 id="close-the-camera"><a name="close-the-camera" class="anchor-navigation-ex-anchor" href="#close-the-camera"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. Close the camera</h3>
+<p>Turn off the camera</p>
+<pre class="language-"><code>sensor.shutdown(enable)
+</code></pre><h4 id="parameters_6"><a name="parameters_6" class="anchor-navigation-ex-anchor" href="#parameters_6"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>enable</code>: 1 means to turn on the camera 0 means to turn off the camera</li>
+</ul>
+<h4 id="return-value_6"><a name="return-value_6" class="anchor-navigation-ex-anchor" href="#return-value_6"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<p>no</p>
+<h3 id="frame-skipping"><a name="frame-skipping" class="anchor-navigation-ex-anchor" href="#frame-skipping"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. Frame skipping</h3>
+<p>Skip the specified number of frames or skip the image for the specified time</p>
+<pre class="language-"><code>sensor.skip_frames(n, [, time])
+</code></pre><h4 id="parameters_7"><a name="parameters_7" class="anchor-navigation-ex-anchor" href="#parameters_7"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><p><code>n</code>: skip n frame image</p>
+</li>
+<li><p><code>time</code>: Skip the specified time in ms</p>
+</li>
+</ul>
+<h4 id="return-value_7"><a name="return-value_7" class="anchor-navigation-ex-anchor" href="#return-value_7"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<p>no</p>
+<h3 id="resolution-width"><a name="resolution-width" class="anchor-navigation-ex-anchor" href="#resolution-width"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. Resolution width</h3>
+<p>Get camera resolution width</p>
+<pre class="language-"><code>sensor.width()
+</code></pre><h4 id="parameters_8"><a name="parameters_8" class="anchor-navigation-ex-anchor" href="#parameters_8"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>no</p>
+<h4 id="return-value_8"><a name="return-value_8" class="anchor-navigation-ex-anchor" href="#return-value_8"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li>camera resolution width of <code>int</code> type</li>
+</ul>
+<h3 id="resolution-height"><a name="resolution-height" class="anchor-navigation-ex-anchor" href="#resolution-height"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. Resolution Height</h3>
+<pre class="language-"><code>sensor.height()
+</code></pre><h4 id="parameters_9"><a name="parameters_9" class="anchor-navigation-ex-anchor" href="#parameters_9"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>no</p>
+<h4 id="return-value_9"><a name="return-value_9" class="anchor-navigation-ex-anchor" href="#return-value_9"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>int</code> type camera resolution height</li>
+</ul>
+<h3 id="get-frame-buffer"><a name="get-frame-buffer" class="anchor-navigation-ex-anchor" href="#get-frame-buffer"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. Get frame buffer</h3>
+<p>Get the current frame buffer</p>
+<pre class="language-"><code>sensor.get_fb()
+</code></pre><h4 id="parameters_10"><a name="parameters_10" class="anchor-navigation-ex-anchor" href="#parameters_10"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>no</p>
+<h4 id="return-value_10"><a name="return-value_10" class="anchor-navigation-ex-anchor" href="#return-value_10"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li>Object of type <code>image</code></li>
+</ul>
+<h3 id="get-id"><a name="get-id" class="anchor-navigation-ex-anchor" href="#get-id"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. Get ID</h3>
+<p>Get the current camera ID</p>
+<pre class="language-"><code>sensor.get_id()
+</code></pre><h4 id="parameters_11"><a name="parameters_11" class="anchor-navigation-ex-anchor" href="#parameters_11"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>no</p>
+<h4 id="return-value_11"><a name="return-value_11" class="anchor-navigation-ex-anchor" href="#return-value_11"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>int</code> type ID</li>
+</ul>
+<h3 id="setting-color-bar-mode"><a name="setting-color-bar-mode" class="anchor-navigation-ex-anchor" href="#setting-color-bar-mode"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. Setting color bar mode</h3>
+<p>Set the camera to color bar mode</p>
+<pre class="language-"><code>sensor.set_colorbar(enable)
+</code></pre><h4 id="parameters_12"><a name="parameters_12" class="anchor-navigation-ex-anchor" href="#parameters_12"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>enable</code>: 1 means to turn on the color bar mode 0 means to turn off the color bar mode</li>
+</ul>
+<h4 id="return-value_12"><a name="return-value_12" class="anchor-navigation-ex-anchor" href="#return-value_12"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<p>no</p>
+<h3 id="setting-the-contrast"><a name="setting-the-contrast" class="anchor-navigation-ex-anchor" href="#setting-the-contrast"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. Setting the contrast</h3>
+<p>Set camera contrast</p>
+<pre class="language-"><code>sensor.set_contrast(contrast)
+</code></pre><h4 id="parameters_13"><a name="parameters_13" class="anchor-navigation-ex-anchor" href="#parameters_13"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>constrast</code>: camera contrast, range [-2, +2]</li>
+</ul>
+<h4 id="return-value_13"><a name="return-value_13" class="anchor-navigation-ex-anchor" href="#return-value_13"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>True</code> : set successfully</li>
+<li><code>False</code>: setting error</li>
+</ul>
+<h3 id="setting-brightness"><a name="setting-brightness" class="anchor-navigation-ex-anchor" href="#setting-brightness"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. Setting brightness</h3>
+<p>Set camera brightness</p>
+<pre class="language-"><code>sensor.set_brightness(brightness)
+</code></pre><h4 id="parameters_14"><a name="parameters_14" class="anchor-navigation-ex-anchor" href="#parameters_14"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>constrast</code>: camera brightness, range [-2, +2]</li>
+</ul>
+<h4 id="return-value_14"><a name="return-value_14" class="anchor-navigation-ex-anchor" href="#return-value_14"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>True</code> : set successfully</li>
+<li><code>False</code>: setting error</li>
+</ul>
+<h3 id="setting-the-saturation"><a name="setting-the-saturation" class="anchor-navigation-ex-anchor" href="#setting-the-saturation"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. Setting the saturation</h3>
+<p>Set camera saturation</p>
+<pre class="language-"><code>sensor.set_saturation(saturation)
+</code></pre><h4 id="parameters_15"><a name="parameters_15" class="anchor-navigation-ex-anchor" href="#parameters_15"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>constrast</code>: camera saturation, range [-2, +2]</li>
+</ul>
+<h4 id="return-value_15"><a name="return-value_15" class="anchor-navigation-ex-anchor" href="#return-value_15"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li><code>True</code> : set successfully</li>
+<li><code>False</code>: setting error</li>
+</ul>
+<h3 id="setting-automatic-gain"><a name="setting-automatic-gain" class="anchor-navigation-ex-anchor" href="#setting-automatic-gain"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. Setting automatic gain</h3>
+<p>Set the camera automatic gain mode</p>
+<pre class="language-"><code>sensor.set_auto_gain(enable,gain_db)
+</code></pre><h4 id="parameters_16"><a name="parameters_16" class="anchor-navigation-ex-anchor" href="#parameters_16"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>enable</code>: 1 means to turn on automatic gain 0 means to turn off automatic gain</li>
+<li><code>gain_db</code>: Set the camera fixed gain value when the auto gain is turned off, the unit is db</li>
+</ul>
+<h4 id="return-value_16"><a name="return-value_16" class="anchor-navigation-ex-anchor" href="#return-value_16"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<p>no</p>
+<h3 id="get-the-gain-value"><a name="get-the-gain-value" class="anchor-navigation-ex-anchor" href="#get-the-gain-value"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. Get the gain value</h3>
+<p>Get camera gain value</p>
+<pre class="language-"><code>sensor.get_gain_db()
+</code></pre><h4 id="parameters_17"><a name="parameters_17" class="anchor-navigation-ex-anchor" href="#parameters_17"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>no</p>
+<h4 id="return-value_17"><a name="return-value_17" class="anchor-navigation-ex-anchor" href="#return-value_17"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li>Gain value of <code>float</code> type</li>
+</ul>
+<h3 id="setting-up-horizontal-mirroring"><a name="setting-up-horizontal-mirroring" class="anchor-navigation-ex-anchor" href="#setting-up-horizontal-mirroring"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. Setting up horizontal mirroring</h3>
+<p>Set the camera horizontal mirror</p>
+<pre class="language-"><code>sensor.set_hmirror(enable)
+</code></pre><h4 id="parameters_18"><a name="parameters_18" class="anchor-navigation-ex-anchor" href="#parameters_18"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>enable</code>: 1 means to turn on horizontal mirroring 0 to turn off horizontal mirroring</li>
+</ul>
+<h4 id="return-value_18"><a name="return-value_18" class="anchor-navigation-ex-anchor" href="#return-value_18"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<p>no</p>
+<h3 id="write-register"><a name="write-register" class="anchor-navigation-ex-anchor" href="#write-register"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. Write register</h3>
+<p>Write the specified value to the camera register</p>
+<pre class="language-"><code>sensor.__write_reg(address, value)
+</code></pre><h4 id="parameters_19"><a name="parameters_19" class="anchor-navigation-ex-anchor" href="#parameters_19"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>address</code>: register address</li>
+<li><code>value</code> : write value</li>
+</ul>
+<h4 id="return-value_19"><a name="return-value_19" class="anchor-navigation-ex-anchor" href="#return-value_19"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<p>no</p>
+<h3 id="read-register"><a name="read-register" class="anchor-navigation-ex-anchor" href="#read-register"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. Read register</h3>
+<p>Read camera register value</p>
+<pre class="language-"><code>sensor.__read_reg(address)
+</code></pre><h4 id="parameters_20"><a name="parameters_20" class="anchor-navigation-ex-anchor" href="#parameters_20"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>address</code>: register address</li>
+</ul>
+<h4 id="return-value_20"><a name="return-value_20" class="anchor-navigation-ex-anchor" href="#return-value_20"><i class="fa fa-link" aria-hidden="true"></i></a>return value</h4>
+<ul>
+<li>Register value of type <code>int</code></li>
+</ul>
+<h2 id="routine"><a name="routine" class="anchor-navigation-ex-anchor" href="#routine"><i class="fa fa-link" aria-hidden="true"></i></a>2. Routine</h2>
+<h3 id="routine-1"><a name="routine-1" class="anchor-navigation-ex-anchor" href="#routine-1"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. Routine 1</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> sensor
+<span class="token keyword">import</span> lcd
+lcd<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>reset<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>set_pixformat<span class="token punctuation">(</span>sensor<span class="token punctuation">.</span>RGB565<span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>set_framesize<span class="token punctuation">(</span>sensor<span class="token punctuation">.</span>QVGA<span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token number">1</span><span class="token punctuation">:</span>
+    img <span class="token operator">=</span> sensor<span class="token punctuation">.</span>snapshot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    lcd<span class="token punctuation">.</span>display<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-26 20:02:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lcd.html" class="navigation navigation-prev " aria-label="Previous page: lcd">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="image.html" class="navigation navigation-next " aria-label="Next page: image">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sensor","level":"4.5.2","depth":2,"next":{"title":"image","level":"4.5.3","depth":2,"path":"libs/machine_vision/image.md","ref":"libs/machine_vision/image.md","articles":[]},"previous":{"title":"lcd","level":"4.5.1","depth":2,"path":"libs/machine_vision/lcd.md","ref":"libs/machine_vision/lcd.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"code","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"MaixPy DOC","language":"en","gitbook":"*","description":"MaixPy documentation"},"file":{"path":"libs/machine_vision/sensor.md","mtime":"2020-11-26T12:02:14.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-26T12:03:10.728Z"},"basePath":"../..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+

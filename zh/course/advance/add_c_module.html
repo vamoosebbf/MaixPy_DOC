@@ -1,0 +1,3209 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>如何添加一个 C 模块 · MaixPy 文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pack_fs.html" />
+    
+    
+    <link rel="prev" href="project_framework.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<nav role="navigation" class="autoshow">
+    <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png"
+                    height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">English</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span
+                    style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/zh/" class="btn">Version: <span
+                            style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/zh/" class="btn">Version: <span
+                            style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn"><i></i>博客</a></li>
+        
+        
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn"><i></i>论坛</a></li>
+        
+        
+        
+        <li>
+            <a href="#" class="btn"><i></i>反馈</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn">文档</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn">源码</a></li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+</nav>
+
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../what_maix_do.html">
+            
+                <a href="../../what_maix_do.html">
+            
+                    
+                    MaixPy 能做哪些事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../maixpy_history.html">
+            
+                <a href="../../maixpy_history.html">
+            
+                    
+                    MaixPy 发展历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../thanks.html">
+            
+                <a href="../../thanks.html">
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">入门必看指南</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../how_to_read.html">
+            
+                <a href="../../how_to_read.html">
+            
+                    
+                    如何正确阅读本文 (重要！！！)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../how_to_ask.html">
+            
+                <a href="../../how_to_ask.html">
+            
+                    
+                    如何优雅提问 (重要！！！)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    开发板和配件选购指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../develop_kit_board/get_hardware.html">
+            
+                <a href="../../develop_kit_board/get_hardware.html">
+            
+                    
+                    开发板选购指南(对比)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" >
+            
+                <span>
+            
+                    
+                    开发板介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.2.1" data-path="../../develop_kit_board/maix_dock.html">
+            
+                <a href="../../develop_kit_board/maix_dock.html">
+            
+                    
+                    Maix Dock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.2" data-path="../../develop_kit_board/maix_bit.html">
+            
+                <a href="../../develop_kit_board/maix_bit.html">
+            
+                    
+                    Maix Bit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.3" data-path="../../develop_kit_board/maix_amigo.html">
+            
+                <a href="../../develop_kit_board/maix_amigo.html">
+            
+                    
+                    Maix Amigo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../../develop_kit_board/maix_duino.html">
+            
+                <a href="../../develop_kit_board/maix_duino.html">
+            
+                    
+                    Maix Duino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.5" data-path="../../develop_kit_board/maix_cube.html">
+            
+                <a href="../../develop_kit_board/maix_cube.html">
+            
+                    
+                    Maix Cube
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.6" data-path="../../develop_kit_board/maix_go.html">
+            
+                <a href="../../develop_kit_board/maix_go.html">
+            
+                    
+                    Maix Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.7" data-path="../../develop_kit_board/maix_nano.html">
+            
+                <a href="../../develop_kit_board/maix_nano.html">
+            
+                    
+                    Maix Nano
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" >
+            
+                <span>
+            
+                    
+                    外设模组（配件）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.3.1" data-path="../../modules/sp_mode/README.md">
+            
+                <span>
+            
+                    
+                    SP-MOD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3.2" data-path="../../modules/grove/">
+            
+                <a href="../../modules/grove/">
+            
+                    
+                    Grove
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3.3" data-path="../../modules/others/">
+            
+                <a href="../../modules/others/">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    基础知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../get_started/knowledge_micropython.html">
+            
+                <a href="../../get_started/knowledge_micropython.html">
+            
+                    
+                    MaixPy 语法基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../get_started/knowledge_git_github.html">
+            
+                <a href="../../get_started/knowledge_git_github.html">
+            
+                    
+                    git 和 github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../get_started/knowledge_image.html">
+            
+                <a href="../../get_started/knowledge_image.html">
+            
+                    
+                    MaixPy 图像基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../../get_started/knowledge_audio.html">
+            
+                <a href="../../get_started/knowledge_audio.html">
+            
+                    
+                    MaixPy 音频基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    开发环境准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../get_started/env_install_driver.html">
+            
+                <a href="../../get_started/env_install_driver.html">
+            
+                    
+                    安装驱动
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1.1" data-path="../../get_started/install_driver/dock.html">
+            
+                <a href="../../get_started/install_driver/dock.html">
+            
+                    
+                    Maix Dock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.1.2" >
+            
+                <span>
+            
+                    
+                    [Maix Bit]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.1.3" >
+            
+                <span>
+            
+                    
+                    [Maix Amigo]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.1.4" >
+            
+                <span>
+            
+                    
+                    [Maix Cube]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.1.5" >
+            
+                <span>
+            
+                    
+                    [Maix Go]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.1.6" >
+            
+                <span>
+            
+                    
+                    [Maix Nano]
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../get_started/upgrade_maixpy_firmware.html">
+            
+                <a href="../../get_started/upgrade_maixpy_firmware.html">
+            
+                    
+                    更新 MaixPy 固件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../../get_started/env_serial_tools.html">
+            
+                <a href="../../get_started/env_serial_tools.html">
+            
+                    
+                    使用串口终端工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="../../get_started/env_maixpyide.html">
+            
+                <a href="../../get_started/env_maixpyide.html">
+            
+                    
+                    MaixPy IDE 使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" >
+            
+                <span>
+            
+                    
+                    [更新 WIFI 模块固件]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.5.1" data-path="../../get_started/upgrade_esp32_firmware.html">
+            
+                <a href="../../get_started/upgrade_esp32_firmware.html">
+            
+                    
+                    更新板载 ESP32 固件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5.2" data-path="../../get_started/upgrade_esp8285_firmware.html">
+            
+                <a href="../../get_started/upgrade_esp8285_firmware.html">
+            
+                    
+                    更新板载 ESP8285 固件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" >
+            
+                <span>
+            
+                    
+                    上手
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="../../get_started/get_started_power_on.html">
+            
+                <a href="../../get_started/get_started_power_on.html">
+            
+                    
+                    上电
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="../../get_started/get_started_cam_lcd.html">
+            
+                <a href="../../get_started/get_started_cam_lcd.html">
+            
+                    
+                    第一个程序: 使用屏幕和摄像头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="../../get_started/get_started_led_blink.html">
+            
+                <a href="../../get_started/get_started_led_blink.html">
+            
+                    
+                    第二个程序: 点亮 LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="../../get_started/get_started_fs.html">
+            
+                <a href="../../get_started/get_started_fs.html">
+            
+                    
+                    文件系统介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.5" data-path="../../get_started/get_started_edit_file.html">
+            
+                <a href="../../get_started/get_started_edit_file.html">
+            
+                    
+                    编辑并运行脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.6" data-path="../../get_started/get_started_upload_script.html">
+            
+                <a href="../../get_started/get_started_upload_script.html">
+            
+                    
+                    上传脚本到开发板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.7" data-path="../../get_started/get_started_boot.html">
+            
+                <a href="../../get_started/get_started_boot.html">
+            
+                    
+                    开机自动运行脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.8" >
+            
+                <span>
+            
+                    
+                    [开发板配置文件]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.9" data-path="../../get_started/maixpy_get_started_video.html">
+            
+                <a href="../../get_started/maixpy_get_started_video.html">
+            
+                    
+                    上手视频教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" >
+            
+                <span>
+            
+                    
+                    固件定制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="../../firmware/why_customize_firware.html">
+            
+                <a href="../../firmware/why_customize_firware.html">
+            
+                    
+                    为什么需要定制固件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" data-path="../../firmware/online_compile.html">
+            
+                <a href="../../firmware/online_compile.html">
+            
+                    
+                    在线编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="../../firmware/compile.html">
+            
+                <a href="../../firmware/compile.html">
+            
+                    
+                    源码编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MaixPy 手把手教程</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    教程说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    基本图像处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" >
+            
+                <span>
+            
+                    
+                    图像获取和显示
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../basic/image/get_images.md">
+            
+                <span>
+            
+                    
+                    图像获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" data-path="../basic/image/display_images.md">
+            
+                <span>
+            
+                    
+                    图像显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../basic/image/vary.md">
+            
+                <span>
+            
+                    
+                    MaixPy 图像及常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../basic/image/draw.md">
+            
+                <span>
+            
+                    
+                    基本画图、写字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../basic/image/acc_image_deal.md">
+            
+                <span>
+            
+                    
+                    硬件加速的图像处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    MaixPy AI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../ai/basic/dnn_basic.html">
+            
+                <a href="../ai/basic/dnn_basic.html">
+            
+                    
+                    深度神经网络基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../ai/basic/maixpy_hardware_ai_basic.html">
+            
+                <a href="../ai/basic/maixpy_hardware_ai_basic.html">
+            
+                    
+                    MaixPy AI 硬件加速基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" >
+            
+                <span>
+            
+                    
+                    图像处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.3.1" data-path="../ai/image/face_detect.html">
+            
+                <a href="../ai/image/face_detect.html">
+            
+                    
+                    人脸检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3.2" data-path="../ai/image/1000_type_classifier.html">
+            
+                <a href="../ai/image/1000_type_classifier.html">
+            
+                    
+                    1000 种物体分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3.3" data-path="../ai/image/face_recognization.html">
+            
+                <a href="../ai/image/face_recognization.html">
+            
+                    
+                    人脸识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3.4" data-path="../ai/image/self_learn_classifier.html">
+            
+                <a href="../ai/image/self_learn_classifier.html">
+            
+                    
+                    自学习分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" >
+            
+                <span>
+            
+                    
+                    音频处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.4.1" data-path="../speech/recognizer_cnn.html">
+            
+                <a href="../speech/recognizer_cnn.html">
+            
+                    
+                    语音识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    模型训练
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" >
+            
+                <span>
+            
+                    
+                    训练自己的分类和检测模型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1.1" data-path="../ai/train/maixhub.html">
+            
+                <a href="../ai/train/maixhub.html">
+            
+                    
+                    MaixHub 云端训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.1.2" data-path="../ai/train/local.html">
+            
+                <a href="../ai/train/local.html">
+            
+                    
+                    本地训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    传统算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" >
+            
+                <span>
+            
+                    
+                    图像处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1.1" >
+            
+                <span>
+            
+                    
+                    寻找色块
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.1.2" data-path="../image/qrcode.md">
+            
+                <span>
+            
+                    
+                    二维码识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" >
+            
+                <span>
+            
+                    
+                    音频处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.2.1" >
+            
+                <span>
+            
+                    
+                    [FFT频谱图]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2.2" >
+            
+                <span>
+            
+                    
+                    [声场成像]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2.3" data-path="../speech/recognizer_mfcc.html">
+            
+                <a href="../speech/recognizer_mfcc.html">
+            
+                    
+                    关键词识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" >
+            
+                <span>
+            
+                    
+                    [外设]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" >
+            
+                <span>
+            
+                    
+                    [片上外设]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" >
+            
+                <span>
+            
+                    
+                    SP-MOD
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.2.1" >
+            
+                <span>
+            
+                    
+                    [Weather 天气模块]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.2" >
+            
+                <span>
+            
+                    
+                    [TOF 镜头]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2.3" >
+            
+                <span>
+            
+                    
+                    [SSD1306 OLED]
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" >
+            
+                <span>
+            
+                    
+                    Grove
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.3.1" >
+            
+                <span>
+            
+                    
+                    [超声波]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3.2" >
+            
+                <span>
+            
+                    
+                    [RGB LED 链]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3.3" >
+            
+                <span>
+            
+                    
+                    [ws2812 灯条]
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" >
+            
+                <span>
+            
+                    
+                    更多外设
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.4.1" data-path="../../develop_kit_board/module_microphone.html">
+            
+                <a href="../../develop_kit_board/module_microphone.html">
+            
+                    
+                    Sipeed 麦克风阵列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4.2" >
+            
+                <span>
+            
+                    
+                    [双摄模块]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4.3" >
+            
+                <span>
+            
+                    
+                    [MLX90640 串口红外镜头模块]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4.4" >
+            
+                <span>
+            
+                    
+                    [HTPA 红外镜头]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4.5" >
+            
+                <span>
+            
+                    
+                    [舵机]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4.6" >
+            
+                <span>
+            
+                    
+                    ESP32 ADC
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" >
+            
+                <span>
+            
+                    
+                    更多功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" >
+            
+                <span>
+            
+                    
+                    系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1.1" data-path="../others/system.html">
+            
+                <a href="../others/system.html">
+            
+                    
+                    主频、复位等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.1.2" data-path="../others/mem.html">
+            
+                <a href="../others/mem.html">
+            
+                    
+                    内存配置与查看
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.1.3" data-path="../others/flash.html">
+            
+                <a href="../others/flash.html">
+            
+                    
+                    Flash 分区表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" >
+            
+                <span>
+            
+                    
+                    GUI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.2.1" data-path="../others/maixui.html">
+            
+                <a href="../others/maixui.html">
+            
+                    
+                    Maix UI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2.2" data-path="../others/lvgl.html">
+            
+                <a href="../others/lvgl.html">
+            
+                    
+                    Lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2.3" data-path="../others/pye.html">
+            
+                <a href="../others/pye.html">
+            
+                    
+                    编辑器 pye
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.3" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.3.1" data-path="../network/network_config.py">
+            
+                <span>
+            
+                    
+                    配置 network 网卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.3.2" data-path="../network/socket_usage.py">
+            
+                <span>
+            
+                    
+                    使用 socket 通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.4" >
+            
+                <span>
+            
+                    
+                    多媒体
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.4.1" data-path="../../api_reference/Maix/audio.html">
+            
+                <a href="../../api_reference/Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.4.2" data-path="../others/video.html">
+            
+                <a href="../others/video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.5" >
+            
+                <span>
+            
+                    
+                    游戏
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.5.1" data-path="../others/nes.html">
+            
+                <a href="../others/nes.html">
+            
+                    
+                    NES 游戏机
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">API手册</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../api_reference/standard/">
+            
+                <a href="../../api_reference/standard/">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../api_reference/standard/cmath.html">
+            
+                <a href="../../api_reference/standard/cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../api_reference/standard/gc.html">
+            
+                <a href="../../api_reference/standard/gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../api_reference/standard/math.html">
+            
+                <a href="../../api_reference/standard/math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../api_reference/standard/sys.html">
+            
+                <a href="../../api_reference/standard/sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../api_reference/standard/ubinascii.html">
+            
+                <a href="../../api_reference/standard/ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../api_reference/standard/ucollections.html">
+            
+                <a href="../../api_reference/standard/ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../api_reference/standard/uctypes.html">
+            
+                <a href="../../api_reference/standard/uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../api_reference/standard/uerrno.html">
+            
+                <a href="../../api_reference/standard/uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../api_reference/standard/uhashlib.html">
+            
+                <a href="../../api_reference/standard/uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../api_reference/standard/uheapq.html">
+            
+                <a href="../../api_reference/standard/uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../../api_reference/standard/ujson.html">
+            
+                <a href="../../api_reference/standard/ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../../api_reference/standard/uos.html">
+            
+                <a href="../../api_reference/standard/uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="../../api_reference/standard/ure.html">
+            
+                <a href="../../api_reference/standard/ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="../../api_reference/standard/uselect.html">
+            
+                <a href="../../api_reference/standard/uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" data-path="../../api_reference/standard/usocket.html">
+            
+                <a href="../../api_reference/standard/usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="../../api_reference/standard/ustruct.html">
+            
+                <a href="../../api_reference/standard/ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="../../api_reference/standard/utime.html">
+            
+                <a href="../../api_reference/standard/utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="../../api_reference/standard/uzlib.html">
+            
+                <a href="../../api_reference/standard/uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../api_reference/machine/">
+            
+                <a href="../../api_reference/machine/">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../api_reference/machine/i2c.html">
+            
+                <a href="../../api_reference/machine/i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../api_reference/machine/pwm.html">
+            
+                <a href="../../api_reference/machine/pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../api_reference/machine/spi.html">
+            
+                <a href="../../api_reference/machine/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../api_reference/machine/timer.html">
+            
+                <a href="../../api_reference/machine/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../api_reference/machine/uart.html">
+            
+                <a href="../../api_reference/machine/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../../api_reference/machine/network.html">
+            
+                <a href="../../api_reference/machine/network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../api_reference/Maix/">
+            
+                <a href="../../api_reference/Maix/">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../api_reference/Maix/fpioa.html">
+            
+                <a href="../../api_reference/Maix/fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../api_reference/Maix/gpio.html">
+            
+                <a href="../../api_reference/Maix/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../../api_reference/Maix/kpu.html">
+            
+                <a href="../../api_reference/Maix/kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../../api_reference/Maix/fft.html">
+            
+                <a href="../../api_reference/Maix/fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../../api_reference/Maix/i2s.html">
+            
+                <a href="../../api_reference/Maix/i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../../api_reference/Maix/audio.html">
+            
+                <a href="../../api_reference/Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../../api_reference/Maix/freq.html">
+            
+                <a href="../../api_reference/Maix/freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../../api_reference/Maix/utils.html">
+            
+                <a href="../../api_reference/Maix/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../api_reference/builtin_py/">
+            
+                <a href="../../api_reference/builtin_py/">
+            
+                    
+                    helper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../api_reference/builtin_py/fm.html">
+            
+                <a href="../../api_reference/builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../../api_reference/builtin_py/board_info.html">
+            
+                <a href="../../api_reference/builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="../../api_reference/application/pye.md">
+            
+                <span>
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../../api_reference/machine_vision/">
+            
+                <a href="../../api_reference/machine_vision/">
+            
+                    
+                    media
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../../api_reference/machine_vision/lcd.html">
+            
+                <a href="../../api_reference/machine_vision/lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../../api_reference/machine_vision/sensor.html">
+            
+                <a href="../../api_reference/machine_vision/sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../../api_reference/machine_vision/image.md">
+            
+                <span>
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../../api_reference/machine_vision/video.md">
+            
+                <span>
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.5" data-path="../../api_reference/application/nes.md">
+            
+                <span>
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.6" data-path="../../api_reference/application/lvgl.md">
+            
+                <span>
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../api_reference/extend/">
+            
+                <a href="../../api_reference/extend/">
+            
+                    
+                    extend
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../../api_reference/extend/touchscreen.html">
+            
+                <a href="../../api_reference/extend/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../../api_reference/extend/ultrasonic.html">
+            
+                <a href="../../api_reference/extend/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../../api_reference/extend/ws2812.html">
+            
+                <a href="../../api_reference/extend/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../../api_reference/extend/htpa.html">
+            
+                <a href="../../api_reference/extend/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../../api_reference/extend/grove_chainable_rgb_led.html">
+            
+                <a href="../../api_reference/extend/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">常见问题 FAQ</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../others/maixpy_faq.html">
+            
+                <a href="../../others/maixpy_faq.html">
+            
+                    
+                    MaixPy 常见问题 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../others/maixhub_faq.html">
+            
+                <a href="../../others/maixhub_faq.html">
+            
+                    
+                    MaixHub 平台 FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    进阶开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="project_framework.html">
+            
+                <a href="project_framework.html">
+            
+                    
+                    源码目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.1.2" data-path="add_c_module.html">
+            
+                <a href="add_c_module.html">
+            
+                    
+                    如何添加一个 C 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="pack_fs.html">
+            
+                <a href="pack_fs.html">
+            
+                    
+                    打包文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <span>
+            
+                    
+                    参与贡献
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../../contribute/doc_convention.html">
+            
+                <a href="../../contribute/doc_convention.html">
+            
+                    
+                    参与文档编写（规范）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../../contribute/code_convention.html">
+            
+                <a href="../../contribute/code_convention.html">
+            
+                    
+                    代码编写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">社区 & 分享</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../share/recommend_articles.html">
+            
+                <a href="../../share/recommend_articles.html">
+            
+                    
+                    精选文章
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../share/open_projects.html">
+            
+                <a href="../../share/open_projects.html">
+            
+                    
+                    开源项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" >
+            
+                <span>
+            
+                    
+                    大家的经验分享
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.3.1" data-path="../../share/my_share/">
+            
+                <a href="../../share/my_share/">
+            
+                    
+                    参与经验分享/分享模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png"
+                    height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">English</a></li>
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i></i>博客</a></li>
+        
+        
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i></i>论坛</a></li>
+        
+        
+        
+        <li>
+            <a href="#" class="btn autohide"><i></i>反馈</a>
+            <ul class="hovershow">
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">文档</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">源码</a></li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        
+        <li class="version-link">
+            <a class="btn">版本 <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/zh/" class="btn">版本: <span style="font-weight:bold">master</span></a>
+                </li>
+                
+                <li><a href="/dev/zh/" class="btn">版本: <span style="font-weight:bold">dev</span></a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../..">如何添加一个 C 模块</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-c-&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-micropython-&#x6A21;&#x5757;"><b> </b>&#x4F7F;&#x7528; C &#x6DFB;&#x52A0;&#x4E00;&#x4E2A; Micropython &#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9884;&#x5907;&#x77E5;&#x8BC6;"><b>1. </b>&#x9884;&#x5907;&#x77E5;&#x8BC6;</a></li><li><span class="title-icon "></span><a href="#&#x5728;-c-&#x4E2D;&#x6DFB;&#x52A0;&#x6A21;&#x5757;"><b>2. </b>&#x5728; C &#x4E2D;&#x6DFB;&#x52A0;&#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5728;componentsportsrc&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6BD4;&#x5982;&#x53D6;&#x540D;mylib"><b>2.1. </b>&#x5728;components/port/src&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6BD4;&#x5982;&#x53D6;&#x540D;my_lib</a></li><li><span class="title-icon "></span><a href="#&#x7136;&#x540E;&#x5728;mylib&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;mylibc&#x6587;&#x4EF6;"><b>2.2. </b>&#x7136;&#x540E;&#x5728;my_lib&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;my_lib.c&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x8F91;mylibc&#x6DFB;&#x52A0;&#x4EE3;&#x7801;"><b>2.3. </b>&#x7F16;&#x8F91;my_lib.c&#x6DFB;&#x52A0;&#x4EE3;&#x7801;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5728;&#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-type"><b>3. </b>&#x5728;&#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; type</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-c-&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x56FA;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;"><b>4. </b>&#x4F7F;&#x7528; C &#x8BED;&#x8A00;&#x7F16;&#x5199;&#x56FA;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;</a></li></ul></ul></div><a href="#&#x4F7F;&#x7528;-c-&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-micropython-&#x6A21;&#x5757;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4F7F;&#x7528;-c-&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-micropython-&#x6A21;&#x5757;"><a name="&#x4F7F;&#x7528;-c-&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-micropython-&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-c-&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-micropython-&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x4F7F;&#x7528; C &#x6DFB;&#x52A0;&#x4E00;&#x4E2A; Micropython &#x6A21;&#x5757;</h1>
+<h2 id="&#x9884;&#x5907;&#x77E5;&#x8BC6;"><a name="&#x9884;&#x5907;&#x77E5;&#x8BC6;" class="anchor-navigation-ex-anchor" href="#&#x9884;&#x5907;&#x77E5;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9884;&#x5907;&#x77E5;&#x8BC6;</h2>
+<p>&#x5728; <code>python</code> &#x4E2D;&#x4E07;&#x7269;&#x7686;&#x5BF9;&#x8C61;</p>
+<p>&#x9700;&#x8981;&#x5148;&#x77E5;&#x9053; module&#xFF0C;type&#xFF0C; function&#xFF0C; class &#x5206;&#x522B;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x6709;&#x4EC0;&#x4E48;&#x5173;&#x7CFB;&#x548C;&#x533A;&#x522B; </p>
+<ul>
+<li>module&#xFF08;&#x6A21;&#x5757;&#xFF09;</li>
+</ul>
+<p>&#x5728;<code>MaixPy</code>&#x4E2D;&#xFF0C;&#x628A;&#x6BCF;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x529F;&#x80FD;&#x653E;&#x5230;&#x4E00;&#x4E2A; &#x6A21;&#x5757; &#x4E2D;&#xFF0C;
+&#x6BD4;&#x5982;&#x5185;&#x7F6E;&#x7684; <code>uos</code>,<code>usys</code>,<code>machine</code>&#xFF0C;
+&#x53E6;&#x5916;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x65B0;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#xFF0C; &#x6BD4;&#x5982;<code>test.py</code> &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;
+&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x6A21;&#x5757;&#x90FD;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> uos
+<span class="token keyword">import</span> machine
+<span class="token keyword">import</span> test
+</code></pre>
+<blockquote>
+<p>&#x5728; C &#x6E90;&#x7801;&#x4E2D;&#x5C31;&#x662F; <code>mp_type_module</code></p>
+</blockquote>
+<ul>
+<li>type&#xFF08;&#x7C7B;&#x578B;&#xFF09;</li>
+</ul>
+<p>&#x7528;&#x6765;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x7C7B;&#x578B;&#xFF0C; &#x5B83;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x53D8;&#x91CF;</p>
+<blockquote>
+<p>&#x5728; C &#x6E90;&#x7801;&#x4E2D;&#x5C31;&#x662F; <code>mp_type_type</code></p>
+</blockquote>
+<ul>
+<li>class&#xFF08;&#x7C7B;&#xFF09;</li>
+</ul>
+<p>&#x4E00;&#x4E2A; class &#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A; <code>type</code>&#xFF0C;&#x6BD4;&#x5982;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span><span class="token keyword">pass</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4F1A;&#x8F93;&#x51FA;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;type&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x5F53;&#x5BF9;<code>A</code>&#x8FDB;&#x884C;&#x4E86;&#x5B9E;&#x4F8B;&#x5316;</p>
+<pre class="language-"><code>class A:pass
+a = A()
+print(type(a))
+</code></pre><p>&#x4F1A;&#x8F93;&#x51FA;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;A&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x8868;&#x793A;<code>a</code>&#x662F;<code>A</code>&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF08;&#x5BF9;&#x8C61;&#xFF09;</p>
+<blockquote>
+<p>&#x5728; C &#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7C7B;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>mp_type_type</code></p>
+</blockquote>
+<h2 id="&#x5728;-c-&#x4E2D;&#x6DFB;&#x52A0;&#x6A21;&#x5757;"><a name="&#x5728;-c-&#x4E2D;&#x6DFB;&#x52A0;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x5728;-c-&#x4E2D;&#x6DFB;&#x52A0;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5728; C &#x4E2D;&#x6DFB;&#x52A0;&#x6A21;&#x5757;</h2>
+<p>&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;&#x662F;&#x5B9E;&#x73B0;&#x5728;<code>MaixPy</code>&#x5C42;&#x9762;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> my_lib
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_lib<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+my_lib<span class="token punctuation">.</span>hello<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x5728;componentsportsrc&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6BD4;&#x5982;&#x53D6;&#x540D;mylib"><a name="&#x5728;componentsportsrc&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6BD4;&#x5982;&#x53D6;&#x540D;mylib" class="anchor-navigation-ex-anchor" href="#&#x5728;componentsportsrc&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6BD4;&#x5982;&#x53D6;&#x540D;mylib"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x5728;components/port/src&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x6BD4;&#x5982;&#x53D6;&#x540D;my_lib</h3>
+<h3 id="&#x7136;&#x540E;&#x5728;mylib&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;mylibc&#x6587;&#x4EF6;"><a name="&#x7136;&#x540E;&#x5728;mylib&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;mylibc&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7136;&#x540E;&#x5728;mylib&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;mylibc&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x7136;&#x540E;&#x5728;my_lib&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;my_lib.c&#x6587;&#x4EF6;</h3>
+<h3 id="&#x7F16;&#x8F91;mylibc&#x6DFB;&#x52A0;&#x4EE3;&#x7801;"><a name="&#x7F16;&#x8F91;mylibc&#x6DFB;&#x52A0;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8F91;mylibc&#x6DFB;&#x52A0;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x7F16;&#x8F91;my_lib.c&#x6DFB;&#x52A0;&#x4EE3;&#x7801;</h3>
+<h4 id="&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF1A;"><a name="&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF1A;</h4>
+<pre class="language-"><code class="lang-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;obj.h&quot;</span></span>
+
+<span class="token keyword">const</span> mp_obj_module_t my_lib_module <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span>base <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">&amp;</span>mp_type_module <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span>globals <span class="token operator">=</span> <span class="token punctuation">(</span>mp_obj_dict_t<span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>mp_module_my_lib_globals_dict<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;<code>my_lib_module</code>&#x662F;&#x5B9A;&#x4E49;&#x7684;<code>my_lib</code>&#x6A21;&#x5757;&#x5BF9;&#x8C61;,
+<code>mp_type_module</code>&#x8868;&#x660E;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;
+<code>mp_module_my_lib_globals_dict</code>&#x662F;&#x6A21;&#x5757;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;<code>dict</code>&#x5BF9;&#x8C61;&#xFF0C;&#x6709;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#xFF0C; &#x73B0;&#x5728;&#x8FD8;&#x6CA1;&#x5B9A;&#x4E49;</p>
+<h4 id="&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;"><a name="&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;</h4>
+<pre class="language-"><code class="lang-c">STATIC mp_obj_t <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">mp_printf</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>mp_plat_print<span class="token punctuation">,</span> <span class="token string">&quot;hello from my_lib&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> mp_const_none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">MP_DEFINE_CONST_FUN_OBJ_0</span><span class="token punctuation">(</span>my_lib_func_hello_obj<span class="token punctuation">,</span> my_lib_func_hello<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+STATIC <span class="token keyword">const</span> mp_map_elem_t my_lib_globals_table<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">{</span> <span class="token function">MP_OBJ_NEW_QSTR</span><span class="token punctuation">(</span>MP_QSTR___name__<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">MP_OBJ_NEW_QSTR</span><span class="token punctuation">(</span>MP_QSTR_my_lib<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token function">MP_OBJ_NEW_QSTR</span><span class="token punctuation">(</span>MP_QSTR_hello<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>mp_obj_t<span class="token punctuation">)</span><span class="token operator">&amp;</span>my_lib_func_hello_obj <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+STATIC <span class="token function">MP_DEFINE_CONST_DICT</span> <span class="token punctuation">(</span>
+    mp_module_my_lib_globals_dict<span class="token punctuation">,</span>
+    my_lib_globals_table
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7EC4;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x7EC4;&#xFF0C;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x503C;, <code>mp_map_elem_t</code>&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">_mp_map_elem_t</span> <span class="token punctuation">{</span>
+    mp_obj_t key<span class="token punctuation">;</span>
+    mp_obj_t value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> mp_map_elem_t<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x662F;<code>key</code>&#xFF0C;&#x7C7B;&#x578B;&#x662F;<code>str</code>&#x5BF9;&#x8C61;&#xFF0C; &#x5373;&#x5728;<code>MaixPy</code>&#x5C42;&#x9762;&#x4F7F;&#x7528;<code>my_lib.key</code>&#x6765;&#x8C03;&#x7528;&#x3002;&#x8FD9;&#x91CC;&#x7528;&#x4E86;<code>MP_OBJ_NEW_QSTR(MP_QSTR___name__)</code>&#x751F;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;<code>__name__</code>&#x7684;<code>str</code>&#x5BF9;&#x8C61;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x6709;&#x7591;&#x95EE;<code>__name__</code>&#x8FD9;&#x4E2A;<code>c</code>&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x5728;&#x54EA;&#x91CC;&#xFF0C;&#x8FD9;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x4F7F;&#x7528;&#x5DE5;&#x5177;&#x81EA;&#x52A8;&#x751F;&#x6210;<code>c</code>&#x53D8;&#x91CF;&#xFF0C;&#x603B;&#x4E4B;&#x8BB0;&#x4F4F;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5199;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;<code>str</code>&#x5BF9;&#x8C61;&#x4FDD;&#x5B58;&#x5728;&#x56FA;&#x4EF6;&#x91CC;&#x5C31;&#x597D;&#x4E86;</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x662F;&#x6570;&#x503C;&#xFF0C;&#x7C7B;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;<code>str/function/int/float/tuple/list/dict</code>&#x7B49;&#xFF0C; &#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<ul>
+<li><code>str</code>: &#x8FD9;&#x91CC;&#x540C;&#x6837;&#x662F;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;<code>str</code>&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4E3A;<code>my_lib</code>,&#x5373;&#x5728;<code>MaixPy</code>&#x5C42;&#x9762;&#x4F7F;&#x7528;<code>my_lib.__name__</code>&#x5F97;&#x5230;&#x7ED3;&#x679C;<code>my_lib</code>&#x3002;</li>
+<li><code>&#x5176;&#x5B83;&#x5E38;&#x91CF;&#x5BF9;&#x8C61;</code>&#xFF1A; &#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>mp_obj_new_xxx</code>,&#x6BD4;&#x5982;<code>int</code>&#x53D8;&#x91CF;<code>mp_obj_new_int(10)</code>&#xFF0C; &#x51FD;&#x6570;&#x5728;<code>obj.h</code>&#x4E2D;&#x641C;&#x7D22;</li>
+<li><code>&#x51FD;&#x6570;</code>&#xFF1A; &#x8FD9;&#x91CC;&#x7684;<code>key``hello</code>&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x4E3A;&#x4E3A;<code>(mp_obj_t)&amp;my_lib_func_hello_obj</code>&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#xFF0C;&#x6CE8;&#x610F;&#x4E0D;&#x662F;<code>C</code>&#x51FD;&#x6570;&#xFF0C;&#x524D;&#x9762;&#x8BF4;&#x4E86;<code>python</code>&#x4E2D;&#x4E00;&#x5207;&#x7686;&#x5BF9;&#x8C61;&#xFF0C; &#x8FD9;&#x91CC;&#x4E5F;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x53BB;&#x5730;&#x5740;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x6210; <code>mp_obj_t</code>&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#x4F7F;&#x7528;&#x4E86;<code>MP_DEFINE_CONST_FUN_OBJ_0</code>&#x5B8F;&#x5B9A;&#x4E49;&#x5C06;<code>my_lib_func_hello</code>&#x8FD9;&#x4E2A;<code>C</code>&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E3A;<code>my_lib_func_hello_obj</code>&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6CE8;&#x610F;<code>hello</code>&#x51FD;&#x6570;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;<code>mp_const_none</code>,&#x6CE8;&#x610F;&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;<code>NULL</code>&#xFF0C; &#x56E0;&#x4E3A;<code>NULL</code>&#x4E0D;&#x662F;&#x4E00;&#x4E2A;(<code>MaixPy</code>)&#x5BF9;&#x8C61;&#xFF0C; &#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x5C31;&#x662F;<code>MaixPy</code>&#x5C42;&#x9762;&#x8C03;&#x7528;<code>hello()</code>&#x51FD;&#x6570;&#x65F6;&#x7684;&#x8FD4;&#x56DE;&#x503C;<blockquote>
+<p>&#x9664;&#x4E86;<code>MP_DEFINE_CONST_FUN_OBJ_0</code>&#x5373;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;<code>1/2/3/n</code>&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x5E26;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x8BF7;&#x7FFB;&#x9605;&#x6E90;&#x7801;&#x4E3E;&#x4E00;&#x53CD;&#x4E09;&#x5B66;&#x4E60;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#x7136;&#x540E;&#x4F7F;&#x7528;<code>MP_DEFINE_CONST_DICT</code>&#x5B8F;&#x5B9A;&#x4E49;&#x5C06;<code>my_lib_globals_table</code>&#x8FD9;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x53D8;&#x6210;<code>MaixPy</code>&#x5C42;&#x9762;&#x80FD;&#x7406;&#x89E3;&#x7684;<code>dict</code>&#x5BF9;&#x8C61;&#xFF08;<code>mp_map_elem_t</code>&#x53EA;&#x662F;<code>C</code>&#x5C42;&#x9762;&#x80FD;&#x7406;&#x89E3;&#xFF09;<code>mp_module_my_lib_globals_dict</code>, &#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E5F;&#x88AB;&#x4E0A;&#x4E00;&#x6B65;&#x4E2D;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;</p>
+<p>&#x5230;&#x6B64;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x5C31;&#x5B9A;&#x4E49;&#x5B8C;&#x6210;&#x4E86;&#xFF0C; &#x5728; <code>MaixPy</code>&#x5C42;&#x9762;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x8BED;&#x53E5;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#x4E86;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> my_lib
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_lib<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+my_lib<span class="token punctuation">.</span>hello<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x8FD8;&#x6CA1;&#x7F16;&#x8BD1;</p>
+<h4 id="&#x5C06;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x56FA;&#x4EF6;&#xFF0C;-&#x5E76;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;"><a name="&#x5C06;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x56FA;&#x4EF6;&#xFF0C;-&#x5E76;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;" class="anchor-navigation-ex-anchor" href="#&#x5C06;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x56FA;&#x4EF6;&#xFF0C;-&#x5E76;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C06;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x56FA;&#x4EF6;&#xFF0C; &#x5E76;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;</h4>
+<ul>
+<li>&#x5728;<code>my_lib.c</code>&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;:</li>
+</ul>
+<pre class="language-"><code class="lang-c"><span class="token function">MP_REGISTER_MODULE</span><span class="token punctuation">(</span>MP_QSTR_my_lib<span class="token punctuation">,</span> my_lib_module<span class="token punctuation">,</span> MODULE_MY_LIB_ENABLED<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x6CE8;&#x518C;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x4F46;&#x662F;&#x662F;&#x5426;&#x7F16;&#x8BD1;&#x8FDB;&#x56FA;&#x4EF6;&#x53D6;&#x51B3;&#x4E0E;<code>MODULE_MY_LIB_ENABLED</code>&#x8FD9;&#x4E2A;&#x5B8F;&#x5B9A;&#x4E49;&#x5728;<code>mpconfigport.h</code>&#x4E2D;&#x662F;&#x5426;&#x5B9A;&#x4E49;&#x4E3A;<code>1</code></p>
+<ul>
+<li>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x6253;&#x5F00;<code>mpconfigport.h</code>&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x6DFB;&#x52A0;</li>
+</ul>
+<pre class="language-"><code class="lang-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression"><span class="token function">MODULE_MY_LIB_ENABLED</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span></span></span>
+</code></pre>
+<ul>
+<li>&#x6253;&#x5F00;<code>components/micropython/CMakeLists.txt</code>&#x7F16;&#x8F91;</li>
+</ul>
+<p>&#x627E;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#x6709;<code>############## Add source files ###############</code> &#x7684;&#x5730;&#x65B9;&#xFF0C;
+&#x5728;&#x540E;&#x9762;&#x6DFB;&#x52A0;</p>
+<pre class="language-"><code class="lang-cmake"><span class="token function">append_srcs_dir</span><span class="token punctuation">(</span>MPY_PORT_SRCS <span class="token string">&quot;port/src/my_lib&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5230;&#x6B64;&#xFF0C;&#x9879;&#x76EE;&#x624D;&#x4F1A;&#x5C06;<code>my_lib</code>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x7F16;&#x8BD1;&#x5230;&#x56FA;&#x4EF6;</p>
+<p>&#x7136;&#x540E;<code>python project.py rebuild</code>&#x7F16;&#x8BD1;&#x56FA;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;&#x56E0;&#x4E3A;&#x65B0;&#x589E;&#x4E86;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x7528;<code>rebuild</code>&#x547D;&#x4EE4;&#x800C;&#x4E0D;&#x662F;<code>build</code>&#xFF0C;&#x6CE8;&#x610F;&#x7F16;&#x8BD1;&#x63D0;&#x793A;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x62A5;&#x9519;&#xFF0C;&#x6CE8;&#x610F;&#x4FEE;&#x6539;</p>
+<h2 id="&#x5728;&#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-type"><a name="&#x5728;&#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-type" class="anchor-navigation-ex-anchor" href="#&#x5728;&#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;-type"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5728;&#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; type</h2>
+<p>&#x524D;&#x9762;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;<code>my_lib</code>&#x6A21;&#x5757;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5728;<code>my_lib</code>&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x53EB;<code>A</code>&#xFF0C;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> my_lib
+
+a <span class="token operator">=</span> my_lib<span class="token punctuation">.</span>A<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x53EA;&#x8BB2;&#x5927;&#x81F4;&#x4E0A;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x7136;&#x540E;&#x63D0;&#x4F9B;&#x6837;&#x4F8B;&#xFF0C;&#x806A;&#x660E;&#x7684;&#x4F60;&#x4E00;&#x4E0B;&#x5C31;&#x80FD;&#x7406;&#x89E3;&#x4E86;</p>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>mp_obj_type_t</code> &#x5BF9;&#x8C61;&#xFF0C;&#x6B63;&#x5982;&#x524D;&#x9762;&#x5B9A;&#x4E49;<code>mp_obj_module_t</code>&#x4E00;&#x6837;</li>
+<li>&#x540C;&#x6837;&#x7684;&#xFF0C;&#x7ED9;&#x8FD9;&#x4E2A;&#x7C7B;&#x5BF9;&#x8C61;&#x4E00;&#x4E2A;<code>dict</code>&#x5BF9;&#x8C61;&#xFF0C;&#x4F5C;&#x4E3A;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x6210;&#x5458;&#x53EF;&#x4EE5;&#x662F;&#x5E38;&#x91CF;&#x6216;&#x8005;&#x51FD;&#x6570;&#x751A;&#x81F3;&#x662F;&#x53E6;&#x4E00;&#x4E2A;<code>type</code>&#x5BF9;&#x8C61;</li>
+<li>&#x5C06;&#x8FD9;&#x4E2A;&#x7C7B;&#x5BF9;&#x8C61;&#x6CE8;&#x518C;&#x5230;&#x524D;&#x9762;&#x7684;<code>my_lib</code>&#x6A21;&#x5757;</li>
+</ul>
+<p>&#x5B9A;&#x4E49;<code>mp_obj_type_t</code>&#x5BF9;&#x8C61;&#x548C;&#x6210;&#x5458;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<code>port/src/standard_lib/machine/machine_i2c.c</code>&#x4E2D;&#x7684;&#x5B9E;&#x73B0;</p>
+<blockquote>
+<p>&#x5B9A;&#x4E49;<code>mp_obj_type_t</code>&#x65F6;&#x6709;&#x4E00;&#x4E2A;<code>make_new</code>&#x6210;&#x5458;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x7528;&#x6765;&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;&#x65F6;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;<code>a = my_lib.A(); a.add(1,2)</code>
+&#x5982;&#x679C;&#x4E0D;&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7C7B;&#x65B9;&#x6CD5;&#x6216;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;<code>A.var_a</code></p>
+</blockquote>
+<p>&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;<code>const mp_obj_type_t my_lib_A_type ...</code></p>
+<p>&#x7136;&#x540E;&#x5728;<code>my_lib/my_lib.c</code>&#x4E2D; <code>my_lib_globals_table</code>&#x4E2D;&#x6DFB;&#x52A0;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x6620;&#x5C04;&#x5230;<code>key</code> <code>A</code>&#x5373;&#x53EF;</p>
+<pre class="language-"><code class="lang-c"><span class="token punctuation">{</span> <span class="token function">MP_ROM_QSTR</span><span class="token punctuation">(</span>MP_QSTR_A<span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token function">MP_ROM_PTR</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>my_lib_A_type<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;-c-&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x56FA;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;"><a name="&#x4F7F;&#x7528;-c-&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x56FA;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-c-&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x56FA;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x4F7F;&#x7528; C &#x8BED;&#x8A00;&#x7F16;&#x5199;&#x56FA;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;</h2>
+<ul>
+<li><code>mp_printf</code> vs <code>printk</code> vs <code>printf</code>
+&#x56E0;&#x4E3A;<code>IDE</code>&#x4F7F;&#x7528;&#x4E86;&#x4E32;&#x53E3;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#xFF0C;&#x6240;&#x4EE5;&#x5728;<code>C</code>&#x5C42;&#x9762;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>printk</code>&#x6216;&#x8005;<code>printf</code>&#x51FD;&#x6570;&#x6253;&#x5370;&#x6D88;&#x606F;&#xFF0C;<strong>&#x5FC5;&#x987B;</strong>&#x4F7F;&#x7528;<code>mp_printf</code>&#x51FD;&#x6570;&#x6765;&#x6253;&#x5370;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x5BFC;&#x81F4; <code>IDE</code> &#x8FD0;&#x884C;&#x65F6;&#x53D7;&#x5230;&#x4E0D;&#x7406;&#x89E3;&#x7684;&#x6570;&#x636E;&#x800C;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF01;&#xFF01;</li>
+</ul>
+<p>&#x5F53;&#x7136;&#x5E73;&#x65F6;&#x8C03;&#x8BD5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>printk</code>&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x7CFB;&#x7EDF;&#x4E2D;&#x65AD;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E2D;&#x65AD;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x8C03;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x4EC5;&#x9650;&#x8C03;&#x8BD5;&#x65F6;&#x4F7F;&#x7528;&#xFF0C; &#x5B9E;&#x9645;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x5220;&#x9664;&#x6389;&#xFF01;&#xFF01;</p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-26 20:02:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="project_framework.html" class="navigation navigation-prev " aria-label="Previous page: 源码目录结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pack_fs.html" class="navigation navigation-next " aria-label="Next page: 打包文件系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"如何添加一个 C 模块","level":"6.1.2","depth":2,"next":{"title":"打包文件系统","level":"6.1.3","depth":2,"path":"course/advance/pack_fs.md","ref":"./course/advance/pack_fs.md","articles":[]},"previous":{"title":"源码目录结构","level":"6.1.1","depth":2,"path":"course/advance/project_framework.md","ref":"./course/advance/project_framework.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"博客","link":"http://blog.sipeed.com"},{"name":"论坛","link":"https://bbs.sipeed.com/"},{"name":"反馈","links":[{"name":"文档","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"源码","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/zh/"},{"name":"dev","link":"/dev/zh/"}]}]},"title":"MaixPy 文档","language":"zh-hans","gitbook":"*","description":"MaixPy 文档"},"file":{"path":"course/advance/add_c_module.md","mtime":"2020-11-26T12:02:14.412Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-26T12:03:10.728Z"},"basePath":"../..","book":{"language":"zh"}});
+        });
+    </script>
+</div>
+
+        
+
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+<script type="text/javascript">
+    (() => {
+        const time = new Date().getTime();
+        const check_time = () => (localStorage.getItem('next_ping_time') ?? new Date().getTime()) <= new Date().getTime();
+
+        check_time() && [`https://cn.maixpy.sipeed.com/`, `https://maixpy.sipeed.com/`]
+            .forEach(
+                url => $.get(`${url}ping?time=${time}`)
+                    .always(e => {
+                        check_time() && !location.href.includes(url) &&
+                            (location.href = location.href.replace(/https[:][/][/].+?[/]/, url));
+
+                        localStorage.setItem('next_ping_time', new Date().getTime() + 24 * 60 * 60 * 1000);
+                        console.log(`${url} use time: ${new Date().getTime() - time}`);
+                    })
+            );
+    })();
+
+    function toggleLanguage() {
+        var path = location.href;
+        // console.log(path);
+        if (path.indexOf('/zh') !== -1) {
+            path = path.replace(/\/zh[\/$\s]/i, '/en/');
+        } else if (path.indexOf('/en') !== -1) {
+            path = path.replace(/\/en[\/$\s]/i, '/zh/');
+        }
+        // console.log('after: ' + path);
+        location.assign(path);
+    }
+</script>
+
+    </body>
+</html>
+

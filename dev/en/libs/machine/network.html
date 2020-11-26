@@ -1,0 +1,1629 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>network · MaixPy DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Maix/" />
+    
+    
+    <link rel="prev" href="uart.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../others/what_maix_do.html">
+            
+                <a href="../../others/what_maix_do.html">
+            
+                    
+                    What can MaixPy do?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../get_started/how_to_read.html">
+            
+                <a href="../../get_started/how_to_read.html">
+            
+                    
+                    Before read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Prepare</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../get_started/get_hardware.html">
+            
+                <a href="../../get_started/get_hardware.html">
+            
+                    
+                    Get Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../get_started/prepare_knowledge.html">
+            
+                <a href="../../get_started/prepare_knowledge.html">
+            
+                    
+                    Prepare knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../get_started/install_driver.html">
+            
+                <a href="../../get_started/install_driver.html">
+            
+                    
+                    Install driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../get_started/upgrade_firmware.html">
+            
+                <a href="../../get_started/upgrade_firmware.html">
+            
+                    
+                    Upgrade firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../get_started/serial_tools.html">
+            
+                <a href="../../get_started/serial_tools.html">
+            
+                    
+                    terminal tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../get_started/maixpyide.html">
+            
+                <a href="../../get_started/maixpyide.html">
+            
+                    
+                    Install MaixPyIDE(optional)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../get_started/power_on.html">
+            
+                <a href="../../get_started/power_on.html">
+            
+                    
+                    Power on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../get_started/led_blink.html">
+            
+                <a href="../../get_started/led_blink.html">
+            
+                    
+                    LED blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../get_started/edit_file.html">
+            
+                <a href="../../get_started/edit_file.html">
+            
+                    
+                    Edit and execute files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../get_started/upload_script.html">
+            
+                <a href="../../get_started/upload_script.html">
+            
+                    
+                    Upload script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../get_started/boot.html">
+            
+                <a href="../../get_started/boot.html">
+            
+                    
+                    Auto start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Modules/Libs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../standard/">
+            
+                <a href="../standard/">
+            
+                    
+                    Standard library
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../standard/cmath.html">
+            
+                <a href="../standard/cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../standard/gc.html">
+            
+                <a href="../standard/gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../standard/math.html">
+            
+                <a href="../standard/math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../standard/sys.html">
+            
+                <a href="../standard/sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../standard/ubinascii.html">
+            
+                <a href="../standard/ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../standard/ucollections.html">
+            
+                <a href="../standard/ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../standard/uctypes.html">
+            
+                <a href="../standard/uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../standard/uerrno.html">
+            
+                <a href="../standard/uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../standard/uhashlib.html">
+            
+                <a href="../standard/uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../standard/uheapq.html">
+            
+                <a href="../standard/uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../standard/ujson.html">
+            
+                <a href="../standard/ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../standard/uos.html">
+            
+                <a href="../standard/uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="../standard/ure.html">
+            
+                <a href="../standard/ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="../standard/uselect.html">
+            
+                <a href="../standard/uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" data-path="../standard/usocket.html">
+            
+                <a href="../standard/usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="../standard/ustruct.html">
+            
+                <a href="../standard/ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="../standard/utime.html">
+            
+                <a href="../standard/utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="../standard/uzlib.html">
+            
+                <a href="../standard/uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="i2c.html">
+            
+                <a href="i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="pwm.html">
+            
+                <a href="pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="timer.html">
+            
+                <a href="timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2.6" data-path="network.html">
+            
+                <a href="network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../Maix/">
+            
+                <a href="../Maix/">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../Maix/fpioa.html">
+            
+                <a href="../Maix/fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../Maix/gpio.html">
+            
+                <a href="../Maix/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../Maix/kpu.html">
+            
+                <a href="../Maix/kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../Maix/fft.html">
+            
+                <a href="../Maix/fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../Maix/i2s.html">
+            
+                <a href="../Maix/i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../Maix/audio.html">
+            
+                <a href="../Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../Maix/freq.html">
+            
+                <a href="../Maix/freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../Maix/utils.html">
+            
+                <a href="../Maix/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../builtin_py/">
+            
+                <a href="../builtin_py/">
+            
+                    
+                    Built-in class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../builtin_py/fm.html">
+            
+                <a href="../builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../builtin_py/board_info.html">
+            
+                <a href="../builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../machine_vision/">
+            
+                <a href="../machine_vision/">
+            
+                    
+                    Machine vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../machine_vision/lcd.html">
+            
+                <a href="../machine_vision/lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../machine_vision/sensor.html">
+            
+                <a href="../machine_vision/sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../machine_vision/image.html">
+            
+                <a href="../machine_vision/image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../machine_vision/video.html">
+            
+                <a href="../machine_vision/video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../peripheral_modules/">
+            
+                <a href="../peripheral_modules/">
+            
+                    
+                    Peripheral modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../peripheral_modules/touchscreen.html">
+            
+                <a href="../peripheral_modules/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../peripheral_modules/ultrasonic.html">
+            
+                <a href="../peripheral_modules/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../peripheral_modules/ws2812.html">
+            
+                <a href="../peripheral_modules/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../peripheral_modules/htpa.html">
+            
+                <a href="../peripheral_modules/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                <a href="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../application/">
+            
+                <a href="../../application/">
+            
+                    
+                    Integrated Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../../application/pye.html">
+            
+                <a href="../../application/pye.html">
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../../application/nes.html">
+            
+                <a href="../../application/nes.html">
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="../../application/lvgl.html">
+            
+                <a href="../../application/lvgl.html">
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced 1 - Custom Firmware</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../advanced/compile.html">
+            
+                <a href="../../advanced/compile.html">
+            
+                    
+                    Custom Firmware-Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../advanced/code_struct.html">
+            
+                <a href="../../advanced/code_struct.html">
+            
+                    
+                    Code structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../advanced/pack_fs.html">
+            
+                <a href="../../advanced/pack_fs.html">
+            
+                    
+                    Pack SPIFFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/sipeed/MaixPy_scripts">
+            
+                    
+                    Demo scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../others/Q_A.html">
+            
+                <a href="../../others/Q_A.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../contribute/">
+            
+                <a href="../../contribute/">
+            
+                    
+                    Contribute
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../contribute/doc_convention.html">
+            
+                <a href="../../contribute/doc_convention.html">
+            
+                    
+                    Doc convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../../contribute/code_convention.html">
+            
+                <a href="../../contribute/code_convention.html">
+            
+                    
+                    Code convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../others/open_projects.html">
+            
+                <a href="../../others/open_projects.html">
+            
+                    
+                    Related projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >network</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#network"><b> </b>network</a></li><ul><ul><li><span class="title-icon "></span><a href="#esp8285"><b>1.1. </b>esp8285</a></li><li><span class="title-icon "></span><a href="#esp32"><b>1.2. </b>esp32</a></li></ul></ul><li><span class="title-icon "></span><a href="#esp8285module"><b> </b>ESP8285_Module</a></li><ul><li><span class="title-icon "></span><a href="#networkesp8285uart"><b>1. </b>network.ESP8285(uart)</a></li><ul><li><span class="title-icon "></span><a href="#parameters"><b>1.1. </b>Parameters</a></li><li><span class="title-icon "></span><a href="#return-value"><b>1.2. </b>Return Value</a></li></ul><li><span class="title-icon "></span><a href="#esp8285_1"><b>2. </b>ESP8285</a></li><ul><li><span class="title-icon "></span><a href="#connectssid-key"><b>2.1. </b>connect(ssid, key)</a></li><li><span class="title-icon "></span><a href="#22-ifconfig"><b>2.2. </b>2.2. ifconfig</a></li><li><span class="title-icon "></span><a href="#isconnected"><b>2.3. </b>isconnected</a></li><li><span class="title-icon "></span><a href="#disconnect"><b>2.4. </b>disconnect</a></li><li><span class="title-icon "></span><a href="#scan"><b>2.5. </b>scan</a></li><li><span class="title-icon "></span><a href="#enableapssid-key-chl5-ecn3"><b>2.6. </b>enable_ap(ssid, key, chl=5, ecn=3)</a></li><li><span class="title-icon "></span><a href="#disableap"><b>2.7. </b>disable_ap()</a></li><li><span class="title-icon "></span><a href="#constants"><b>2.8. </b>Constants</a></li></ul><li><span class="title-icon "></span><a href="#code"><b>3. </b>Code</a></li></ul><li><span class="title-icon "></span><a href="#esp32module"><b> </b>ESP32_Module</a></li><ul><li><span class="title-icon "></span><a href="#networkesp32spicsrstrdymosimisosclk"><b>1. </b>network.ESP32_SPI(cs,rst,rdy,mosi,miso,sclk)</a></li><ul><li><span class="title-icon "></span><a href="#parameters_7"><b>1.1. </b>Parameters</a></li><li><span class="title-icon "></span><a href="#return-value_6"><b>1.2. </b>Return Value</a></li></ul><li><span class="title-icon "></span><a href="#esp32spi"><b>2. </b>ESP32_SPI</a></li><ul><li><span class="title-icon "></span><a href="#adc"><b>2.1. </b>adc</a></li></ul></ul></ul></div><a href="#network" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="network"><a name="network" class="anchor-navigation-ex-anchor" href="#network"><i class="fa fa-link" aria-hidden="true"></i></a> network</h1>
+<p>This module is used to initialize various network card drivers. The network card has these function: connecting routes, disconnecting routes, viewing network card connection information, checking whether connections are made. </p>
+<p>Please make sure the antenna is connected before using WiFi. </p>
+<h3 id="esp8285"><a name="esp8285" class="anchor-navigation-ex-anchor" href="#esp8285"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. esp8285</h3>
+<p>Some development boards expose an <code>AT</code> network interface module, such as an <code>esp8285</code> interface connected to the <code>k210</code> processor via a serial port.</p>
+<p>Pin <code>8</code> is the enable pin. Instantiate a <code>GPIO</code> object set it high to enable, low to disable. To reset, set it low, wait a short while, then set it high. </p>
+<p>Sample code [wifi_ap_scan.py] (<a href="https://github.com/sipeed/MaixPy_scripts/blob/master/network/demo_wifi_ap_scan.py" target="_blank">https://github.com/sipeed/MaixPy_scripts/blob/master/network/demo_wifi_ap_scan.py</a>)</p>
+<h3 id="esp32"><a name="esp32" class="anchor-navigation-ex-anchor" href="#esp32"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. esp32</h3>
+<p>There is currently a <code>esp32</code> module in the <code>MaixDuino</code> development board connected to <code>k210</code> via <code>SPI</code>. 
+There is also a separate <code>TF</code> plug-in module. </p>
+<h1 id="esp8285module"><a name="esp8285module" class="anchor-navigation-ex-anchor" href="#esp8285module"><i class="fa fa-link" aria-hidden="true"></i></a> ESP8285_Module</h1>
+<h2 id="networkesp8285uart"><a name="networkesp8285uart" class="anchor-navigation-ex-anchor" href="#networkesp8285uart"><i class="fa fa-link" aria-hidden="true"></i></a>1. network.ESP8285(uart)</h2>
+<p>Instantiate an <code>ESP8285</code> NIC object, passing in an <code>uart</code> object. On the <code>dock</code> and <code>GO</code> currently supported by <code>MaixPy</code>, use the AT command module as <code>WiFi</code>. So the <code>uart</code> object is the object that communicates with the <code>AT</code> module, you can view the <code>uart</code> module routine.</p>
+<p>Calling this method will initialize <code>ESP8285</code>, throwing an exception if it fails. </p>
+<h3 id="parameters"><a name="parameters" class="anchor-navigation-ex-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Parameters</h3>
+<ul>
+<li><code>uart</code>: UART object that communicates with the AT module</li>
+</ul>
+<h3 id="return-value"><a name="return-value" class="anchor-navigation-ex-anchor" href="#return-value"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Return Value</h3>
+<ul>
+<li><code>ESP8285</code>: NIC object</li>
+</ul>
+<h2 id="esp8285_1"><a name="esp8285_1" class="anchor-navigation-ex-anchor" href="#esp8285_1"><i class="fa fa-link" aria-hidden="true"></i></a>2. ESP8285</h2>
+<h3 id="connectssid-key"><a name="connectssid-key" class="anchor-navigation-ex-anchor" href="#connectssid-key"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. connect(ssid, key)</h3>
+<p>Connect to a hotspot (AP/router). </p>
+<h4 id="parameters_1"><a name="parameters_1" class="anchor-navigation-ex-anchor" href="#parameters_1"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>ssid</code>: hotspot <code>SSID</code></li>
+<li><code>key</code>: password for hotspot</li>
+</ul>
+<h4 id="return-value_1"><a name="return-value_1" class="anchor-navigation-ex-anchor" href="#return-value_1"><i class="fa fa-link" aria-hidden="true"></i></a>Return Value</h4>
+<p>None. An exception will be thrown if an error occurs. </p>
+<h3 id="22-ifconfig"><a name="22-ifconfig" class="anchor-navigation-ex-anchor" href="#22-ifconfig"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. 2.2. ifconfig</h3>
+<p>Display the current WiFi connection information. Currently, the network does not support setting the network card configuration.</p>
+<pre class="language-"><code>nic.ifconfig()
+</code></pre><h4 id="parameters_2"><a name="parameters_2" class="anchor-navigation-ex-anchor" href="#parameters_2"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return-value_2"><a name="return-value_2" class="anchor-navigation-ex-anchor" href="#return-value_2"><i class="fa fa-link" aria-hidden="true"></i></a>Return Value</h4>
+<p><code>tuple</code> type, the elements are all strings: <code>(ip, netmask, gateway, dns_server, dhcp_server, mac, ssid)</code>, if not queried or invalid, the value is `&quot;0&quot;.</p>
+<h3 id="isconnected"><a name="isconnected" class="anchor-navigation-ex-anchor" href="#isconnected"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. isconnected</h3>
+<p>Check if WiFi is connected. </p>
+<pre class="language-"><code>nic.isconnected()
+</code></pre><h4 id="parameters_3"><a name="parameters_3" class="anchor-navigation-ex-anchor" href="#parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return-value_3"><a name="return-value_3" class="anchor-navigation-ex-anchor" href="#return-value_3"><i class="fa fa-link" aria-hidden="true"></i></a>Return Value</h4>
+<p><code>True</code>: Already connected
+<code>False</code>: Disconnected</p>
+<h3 id="disconnect"><a name="disconnect" class="anchor-navigation-ex-anchor" href="#disconnect"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. disconnect</h3>
+<p>Disconnect WiFi. </p>
+<h4 id="parameters_4"><a name="parameters_4" class="anchor-navigation-ex-anchor" href="#parameters_4"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return-value_4"><a name="return-value_4" class="anchor-navigation-ex-anchor" href="#return-value_4"><i class="fa fa-link" aria-hidden="true"></i></a>Return Value</h4>
+<p>None</p>
+<h3 id="scan"><a name="scan" class="anchor-navigation-ex-anchor" href="#scan"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. scan</h3>
+<p>Scan for surrounding WiFi hotspots. </p>
+<h4 id="parameters_5"><a name="parameters_5" class="anchor-navigation-ex-anchor" href="#parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return-value_5"><a name="return-value_5" class="anchor-navigation-ex-anchor" href="#return-value_5"><i class="fa fa-link" aria-hidden="true"></i></a>Return Value</h4>
+<p>A <code>list</code> object, each element containing a string, the string comes from the response of the <code>AT</code> module, the content is the same as described in <code>esp8285</code> <code>AT directive document</code>, as follows:
+<code>&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ecn</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ssid</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rssi</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mac</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>channel</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>freq</span> <span class="token attr-name">offset</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>freq</span> <span class="token attr-name">cali</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pairwise_cipher</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>group_cipher</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bgn</span><span class="token punctuation">&gt;</span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wps</span><span class="token punctuation">&gt;</span></span>&apos;</code></p>
+<ul>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ecn</span><span class="token punctuation">&gt;</span></span></code>: encryption method<ul>
+<li>0: OPEN</li>
+<li>1: WEP</li>
+<li>2: WPA_PSK</li>
+<li>3: WPA2_PSK</li>
+<li>4: WPA_WPA2_PSK</li>
+<li>5: WPA2_Enterprise (current AT does not support connection to this encrypted AP)</li>
+</ul>
+</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ssid</span><span class="token punctuation">&gt;</span></span></code>: string parameter, SSID of AP</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rssi</span><span class="token punctuation">&gt;</span></span></code>: signal strength</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mac</span><span class="token punctuation">&gt;</span></span></code>: string parameter, AP&apos;s MAC address</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>channel</span><span class="token punctuation">&gt;</span></span></code>: channel number</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>freq</span> <span class="token attr-name">offset</span><span class="token punctuation">&gt;</span></span></code>: AP frequency offset, unit: kHz. This value is divided by 2.4 to get the ppm value.</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>freq</span> <span class="token attr-name">cali</span><span class="token punctuation">&gt;</span></span></code>: frequency offset calibration value</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pairwise_cipher</span><span class="token punctuation">&gt;</span></span></code>:<ul>
+<li>0: CIPHER_NONE</li>
+<li>1: CIPHER_WEP40</li>
+<li>2: CIPHER_WEP104</li>
+<li>3: CIPHER_TKIP</li>
+<li>4: CIPHER_CCMP</li>
+<li>5: CIPHER_TKIP_CCMP</li>
+<li>6: CIPHER_UNKNOWN</li>
+</ul>
+</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>group_cipher</span><span class="token punctuation">&gt;</span></span></code>: definition is the same as <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pairwise_cipher</span><span class="token punctuation">&gt;</span></span></code></li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bgn</span><span class="token punctuation">&gt;</span></span></code>: bit0 stands for b mode; bit1 stands for g mode; bit2 stands for n mode<pre class="language-"><code>    If the corresponding bit is 1, it indicates that the mode is enabled; if the corresponding bit is 0, the mode is not enabled.
+</code></pre></li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>wps</span><span class="token punctuation">&gt;</span></span></code>:0, WPS is not enabled; 1, WPS is enabled</li>
+</ul>
+<p>example:</p>
+<pre class="language-"><code>info_strs = [&apos;4,&quot;ChinaNet-lot0&quot;,-79,&quot;c8:50:e9:e8:21:3e&quot;,1,-42,0,4,3,7,1&apos;, &apos;4,&quot;TOPSTEP2G4&quot;,-7
+0,&quot;f8:e7:1e:0d:0d:f8&quot;,1,-57,0,4,4,7,0&apos;]
+</code></pre><p>This may seem strange, because each AP&apos;s information is a string of characters, there are integers and strings in the message, the string is enclosed in double quotes, so you need to deal with it again after getting this string, for example:</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">wifi_deal_ap_info</span><span class="token punctuation">(</span>info<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> ap_str <span class="token keyword">in</span> info<span class="token punctuation">:</span>
+        ap_str <span class="token operator">=</span> ap_str<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">&quot;,&quot;</span><span class="token punctuation">)</span>
+        info_one <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> node <span class="token keyword">in</span> ap_str<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> node<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">&apos;&quot;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                info_one<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                info_one<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>info_one<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+
+info_strs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;4,&quot;ChinaNet-lot0&quot;,-79,&quot;c8:50:e9:e8:21:3e&quot;,1,-42,0,4,3,7,1&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;4,&quot;TOPSTEP2G4&quot;,-70,&quot;f8:e7:1e:0d:0d:f8&quot;,1,-57,0,4,4,7,0&apos;</span><span class="token punctuation">]</span>
+
+info <span class="token operator">=</span> wifi_deal_ap_info<span class="token punctuation">(</span>info_strs<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>info<span class="token punctuation">)</span>
+</code></pre>
+<p>The output is:</p>
+<pre class="language-"><code>[[4, &apos;ChinaNet-lot0&apos;, -79, &apos;c8:50:e9:e8:21:3e&apos;, 1, -42, 0, 4, 3, 7, 1], [4, &apos;TOPSTEP2G4&apos;, -70, &apos;f8:e7:1e:0d:0d:f8&apos;, 1, -57, 0, 4, 4, 7, 0]]
+</code></pre><p>Then for example to get every <code>AP</code> <code>SSID</code>:</p>
+<pre class="language-"><code>for ap_info in info:
+    print(ap_info[1])
+</code></pre><h3 id="enableapssid-key-chl5-ecn3"><a name="enableapssid-key-chl5-ecn3" class="anchor-navigation-ex-anchor" href="#enableapssid-key-chl5-ecn3"><i class="fa fa-link" aria-hidden="true"></i></a>2.6. enable_ap(ssid, key, chl=5, ecn=3)</h3>
+<p>Connect to the specified WiFi hotspot. </p>
+<h4 id="parameters_6"><a name="parameters_6" class="anchor-navigation-ex-anchor" href="#parameters_6"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>ssid</code>: SSID</li>
+<li><code>key</code>: password</li>
+<li><code>chl</code>: channel number of the WiFi signal</li>
+<li><code>ecn</code>: encryption method, there are <code>OPEN``WPA2_PSK</code>, etc., refer to the constant part of this page <code>ESP8285</code>, the default value is <code>3</code>, which is <code>ESP8285.WPA2_PSK</code>, for example<pre class="language-"><code class="lang-python">Nic <span class="token operator">=</span> network<span class="token punctuation">.</span>ESP8285<span class="token punctuation">(</span>uart<span class="token punctuation">)</span>
+Nic<span class="token punctuation">.</span>enable_ap<span class="token punctuation">(</span><span class="token string">&quot;maixpy&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;12345678&quot;</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> nic<span class="token punctuation">.</span>OPEN<span class="token punctuation">)</span>
+</code></pre>
+or<pre class="language-"><code>Nic.enable_ap(&quot;maixpy&quot;, &quot;12345678&quot;, 5, network.ESP8285.OPEN)
+</code></pre></li>
+</ul>
+<h3 id="disableap"><a name="disableap" class="anchor-navigation-ex-anchor" href="#disableap"><i class="fa fa-link" aria-hidden="true"></i></a>2.7. disable_ap()</h3>
+<p>Disconnect from the currently connected WiFi hotspot. </p>
+<h3 id="constants"><a name="constants" class="anchor-navigation-ex-anchor" href="#constants"><i class="fa fa-link" aria-hidden="true"></i></a>2.8. Constants</h3>
+<h4 id="open"><a name="open" class="anchor-navigation-ex-anchor" href="#open"><i class="fa fa-link" aria-hidden="true"></i></a>OPEN</h4>
+<p>No encryption and no password required. </p>
+<h4 id="wpapsk"><a name="wpapsk" class="anchor-navigation-ex-anchor" href="#wpapsk"><i class="fa fa-link" aria-hidden="true"></i></a>WPA_PSK</h4>
+<p><code>WPA_PSK</code> encryption</p>
+<h4 id="wpa2psk"><a name="wpa2psk" class="anchor-navigation-ex-anchor" href="#wpa2psk"><i class="fa fa-link" aria-hidden="true"></i></a>WPA2_PSK</h4>
+<p><code>WPA2_PSK</code> encryption</p>
+<h4 id="wpawpa2psk"><a name="wpawpa2psk" class="anchor-navigation-ex-anchor" href="#wpawpa2psk"><i class="fa fa-link" aria-hidden="true"></i></a>WPA_WPA2_PSK</h4>
+<p><code>WPA_WPA2_PSK</code> encryption</p>
+<h2 id="code"><a name="code" class="anchor-navigation-ex-anchor" href="#code"><i class="fa fa-link" aria-hidden="true"></i></a>3. Code</h2>
+<p>Refer to [code in the network directory] (<a href="https://github.com/sipeed/MaixPy_scripts/tree/master/network" target="_blank">https://github.com/sipeed/MaixPy_scripts/tree/master/network</a>)</p>
+<h1 id="esp32module"><a name="esp32module" class="anchor-navigation-ex-anchor" href="#esp32module"><i class="fa fa-link" aria-hidden="true"></i></a> ESP32_Module</h1>
+<h2 id="networkesp32spicsrstrdymosimisosclk"><a name="networkesp32spicsrstrdymosimisosclk" class="anchor-navigation-ex-anchor" href="#networkesp32spicsrstrdymosimisosclk"><i class="fa fa-link" aria-hidden="true"></i></a>1. network.ESP32_SPI(cs,rst,rdy,mosi,miso,sclk)</h2>
+<p>To instantiate an <code>ESP32_SPI</code> NIC object, you need to pass in the corresponding <code>GPIOHS FUNC</code>.</p>
+<p>If the number of parameters passed in is incorrect, an error will be returned.</p>
+<h3 id="parameters_7"><a name="parameters_7" class="anchor-navigation-ex-anchor" href="#parameters_7"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Parameters</h3>
+<ul>
+<li><code>fpioa_func</code> for pin function</li>
+</ul>
+<h3 id="return-value_6"><a name="return-value_6" class="anchor-navigation-ex-anchor" href="#return-value_6"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Return Value</h3>
+<ul>
+<li><code>ESP32_SPI</code> NIC object</li>
+</ul>
+<h2 id="esp32spi"><a name="esp32spi" class="anchor-navigation-ex-anchor" href="#esp32spi"><i class="fa fa-link" aria-hidden="true"></i></a>2. ESP32_SPI</h2>
+<h3 id="adc"><a name="adc" class="anchor-navigation-ex-anchor" href="#adc"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. adc</h3>
+<p>Read the <code>adc</code> value of the <code>esp32</code> module</p>
+<h4 id="parameters_8"><a name="parameters_8" class="anchor-navigation-ex-anchor" href="#parameters_8"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return-value_7"><a name="return-value_7" class="anchor-navigation-ex-anchor" href="#return-value_7"><i class="fa fa-link" aria-hidden="true"></i></a>Return Value</h4>
+<p><code>tuple</code>, the <code>adc</code> value of 5 channels is <code>&quot;PIN36&quot;, &quot;PIN39&quot;, &quot;PIN34&quot;, &quot;PIN35&quot;, &quot;PIN32&quot;</code></p>
+<h4 id="code_1"><a name="code_1" class="anchor-navigation-ex-anchor" href="#code_1"><i class="fa fa-link" aria-hidden="true"></i></a>Code</h4>
+<p><a href="https://github.com/sipeed/MaixPy_scripts/blob/master/network/demo_esp32_read_adc.py" target="_blank">demo_esp32_read_adc.py</a></p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-25 16:09:59
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="uart.html" class="navigation navigation-prev " aria-label="Previous page: UART">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Maix/" class="navigation navigation-next " aria-label="Next page: Maix">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"network","level":"4.2.6","depth":2,"next":{"title":"Maix","level":"4.3","depth":1,"path":"libs/Maix/README.md","ref":"libs/Maix/README.md","articles":[{"title":"FPIOA","level":"4.3.1","depth":2,"path":"libs/Maix/fpioa.md","ref":"libs/Maix/fpioa.md","articles":[]},{"title":"GPIO","level":"4.3.2","depth":2,"path":"libs/Maix/gpio.md","ref":"libs/Maix/gpio.md","articles":[]},{"title":"KPU","level":"4.3.3","depth":2,"path":"libs/Maix/kpu.md","ref":"libs/Maix/kpu.md","articles":[]},{"title":"FFT","level":"4.3.4","depth":2,"path":"libs/Maix/fft.md","ref":"libs/Maix/fft.md","articles":[]},{"title":"I2S","level":"4.3.5","depth":2,"path":"libs/Maix/i2s.md","ref":"libs/Maix/i2s.md","articles":[]},{"title":"Audio","level":"4.3.6","depth":2,"path":"libs/Maix/audio.md","ref":"libs/Maix/audio.md","articles":[]},{"title":"freq","level":"4.3.7","depth":2,"path":"libs/Maix/freq.md","ref":"libs/Maix/freq.md","articles":[]},{"title":"utils","level":"4.3.8","depth":2,"path":"libs/Maix/utils.md","ref":"libs/Maix/utils.md","articles":[]}]},"previous":{"title":"UART","level":"4.2.5","depth":2,"path":"libs/machine/uart.md","ref":"libs/machine/uart.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"code","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"MaixPy DOC","language":"en","gitbook":"*","description":"MaixPy documentation"},"file":{"path":"libs/machine/network.md","mtime":"2020-11-25T08:09:59.445Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-25T08:10:49.444Z"},"basePath":"../..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+

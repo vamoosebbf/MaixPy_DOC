@@ -1,0 +1,1571 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Edit and execute files · MaixPy DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="upload_script.html" />
+    
+    
+    <link rel="prev" href="led_blink.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../others/what_maix_do.html">
+            
+                <a href="../others/what_maix_do.html">
+            
+                    
+                    What can MaixPy do?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="how_to_read.html">
+            
+                <a href="how_to_read.html">
+            
+                    
+                    Before read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Prepare</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="get_hardware.html">
+            
+                <a href="get_hardware.html">
+            
+                    
+                    Get Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="prepare_knowledge.html">
+            
+                <a href="prepare_knowledge.html">
+            
+                    
+                    Prepare knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="install_driver.html">
+            
+                <a href="install_driver.html">
+            
+                    
+                    Install driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="upgrade_firmware.html">
+            
+                <a href="upgrade_firmware.html">
+            
+                    
+                    Upgrade firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="serial_tools.html">
+            
+                <a href="serial_tools.html">
+            
+                    
+                    terminal tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="maixpyide.html">
+            
+                <a href="maixpyide.html">
+            
+                    
+                    Install MaixPyIDE(optional)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="power_on.html">
+            
+                <a href="power_on.html">
+            
+                    
+                    Power on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="led_blink.html">
+            
+                <a href="led_blink.html">
+            
+                    
+                    LED blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="edit_file.html">
+            
+                <a href="edit_file.html">
+            
+                    
+                    Edit and execute files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="upload_script.html">
+            
+                <a href="upload_script.html">
+            
+                    
+                    Upload script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="boot.html">
+            
+                <a href="boot.html">
+            
+                    
+                    Auto start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Modules/Libs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../libs/standard/">
+            
+                <a href="../libs/standard/">
+            
+                    
+                    Standard library
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../libs/standard/cmath.html">
+            
+                <a href="../libs/standard/cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../libs/standard/gc.html">
+            
+                <a href="../libs/standard/gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../libs/standard/math.html">
+            
+                <a href="../libs/standard/math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../libs/standard/sys.html">
+            
+                <a href="../libs/standard/sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../libs/standard/ubinascii.html">
+            
+                <a href="../libs/standard/ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../libs/standard/ucollections.html">
+            
+                <a href="../libs/standard/ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../libs/standard/uctypes.html">
+            
+                <a href="../libs/standard/uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../libs/standard/uerrno.html">
+            
+                <a href="../libs/standard/uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../libs/standard/uhashlib.html">
+            
+                <a href="../libs/standard/uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../libs/standard/uheapq.html">
+            
+                <a href="../libs/standard/uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../libs/standard/ujson.html">
+            
+                <a href="../libs/standard/ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../libs/standard/uos.html">
+            
+                <a href="../libs/standard/uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="../libs/standard/ure.html">
+            
+                <a href="../libs/standard/ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="../libs/standard/uselect.html">
+            
+                <a href="../libs/standard/uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" data-path="../libs/standard/usocket.html">
+            
+                <a href="../libs/standard/usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="../libs/standard/ustruct.html">
+            
+                <a href="../libs/standard/ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="../libs/standard/utime.html">
+            
+                <a href="../libs/standard/utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="../libs/standard/uzlib.html">
+            
+                <a href="../libs/standard/uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../libs/machine/">
+            
+                <a href="../libs/machine/">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../libs/machine/i2c.html">
+            
+                <a href="../libs/machine/i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../libs/machine/pwm.html">
+            
+                <a href="../libs/machine/pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../libs/machine/spi.html">
+            
+                <a href="../libs/machine/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../libs/machine/timer.html">
+            
+                <a href="../libs/machine/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../libs/machine/uart.html">
+            
+                <a href="../libs/machine/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../libs/machine/network.html">
+            
+                <a href="../libs/machine/network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../libs/Maix/">
+            
+                <a href="../libs/Maix/">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../libs/Maix/fpioa.html">
+            
+                <a href="../libs/Maix/fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../libs/Maix/gpio.html">
+            
+                <a href="../libs/Maix/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../libs/Maix/kpu.html">
+            
+                <a href="../libs/Maix/kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../libs/Maix/fft.html">
+            
+                <a href="../libs/Maix/fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../libs/Maix/i2s.html">
+            
+                <a href="../libs/Maix/i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../libs/Maix/audio.html">
+            
+                <a href="../libs/Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../libs/Maix/freq.html">
+            
+                <a href="../libs/Maix/freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../libs/Maix/utils.html">
+            
+                <a href="../libs/Maix/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../libs/builtin_py/">
+            
+                <a href="../libs/builtin_py/">
+            
+                    
+                    Built-in class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../libs/builtin_py/fm.html">
+            
+                <a href="../libs/builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../libs/builtin_py/board_info.html">
+            
+                <a href="../libs/builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../libs/machine_vision/">
+            
+                <a href="../libs/machine_vision/">
+            
+                    
+                    Machine vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../libs/machine_vision/lcd.html">
+            
+                <a href="../libs/machine_vision/lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../libs/machine_vision/sensor.html">
+            
+                <a href="../libs/machine_vision/sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../libs/machine_vision/image.html">
+            
+                <a href="../libs/machine_vision/image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../libs/machine_vision/video.html">
+            
+                <a href="../libs/machine_vision/video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../libs/peripheral_modules/">
+            
+                <a href="../libs/peripheral_modules/">
+            
+                    
+                    Peripheral modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../libs/peripheral_modules/touchscreen.html">
+            
+                <a href="../libs/peripheral_modules/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../libs/peripheral_modules/ultrasonic.html">
+            
+                <a href="../libs/peripheral_modules/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../libs/peripheral_modules/ws2812.html">
+            
+                <a href="../libs/peripheral_modules/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../libs/peripheral_modules/htpa.html">
+            
+                <a href="../libs/peripheral_modules/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../libs/peripheral_modules/grove_chainable_rgb_led.html">
+            
+                <a href="../libs/peripheral_modules/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../application/">
+            
+                <a href="../application/">
+            
+                    
+                    Integrated Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../application/pye.html">
+            
+                <a href="../application/pye.html">
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../application/nes.html">
+            
+                <a href="../application/nes.html">
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="../application/lvgl.html">
+            
+                <a href="../application/lvgl.html">
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced 1 - Custom Firmware</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../advanced/compile.html">
+            
+                <a href="../advanced/compile.html">
+            
+                    
+                    Custom Firmware-Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../advanced/code_struct.html">
+            
+                <a href="../advanced/code_struct.html">
+            
+                    
+                    Code structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../advanced/pack_fs.html">
+            
+                <a href="../advanced/pack_fs.html">
+            
+                    
+                    Pack SPIFFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/sipeed/MaixPy_scripts">
+            
+                    
+                    Demo scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../others/Q_A.html">
+            
+                <a href="../others/Q_A.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../contribute/">
+            
+                <a href="../contribute/">
+            
+                    
+                    Contribute
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../contribute/doc_convention.html">
+            
+                <a href="../contribute/doc_convention.html">
+            
+                    
+                    Doc convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../contribute/code_convention.html">
+            
+                <a href="../contribute/code_convention.html">
+            
+                    
+                    Code convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../others/open_projects.html">
+            
+                <a href="../others/open_projects.html">
+            
+                    
+                    Related projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Edit and execute files</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#editing-saving-and-executing-files"><b> </b>Editing, saving and executing files</a></li><ul><li><span class="title-icon "></span><a href="#repl-interface"><b>1. </b>REPL interface</a></li><li><span class="title-icon "></span><a href="#maixpy-file-system"><b>2. </b>MaixPy file system</a></li><li><span class="title-icon "></span><a href="#navigating-the-file-system"><b>3. </b>Navigating the file system</a></li><li><span class="title-icon "></span><a href="#editing-and-saving-files"><b>4. </b>Editing and saving files</a></li><ul><li><span class="title-icon "></span><a href="#method-a-edit-and-save-files-using-the-pye-editor-built-into-maixpy"><b>4.1. </b>Method A: Edit and save files using the pye editor built into MaixPy</a></li><li><span class="title-icon "></span><a href="#method-b-read-files-to-pc-by-upyloader-then-download-to-board-after-editing"><b>4.2. </b>Method B: Read files to PC by uPyLoader, then download to board after editing</a></li><li><span class="title-icon "></span><a href="#method-c-read-files-to-pc-by-rshell-edit-and-then-save-back-to-board"><b>4.3. </b>Method C: Read files to PC by rshell, edit, and then save back to board</a></li></ul><li><span class="title-icon "></span><a href="#execution-of-documents"><b>5. </b>Execution of documents</a></li><ul><li><span class="title-icon "></span><a href="#method-a-execute-using-import"><b>5.1. </b>Method A: Execute using import</a></li><li><span class="title-icon "></span><a href="#method-b-execute-using-exec"><b>5.2. </b>Method B: Execute using exec()</a></li><li><span class="title-icon "></span><a href="#method-c-execute-using-upyloader"><b>5.3. </b>Method C: Execute using uPyLoader</a></li><li><span class="title-icon "></span><a href="#method-d-execute-files-locally-on-pc-using-ampy"><b>5.4. </b>Method D: Execute files locally on PC using ampy</a></li></ul></ul></ul></div><a href="#editing-saving-and-executing-files" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="editing-saving-and-executing-files"><a name="editing-saving-and-executing-files" class="anchor-navigation-ex-anchor" href="#editing-saving-and-executing-files"><i class="fa fa-link" aria-hidden="true"></i></a> Editing, saving and executing files</h1>
+<p>This section teaches you how to edit, save and execute files.</p>
+<h2 id="repl-interface"><a name="repl-interface" class="anchor-navigation-ex-anchor" href="#repl-interface"><i class="fa fa-link" aria-hidden="true"></i></a>1. REPL interface</h2>
+<p>To keep things simple in the <a href="led_blink.html">previous example</a>, we entered code directly in the terminal at the Maix prompt which was executed immediately upon pressing the Enter key.  Such interactive command line interfaces are often referred to as <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank"><code>REPL&#xFF08;Read Eval Print Loop)</code></a>. MaixPy&apos;s REPL interface operates similar to most other command line interfaces except that the supported syntax is <a href="http://docs.micropython.org/en/latest/reference/repl.html" target="_blank">MicroPython</a></p>
+<p>While MaixPy&apos;s REPL interface is simple and convenient for small tasks, it soon becomes annoying to re-enter your code each time you want to run it.  The solution is to save your code to a file, and then execute the file.  The remainder of this page describes that process.</p>
+<h2 id="maixpy-file-system"><a name="maixpy-file-system" class="anchor-navigation-ex-anchor" href="#maixpy-file-system"><i class="fa fa-link" aria-hidden="true"></i></a>2. MaixPy file system</h2>
+<p>MaixPy devices have an internal file system which can access both internal and external memories.  During boot, the device will mount any external memory cards formatted with either SPIFFS or FAT file systems, and add them to the internal file system as the <code>/flash</code> or <code>/sd</code> directories respectively.  </p>
+<p>NOTES:</p>
+<p>SPIFFS cards are by default assigned to <code>3MB</code> <code>SPIFFS</code> (starting at flash address <code>0xD00000</code>). When detected at boot, SPIFFS devices automatically appear as the <code>/flash</code> directory within the device&apos;s internal file system.  Currently the <code>SPIFFS</code> implementation in MaixPy does not support the creation of directories. </p>
+<p>FAT formatted SD (TF) cards are supported, but FAT32 or exFAT formatted cards are not currently supported.  When detected at boot, FAT formatted cards will be automatically mounted and appear as the <code>/sd</code> directory in the device&apos;s internal file system.  </p>
+<p>It should be noted that the root directory is only used to mount the SD card or SPIFFS flash card. All other file operations happen in the <code>/flash</code> or <code>/sd</code> directories, as determined by the format of the memory card discovered at boot time.  </p>
+<h2 id="navigating-the-file-system"><a name="navigating-the-file-system" class="anchor-navigation-ex-anchor" href="#navigating-the-file-system"><i class="fa fa-link" aria-hidden="true"></i></a>3. Navigating the file system</h2>
+<p>In MaixPy&apos;s REPL interface and in code the following os commands can be used to navigate directories and manage files.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Command</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>os.chdir()</code></td>
+<td style="text-align:left">changes the current directory</td>
+<td style="text-align:left"><code>os.chdir(&quot;/flash&quot;)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os.listdir()</code></td>
+<td style="text-align:left">list the files in the current directory</td>
+<td style="text-align:left"><code>os.listdir()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os.listdir(path)</code></td>
+<td style="text-align:left">list the files in another directory</td>
+<td style="text-align:left"><code>os.listdir(&quot;/sd&quot;)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os.getcwd()</code></td>
+<td style="text-align:left">return the current working directory</td>
+<td style="text-align:left"><code>os.getcwd()</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os.rename(old_path, new_path)</code></td>
+<td style="text-align:left">rename a file</td>
+<td style="text-align:left"><code>os.rename(&quot;./blue.py&quot;, &quot;./aaah.py&quot;)</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os.remove(path)</code></td>
+<td style="text-align:left">remove a file</td>
+<td style="text-align:left"><code>os.remove(&quot;./herring.py&quot;)</code></td>
+</tr>
+</tbody>
+</table>
+<p>For a complete list of os commands refer to the <a href="http://docs.micropython.org/en/v1.7/esp8266/library/os.html" target="_blank">MicroPython documentation</a></p>
+<h2 id="editing-and-saving-files"><a name="editing-and-saving-files" class="anchor-navigation-ex-anchor" href="#editing-and-saving-files"><i class="fa fa-link" aria-hidden="true"></i></a>4. Editing and saving files</h2>
+<p>There are a number of ways you can edit and save files described below as Methods A through C</p>
+<h3 id="method-a-edit-and-save-files-using-the-pye-editor-built-into-maixpy"><a name="method-a-edit-and-save-files-using-the-pye-editor-built-into-maixpy" class="anchor-navigation-ex-anchor" href="#method-a-edit-and-save-files-using-the-pye-editor-built-into-maixpy"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. Method A: Edit and save files using the pye editor built into MaixPy</h3>
+<p>MaixPy includes a built-in open source editor <a href="https://github.com/robert-hh/Micropython-Editor" target="_blank">Micropython Editor(pye)</a></p>
+<p>At the REPL interface enter <code>pye(&quot;hello.py&quot;)</code> to create a file and enter the edit mode. Keyboard shortcuts and other instructions can be found <a href="https://github.com/robert-hh/Micropython-Editor/blob/master/Pyboard%20Editor.pdf" target="_blank">here</a></p>
+<p>Enter the following code:</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hello maixpy&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>When you have finished editing, press <code>Ctrl+S</code> and then press <code>Enter</code> to save, and then press <code>Ctrl+Q</code> to exit the editor.</p>
+<p><strong>Note</strong> : The pye editor has certain requirements of the connected terminal. For intuitive operation the <code>BackSpace</code> key should be configured to send <code>Ctrl+?</code>, otherwise the <code>BackSpace</code> key will function as <code>Ctrl+H</code> (ie: character replacement).</p>
+<p>Linux users are recommended to use <code>minicom</code>. Use <code>sudo minicom -s</code> to set the reference to <a href="serial_tools.html">the previous tutorial</a></p>
+<p>Windows users can use <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">PuTTY</a> which supports Backspace key configuration.
+<a href="assets/Maix_pye_putty_backspace_config.png" data-lightbox="9bdbd43b-a90d-4b68-a2a5-15170b369ca4" data-title="PuTTY Backspace Configuration"><img src="assets/Maix_pye_putty_backspace_config.png" alt="PuTTY Backspace Configuration"></a></p>
+<p><strong>Note</strong> Typing Shift-Backspace will cause PuTTY to send whichever code isn&apos;t configured as the default.</p>
+<p>Alternatively, Xshell users can use:</p>
+<pre class="language-"><code>File &#x2192; Properties &#x2192; Terminal &#x2192; Keyboard,
+Change the delete and backspace sequences to ASCII 127.
+</code></pre><h3 id="method-b-read-files-to-pc-by-upyloader-then-download-to-board-after-editing"><a name="method-b-read-files-to-pc-by-upyloader-then-download-to-board-after-editing" class="anchor-navigation-ex-anchor" href="#method-b-read-files-to-pc-by-upyloader-then-download-to-board-after-editing"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. Method B: Read files to PC by uPyLoader, then download to board after editing</h3>
+<p>This method uses the <a href="https://github.com/BetaRavener/uPyLoader" target="_blank">uPyLoader</a> utility</p>
+<p>Download the executable: <a href="https://github.com/BetaRavener/uPyLoader/releases" target="_blank">release</a></p>
+<p><a href="../../assets/uPyLoader.png" data-lightbox="c552497c-302b-4210-8447-1523efab4580" data-title="uPyLoader"><img src="../../assets/uPyLoader.png" alt="uPyLoader"></a></p>
+<p>Select the serial port and click the <code>Connect</code> button to connect the board</p>
+<p>The first time you run the software, you need to initialize it. Click <code>File-&gt;Init transfer files</code> to complete the initialization. This will create two files in the board, <code>__upload.py</code> and <code>__download.py</code>.</p>
+<p>Then double click file name to read and edit, then click the <code>save</code> button to download the file to board</p>
+<h3 id="method-c-read-files-to-pc-by-rshell-edit-and-then-save-back-to-board"><a name="method-c-read-files-to-pc-by-rshell-edit-and-then-save-back-to-board" class="anchor-navigation-ex-anchor" href="#method-c-read-files-to-pc-by-rshell-edit-and-then-save-back-to-board"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. Method C: Read files to PC by rshell, edit, and then save back to board</h3>
+<p>Install <a href="https://github.com/dhylands/rshell" target="_blank">rshell</a> first according to the doc of <code>rshell</code></p>
+<pre class="language-"><code class="lang-python">sudo apt<span class="token operator">-</span>get install python3<span class="token operator">-</span>pip
+sudo pip3 install rshell
+rshell <span class="token operator">-</span>p <span class="token operator">/</span>dev<span class="token operator">/</span>ttyUSB1 <span class="token comment"># select board serial</span>
+</code></pre>
+<p>Edit file</p>
+<pre class="language-"><code class="lang-python">ls <span class="token operator">/</span>flash
+edit <span class="token operator">/</span>flash<span class="token operator">/</span>boot<span class="token punctuation">.</span>py
+<span class="token comment"># the editor uses vim commands</span>
+</code></pre>
+<h2 id="execution-of-documents"><a name="execution-of-documents" class="anchor-navigation-ex-anchor" href="#execution-of-documents"><i class="fa fa-link" aria-hidden="true"></i></a>5. Execution of documents</h2>
+<p>Once MicroPython files exist on the file system they may be executed using the following methods</p>
+<h3 id="method-a-execute-using-import"><a name="method-a-execute-using-import" class="anchor-navigation-ex-anchor" href="#method-a-execute-using-import"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. Method A: Execute using import</h3>
+<p>At MaixPy&apos;s REPL interface simply enter:
+<code>import hello</code> then press Enter</p>
+<p>The <code>hello.py</code> file will run and should output <code>hello maixpy</code></p>
+<p>But be careful, the <code>import</code> command can only be used once.  If you want to execute the code more than once, please use <code>Method B</code> below.</p>
+<h3 id="method-b-execute-using-exec"><a name="method-b-execute-using-exec" class="anchor-navigation-ex-anchor" href="#method-b-execute-using-exec"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. Method B: Execute using exec()</h3>
+<p>Use <code>exec()</code> in a simple program to execute your file</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;hello.py&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">exec</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="method-c-execute-using-upyloader"><a name="method-c-execute-using-upyloader" class="anchor-navigation-ex-anchor" href="#method-c-execute-using-upyloader"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. Method C: Execute using uPyLoader</h3>
+<p>Just select the file, then click the <code>execute</code> button</p>
+<h3 id="method-d-execute-files-locally-on-pc-using-ampy"><a name="method-d-execute-files-locally-on-pc-using-ampy" class="anchor-navigation-ex-anchor" href="#method-d-execute-files-locally-on-pc-using-ampy"><i class="fa fa-link" aria-hidden="true"></i></a>5.4. Method D: Execute files locally on PC using ampy</h3>
+<p><a href="https://github.com/pycampers/ampy" target="_blank">ampy</a> </p>
+<p>run script by command <code>ampy run file_in_PC.py</code> to execute files on PC (file won&apos;t transmit to board)</p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-25 16:09:59
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="led_blink.html" class="navigation navigation-prev " aria-label="Previous page: LED blink">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="upload_script.html" class="navigation navigation-next " aria-label="Next page: Upload script">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Edit and execute files","level":"3.3","depth":1,"next":{"title":"Upload script","level":"3.4","depth":1,"path":"get_started/upload_script.md","ref":"get_started/upload_script.md","articles":[]},"previous":{"title":"LED blink","level":"3.2","depth":1,"path":"get_started/led_blink.md","ref":"get_started/led_blink.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"code","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"MaixPy DOC","language":"en","gitbook":"*","description":"MaixPy documentation"},"file":{"path":"get_started/edit_file.md","mtime":"2020-11-25T08:09:59.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-25T08:10:49.444Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+

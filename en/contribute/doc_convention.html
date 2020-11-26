@@ -1,0 +1,1576 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Doc convention · MaixPy DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="code_convention.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../others/what_maix_do.html">
+            
+                <a href="../others/what_maix_do.html">
+            
+                    
+                    What can MaixPy do?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../get_started/how_to_read.html">
+            
+                <a href="../get_started/how_to_read.html">
+            
+                    
+                    Before read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Prepare</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../get_started/get_hardware.html">
+            
+                <a href="../get_started/get_hardware.html">
+            
+                    
+                    Get Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../get_started/prepare_knowledge.html">
+            
+                <a href="../get_started/prepare_knowledge.html">
+            
+                    
+                    Prepare knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../get_started/install_driver.html">
+            
+                <a href="../get_started/install_driver.html">
+            
+                    
+                    Install driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../get_started/upgrade_firmware.html">
+            
+                <a href="../get_started/upgrade_firmware.html">
+            
+                    
+                    Upgrade firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../get_started/serial_tools.html">
+            
+                <a href="../get_started/serial_tools.html">
+            
+                    
+                    terminal tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../get_started/maixpyide.html">
+            
+                <a href="../get_started/maixpyide.html">
+            
+                    
+                    Install MaixPyIDE(optional)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../get_started/power_on.html">
+            
+                <a href="../get_started/power_on.html">
+            
+                    
+                    Power on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../get_started/led_blink.html">
+            
+                <a href="../get_started/led_blink.html">
+            
+                    
+                    LED blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../get_started/edit_file.html">
+            
+                <a href="../get_started/edit_file.html">
+            
+                    
+                    Edit and execute files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../get_started/upload_script.html">
+            
+                <a href="../get_started/upload_script.html">
+            
+                    
+                    Upload script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../get_started/boot.html">
+            
+                <a href="../get_started/boot.html">
+            
+                    
+                    Auto start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Modules/Libs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../libs/standard/">
+            
+                <a href="../libs/standard/">
+            
+                    
+                    Standard library
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../libs/standard/cmath.html">
+            
+                <a href="../libs/standard/cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../libs/standard/gc.html">
+            
+                <a href="../libs/standard/gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../libs/standard/math.html">
+            
+                <a href="../libs/standard/math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../libs/standard/sys.html">
+            
+                <a href="../libs/standard/sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../libs/standard/ubinascii.html">
+            
+                <a href="../libs/standard/ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../libs/standard/ucollections.html">
+            
+                <a href="../libs/standard/ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../libs/standard/uctypes.html">
+            
+                <a href="../libs/standard/uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../libs/standard/uerrno.html">
+            
+                <a href="../libs/standard/uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../libs/standard/uhashlib.html">
+            
+                <a href="../libs/standard/uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../libs/standard/uheapq.html">
+            
+                <a href="../libs/standard/uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../libs/standard/ujson.html">
+            
+                <a href="../libs/standard/ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../libs/standard/uos.html">
+            
+                <a href="../libs/standard/uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="../libs/standard/ure.html">
+            
+                <a href="../libs/standard/ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="../libs/standard/uselect.html">
+            
+                <a href="../libs/standard/uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" data-path="../libs/standard/usocket.html">
+            
+                <a href="../libs/standard/usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="../libs/standard/ustruct.html">
+            
+                <a href="../libs/standard/ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="../libs/standard/utime.html">
+            
+                <a href="../libs/standard/utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="../libs/standard/uzlib.html">
+            
+                <a href="../libs/standard/uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../libs/machine/">
+            
+                <a href="../libs/machine/">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../libs/machine/i2c.html">
+            
+                <a href="../libs/machine/i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../libs/machine/pwm.html">
+            
+                <a href="../libs/machine/pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../libs/machine/spi.html">
+            
+                <a href="../libs/machine/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../libs/machine/timer.html">
+            
+                <a href="../libs/machine/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../libs/machine/uart.html">
+            
+                <a href="../libs/machine/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../libs/machine/network.html">
+            
+                <a href="../libs/machine/network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../libs/Maix/">
+            
+                <a href="../libs/Maix/">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../libs/Maix/fpioa.html">
+            
+                <a href="../libs/Maix/fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../libs/Maix/gpio.html">
+            
+                <a href="../libs/Maix/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../libs/Maix/kpu.html">
+            
+                <a href="../libs/Maix/kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../libs/Maix/fft.html">
+            
+                <a href="../libs/Maix/fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../libs/Maix/i2s.html">
+            
+                <a href="../libs/Maix/i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../libs/Maix/audio.html">
+            
+                <a href="../libs/Maix/audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../libs/Maix/freq.html">
+            
+                <a href="../libs/Maix/freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../libs/Maix/utils.html">
+            
+                <a href="../libs/Maix/utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../libs/builtin_py/">
+            
+                <a href="../libs/builtin_py/">
+            
+                    
+                    Built-in class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../libs/builtin_py/fm.html">
+            
+                <a href="../libs/builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../libs/builtin_py/board_info.html">
+            
+                <a href="../libs/builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../libs/machine_vision/">
+            
+                <a href="../libs/machine_vision/">
+            
+                    
+                    Machine vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../libs/machine_vision/lcd.html">
+            
+                <a href="../libs/machine_vision/lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../libs/machine_vision/sensor.html">
+            
+                <a href="../libs/machine_vision/sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../libs/machine_vision/image.html">
+            
+                <a href="../libs/machine_vision/image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../libs/machine_vision/video.html">
+            
+                <a href="../libs/machine_vision/video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../libs/peripheral_modules/">
+            
+                <a href="../libs/peripheral_modules/">
+            
+                    
+                    Peripheral modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../libs/peripheral_modules/touchscreen.html">
+            
+                <a href="../libs/peripheral_modules/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../libs/peripheral_modules/ultrasonic.html">
+            
+                <a href="../libs/peripheral_modules/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../libs/peripheral_modules/ws2812.html">
+            
+                <a href="../libs/peripheral_modules/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../libs/peripheral_modules/htpa.html">
+            
+                <a href="../libs/peripheral_modules/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../libs/peripheral_modules/grove_chainable_rgb_led.html">
+            
+                <a href="../libs/peripheral_modules/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../application/">
+            
+                <a href="../application/">
+            
+                    
+                    Integrated Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../application/pye.html">
+            
+                <a href="../application/pye.html">
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../application/nes.html">
+            
+                <a href="../application/nes.html">
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="../application/lvgl.html">
+            
+                <a href="../application/lvgl.html">
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced 1 - Custom Firmware</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../advanced/compile.html">
+            
+                <a href="../advanced/compile.html">
+            
+                    
+                    Custom Firmware-Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../advanced/code_struct.html">
+            
+                <a href="../advanced/code_struct.html">
+            
+                    
+                    Code structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../advanced/pack_fs.html">
+            
+                <a href="../advanced/pack_fs.html">
+            
+                    
+                    Pack SPIFFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/sipeed/MaixPy_scripts">
+            
+                    
+                    Demo scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../others/Q_A.html">
+            
+                <a href="../others/Q_A.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Contribute
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="6.3.1" data-path="doc_convention.html">
+            
+                <a href="doc_convention.html">
+            
+                    
+                    Doc convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="code_convention.html">
+            
+                <a href="code_convention.html">
+            
+                    
+                    Code convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../others/open_projects.html">
+            
+                <a href="../others/open_projects.html">
+            
+                    
+                    Related projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Doc convention</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#documentation-convention"><b> </b>Documentation Convention</a></li><ul><li><span class="title-icon "></span><a href="#markdown-syntax"><b>1. </b>Markdown syntax</a></li><ul><li><span class="title-icon "></span><a href="#the-syntax-tags-of-the-title-class-must-be-separated-by-spaces-a-blank-line-is-required-between-the-headline-and-the-body-such-as"><b>1.1. </b>The syntax tags of the title class must be separated by spaces. A blank line is required between the headline and the body, such as:</a></li><li><span class="title-icon "></span><a href="#all-pages-have-only-one-top-level-title"><b>1.2. </b>All pages have only one top level title</a></li><li><span class="title-icon "></span><a href="#link"><b>1.3. </b>Link</a></li><li><span class="title-icon "></span><a href="#chinese-and-english-mixed"><b>1.4. </b>Chinese and English mixed</a></li></ul><li><span class="title-icon "></span><a href="#directory-and-file-name"><b>2. </b>Directory and file name</a></li><li><span class="title-icon "></span><a href="#catalog-and-links"><b>3. </b>Catalog and links</a></li><li><span class="title-icon "></span><a href="#chinese-and-english-multi-language-page-file-directory-structure-and-file-name-are-the-same"><b>4. </b>Chinese and English (multi-language) page file directory structure and file name are the same</a></li><li><span class="title-icon "></span><a href="#module-document-content"><b>5. </b>Module Document Content</a></li><li><span class="title-icon "></span><a href="#multi-version-management"><b>6. </b>Multi-version management</a></li></ul></ul></div><a href="#documentation-convention" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="documentation-convention"><a name="documentation-convention" class="anchor-navigation-ex-anchor" href="#documentation-convention"><i class="fa fa-link" aria-hidden="true"></i></a> Documentation Convention</h1>
+<p>Documents are built using gitbook and written in simple and efficient Markdown</p>
+<p>The documentation source code is hosted on <a href="https://github.com/sipeed/MaixPy_DOC" target="_blank">GitHub</a></p>
+<h2 id="markdown-syntax"><a name="markdown-syntax" class="anchor-navigation-ex-anchor" href="#markdown-syntax"><i class="fa fa-link" aria-hidden="true"></i></a>1. Markdown syntax</h2>
+<p>If you&apos;ve never used the basic syntax of Markdown, please take half an hour to learn. We recommend the GitHub tutorial: <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">GitHub Markdown Tutorial</a></p>
+<p>In this article, we need to pay attention to the following points:</p>
+<h3 id="the-syntax-tags-of-the-title-class-must-be-separated-by-spaces-a-blank-line-is-required-between-the-headline-and-the-body-such-as"><a name="the-syntax-tags-of-the-title-class-must-be-separated-by-spaces-a-blank-line-is-required-between-the-headline-and-the-body-such-as" class="anchor-navigation-ex-anchor" href="#the-syntax-tags-of-the-title-class-must-be-separated-by-spaces-a-blank-line-is-required-between-the-headline-and-the-body-such-as"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. The syntax tags of the title class must be separated by spaces. A blank line is required between the headline and the body, such as:</h3>
+<pre class="language-"><code class="lang-markdown"><span class="token title important"><span class="token punctuation">##</span> This is a secondary title</span>
+
+<span class="token list punctuation">*</span> This is list item 1
+<span class="token list punctuation">*</span> This is list item 2
+</code></pre>
+<p>The following example is not correct, it may cause the parser to parse the file with errors.</p>
+<pre class="language-"><code class="lang-markdown"><span class="token title important"><span class="token punctuation">##</span>This is a secondary title</span>
+<span class="token italic"><span class="token punctuation">*</span><span class="token content">This is list item 1
+</span><span class="token punctuation">*</span></span>This is list item 2
+</code></pre>
+<h3 id="all-pages-have-only-one-top-level-title"><a name="all-pages-have-only-one-top-level-title" class="anchor-navigation-ex-anchor" href="#all-pages-have-only-one-top-level-title"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. All pages have only one top level title</h3>
+<p>Because the need to automatically generate a directory, mainly to ensure that the automatically generated directory is correct.
+Write each page like this</p>
+<pre class="language-"><code>Page title/top level title
+=======                          (There is at least three equals here)
+                                 (At least one more blank line is required, 2 lines are recommended)
+
+## Secondary title 1             (You cannot use a first-level title here, and you cannot use a ##. You don&apos;t need to write a serial number, it will automatically generate a serial number.)
+                                 ( Skip a line )
+text
+                                 (at least one line)
+### Three-level title            (similar to the second-level title, it does not need to be written, it will be generated automatically)
+
+text
+
+## Secondary title 2
+
+text
+</code></pre><h3 id="link"><a name="link" class="anchor-navigation-ex-anchor" href="#link"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Link</h3>
+<p>Due to the large number of pages and the need to link resources such as images, relative paths are used when writing links.
+The directory structure is as follows:</p>
+<pre class="language-"><code>Assets/                                     (put public resource files)
+       |
+       ----pic000.png
+En/
+    |
+    ----- get_started/
+                   |
+                   ---- assets/            (put the resource file common to the md file in the get_started directory)
+                              |
+                              ------ pic.png
+                   |
+                   ---- get_hardware.md
+                   |
+                   ---- how_to_read.md
+Zh/
+</code></pre><p>If you want to show the images in <code>get_hardware.md</code>, put the image in the <code>assets</code> folder, then use the following code to reference the image:</p>
+<pre class="language-"><code>![pic](assets/pic.png)
+![pic](../../assets/pic000.png)
+</code></pre><h3 id="chinese-and-english-mixed"><a name="chinese-and-english-mixed" class="anchor-navigation-ex-anchor" href="#chinese-and-english-mixed"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Chinese and English mixed</h3>
+<p>When writing Chinese documents, the Chinese characters should be separated by spaces as much as possible. Punctuation should use full-width symbols as much as possible.
+Mainly to make it stand out and make the document more elegant.
+For example, the following comparison:</p>
+<hr>
+<pre class="language-"><code class="lang-markdown">In Micropython, we often use <span class="token code keyword">`deinit`</span> to represent the destructor instead of setting the default value like STM32.
+</code></pre>
+<p>In Micropython, we often use <code>deinit</code> to represent the destructor instead of setting the default value like STM32.</p>
+<hr>
+<pre class="language-"><code class="lang-markdown">In Micropython, we often use deinit to represent the destructor, instead of setting the default value like STM32.
+</code></pre>
+<p>In Micropython, we often use deinit to represent the destructor, instead of setting the default value like STM32.</p>
+<hr>
+<h2 id="directory-and-file-name"><a name="directory-and-file-name" class="anchor-navigation-ex-anchor" href="#directory-and-file-name"><i class="fa fa-link" aria-hidden="true"></i></a>2. Directory and file name</h2>
+<ul>
+<li><p>The generated document directory is edited in the corresponding language folder <code>SUMMARY.md</code></p>
+</li>
+<li><p>The source document folder should be a function module corresponding to a folder, and the resource file (picture) is placed in the <code>assets</code> folder directory of the current path of the corresponding md document, which is more convenient when adding, deleting, and modifying.</p>
+</li>
+</ul>
+<pre class="language-"><code>Assets/                                 (put public resource files)
+En/
+   |
+   ----- get_started/
+                  |
+                  ---- assets/          (put the resource file common to the md file in the get_started directory)
+                  |
+                  ---- get_hardware.md
+                  |
+                  ---- how_to_read.md
+Zh/
+</code></pre><ul>
+<li>The file name is not limited to <code>README.md</code>, other file names are named with lowercase + underscore, such as <code>get_hardware.md</code></li>
+</ul>
+<h2 id="catalog-and-links"><a name="catalog-and-links" class="anchor-navigation-ex-anchor" href="#catalog-and-links"><i class="fa fa-link" aria-hidden="true"></i></a>3. Catalog and links</h2>
+<p>Try to guide readers to use the directory, and use the jump link in the text with caution. If the link jumps in a mess, it will cause the document to look messy and it will be difficult to read.</p>
+<h2 id="chinese-and-english-multi-language-page-file-directory-structure-and-file-name-are-the-same"><a name="chinese-and-english-multi-language-page-file-directory-structure-and-file-name-are-the-same" class="anchor-navigation-ex-anchor" href="#chinese-and-english-multi-language-page-file-directory-structure-and-file-name-are-the-same"><i class="fa fa-link" aria-hidden="true"></i></a>4. Chinese and English (multi-language) page file directory structure and file name are the same</h2>
+<p>Since there are multiple language switching options in the last generated page, clicking the switch will directly access the same path of the corresponding language, so the Chinese and English directory structure and file name must be the same.</p>
+<p>For example, English is accessing <code>en/get_started/how_to_read.md</code>. After clicking the button for language switching, it will automatically access <code>zh/get_started/how_to_read.md</code>. If this file does not exist, it will report a <code>404</code> error!</p>
+<h2 id="module-document-content"><a name="module-document-content" class="anchor-navigation-ex-anchor" href="#module-document-content"><i class="fa fa-link" aria-hidden="true"></i></a>5. Module Document Content</h2>
+<ul>
+<li>Need to include a module introduction in the file header</li>
+<li>Need to explain the constructor, function, constant, etc.</li>
+<li><strong>Explain that you can&apos;t be lazy. Simply translate the function name again. You need to explain the function of the function, the range of parameters, and the point of attention</strong></li>
+</ul>
+<h2 id="multi-version-management"><a name="multi-version-management" class="anchor-navigation-ex-anchor" href="#multi-version-management"><i class="fa fa-link" aria-hidden="true"></i></a>6. Multi-version management</h2>
+<p>In addition to the Chinese and English (multi-language) support (not automatic translation, manual modification), the document also has multi-version management.</p>
+<p>Each version is a branch with requirements for the branch name, which are:</p>
+<ul>
+<li><code>master</code> branch is the main branch</li>
+<li><code>dev</code> branch for development branch</li>
+<li>Other published historical versions start with a lowercase <code>v</code>, such as creating a branch called <code>v1.2</code></li>
+</ul>
+<p>After creating a new branch, you need to modify the version link in <code>book.json</code> in the directory of each language version, otherwise the reader can&apos;t find the entry.</p>
+<p>You can preview it locally under the newly created branch (see the root directory <code>README.md</code> for the preview method). Note that the previewed page is the current branch. If you want to preview other branches locally, you need to switch to other points before previewing. Just fine.</p>
+<p>After confirming that the error is modified, push the branch to the remote (github), the automatic build system will be automatically built and published to the pages branch, and the effect will be seen when the access URL is built.</p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-26 20:02:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Contribute">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="code_convention.html" class="navigation navigation-next " aria-label="Next page: Code convention">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Doc convention","level":"6.3.1","depth":2,"next":{"title":"Code convention","level":"6.3.2","depth":2,"path":"contribute/code_convention.md","ref":"contribute/code_convention.md","articles":[]},"previous":{"title":"Contribute","level":"6.3","depth":1,"path":"contribute/README.md","ref":"contribute/README.md","articles":[{"title":"Doc convention","level":"6.3.1","depth":2,"path":"contribute/doc_convention.md","ref":"contribute/doc_convention.md","articles":[]},{"title":"Code convention","level":"6.3.2","depth":2,"path":"contribute/code_convention.md","ref":"contribute/code_convention.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"code","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"MaixPy DOC","language":"en","gitbook":"*","description":"MaixPy documentation"},"file":{"path":"contribute/doc_convention.md","mtime":"2020-11-26T12:02:14.404Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-26T12:03:10.728Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+

@@ -1,0 +1,1669 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>KPU · MaixPy DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fft.html" />
+    
+    
+    <link rel="prev" href="gpio.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../others/what_maix_do.html">
+            
+                <a href="../../others/what_maix_do.html">
+            
+                    
+                    What can MaixPy do?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../get_started/how_to_read.html">
+            
+                <a href="../../get_started/how_to_read.html">
+            
+                    
+                    Before read
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Prepare</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../get_started/get_hardware.html">
+            
+                <a href="../../get_started/get_hardware.html">
+            
+                    
+                    Get Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../get_started/prepare_knowledge.html">
+            
+                <a href="../../get_started/prepare_knowledge.html">
+            
+                    
+                    Prepare knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../get_started/install_driver.html">
+            
+                <a href="../../get_started/install_driver.html">
+            
+                    
+                    Install driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../get_started/upgrade_firmware.html">
+            
+                <a href="../../get_started/upgrade_firmware.html">
+            
+                    
+                    Upgrade firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../get_started/serial_tools.html">
+            
+                <a href="../../get_started/serial_tools.html">
+            
+                    
+                    terminal tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../get_started/maixpyide.html">
+            
+                <a href="../../get_started/maixpyide.html">
+            
+                    
+                    Install MaixPyIDE(optional)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../get_started/power_on.html">
+            
+                <a href="../../get_started/power_on.html">
+            
+                    
+                    Power on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../get_started/led_blink.html">
+            
+                <a href="../../get_started/led_blink.html">
+            
+                    
+                    LED blink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../get_started/edit_file.html">
+            
+                <a href="../../get_started/edit_file.html">
+            
+                    
+                    Edit and execute files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../get_started/upload_script.html">
+            
+                <a href="../../get_started/upload_script.html">
+            
+                    
+                    Upload script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../get_started/boot.html">
+            
+                <a href="../../get_started/boot.html">
+            
+                    
+                    Auto start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Modules/Libs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../standard/">
+            
+                <a href="../standard/">
+            
+                    
+                    Standard library
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../standard/cmath.html">
+            
+                <a href="../standard/cmath.html">
+            
+                    
+                    cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../standard/gc.html">
+            
+                <a href="../standard/gc.html">
+            
+                    
+                    gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../standard/math.html">
+            
+                <a href="../standard/math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../standard/sys.html">
+            
+                <a href="../standard/sys.html">
+            
+                    
+                    sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../standard/ubinascii.html">
+            
+                <a href="../standard/ubinascii.html">
+            
+                    
+                    ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../standard/ucollections.html">
+            
+                <a href="../standard/ucollections.html">
+            
+                    
+                    ucollections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../standard/uctypes.html">
+            
+                <a href="../standard/uctypes.html">
+            
+                    
+                    uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../standard/uerrno.html">
+            
+                <a href="../standard/uerrno.html">
+            
+                    
+                    uerrno
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../standard/uhashlib.html">
+            
+                <a href="../standard/uhashlib.html">
+            
+                    
+                    uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../standard/uheapq.html">
+            
+                <a href="../standard/uheapq.html">
+            
+                    
+                    uheapq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../standard/ujson.html">
+            
+                <a href="../standard/ujson.html">
+            
+                    
+                    ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../standard/uos.html">
+            
+                <a href="../standard/uos.html">
+            
+                    
+                    uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="../standard/ure.html">
+            
+                <a href="../standard/ure.html">
+            
+                    
+                    ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="../standard/uselect.html">
+            
+                <a href="../standard/uselect.html">
+            
+                    
+                    uselect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" data-path="../standard/usocket.html">
+            
+                <a href="../standard/usocket.html">
+            
+                    
+                    usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="../standard/ustruct.html">
+            
+                <a href="../standard/ustruct.html">
+            
+                    
+                    ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="../standard/utime.html">
+            
+                <a href="../standard/utime.html">
+            
+                    
+                    utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="../standard/uzlib.html">
+            
+                <a href="../standard/uzlib.html">
+            
+                    
+                    uzlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../machine/">
+            
+                <a href="../machine/">
+            
+                    
+                    machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../machine/i2c.html">
+            
+                <a href="../machine/i2c.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../machine/pwm.html">
+            
+                <a href="../machine/pwm.html">
+            
+                    
+                    PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../machine/spi.html">
+            
+                <a href="../machine/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../machine/timer.html">
+            
+                <a href="../machine/timer.html">
+            
+                    
+                    Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../machine/uart.html">
+            
+                <a href="../machine/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../machine/network.html">
+            
+                <a href="../machine/network.html">
+            
+                    
+                    network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Maix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="fpioa.html">
+            
+                <a href="fpioa.html">
+            
+                    
+                    FPIOA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3.3" data-path="kpu.html">
+            
+                <a href="kpu.html">
+            
+                    
+                    KPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="fft.html">
+            
+                <a href="fft.html">
+            
+                    
+                    FFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="i2s.html">
+            
+                <a href="i2s.html">
+            
+                    
+                    I2S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="audio.html">
+            
+                <a href="audio.html">
+            
+                    
+                    Audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="freq.html">
+            
+                <a href="freq.html">
+            
+                    
+                    freq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="utils.html">
+            
+                <a href="utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../builtin_py/">
+            
+                <a href="../builtin_py/">
+            
+                    
+                    Built-in class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../builtin_py/fm.html">
+            
+                <a href="../builtin_py/fm.html">
+            
+                    
+                    fpioa_manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../builtin_py/board_info.html">
+            
+                <a href="../builtin_py/board_info.html">
+            
+                    
+                    board_info
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../machine_vision/">
+            
+                <a href="../machine_vision/">
+            
+                    
+                    Machine vision
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../machine_vision/lcd.html">
+            
+                <a href="../machine_vision/lcd.html">
+            
+                    
+                    lcd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../machine_vision/sensor.html">
+            
+                <a href="../machine_vision/sensor.html">
+            
+                    
+                    sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../machine_vision/image.html">
+            
+                <a href="../machine_vision/image.html">
+            
+                    
+                    image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../machine_vision/video.html">
+            
+                <a href="../machine_vision/video.html">
+            
+                    
+                    video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../peripheral_modules/">
+            
+                <a href="../peripheral_modules/">
+            
+                    
+                    Peripheral modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../peripheral_modules/touchscreen.html">
+            
+                <a href="../peripheral_modules/touchscreen.html">
+            
+                    
+                    touchscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../peripheral_modules/ultrasonic.html">
+            
+                <a href="../peripheral_modules/ultrasonic.html">
+            
+                    
+                    modules.ultrasonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../peripheral_modules/ws2812.html">
+            
+                <a href="../peripheral_modules/ws2812.html">
+            
+                    
+                    modules.ws2812
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.4" data-path="../peripheral_modules/htpa.html">
+            
+                <a href="../peripheral_modules/htpa.html">
+            
+                    
+                    modules.htpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.5" data-path="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                <a href="../peripheral_modules/grove_chainable_rgb_led.html">
+            
+                    
+                    Grove RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../application/">
+            
+                <a href="../../application/">
+            
+                    
+                    Integrated Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../../application/pye.html">
+            
+                <a href="../../application/pye.html">
+            
+                    
+                    Micropython Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../../application/nes.html">
+            
+                <a href="../../application/nes.html">
+            
+                    
+                    nes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="../../application/lvgl.html">
+            
+                <a href="../../application/lvgl.html">
+            
+                    
+                    lvgl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Advanced 1 - Custom Firmware</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../advanced/compile.html">
+            
+                <a href="../../advanced/compile.html">
+            
+                    
+                    Custom Firmware-Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../advanced/code_struct.html">
+            
+                <a href="../../advanced/code_struct.html">
+            
+                    
+                    Code structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../advanced/pack_fs.html">
+            
+                <a href="../../advanced/pack_fs.html">
+            
+                    
+                    Pack SPIFFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/sipeed/MaixPy_scripts">
+            
+                    
+                    Demo scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../others/Q_A.html">
+            
+                <a href="../../others/Q_A.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../contribute/">
+            
+                <a href="../../contribute/">
+            
+                    
+                    Contribute
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../contribute/doc_convention.html">
+            
+                <a href="../../contribute/doc_convention.html">
+            
+                    
+                    Doc convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../../contribute/code_convention.html">
+            
+                <a href="../../contribute/code_convention.html">
+            
+                    
+                    Code convention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../others/open_projects.html">
+            
+                <a href="../../others/open_projects.html">
+            
+                    
+                    Related projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/sipeed/sipeed_logo_2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/MaixPy_DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/MaixPy/issues" class="btn" target="_blank">code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >KPU</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#kpu"><b> </b>KPU</a></li><ul><li><span class="title-icon "></span><a href="#module-method"><b>1. </b>Module Method</a></li><ul><li><span class="title-icon "></span><a href="#loading-the-model"><b>1.1. </b>Loading the model</a></li><li><span class="title-icon "></span><a href="#initializing-the-yolo2-network"><b>1.2. </b>Initializing the yolo2 network</a></li><li><span class="title-icon "></span><a href="#initialization"><b>1.3. </b>initialization</a></li><li><span class="title-icon "></span><a href="#running-yolo2-network"><b>1.4. </b>Running yolo2 network</a></li><li><span class="title-icon "></span><a href="#network-forward-operation-forward"><b>1.5. </b>Network forward operation (forward)</a></li><li><span class="title-icon "></span><a href="#fmap-feature-map"><b>1.6. </b>fmap feature map</a></li><li><span class="title-icon "></span><a href="#fmapfree-release-feature-map"><b>1.7. </b>fmap_free Release Feature Map</a></li><li><span class="title-icon "></span><a href="#netinfo"><b>1.8. </b>netinfo</a></li></ul><li><span class="title-icon "></span><a href="#routine"><b>2. </b>Routine</a></li></ul></ul></div><a href="#kpu" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="kpu"><a name="kpu" class="anchor-navigation-ex-anchor" href="#kpu"><i class="fa fa-link" aria-hidden="true"></i></a> KPU</h1>
+<p>KPU is a general-purpose neural network processor, which can do convolutional neural network calculation at low power consumption, for example obtain the size, coordinates and types of detected objects or detect and classify faces and objects.</p>
+<ul>
+<li>KPU has the following features:<ul>
+<li>Supports fixed-point models trained by mainstream framework with some restrictions</li>
+<li>There is no direct limit on the number of network layers. It supports separate configuration of each layer of convolutional neural network parameters, including the number of input and output channels, input and output line width and column height.</li>
+<li>Supports two convolution kernels 1x1 and 3x3</li>
+<li>Support any form of activation function</li>
+<li>The maximum supported neural network parameter size in real-time work is 5.5MiB to 5.9MiB</li>
+<li>Maximum supported network parameter size when working in non-real time (Flash capacity - software volume)</li>
+</ul>
+</li>
+</ul>
+<h2 id="module-method"><a name="module-method" class="anchor-navigation-ex-anchor" href="#module-method"><i class="fa fa-link" aria-hidden="true"></i></a>1. Module Method</h2>
+<h3 id="loading-the-model"><a name="loading-the-model" class="anchor-navigation-ex-anchor" href="#loading-the-model"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Loading the model</h3>
+<p>Load a model from flash or file system</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> KPU <span class="token keyword">as</span> kpu
+task <span class="token operator">=</span> kpu<span class="token punctuation">.</span>load<span class="token punctuation">(</span>offset <span class="token keyword">or</span> file_path<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="parameters"><a name="parameters" class="anchor-navigation-ex-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>offtset</code>: The offset of the model in flash, such as <code>0xd00000</code> indicates that the model is flashed at the beginning of 13M</li>
+<li><code>file_path</code>: The model is the file name in the file system, such as <code>&quot;/sd/xxx.kmodel&quot;</code></li>
+</ul>
+<h5 id="back"><a name="back" class="anchor-navigation-ex-anchor" href="#back"><i class="fa fa-link" aria-hidden="true"></i></a>Back</h5>
+<ul>
+<li><code>kpu_net</code>: kpu network object</li>
+</ul>
+<h3 id="initializing-the-yolo2-network"><a name="initializing-the-yolo2-network" class="anchor-navigation-ex-anchor" href="#initializing-the-yolo2-network"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Initializing the yolo2 network</h3>
+<p>Passing initialization parameters for the yolo2 network model</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> KPU <span class="token keyword">as</span> kpu
+task <span class="token operator">=</span> kpu<span class="token punctuation">.</span>load<span class="token punctuation">(</span>offset <span class="token keyword">or</span> file_path<span class="token punctuation">)</span>
+anchor <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1.889</span><span class="token punctuation">,</span> <span class="token number">2.5245</span><span class="token punctuation">,</span> <span class="token number">2.9465</span><span class="token punctuation">,</span> <span class="token number">3.94056</span><span class="token punctuation">,</span> <span class="token number">3.99987</span><span class="token punctuation">,</span> <span class="token number">5.3658</span><span class="token punctuation">,</span> <span class="token number">5.155437</span><span class="token punctuation">,</span> <span class="token number">6.92275</span><span class="token punctuation">,</span> <span class="token number">6.718375</span><span class="token punctuation">,</span> <span class="token number">9.01025</span><span class="token punctuation">)</span>
+kpu<span class="token punctuation">.</span>init_yolo2<span class="token punctuation">(</span>task<span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> anchor<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="parameters_1"><a name="parameters_1" class="anchor-navigation-ex-anchor" href="#parameters_1"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><p><code>kpu_net</code>: kpu network object</p>
+</li>
+<li><p><code>threshold</code>: probability threshold</p>
+</li>
+<li><p><code>nms_value</code>: box_iou threshold</p>
+</li>
+<li><p><code>anchor_num</code>: number of anchors</p>
+</li>
+<li><p><code>anchor</code>: anchor parameters are consistent with model parameters</p>
+</li>
+</ul>
+<h3 id="initialization"><a name="initialization" class="anchor-navigation-ex-anchor" href="#initialization"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. initialization</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> KPU <span class="token keyword">as</span> kpu
+task <span class="token operator">=</span> kpu<span class="token punctuation">.</span>load<span class="token punctuation">(</span>offset <span class="token keyword">or</span> file_path<span class="token punctuation">)</span>
+kpu<span class="token punctuation">.</span>deinit<span class="token punctuation">(</span>task<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="parameters_2"><a name="parameters_2" class="anchor-navigation-ex-anchor" href="#parameters_2"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p><code>kpu_net</code>: kpu_net object returned by kpu_load</p>
+<h3 id="running-yolo2-network"><a name="running-yolo2-network" class="anchor-navigation-ex-anchor" href="#running-yolo2-network"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Running yolo2 network</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> KPU <span class="token keyword">as</span> kpu
+<span class="token keyword">import</span> image
+task <span class="token operator">=</span> kpu<span class="token punctuation">.</span>load<span class="token punctuation">(</span>offset <span class="token keyword">or</span> file_path<span class="token punctuation">)</span>
+anchor <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1.889</span><span class="token punctuation">,</span> <span class="token number">2.5245</span><span class="token punctuation">,</span> <span class="token number">2.9465</span><span class="token punctuation">,</span> <span class="token number">3.94056</span><span class="token punctuation">,</span> <span class="token number">3.99987</span><span class="token punctuation">,</span> <span class="token number">5.3658</span><span class="token punctuation">,</span> <span class="token number">5.155437</span><span class="token punctuation">,</span> <span class="token number">6.92275</span><span class="token punctuation">,</span> <span class="token number">6.718375</span><span class="token punctuation">,</span> <span class="token number">9.01025</span><span class="token punctuation">)</span>
+kpu<span class="token punctuation">.</span>init_yolo2<span class="token punctuation">(</span>task<span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> anchor<span class="token punctuation">)</span>
+img <span class="token operator">=</span> image<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token punctuation">)</span>
+kpu<span class="token punctuation">.</span>run_yolo2<span class="token punctuation">(</span>task<span class="token punctuation">,</span> img<span class="token punctuation">)</span> <span class="token comment">#This is not right, please refer to the routine</span>
+</code></pre>
+<h4 id="parameters_3"><a name="parameters_3" class="anchor-navigation-ex-anchor" href="#parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>kpu_net</code>: kpu_net object returned by kpu_load</li>
+<li><code>image_t</code>: image captured from sensor</li>
+</ul>
+<h5 id="back_1"><a name="back_1" class="anchor-navigation-ex-anchor" href="#back_1"><i class="fa fa-link" aria-hidden="true"></i></a>Back</h5>
+<ul>
+<li><code>list</code>: list of kpu_yolo2_find</li>
+</ul>
+<h3 id="network-forward-operation-forward"><a name="network-forward-operation-forward" class="anchor-navigation-ex-anchor" href="#network-forward-operation-forward"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Network forward operation (forward)</h3>
+<p>Calculate the loaded network model to the specified number of layers 3, and output the feature map of the target layer</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> KPU <span class="token keyword">as</span> kpu
+task <span class="token operator">=</span> kpu<span class="token punctuation">.</span>load<span class="token punctuation">(</span>offset <span class="token keyword">or</span> file_path<span class="token punctuation">)</span>
+&#x2026;&#x2026;
+fmap<span class="token operator">=</span>kpu<span class="token punctuation">.</span>forward<span class="token punctuation">(</span>task<span class="token punctuation">,</span>img<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="parameters_4"><a name="parameters_4" class="anchor-navigation-ex-anchor" href="#parameters_4"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>kpu_net</code>: kpu_net object</li>
+<li><code>image_t</code>: image captured from sensor</li>
+<li><code>int</code>: specifies the number of layers to calculate to the network</li>
+</ul>
+<h5 id="back_2"><a name="back_2" class="anchor-navigation-ex-anchor" href="#back_2"><i class="fa fa-link" aria-hidden="true"></i></a>Back</h5>
+<ul>
+<li><code>fmap</code>: Feature map object, containing the feature map of all channels of the current layer</li>
+</ul>
+<h3 id="fmap-feature-map"><a name="fmap-feature-map" class="anchor-navigation-ex-anchor" href="#fmap-feature-map"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. fmap feature map</h3>
+<p>Take the specified channel data of the feature map to the image object</p>
+<pre class="language-"><code class="lang-python">img<span class="token operator">=</span>kpu<span class="token punctuation">.</span>fmap<span class="token punctuation">(</span>fmap<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="parameters_5"><a name="parameters_5" class="anchor-navigation-ex-anchor" href="#parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>fmap</code>: feature map object</li>
+<li><code>int</code>: specify the channel number of the feature map</li>
+</ul>
+<h5 id="back_3"><a name="back_3" class="anchor-navigation-ex-anchor" href="#back_3"><i class="fa fa-link" aria-hidden="true"></i></a>Back</h5>
+<ul>
+<li><code>img_t</code>: The grayscale image generated by the corresponding map of the feature map</li>
+</ul>
+<h3 id="fmapfree-release-feature-map"><a name="fmapfree-release-feature-map" class="anchor-navigation-ex-anchor" href="#fmapfree-release-feature-map"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. fmap_free Release Feature Map</h3>
+<p>Release feature map object</p>
+<pre class="language-"><code class="lang-python">kpu<span class="token punctuation">.</span>fmap_free<span class="token punctuation">(</span>fmap<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="parameters_6"><a name="parameters_6" class="anchor-navigation-ex-anchor" href="#parameters_6"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>fmap</code>: feature map object</li>
+</ul>
+<h5 id="back_4"><a name="back_4" class="anchor-navigation-ex-anchor" href="#back_4"><i class="fa fa-link" aria-hidden="true"></i></a>Back</h5>
+<ul>
+<li>none</li>
+</ul>
+<h3 id="netinfo"><a name="netinfo" class="anchor-navigation-ex-anchor" href="#netinfo"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. netinfo</h3>
+<p>Get the network structure information of the model</p>
+<pre class="language-"><code class="lang-python">info<span class="token operator">=</span>kpu<span class="token punctuation">.</span>netinfo<span class="token punctuation">(</span>task<span class="token punctuation">)</span>
+layer0<span class="token operator">=</span>info<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+</code></pre>
+<h4 id="parameters_7"><a name="parameters_7" class="anchor-navigation-ex-anchor" href="#parameters_7"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><code>kpu_net</code>: kpu_net object</li>
+</ul>
+<h5 id="back_5"><a name="back_5" class="anchor-navigation-ex-anchor" href="#back_5"><i class="fa fa-link" aria-hidden="true"></i></a>Back</h5>
+<ul>
+<li><code>netinfo list</code>: a list of all layers of information, including information:<pre class="language-"><code>Index: the number of layers of the current layer in the network
+Wi: input width
+Hi: input height
+Wo: output width
+Ho: output height
+Chi: number of input channels
+Cho: number of output channels
+Dw: whether it is a depth wise layer
+Kernel_type: convolution kernel type, 0 is 1x1, 1 is 3x3
+Pool_type: pooling type, 0 is not pooled; 1:2x2 max pooling; 2:...
+Para_size: the number of bytes of the convolution parameter of the current layer
+</code></pre></li>
+</ul>
+<h2 id="routine"><a name="routine" class="anchor-navigation-ex-anchor" href="#routine"><i class="fa fa-link" aria-hidden="true"></i></a>2. Routine</h2>
+<h4 id="running-face-recognition-demo"><a name="running-face-recognition-demo" class="anchor-navigation-ex-anchor" href="#running-face-recognition-demo"><i class="fa fa-link" aria-hidden="true"></i></a>Running face recognition demo</h4>
+<p>Model download address: <a href="http://dl.sipeed.com/MAIX/MaixPy/model/face_model_at_0x300000.kfpkg" target="_blank">http://dl.sipeed.com/MAIX/MaixPy/model/face_model_at_0x300000.kfpkg</a></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> sensor
+<span class="token keyword">import</span> image
+<span class="token keyword">import</span> lcd
+<span class="token keyword">import</span> KPU <span class="token keyword">as</span> kpu
+
+lcd<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>reset<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>set_pixformat<span class="token punctuation">(</span>sensor<span class="token punctuation">.</span>RGB565<span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>set_framesize<span class="token punctuation">(</span>sensor<span class="token punctuation">.</span>QVGA<span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+task <span class="token operator">=</span> kpu<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token number">0x300000</span><span class="token punctuation">)</span> <span class="token comment">#&#x4F7F;&#x7528;kfpkg&#x5C06; kmodel &#x4E0E; maixpy &#x56FA;&#x4EF6;&#x6253;&#x5305;&#x4E0B;&#x8F7D;&#x5230; flash</span>
+anchor <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1.889</span><span class="token punctuation">,</span> <span class="token number">2.5245</span><span class="token punctuation">,</span> <span class="token number">2.9465</span><span class="token punctuation">,</span> <span class="token number">3.94056</span><span class="token punctuation">,</span> <span class="token number">3.99987</span><span class="token punctuation">,</span> <span class="token number">5.3658</span><span class="token punctuation">,</span> <span class="token number">5.155437</span><span class="token punctuation">,</span> <span class="token number">6.92275</span><span class="token punctuation">,</span> <span class="token number">6.718375</span><span class="token punctuation">,</span> <span class="token number">9.01025</span><span class="token punctuation">)</span>
+a <span class="token operator">=</span> kpu<span class="token punctuation">.</span>init_yolo2<span class="token punctuation">(</span>task<span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> anchor<span class="token punctuation">)</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    img <span class="token operator">=</span> sensor<span class="token punctuation">.</span>snapshot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    code <span class="token operator">=</span> kpu<span class="token punctuation">.</span>run_yolo2<span class="token punctuation">(</span>task<span class="token punctuation">,</span> img<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> code<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> code<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            a <span class="token operator">=</span> img<span class="token punctuation">.</span>draw_rectangle<span class="token punctuation">(</span>i<span class="token punctuation">.</span>rect<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    a <span class="token operator">=</span> lcd<span class="token punctuation">.</span>display<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+a <span class="token operator">=</span> kpu<span class="token punctuation">.</span>deinit<span class="token punctuation">(</span>task<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="operational-feature-map"><a name="operational-feature-map" class="anchor-navigation-ex-anchor" href="#operational-feature-map"><i class="fa fa-link" aria-hidden="true"></i></a>Operational feature map</h4>
+<p>Model download address: <a href="http://dl.sipeed.com/MAIX/MaixPy/model/face_model_at_0x300000.kfpkg" target="_blank">http://dl.sipeed.com/MAIX/MaixPy/model/face_model_at_0x300000.kfpkg</a></p>
+<p>The model is an 8-bit fixed-point model, about 380KB in size, and the layer information is:</p>
+<pre class="language-"><code>1 2 : 160x120
+3 4 5 6 : 80x60
+7 8 9 10 :40x30
+11~16 : 20x15
+</code></pre><pre class="language-"><code class="lang-python"><span class="token keyword">import</span> sensor
+<span class="token keyword">import</span> image
+<span class="token keyword">import</span> lcd
+<span class="token keyword">import</span> KPU <span class="token keyword">as</span> kpu
+index<span class="token operator">=</span><span class="token number">3</span>  
+lcd<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>reset<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>set_pixformat<span class="token punctuation">(</span>sensor<span class="token punctuation">.</span>RGB565<span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>set_framesize<span class="token punctuation">(</span>sensor<span class="token punctuation">.</span>QVGA<span class="token punctuation">)</span>
+sensor<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+task<span class="token operator">=</span>kpu<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token number">0x300000</span><span class="token punctuation">)</span>
+img<span class="token operator">=</span>image<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token punctuation">)</span>
+info<span class="token operator">=</span>kpu<span class="token punctuation">.</span>netinfo<span class="token punctuation">(</span>task<span class="token punctuation">)</span>
+layer<span class="token operator">=</span>info<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+w<span class="token operator">=</span>layer<span class="token punctuation">.</span>wo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+h<span class="token operator">=</span>layer<span class="token punctuation">.</span>ho<span class="token punctuation">(</span><span class="token punctuation">)</span>
+num<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">320</span><span class="token operator">*</span><span class="token number">240</span><span class="token operator">/</span>w<span class="token operator">/</span>h<span class="token punctuation">)</span>
+<span class="token builtin">list</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token boolean">None</span><span class="token punctuation">]</span><span class="token operator">*</span>num
+x_step<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">320</span><span class="token operator">/</span>w<span class="token punctuation">)</span>
+y_step<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">240</span><span class="token operator">/</span>h<span class="token punctuation">)</span>
+img_lcd<span class="token operator">=</span>image<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    img<span class="token operator">=</span>sensor<span class="token punctuation">.</span>snapshot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    fmap<span class="token operator">=</span>kpu<span class="token punctuation">.</span>forward<span class="token punctuation">(</span>task<span class="token punctuation">,</span>img<span class="token punctuation">,</span>index<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">list</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>kpu<span class="token punctuation">.</span>fmap<span class="token punctuation">(</span>fmap<span class="token punctuation">,</span>i<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">list</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>stretch<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        a<span class="token operator">=</span>img_lcd<span class="token punctuation">.</span>draw_image<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">%</span>x_step<span class="token punctuation">)</span><span class="token operator">*</span>w<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>i<span class="token operator">/</span>x_step<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span>h<span class="token punctuation">)</span><span class="token punctuation">)</span>
+       lcd<span class="token punctuation">.</span>display<span class="token punctuation">(</span>img_lcd<span class="token punctuation">)</span>
+       kpu<span class="token punctuation">.</span>fmap_free<span class="token punctuation">(</span>fmap<span class="token punctuation">)</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">File Modify: 
+2020-11-26 20:02:14
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gpio.html" class="navigation navigation-prev " aria-label="Previous page: GPIO">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="fft.html" class="navigation navigation-next " aria-label="Next page: FFT">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"KPU","level":"4.3.3","depth":2,"next":{"title":"FFT","level":"4.3.4","depth":2,"path":"libs/Maix/fft.md","ref":"libs/Maix/fft.md","articles":[]},"previous":{"title":"GPIO","level":"4.3.2","depth":2,"path":"libs/Maix/gpio.md","ref":"libs/Maix/gpio.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","-search-title","terminal","search-pro","expandable-chapters","chapter-fold","tbfed-pagefooter","anchor-navigation-ex","puml","popup","lightbox","auto-scroll-table","hide-element","todo","anchorjs","sharing","prism","-highlight","prism-themes","edit-link","ga","hide-element","pageview-count","collapsible-chapters"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/sipeed/MaixPy"},"puml":{},"todo":{},"search-pro":{},"search":{"maxIndexSize":1000000000},"collapsible-chapters":{},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000000},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/MaixPy"}]},"ga":{"configuration":"auto","token":"UA-119047820-2"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"edit-link":{"label":"","base":"https://github.com/sipeed/MaixPy_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/MaixPy_DOC/issues"},{"name":"code","link":"https://github.com/sipeed/MaixPy/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"MaixPy DOC","language":"en","gitbook":"*","description":"MaixPy documentation"},"file":{"path":"libs/Maix/kpu.md","mtime":"2020-11-26T12:02:14.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-26T12:03:10.728Z"},"basePath":"../..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+
