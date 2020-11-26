@@ -117,7 +117,7 @@
     - [Maix UI](./course/others/maixui.md)
     - [Lvgl](./course/others/lvgl.md)
     - [编辑器 pye](/course/others/pye.md)
-  * 网络(ESP8266/ESP32/W5X00)
+  * 网络
     - [配置 network 网卡](./course/network/network_config.py)
     - [使用 socket 通信](./course/network/socket_usage.py)
   * 多媒体
