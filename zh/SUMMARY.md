@@ -51,7 +51,7 @@
   - [编辑并运行脚本](./get_started/get_started_edit_file.md)
   - [上传脚本到开发板](./get_started/get_started_upload_script.md)
   - [开机自动运行脚本](./get_started/get_started_boot.md)
-  - [开发板配置文件]
+  - [开发板配置文件](./api_reference/builtin_py/board_info.md)
   - [上手视频教程](./get_started/maixpy_get_started_video.md)
 * 固件定制
   - [为什么需要定制固件](./firmware/why_customize_firware.md)
