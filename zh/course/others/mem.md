@@ -17,8 +17,6 @@
 * 如果分配新的变量提示内存不足， 可以适当将`GC`内存设置大一点即可
 * 如果都不够了， 就要考虑缩减固件大小，或者优化代码了
 
-
-
 设置`GC`内存大小示例：
 
 ```python
@@ -32,3 +30,27 @@ machine.reset()
 ```
 
 注意修改后需要重启生效
+
+查看内存分配情况：
+
+```python
+import gc
+
+print(gc.mem_free() / 1024) # stack mem
+
+import Maix
+
+print(Maix.utils.heap_free() / 1024) # heap mem
+
+'''
+>>> 
+raw REPL; CTRL-B to exit
+>OK
+352.0937
+4640.0
+>
+MicroPython v0.5.1-136-g039f72b6c-dirty on 2020-11-18; Sipeed_M1 with kendryte-k210
+Type "help()" for more information.
+>>> 
+'''
+```
