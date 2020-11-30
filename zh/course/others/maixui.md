@@ -123,7 +123,7 @@ class launcher:
 - load 只会执行一次，用于 UI 应用的初始化。
 - free 只会执行一次，用于 UI 应用的释放。
 - event 将会提供给 UI 容器循环执行其中的操作。
-  - UI 容器指的是 [ui/ui_container.py](./ui/ui_container.py) 。
+  - UI 容器指的是 [ui/ui_container.py](https://github.com/sipeed/MaixUI/tree/master/ui/ui_container.py) 。
   - 当然你也可以不通过 UI 容器来维持运行。
 
 可以看到该 UI 应用在 load 的时候定义了 agent 软定时器和设置了绘图函数的期望执行周期为 20ms ，设置再小也不会低于真实运行的周期。
@@ -189,7 +189,7 @@ class launcher:
     ui.display()
 ```
 
-接入其他按键/触摸/摄像头的事件亦如此，可以在此查看 UI 绘图的具体实现 [ui/ui_canvas.py](ui/ui_canvas.py)。
+接入其他按键/触摸/摄像头的事件亦如此，可以在此查看 UI 绘图的具体实现 [ui/ui_canvas.py](https://github.com/sipeed/MaixUI/tree/master/ui/ui_canvas.py)。
 
 ### 运行 UI 框架
 
@@ -204,7 +204,7 @@ if __name__ == "__main__":
 
 ```
 
-讲解一下，我们看到使用 UI 容器 （container.reload(launcher)） 加载一个名为 launcher 的 UI 应用即可运行，可以在此查看 UI 容器的具体实现 [ui/ui_container.py](ui/ui_container.py)。
+讲解一下，我们看到使用 UI 容器 （container.reload(launcher)） 加载一个名为 launcher 的 UI 应用即可运行，可以在此查看 UI 容器的具体实现 [ui/ui_container.py](https://github.com/sipeed/MaixUI/tree/master/ui/ui_container.py)。
 
 但仅仅这样写是不够稳定的，所以我们可以通过两个 while True 保持程序永远不会退出（除非系统 core dump 崩溃）。
 
@@ -269,7 +269,7 @@ if __name__ == "__main__":
 - 你可以通过 time.sleep(0.1) 来降低 UI 容器的执行速率来观察 UI 的变化状态是否符合预期，有时候高于 15 fps 的变化人眼感知不到，就可以减少不必要的绘图过程，压缩绘图过程提高性能。
 - 你可以通过 except Exception as e: 来保证任何异常都不会导致 UI 框架的崩溃，但调试的时候可以把这个注释，来捕获可能出现的异常。
 
-> 默认情况下程序超过 10 秒没有执行 protect.keep() 重置看门狗，则系统自动重启，这从 import wdt 驱动的时候就开始计时了，详细可以看 [driver/wdt.py](driver/wdt.py) 驱动。
+> 默认情况下程序超过 10 秒没有执行 protect.keep() 重置看门狗，则系统自动重启，这从 import wdt 驱动的时候就开始计时了，详细可以看 [driver/wdt.py](https://github.com/sipeed/MaixUI/tree/master/driver/wdt.py) 驱动。
 
 最后再加入捕获 KeyboardInterrupt 异常事件来保证程序可以在 IDE 或 Ctrl + C 输入后，停下来并被重新运行，并停下看门狗事件（protect.stop()），同时还要在 finally 中试图执行 ui.display() 防止绘图事件中存在异常导致没有释放画布，保证 image 画布对象永远都能在循环的最后被释放。
 
@@ -295,7 +295,7 @@ if __name__ == "__main__":
 
 ### 最后
 
-本文档介绍如何运行最基础的示例，如果想看更多示例，可以参考 [app_cube.py](app/app_cube.py) & [app_amigo.py](app/app_amigo.py) 两个案例。
+本文档介绍如何运行最基础的示例，如果想看更多示例，可以参考 [app_cube.py](https://github.com/sipeed/MaixUI/tree/master/app/app_cube.py) & [app_amigo.py](https://github.com/sipeed/MaixUI/tree/master/app/app_amigo.py) 两个案例。
 
 > 截至目前 2020年10月7日 已经完成 MaixPy 的常见功能使用的 App 案例，不过这需要你亲自烧写一下体验看看了 XD ， 说明里只有一点简单的交互与动画展示。
 
