@@ -174,6 +174,8 @@ for ap_info in info:
 
 ### enable_ap(ssid, key, chl=5, ecn=3)
 
+* **警告：截止 2020年11月26日前， MaixPy 的 socket 还未实现 listen / bind / accpet 等函数操作。**
+
 打开热点
 
 #### 参数
@@ -230,6 +232,7 @@ ESP32_Module
 
 如果传入参数数量不对，会返回错误
 
+**注意** 想要在 maixduino 上 SPI 和 SD 不冲突，需要设置 ESP32_SPI 为硬件 SPI 配置。
 
 ### 参数
 

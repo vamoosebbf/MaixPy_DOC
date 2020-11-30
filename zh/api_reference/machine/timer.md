@@ -9,7 +9,7 @@ machine.Timer
 ## 构造函数
 
 ```python
-class machine.Timer(id, channel, mode=Timer.MODE_ONE_SHOT, period=1000, unit=Timer.UNIT_MS, callback=None, arg=None, start=True, priority=1, div=0)
+tim = machine.Timer(id, channel, mode=Timer.MODE_ONE_SHOT, period=1000, unit=Timer.UNIT_MS, callback=None, arg=None, start=True, priority=1, div=0)
 ```
 
 通过指定的参数新建一个 Timer 对象
@@ -37,7 +37,7 @@ class machine.Timer(id, channel, mode=Timer.MODE_ONE_SHOT, period=1000, unit=Tim
 类似构造函数
 
 ```python
-Timer.init(id, channel, mode=Timer.MODE_ONE_SHOT, period=1000, unit=Timer.UNIT_MS, callback=None, arg=None, start=True, priority=1, div=0)
+tim.init(id, channel, mode=Timer.MODE_ONE_SHOT, period=1000, unit=Timer.UNIT_MS, callback=None, arg=None, start=True, priority=1, div=0)
 ```
 
 #### 参数
@@ -59,7 +59,7 @@ Timer.init(id, channel, mode=Timer.MODE_ONE_SHOT, period=1000, unit=Timer.UNIT_M
 获取或者设置回调函数
 
 ```python
-Timer.callback(callback)
+tim.callback(callback)
 ```
 
 #### 参数
@@ -86,7 +86,7 @@ print(on_timer, tim.callback())
 获取或者设置定时周期
 
 ```python
-Timer.period(period)
+tim.period(period)
 ```
 
 #### 参数
@@ -109,7 +109,7 @@ print( tim.period() )
 启动定时器
 
 ```python
-Timer.start()
+tim.start()
 ```
 
 #### 参数
@@ -131,7 +131,7 @@ tim.start()
 停止定时器
 
 ```python
-Timer.stop()
+tim.stop()
 ```
 
 #### 参数
@@ -147,7 +147,7 @@ Timer.stop()
 重新开启定时器
 
 ```python
-Timer.restart()
+tim.restart()
 ```
 
 #### 参数
@@ -163,7 +163,7 @@ Timer.restart()
 注销定时器，并且注销硬件的占用，关闭硬件的时钟
 
 ```python
-Timer.deinit()
+tim.deinit()
 ```
 
 #### 参数

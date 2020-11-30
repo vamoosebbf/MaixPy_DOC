@@ -1,7 +1,7 @@
 系统控制
 ==========
 
-## 复位
+## 复位（reset）
 
 ```python
 import machine
@@ -10,9 +10,9 @@ machine.reset()
 ```
 
 
-## 主频
+## 主频（cpu）
 
-可以设置 CPU 和 KPU 的主频， 具体参考[Maix.greq](/api_reference/Maix/freq.md)模块
+可以设置 CPU 和 KPU 的主频， 具体参考[Maix.freq](/api_reference/Maix/freq.md)模块
 
 ```python
 from Maix import freq

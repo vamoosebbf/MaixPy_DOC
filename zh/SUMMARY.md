@@ -61,24 +61,24 @@
 
 ## MaixPy 手把手教程
 
-* [教程说明](/course/readme.md)
+* [教程说明](./course/readme.md)
 * 基本图像处理
   * 图像获取和显示
-    * [图像获取](/course/basic/image/get_images.md)
-    * [图像显示](/course/basic/image/display_images.md)
-  * [MaixPy 图像及常用操作](/course/basic/image/vary.md)
-  * [基本画图、写字](/course/basic/image/draw.md)
-  * [硬件加速的图像处理](/course/basic/image/acc_image_deal.md)
+    * [图像获取](./course/image/basic/get_images.md)
+    * [图像显示](./course/image/basic/display_images.md)
+  * [MaixPy 图像及常用操作](./course/image/basic/vary.md)
+  * [基本画图、写字](./course/image/basic/draw.md)
+  * [硬件加速的图像处理](./course/image/basic/acc_image_deal.md)
 * MaixPy AI
-  * [深度神经网络基础知识](/course/ai/basic/dnn_basic.md)
-  * [MaixPy AI 硬件加速基础知识](/course/ai/basic/maixpy_hardware_ai_basic.md)
+  * [深度神经网络基础知识](./course/ai/basic/dnn_basic.md)
+  * [MaixPy AI 硬件加速基础知识](./course/ai/basic/maixpy_hardware_ai_basic.md)
   * 图像处理
-    * [人脸检测](/course/ai/image/face_detect.md)
-    * [1000 种物体分类](/course/ai/image/1000_type_classifier.md)
-    * [人脸识别](/course/ai/image/face_recognization.md)
-    * [自学习分类](/course/ai/image/self_learn_classifier.md)
+    * [人脸检测](./course/ai/image/face_detect.md)
+    * [1000 种物体分类](./course/ai/image/1000_type_classifier.md)
+    * [人脸识别](./course/ai/image/face_recognization.md)
+    * [自学习分类](./course/ai/image/self_learn_classifier.md)
   * 音频处理
-    * [语音识别](./application/speech_recognizer/cnn.md)
+    * [语音识别](./course/speech/recognizer_cnn.md)
 * 模型训练
   * 训练自己的分类和检测模型
     * [MaixHub 云端训练](./course/ai/train/maixhub.md)
@@ -86,11 +86,11 @@
 * 传统算法
   * 图像处理
     - [寻找色块]()
-    - [二维码识别](./application/image/qrcode.md)
+    - [二维码识别](./course/image/qrcode.md)
   * 音频处理
     - [FFT频谱图]
     - [声场成像]
-    - [关键词识别](./application/speech_recognizer/mfcc.md)
+    - [关键词识别](./course/speech/recognizer_mfcc.md)
 * [外设]
   * [片上外设]
   * SP-MOD
@@ -101,31 +101,30 @@
     - [超声波]
     - [RGB LED 链]
     - [ws2812 灯条]
-  * 其它外设
+  * 更多外设
     - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
     - [双摄模块]
     - [MLX90640 串口红外镜头模块]
     - [HTPA 红外镜头]
     - [舵机]
     - [ESP32 ADC]()
-* 其它功能
-  * [编辑器 pye](/course/others/pye.md)
+* 更多功能
   * 系统
-    - [主频、复位等](/course/others/system/readme.md)
-    - [内存控制](/course/others/system/mem.md)
+    - [主频、复位等](./course/others/system.md)
+    - [内存配置与查看](./course/others/mem.md)
+    - [Flash 分区表](./course/others/flash.md)
   * GUI
-    - [Maix GUI](./api_reference/application/maixui.md)
-    - [Lvgl](./api_reference/application/lvgl.md)
-  * 网络(ESP8266/ESP32)
-    - [socket]()
-    - [http/https]()
+    - [Maix UI](./course/others/maixui.md)
+    - [Lvgl](./course/others/lvgl.md)
+    - [编辑器 pye](/course/others/pye.md)
+  * 网络
+    - [配置 network 网卡](./course/network/network_config.py)
+    - [使用 socket 通信](./course/network/socket_usage.py)
   * 多媒体
     - [Audio](./api_reference/Maix/audio.md)
-    - [video](./api_reference/machine_vision/video.md)
+    - [video](./course/others/video.md)
   * 游戏
-    - [NES 游戏模拟器](./api_reference/application/nes.md)
-
-
+    - [NES 游戏机](./course/others/nes.md)
 
 ## API手册
 
@@ -164,24 +163,23 @@
   - [Audio](./api_reference/Maix/audio.md)
   - [freq](./api_reference/Maix/freq.md)
   - [utils](./api_reference/Maix/utils.md)
-* [内置类](./api_reference/builtin_py/README.md)
+* [helper](./api_reference/builtin_py/README.md)
   - [fpioa_manager](./api_reference/builtin_py/fm.md)
   - [board_info](./api_reference/builtin_py/board_info.md)
-* [机器视觉](./api_reference/machine_vision/README.md)
+  - [Micropython Editor](./api_reference/application/pye.md)
+* [media](./api_reference/machine_vision/README.md)
   - [lcd](./api_reference/machine_vision/lcd.md)
   - [sensor](./api_reference/machine_vision/sensor.md)
   - [image](./api_reference/machine_vision/image.md)
   - [video](./api_reference/machine_vision/video.md)
-* [MaixPy 附加外设模块](./api_reference/peripheral_modules/README.md)
-  - [touchscreen](./api_reference/peripheral_modules/touchscreen.md)
-  - [modules.ultrasonic](./api_reference/peripheral_modules/ultrasonic.md)
-  - [modules.ws2812](./api_reference/peripheral_modules/ws2812.md)
-  - [modules.htpa](./api_reference/peripheral_modules/htpa.md)
-  - [Grove RGB LED](./api_reference/peripheral_modules/grove_chainable_rgb_led.md)
-* [内置应用](./api_reference/application/README.md)
-  - [Micropython Editor](./api_reference/application/pye.md)
   - [nes](./api_reference/application/nes.md)
   - [lvgl](./api_reference/application/lvgl.md)
+* [extend](./api_reference/extend/README.md)
+  - [touchscreen](./api_reference/extend/touchscreen.md)
+  - [modules.ultrasonic](./api_reference/extend/ultrasonic.md)
+  - [modules.ws2812](./api_reference/extend/ws2812.md)
+  - [modules.htpa](./api_reference/extend/htpa.md)
+  - [Grove RGB LED](./api_reference/extend/grove_chainable_rgb_led.md)
 
 
 ## 常见问题 FAQ

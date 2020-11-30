@@ -3,8 +3,7 @@ NES 游戏模拟器
 
 经典的 FC 红白机 游戏模拟器， 带我们回到小时候吧～～
 
-或者？ 让我们想办法让它自己玩自己？
-
+** 警告，该模块只在标准固件（> 2m）中被编译包含，其他固件不带有，如有需求，请重新编译固件。
 
 ## 函数
 
@@ -24,7 +23,6 @@ NES 游戏模拟器
 * `repeat`： 这个参数只对使用键盘（/串口）时， 指按键的重复率
 * `vol`： 初始化时的音量， 后面可以通过按键调整
 
-
 ### run(nes)
 
 运行 `NES` 游戏 `ROM`
@@ -35,6 +33,11 @@ NES 游戏模拟器
 
 
 ## 快捷键
+
+
+### 代码输入
+
+* `nes.input` ： `(①号机手柄, ②号机手柄, 菜单功能)`
 
 ### 键盘（/串口）
 
@@ -62,8 +65,25 @@ NES 游戏模拟器
 * `运行速度 -` ： `L1`
 * `运行速度 +` ： `L2`
 
+## 例程
 
-## 例
+## 例 0： 代码输入
+
+```python
+import nes, lcd
+lcd.init(freq=15000000)
+try:
+  nes.init(nes.INPUT)
+  nes.load("mario.nes")
+  while True:
+    # tmp = i2c.readfrom(66, 1) # handle i2c addr
+    # tmp = i2c.readfrom(74, 1) # handle i2c addr
+    # nes.input(tmp[0], 0, 0)
+    nes.loop()
+finally:
+  nes.free()
+
+```
 
 ## 例 1： 键盘（串口）
 
@@ -74,6 +94,9 @@ lcd.init(freq=15000000)
 nes.init(nes.KEYBOARD)
 nes.run("/sd/mario.nes")
 
+while True:
+    nes.loop()
+    
 ```
 
 ## 例 2： PS2 手柄
@@ -90,6 +113,9 @@ fm.register(21, fm.fpioa.GPIOHS21)
 lcd.init(freq=15000000)
 nes.init(nes.JOYSTICK, cs=fm.fpioa.GPIOHS19, clk=fm.fpioa.GPIOHS18, mosi=fm.fpioa.GPIOHS23, miso=fm.fpioa.GPIOHS21)
 nes.run("/sd/mario.nes")
+
+while True:
+    nes.loop()
 
 ```
 
