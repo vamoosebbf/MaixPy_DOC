@@ -94,9 +94,10 @@
 * [外设]
   * [片上外设]
   * SP-MOD
+    - [SP_BT](./modules/sp_mod/sp_bt.md)
     - [Weather 天气模块]
     - [TOF 镜头]
-    - [SSD1306 OLED]
+    - [SSD1306 OLE
   * Grove
     - [超声波]
     - [RGB LED 链]
