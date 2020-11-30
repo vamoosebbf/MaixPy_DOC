@@ -85,8 +85,8 @@
     * [本地训练](./course/ai/train/local.md)
 * 传统算法
   * 图像处理
-    - [寻找色块]()
-    - [二维码识别](./course/image/qrcode.md)
+    - [寻找色块](./course/image/demo_find_green_blob.md)
+    - [二维码识别]
   * 音频处理
     - [FFT频谱图]
     - [声场成像]
@@ -107,7 +107,7 @@
     - [MLX90640 串口红外镜头模块]
     - [HTPA 红外镜头]
     - [舵机]
-    - [ESP32 ADC]()
+    - [ESP32 ADC](./modules/others/esp32_read_adc.md)
 * 更多功能
   * 系统
     - [主频、复位等](./course/others/system.md)
@@ -116,10 +116,10 @@
   * GUI
     - [Maix UI](./course/others/maixui.md)
     - [Lvgl](./course/others/lvgl.md)
-    - [编辑器 pye](/course/others/pye.md)
+    - [编辑器 pye](./course/others/pye.md)
   * 网络
-    - [配置 network 网卡](./course/network/network_config.py)
-    - [使用 socket 通信](./course/network/socket_usage.py)
+    - [配置 network 网卡](./course/network/network_config.md)
+    - [使用 socket 通信](./course/network/socket_usage.md)
   * 多媒体
     - [Audio](./api_reference/Maix/audio.md)
     - [video](./course/others/video.md)
