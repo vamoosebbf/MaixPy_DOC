@@ -114,6 +114,7 @@
     - [内存配置与查看](./course/others/mem.md)
     - [Flash 分区表](./course/others/flash.md)
   * GUI
+    - [中文等多国语言支持](./course/image/image_draw_font/image_draw_font.md)
     - [Maix UI](./course/others/maixui.md)
     - [Lvgl](./course/others/lvgl.md)
     - [编辑器 pye](./course/others/pye.md)

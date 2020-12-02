@@ -1,6 +1,6 @@
 MaixPy 查找色块
 
-##
+## 使用方法
 
 ```python
 import sensor
