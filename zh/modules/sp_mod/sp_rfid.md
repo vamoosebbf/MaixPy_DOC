@@ -1,0 +1,54 @@
+SP_RFID 的使用
+====
+
+<img src="../../../assets/hardware/module_spmod/sp_rfid.png"/>
+
+该模块所采用的 FM17510 是一款高度集成的工作在 13.56MHz 下的非接触读写器芯片. 支持符合 ISO/IEC 14443 TypeA 协议的非接触读写器模式,
+64Byte 收发缓冲 FIFO, 支持SPI串行接口，最高10Mbps, 并且程序与 MFRC522 兼容.
+
+## 使用方法
+
+程序如下:
+
+```python
+    # Init module
+    MIFAREReader = MFRC522(spi1, cs)
+    # Scan for cards
+    (status, ataq) = MIFAREReader.MFRC522_Request(MIFAREReader.PICC_REQALL)
+    # Get uid
+    (status, uid) = MIFAREReader.MFRC522_Anticoll()
+    if status == MIFAREReader.MI_OK:
+        # Bind card by uid
+        MIFAREReader.MFRC522_SelectTag(uid)
+        # Authenticate block 0x11 by key
+        status = MIFAREReader.MFRC522_Auth(MIFAREReader.PICC_AUTHENT1A, 0x11, key, uid)
+        if status == MIFAREReader.MI_OK:
+            # Write 16 bytes from block 0x11
+            MIFAREReader.MFRC522_Write(0x11, data)
+            # Read 16 bytes from block 0x11
+            MIFAREReader.MFRC522_Read(0x11)
+```
+
+主要分为几步:
+
+* 创建 MFRC522 对象(参数为: SPI 对象, 片选脚).
+
+* 扫描卡片并获取到 ATQA(即卡片类型码), ATQA 对应卡片类型如下:
+  
+  |  ATQA  | Type               |
+  | :----: | :----------------- |
+  | 0x4400 | Mifare_UltraLight  |
+  | 0x0400 | Mifare_One(M1 S50) |
+  | 0x0200 | Mifare_One(M1 S70) |
+  | 0x0800 | Mifare_Pro(X)      |
+  | 0x4403 | Mifare_DESFire     |
+  
+* 获取卡片 UID
+
+* 通过 UID 绑定卡片(防碰撞, 确保所选卡能正确执行交易, 不受现场另一张卡的影响)
+
+* 对卡片中某一扇区进行身份验证(M1(S50)默认密码为16个0xff)
+
+* 读/写卡片信息(以一个块(16字节)为基本读写单位)
+
+[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_rfid.py)

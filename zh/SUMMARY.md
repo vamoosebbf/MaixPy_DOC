@@ -91,12 +91,16 @@
     - [FFT频谱图]
     - [声场成像]
     - [关键词识别](./course/speech/recognizer_mfcc.md)
-* [外设]
+* 外设
   * [片上外设]
   * SP-MOD
-    - [Weather 天气模块]
-    - [TOF 镜头]
-    - [SSD1306 OLED]
+    - [BT 蓝牙透传](./modules/sp_mod/sp_bt.md)
+    - [LoRa 无线通信](./modules/sp_mod/sp_lora.md)
+    - [RFID 射频识别](./modules/sp_mod/sp_rfid.md)
+    - [TOF 测距](./modules/sp_mod/sp_tof.md)
+    - [Eink 电子墨水屏](./modules/sp_mod/sp_eink.md)
+    - [Lcd1.14 ips屏](./modules/sp_mod/sp_lcd1.14.md)
+    - [Weather 天气模块](./modules/sp_mod/sp_weather.md)
   * Grove
     - [超声波]
     - [RGB LED 链]
