@@ -35,13 +35,13 @@ img.draw_font(10, 20, 8, 8, tmp, scale=1, color=(255, 255, 255))
 lcd.display(img)
 ```
 
-范例参考 [image_draw_font.py](image_draw_font.py) 。
+范例参考 [image_draw_font.py](https://gitee.com/Sipeed/maixpy_scripts/tree/master/multimedia/gui/image/demo_draw_font/image_draw_font.py) 。
 
 ## 字库接口
 
 请先使用 font_load / font_free 加载或释放字库，这将提升 draw_string 的功能，支持从  `xx.Dzk` 文件 与 Flash 地址加载，这之后后 draw_string 将通过字库打印字符串，目前只支持 `ASCII` / `UTF-8` 编码 。
 
-> 附带字库文件 [0xA00000_font_uincode_16_16_tblr.Dzk](./tools/0xA00000_font_uincode_16_16_tblr.Dzk) 
+> 附带字库文件 [0xA00000_font_uincode_16_16_tblr.Dzk](https://gitee.com/Sipeed/maixpy_scripts/tree/master/multimedia/gui/image/demo_draw_font/tools/0xA00000_font_uincode_16_16_tblr.Dzk) 
 
 ```python
 import lcd, image
@@ -54,7 +54,7 @@ image.font_free()
 lcd.display(img)
 ```
 
-范例参考 [image_draw_string.py](image_draw_string.py) 。
+范例参考 [image_draw_string.py](https://gitee.com/Sipeed/maixpy_scripts/tree/master/multimedia/gui/image/demo_draw_font/image_draw_string.py) 。
 
 ## 显示效果
 
@@ -62,7 +62,7 @@ lcd.display(img)
 
 ## 字库工具
 
-我们将使用根目录下的 [FontGenerator.zip](./tools/FontGenerator.zip) 导出字体对应的字库，请看下图完成导出操作。
+我们将使用根目录下的 [FontGenerator.zip](https://gitee.com/Sipeed/maixpy_scripts/tree/master/multimedia/gui/image/demo_draw_font/tools/FontGenerator.zip) 导出字体对应的字库，请看下图完成导出操作。
 
 1. 选择字库编码类型为 Unicode 编码，这将支持绝大多数国家的语言。
 
@@ -84,7 +84,7 @@ lcd.display(img)
 
 > 警告：不推荐使用字模工具，不了解的人请不要使用。
 
-使用目录下的 [Pc2Lcd2002.zip](./tools/Pc2Lcd2002.zip)  获取字模的字符串。
+使用目录下的 [Pc2Lcd2002.zip](https://gitee.com/Sipeed/maixpy_scripts/tree/master/multimedia/gui/image/demo_draw_font/tools/Pc2Lcd2002.zip)  获取字模的字符串。
 
 1. 确认软件为字符模式。
 
