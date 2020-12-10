@@ -400,13 +400,32 @@ if __name__ == "__main__":
 '''
 ```
 
-#### Spmod 的 W5X00
+#### Spmod 的 W5500
 
-使用 Spmod 的 W5X00 网卡联网，上传该类库 [network_w5k.py](https://github.com/sipeed/MaixPy_scripts/blob/master/network/network_w5k.py) 即可
+使用 Spmod 的 W5500 网卡联网，上传该类库 [network_wiznet5k.py](https://github.com/sipeed/MaixPy_scripts/blob/master/network/network_wiznet5k.py) 即可
 
-> TODO 还没写 2020-11-26
+> vamoosebbf 2020-12-10 编辑
+
+W5500 为有线网卡模块, 使用时只需要将网线插好即可, 使用 SPI 协议, 在完整固件中默认使能了此模块, 最小固件中没有.
 
 ```python
+spi1 = SPI(4, mode=SPI.MODE_MASTER, baudrate=600 * 1000,
+            polarity=0, phase=0, bits=8, firstbit=SPI.MSB, sck=WIZNET5K_SPI_SCK, mosi=WIZNET5K_SPI_MOSI, miso = WIZNET5K_SPI_MISO)
+
+nic = network.WIZNET5K(spi = spi1, cs = WIZNET5K_SPI_CS)
+print("Static IP: ", nic.ifconfig())
+
+#dhcp 动态获取 IP, 因为上面已经设置了静态 IP , 这一步可跳过, 要注意的是如果使用 DHCP, 必须像下面代码一样使用死循环, 否则将获取不成功
+while True:
+    if(nic.dhclient()):
+        print("DHCP IP:", nic.ifconfig() )
+        break;
+
+```output
+>>> Static IP:  ('192.168.0.117', '255.255.255.0', '192.168.0.1', '8.8.8.8')
+init dhcp
+DHCP IP: ('192.168.0.165', '255.255.255.0', '192.168.0.1', '8.8.8.8')
+```
 
 ```
 
