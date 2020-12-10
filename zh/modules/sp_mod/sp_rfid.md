@@ -3,8 +3,21 @@ SP_RFID 的使用
 
 <img src="../../../assets/hardware/module_spmod/sp_rfid.png"/>
 
-该模块所采用的 FM17510 是一款高度集成的工作在 13.56MHz 下的非接触读写器芯片. 支持符合 ISO/IEC 14443 TypeA 协议的非接触读写器模式,
-64Byte 收发缓冲 FIFO, 支持SPI串行接口，最高10Mbps, 并且程序与 MFRC522 兼容.
+该模块所采用的 FM17510 是一款高度集成的工作在 13.56MHz 下的非接触读写器芯片. 支持符合 ISO/IEC 14443 TypeA 协议的非接触读写器模式, 并且程序与 MFRC522 兼容.
+
+## 参数
+
+* 支持 ISO/IEC 14443 TypeA 读写器模式
+* 读写器模式支持 M1 加密算法
+* ISO14443 TYPEA 支持通讯速率 106kbps,212kbps,424kbps
+* 支持 SPI 串行接口,最高 10Mbps
+* 电压范围 2.2V~3.6V
+* 64Byte 收发缓冲 FIFO
+* 多种低功耗模式:Soft powerdown 模式 Hard powerdown 模式
+* 内置 CRC 协处理器
+* 支持低功耗外部卡片侦测功能
+* 工作电压: 2.2V~3.6V
+* 工作温度: -40°C~85°C
 
 ## 使用方法
 
@@ -34,7 +47,8 @@ SP_RFID 的使用
 * 创建 MFRC522 对象(参数为: SPI 对象, 片选脚).
 
 * 扫描卡片并获取到 ATQA(即卡片类型码), ATQA 对应卡片类型如下:
-  
+
+
   |  ATQA  | Type               |
   | :----: | :----------------- |
   | 0x4400 | Mifare_UltraLight  |

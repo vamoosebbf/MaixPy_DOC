@@ -3,9 +3,20 @@ SP_LORA 的使用
 
 <img src="../../../assets/hardware/module_spmod/sp_lora.png"/>
 
-SP_LoRa 模块使用 M-XL8 模组, 其内置 LoRaTM 调制解调器和可调功率放大器的 LoRa 模块, 具有高性能和高可靠性, 工作频段 370MHz-1200MHz, 最大 20dBm(100mW)持续发射功率.
+SP_LoRa 模块使用 M-XL8 模组, 其内置 LoRaTM 调制解调器和可调功率放大器的 LoRa 模块, 具有高性能和高可靠性.
 
-## 使用说明
+## 参数
+
+* 工作频段: 370MHz~1200Mhz
+* 发射功率: 20dBm(最大)
+* 通信接口: SPI
+* 天线: 外置天线,IPEX 或焊接
+* 接收灵敏度: -148dbm
+* RSSI 动态范围: 127dB
+* 工作电压: 1.8V~6.3V
+* 工作温度: -40°C~80°C
+
+## 使用方法
 
 MaixPy 程序如下:
 
