@@ -5,8 +5,7 @@
 
 * [lcd](lcd.md)
 * [sensor](sensor.md)
-* [image](./image/readme.md)
-    * [image](image/image.md)
+* [image](./image/image.md)
 * [video](video.md)
 * [isolated_word](isolated_word.md)
 * [maix_asr](maix_asr.md)

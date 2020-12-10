@@ -45,5 +45,5 @@ htpa 对象
 
 ## 例子
 
-[heimann_HTPA_32x32](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/heimann_HTPA_32x32)
+[heimann_HTPA_32x32](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/others/heimann_HTPA_32x32)
 

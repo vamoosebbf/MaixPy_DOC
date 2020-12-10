@@ -51,7 +51,7 @@
   - [编辑并运行脚本](./get_started/get_started_edit_file.md)
   - [上传脚本到开发板](./get_started/get_started_upload_script.md)
   - [开机自动运行脚本](./get_started/get_started_boot.md)
-  - [开发板配置文件]
+  - [开发板配置文件](./api_reference/builtin_py/board_info.md)
   - [上手视频教程](./get_started/maixpy_get_started_video.md)
 * 固件定制
   - [为什么需要定制固件](./firmware/why_customize_firware.md)
@@ -61,22 +61,22 @@
 
 ## MaixPy 手把手教程
 
-* [教程说明](/course/readme.md)
+* [教程说明](./course/readme.md)
 * 基本图像处理
   * 图像获取和显示
-    * [图像获取](/course/basic/image/get_images.md)
-    * [图像显示](/course/basic/image/display_images.md)
-  * [MaixPy 图像及常用操作](/course/basic/image/vary.md)
-  * [基本画图、写字](/course/basic/image/draw.md)
-  * [硬件加速的图像处理](/course/basic/image/acc_image_deal.md)
+    * [图像获取](./course/image/basic/get_images.md)
+    * [图像显示](./course/image/basic/display_images.md)
+  * [MaixPy 图像及常用操作](./course/image/basic/vary.md)
+  * [基本画图、写字](./course/image/basic/draw.md)
+  * [硬件加速的图像处理](./course/image/basic/acc_image_deal.md)
 * MaixPy AI
-  * [深度神经网络基础知识](/course/ai/basic/dnn_basic.md)
-  * [MaixPy AI 硬件加速基础知识](/course/ai/basic/maixpy_hardware_ai_basic.md)
+  * [深度神经网络基础知识](./course/ai/basic/dnn_basic.md)
+  * [MaixPy AI 硬件加速基础知识](./course/ai/basic/maixpy_hardware_ai_basic.md)
   * 图像处理
-    * [人脸检测](/course/ai/image/face_detect.md)
-    * [1000 种物体分类](/course/ai/image/1000_type_classifier.md)
-    * [人脸识别](/course/ai/image/face_recognization.md)
-    * [自学习分类](/course/ai/image/self_learn_classifier.md)
+    * [人脸检测](./course/ai/image/face_detect.md)
+    * [1000 种物体分类](./course/ai/image/1000_type_classifier.md)
+    * [人脸识别](./course/ai/image/face_recognization.md)
+    * [自学习分类](./course/ai/image/self_learn_classifier.md)
   * 音频处理
     * [语音识别](./course/speech/recognizer_cnn.md)
 * 模型训练
@@ -85,8 +85,8 @@
     * [本地训练](./course/ai/train/local.md)
 * 传统算法
   * 图像处理
-    - [寻找色块]()
-    - [二维码识别](./course/image/qrcode.md)
+    - [寻找色块](./course/image/demo_find_green_blob.md)
+    - [二维码识别]
   * 音频处理
     - [FFT频谱图]
     - [声场成像]
@@ -111,19 +111,20 @@
     - [MLX90640 串口红外镜头模块]
     - [HTPA 红外镜头]
     - [舵机]
-    - [ESP32 ADC]()
+    - [ESP32 ADC](./modules/others/esp32_read_adc.md)
 * 更多功能
   * 系统
-    - [主频、复位等](/course/others/system.md)
-    - [内存配置与查看](/course/others/mem.md)
-    - [Flash 分区表](/course/others/flash.md)
+    - [主频、复位等](./course/others/system.md)
+    - [内存配置与查看](./course/others/mem.md)
+    - [Flash 分区表](./course/others/flash.md)
   * GUI
+    - [中文等多国语言支持](./course/image/image_draw_font/image_draw_font.md)
     - [Maix UI](./course/others/maixui.md)
     - [Lvgl](./course/others/lvgl.md)
-    - [编辑器 pye](/course/others/pye.md)
+    - [编辑器 pye](./course/others/pye.md)
   * 网络
-    - [配置 network 网卡](./course/network/network_config.py)
-    - [使用 socket 通信](./course/network/socket_usage.py)
+    - [配置 network 网卡](./course/network/network_config.md)
+    - [使用 socket 通信](./course/network/socket_usage.md)
   * 多媒体
     - [Audio](./api_reference/Maix/audio.md)
     - [video](./course/others/video.md)
@@ -175,9 +176,9 @@
   - [lcd](./api_reference/machine_vision/lcd.md)
   - [sensor](./api_reference/machine_vision/sensor.md)
   - [image](./api_reference/machine_vision/image.md)
-  - [video](./api_reference/machine_vision/video.md)
-  - [nes](./api_reference/application/nes.md)
-  - [lvgl](./api_reference/application/lvgl.md)
+  - [video](./course/others/video.md)
+  - [nes](./course/others/nes.md)
+  - [lvgl](./course/others/lvgl.md)
 * [extend](./api_reference/extend/README.md)
   - [touchscreen](./api_reference/extend/touchscreen.md)
   - [modules.ultrasonic](./api_reference/extend/ultrasonic.md)

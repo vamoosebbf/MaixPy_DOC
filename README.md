@@ -7,6 +7,18 @@ Documentation Of MaixPy
 
 [![Build Status](https://travis-ci.org/sipeed/MaixPy_DOC.svg?branch=master)](https://travis-ci.org/sipeed/MaixPy_DOC)
 
+
+> In addition to [https://maixpy.sipeed.com](https://maixpy.sipeed.com), you can also visit [https://en.maixpy.sipeed.com](https://en.maixpy.sipeed.com). The former is synchronized with the latter's (en) pages, so there is a delay in refreshing the former's pages after document changes, usually less than 3 days.
+> 
+> Alternatively, if the above page is not accessible, you can also try [https://cn.maixpy.sipeed.com/](https://cn.maixpy.sipeed.com/).
+
+
+
+
+> 除了[https://maixpy.sipeed.com](https://maixpy.sipeed.com) , 您也可以访问 [https://cn.maixpy.sipeed.com](https://cn.maixpy.sipeed.com)  ， 前者是同步的后者（cn）的页面，所以文档修改后前者页面刷新会有延迟，一般小于 3 天
+> 
+> 另外， 以上页面如果无法访问， 也可以尝试访问[https://en.maixpy.sipeed.com/](https://en.maixpy.sipeed.com/)
+
 ## Usage
 
 * `git clone https://github.com/sipeed/MaixPy_DOC.git`
