@@ -21,25 +21,47 @@ SP_RFID 的使用
 
 ## 使用方法
 
+连接模块, 取出文末的示例代码, 修改代码中 config 包围的配置为自己的, 即可运行查看效果.
+
 程序如下:
 
 ```python
-    # Init module
-    MIFAREReader = MFRC522(spi1, cs)
-    # Scan for cards
-    (status, ataq) = MIFAREReader.MFRC522_Request(MIFAREReader.PICC_REQALL)
-    # Get uid
-    (status, uid) = MIFAREReader.MFRC522_Anticoll()
+# Init module
+MIFAREReader = MFRC522(spi1, cs)
+# Scan for cards
+(status, ataq) = MIFAREReader.MFRC522_Request(MIFAREReader.PICC_REQALL)
+# Get uid
+(status, uid) = MIFAREReader.MFRC522_Anticoll()
+if status == MIFAREReader.MI_OK:
+    # Bind card by uid
+    MIFAREReader.MFRC522_SelectTag(uid)
+    # Authenticate block 0x11 by key
+    status = MIFAREReader.MFRC522_Auth(MIFAREReader.PICC_AUTHENT1A, 0x11, key, uid)
     if status == MIFAREReader.MI_OK:
-        # Bind card by uid
-        MIFAREReader.MFRC522_SelectTag(uid)
-        # Authenticate block 0x11 by key
-        status = MIFAREReader.MFRC522_Auth(MIFAREReader.PICC_AUTHENT1A, 0x11, key, uid)
-        if status == MIFAREReader.MI_OK:
-            # Write 16 bytes from block 0x11
-            MIFAREReader.MFRC522_Write(0x11, data)
-            # Read 16 bytes from block 0x11
-            MIFAREReader.MFRC522_Read(0x11)
+        # Write 16 bytes from block 0x11
+        MIFAREReader.MFRC522_Write(0x11, data)
+        # Read 16 bytes from block 0x11
+        MIFAREReader.MFRC522_Read(0x11)
+        
+'''output
+>>> [Warning] function is used by fm.fpioa.GPIOHS20(pin:36)
+Welcome to the MFRC522 data read/write example
+Card detected type:  0x400
+Card read UID: 110,159,46,15
+Size:  8
+Sector 11 will now be filled with 1~16:
+4 backdata &0x0F == 0x0A 10
+Data written
+start to read
+Sector 18 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Card detected type:  0x400
+Card read UID: 110,159,46,15
+Size:  8
+Sector 11 will now be filled with 1~16:
+4 backdata &0x0F == 0x0A 10
+Error while writing
+Data written
+'''
 ```
 
 主要分为几步:

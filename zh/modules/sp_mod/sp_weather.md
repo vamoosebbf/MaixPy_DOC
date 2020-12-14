@@ -31,6 +31,8 @@ SP_Weather 拥有两颗传感器, 磁性传感器 QMC7983, 这是一个内置灵
 
 ## 使用方法
 
+连接模块, 取出文末的示例代码, 修改代码中 config 包围的配置为自己的, 即可运行查看效果.
+
 程序如下:
 
 ```python
@@ -39,12 +41,24 @@ while 1:
     time.sleep_ms(500)
     print(weather.qmc_read_xyz) # QMC7983 read data
     print(weather.bme_values) # BME280 read data
+
+'''output
+>>> I2C devices:[44, 118]
+0x32
+6
+(228, 123, 156)
+('31.0C', '1017.75hPa', '34.32%')
+(235, 130, 185)
+('30.75C', '1017.74hPa', '34.31%')
+(235, 130, 161)
+('30.7C', '1017.82hPa', '34.32%')
+'''
 ```
 
 主要步骤为:
 
 * 创建 SPWEATHE(参数为: I2C 对象).
 
-* 读取磁力传感器数据和温湿度数据.
+* 读取磁力传感器数据和温湿度数据.(读取到的数据均为元组)
 
 [示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_weather.py)

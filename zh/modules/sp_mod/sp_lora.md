@@ -18,6 +18,8 @@ SP_LoRa 模块使用 M-XL8 模组, 其内置 LoRaTM 调制解调器和可调功�
 
 ## 使用方法
 
+连接模块, 取出文末的示例代码, 修改代码中 config 包围的配置为自己的, 即可运行查看效果, 本测试需要两个模块(发送, 接收)才能看到效果.
+
 MaixPy 程序如下:
 
 ```python
@@ -36,7 +38,31 @@ receive(lora)
 
 ######## sender ###########
 # send(lora)
+
+'''output
+mpfs [/flash]> runfile lora_send.py
+    transfer 6400 of 14576
+    transfer 12800 of 14576
+    transfer 14576 of 14576
+[Warning] function is used by fm.fpioa.GPIOHS(pin:23)
+LoRa Sender
+Sending packet:
+Hello(0)
+
+mpfs [/sd]> runfile lora_recv.py
+    transfer 6400 of 14576
+    transfer 12800 of 14576
+    transfer 14576 of 14576
+[Warning] function us used by fm.fpioa.GPIOHS7(pin:23)
+LoRa Receiver
+[Memory - free: 470080 allocated: 48064]
+*** Received message ***
+Hello(0)
+with RSSI: <bound_method 800d19e0 <SX127x object at 800f5700>.<function packetRssi at 0x800d3180>>
+'''
 ```
+
+这里使用的调试运行工具为 mpfshell 方便同时打开两个终端运行脚本.
 
 主要步骤为:
 
