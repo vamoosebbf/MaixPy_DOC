@@ -61,4 +61,4 @@ while 1:
 
 * 读取磁力传感器数据和温湿度数据.(读取到的数据均为元组)
 
-[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_weather.py)
+[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_weather)

@@ -61,4 +61,4 @@ if count != 0:
   
   上图中可以看到有一个 UUID 为 ffe0 的服务有两个特征, 打开透传(ffe1)的 Write, Notify, 便可以开始发送/接收数据.
 
-[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_bt.py)
+[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_bt)

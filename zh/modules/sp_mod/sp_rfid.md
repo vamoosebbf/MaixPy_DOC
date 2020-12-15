@@ -87,4 +87,4 @@ Data written
 
 * 读/写卡片信息(以一个块(16字节)为基本读写单位)
 
-[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_rfid.py)
+[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_rfid)

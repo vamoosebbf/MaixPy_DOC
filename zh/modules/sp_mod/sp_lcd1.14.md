@@ -41,4 +41,4 @@ ips.display(img)
   
 * 调用 display 显示图片(传入参数为 Image 对象).
 
-[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_lcd114.py)
+[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_lcd114)

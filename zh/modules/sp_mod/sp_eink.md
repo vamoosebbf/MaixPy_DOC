@@ -52,4 +52,4 @@ epd.sleep()
   
 * 进入睡眠状态.
 
-[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_eink.py)
+[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_eink)

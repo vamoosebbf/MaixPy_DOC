@@ -45,4 +45,4 @@ while True:
 
 * 读取距离, 若读取距离为 8190, 则说明已经超出量程.
 
-[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_tof.py)
+[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_tof)

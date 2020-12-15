@@ -44,7 +44,7 @@ mpfs [/flash]> runfile lora_send.py
     transfer 6400 of 14576
     transfer 12800 of 14576
     transfer 14576 of 14576
-[Warning] function is used by fm.fpioa.GPIOHS(pin:23)
+[Warning] function is used by fm.fpioa.GPIOHS7(pin:23)
 LoRa Sender
 Sending packet:
 Hello(0)
@@ -72,4 +72,4 @@ with RSSI: <bound_method 800d19e0 <SX127x object at 800f5700>.<function packetRs
   
 * 开始发送或接收.
 
-[示例代码](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_sp_lora.py)
+[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_lora)
