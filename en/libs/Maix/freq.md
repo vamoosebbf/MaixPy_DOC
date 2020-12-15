@@ -15,7 +15,7 @@ Please note that after the frequency setting is completed, some peripheral perfo
 
 ```python
 from Maix import freq
-freq.set (cpu = 400, kpu = 400)
+freq.set (cpu = 400, pll1=400, kpu_div=1) #kpu frequency is pll1/kpu_div
 ```
 
 The configuration file will be saved in the `/flash/freq.conf` file of the file system. Do not modify this file. If the file does not exist, it will be automatically created
