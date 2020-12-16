@@ -92,7 +92,12 @@
     - [声场成像]
     - [关键词识别](./course/speech/recognizer_mfcc.md)
 * 外设
-  * [片上外设]
+  * 片上外设
+    - [I2C](modules/on_chip/i2c.md)
+    - [PWM](modules/on_chip/pwm.md)
+    - [SPI](modules/on_chip/spi.md)
+    - [Timer](modules/on_chip/timer.md)
+    - [UART](modules/on_chip/uart.md)
   * SP-MOD
     - [BT 蓝牙透传](./modules/sp_mod/sp_bt.md)
     - [LoRa 无线通信](./modules/sp_mod/sp_lora.md)

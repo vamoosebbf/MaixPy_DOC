@@ -44,7 +44,7 @@ MaixPy 为图像设计了两个缓冲区，
 同样反方向更新也提供 API： `img.ai_to_pix()`， 这会将`RGB888`区域的数据更新到`RGB565`区域
 
 
-## resize, 修改分辨率
+## resize 修改分辨率
 
 ```python
 import image

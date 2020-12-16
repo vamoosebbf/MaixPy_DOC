@@ -35,7 +35,7 @@
 ## 学会搜索
 
 * 关于模块的接口及参数，在使用时根据自己的需求进行查阅，**左上角有搜索框**，可以好好利用，同时也可以使用浏览器的页面搜索功能，即按键盘<kbd> Ctrl+F </kbd>，然后输入要搜索的内容后按确认键
-* 如果有找不到的内容也请不要着急， 可以上 github 的 [issue](https://github.com/sipeed/MaixPy/issues)） 页面找一找（/搜一搜）是不是有人提过了，没有的话可以新建 issue, 或者到 [论坛](https://bbs.sipeed.com) 搜索问题，没有再向大家求助， 或者联系技术支持。
+* 如果有找不到的内容也请不要着急， 可以上 github 的 [issue](https://github.com/sipeed/MaixPy/issues) 页面找一找（搜一搜）是不是有人提过了，没有的话可以新建 issue, 或者到 [论坛](https://bbs.sipeed.com) 搜索问题，没有再向大家求助， 或者联系技术支持。
 
 ## 本文档常见问题
 
