@@ -21,7 +21,9 @@ SP_RFID 的使用
 
 ## 使用方法
 
-连接模块, 取出文末的示例代码, 修改代码中 config 包围的配置为自己的, 即可运行查看效果.
+1. 准备: 已烧录最新固件的开发板, sp_rfid 模块, M1 卡片.
+
+2. 运行: 连接模块, 修改[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_rfid)中 config 包围的配置, 运行后将卡片靠近模块天线, 可看到终端打印的读卡信息.
 
 程序如下:
 
@@ -86,5 +88,3 @@ Data written
 * 对卡片中某一扇区进行身份验证(M1(S50)默认密码为16个0xff)
 
 * 读/写卡片信息(以一个块(16字节)为基本读写单位)
-
-[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_rfid)

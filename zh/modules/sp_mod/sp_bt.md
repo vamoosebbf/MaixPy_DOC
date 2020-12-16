@@ -18,47 +18,45 @@ SP_BT 是一款蓝牙串口透传模块， 具备超低功率特性和高可靠�
 
 ## 使用说明
 
-透传即透明传输, 我们发给该模块的消息会被该模块原封不动的以蓝牙消息的方式发送出去, 使用者只需将其当作串口使用即可, 可查看文末示例代码.
+1. 准备: 已烧录最新固件的开发板, sp_bt 模块, 蓝牙调试助手.
 
-### 初始化串口
-
-初始化串口(注意串口波特率需要与 SP_BT 的波特率相同), 可以使用 AT 指令更改模块波特率.
-
-### 检查模块
-
-可通过发送 AT 指令查询模块信息来检查是否可以正常控制模块.
+2. 运行: 连接模块, 修改[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_bt)中 config 包围的配置, 运行后使用蓝牙调试助手连接并发送数据, 即可在终端查看收发信息.
 
 程序如下:
 
 ```python
-# send at order
-uart.write("AT+NAME\r\n")
-# gee res
-read_data = uart.read()
-read_str = read_data.decode('utf-8')
-count = read_str.count("NAME")
-if count != 0:
-    print("get name success")
+# set uart rx/tx func to io_6/7
+fm.register(TX, fm.fpioa.UART1_TX)
+fm.register(RX, fm.fpioa.UART1_RX)
+# init uart
+uart = UART(UART.UART1, 9600, 8, 1, 0, timeout=1000, read_buf_len=4096)
+
+set_name(uart, name)
+print("wait data: ")
+while True:
+  read_data = uart.read()
+  if read_data:
+      print("recv:", read_data)
+      uart.write(read_data)  # send data back
+      print("wait data: ")
 ```
 
-主要分为两步:
+主要步骤为:
 
-* 发送 "AT+NAME\r\n".
+* 初始化串口(波特率为模块默认波特率9600)
 
-* 接收应答并判断应答是否有效.
+* 设置模块广播名
 
-**需要注意的是 AT 指令需加上结束符 '\r\n'**
+* 等待连接, 接收数据打印后发送回去
 
-### 开始蓝牙通信
+## 连接过程
 
-* 此时模块处于未连接状态(ACT 闪烁, STA 常灭).
+* 模块初始化后处于未连接状态(指示灯: ACT 闪烁, STA 常灭).
   
-* 打开蓝牙助手并连接, 模块变为已连接(ACT 常亮, STA 常亮).
+* 蓝牙调试助手连接后模块变为已连接(指示灯: ACT 常亮, STA 常亮).
   
 * 连接后蓝牙调试助手会显示的服务如下图:
   
   <img src="../../../assets/hardware/module_spmod/sp_bt_screenshot.png" alt="bt_server"/>
   
   上图中可以看到有一个 UUID 为 ffe0 的服务有两个特征, 打开透传(ffe1)的 Write, Notify, 便可以开始发送/接收数据.
-
-[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_bt)

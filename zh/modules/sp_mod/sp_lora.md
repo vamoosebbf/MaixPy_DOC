@@ -18,9 +18,11 @@ SP_LoRa 模块使用 M-XL8 模组, 其内置 LoRaTM 调制解调器和可调功�
 
 ## 使用方法
 
-连接模块, 取出文末的示例代码, 修改代码中 config 包围的配置为自己的, 即可运行查看效果, 本测试需要两个模块(发送, 接收)才能看到效果.
+1. 准备: 两块已烧录最新固件的开发板, 两个 sp_lora 模块.
 
-MaixPy 程序如下:
+2. 运行: 连接模块, 修改[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_lora)中 config 包围的配置, 两块开发板分别运行发送和接收函数, 即可在终端查看收发信息.
+
+程序如下:
 
 ```python
 # init
@@ -71,5 +73,3 @@ with RSSI: <bound_method 800d19e0 <SX127x object at 800f5700>.<function packetRs
 * 复位(将复位引脚拉低有拉高), 初始化.
   
 * 开始发送或接收.
-
-[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_lora)

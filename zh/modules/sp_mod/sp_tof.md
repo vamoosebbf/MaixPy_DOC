@@ -16,9 +16,11 @@ SP_TOF 所采用的 VL53L0X 是新一代飞行时间(ToF)激光测距模块, 无
 
 ## 使用方法
 
-程序如下:
+1. 准备: 已烧录最新固件的开发板, sp_tof 模块.
 
-连接模块, 取出文末的示例代码, 修改代码中 config 包围的配置为自己的, 即可运行查看效果.
+2. 运行: 连接模块, 修改[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_tof)中 config 包围的配置, 运行后将激光瞄头对准测量点, 可看到终端打印的距离信息.
+
+程序如下:
 
 ```python
 # create obj and read distance
@@ -44,5 +46,3 @@ while True:
 * 创建 TOF 对象(参数为: I2C 对象).
 
 * 读取距离, 若读取距离为 8190, 则说明已经超出量程.
-
-[示例代码](https://github.com/sipeed/MaixPy_scripts/tree/master/modules/spmod/sp_tof)
