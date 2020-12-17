@@ -315,7 +315,7 @@ nic.ifconfig()
 #### 返回值
 
 * 不传参: 返回`tuple`，元素都是字符串, `(ip, netmask, gateway, dns_server)`， 如果没有查询到或者无效，值为`"0"`
-* 传参: None
+* 传参: 返回`None`
 
 ### isconnected
 
@@ -331,8 +331,8 @@ nic.isconnected()
 
 #### 返回值
 
-`True`: 已经连接
-`False`: 断开连接
+* `True`: 已经连接
+* `False`: 断开连接
 
 #### 例程
 
