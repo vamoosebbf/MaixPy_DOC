@@ -400,13 +400,13 @@ if __name__ == "__main__":
 '''
 ```
 
-#### Spmod 的 W5500
+#### Spmod 的 WIZNET5K
 
-使用 Spmod 的 W5500 网卡联网，上传该类库 [network_wiznet5k.py](https://github.com/sipeed/MaixPy_scripts/blob/master/network/network_wiznet5k.py) 即可
+使用 Spmod 的 WIZNET5K 网卡联网，上传该类库 [network_wiznet5k.py](https://github.com/sipeed/MaixPy_scripts/blob/master/network/network_wiznet5k.py) 即可
 
 > vamoosebbf 2020-12-10 编辑
 
-W5500 为有线网卡模块, 使用时只需要将网线插好即可, 使用 SPI 协议, 在完整固件中默认使能了此模块, 最小固件中没有.
+WIZNET5K 为有线网卡模块, 使用时只需要将网线插好即可, 使用 SPI 协议, 在完整固件中默认使能了此模块, 最小固件中没有.
 
 ```python
 spi1 = SPI(4, mode=SPI.MODE_MASTER, baudrate=600 * 1000,

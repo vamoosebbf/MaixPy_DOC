@@ -260,3 +260,80 @@ ESP32_Module
 #### 例程
 
 [demo_esp32_read_adc.py](https://github.com/sipeed/MaixPy_scripts/blob/master/network/demo_esp32_read_adc.py)
+
+
+WIZNET5K_Module
+=========
+
+
+## network.WIZNET5K(spi, cs)
+
+构造一个`WIZNET5K`网卡对象，使用该方法需要传入一个`spi`对象， 一个`cs` pin 脚.
+
+调用此方法会初始化`WIZNET5K`， 如果失败会抛出异常
+
+
+### 参数
+
+* `spi`: 负责与 WIZNET5K 模块通信
+* `cs`: spi 通信片选脚
+
+### 返回值
+
+* `WIZNET5K`: 网卡对象
+
+## WIZNET5K
+
+### dhclient
+
+DHCP 动态获取 IP
+
+```
+nic.dhclient()
+```
+
+#### 参数
+
+无
+
+#### 返回值
+
+* `True`: 获取成功
+* `False`: 获取失败
+
+### ifconfig
+
+```
+nic.ifconfig()
+```
+
+#### 参数
+
+* 不传参: 查询网卡信息
+* 传入`(ip, netmask, gateway, dns_server)`元组: 配置网卡, `ip` ip 地址, `netmask`子网掩码, `gateway`网关 IP 地址, `dns_server` DNS 服务 IP 地址.
+
+#### 返回值
+
+* 不传参: 返回`tuple`，元素都是字符串, `(ip, netmask, gateway, dns_server)`， 如果没有查询到或者无效，值为`"0"`
+* 传参: None
+
+### isconnected
+
+查看网络是否连接
+
+```
+nic.isconnected()
+```
+
+#### 参数
+
+无
+
+#### 返回值
+
+`True`: 已经连接
+`False`: 断开连接
+
+#### 例程
+
+[network_wiznet5k.py](https://github.com/sipeed/MaixPy_scripts/blob/master/network/network_wiznet5k.py)
