@@ -40,7 +40,7 @@
   - [更新 MaixPy 固件](./get_started/upgrade_maixpy_firmware.md)
   - [使用串口终端工具](./get_started/env_serial_tools.md)
   - [MaixPy IDE 使用说明](./get_started/env_maixpyide.md)
-  - [更新 WIFI 模块固件]
+  - 更新 WIFI 模块固件
     - [更新板载 ESP32 固件](./get_started/upgrade_esp32_firmware.md)
     - [更新板载 ESP8285 固件](./get_started/upgrade_esp8285_firmware.md)
 * 上手
@@ -85,8 +85,8 @@
     * [本地训练](./course/ai/train/local.md)
 * 传统算法
   * 图像处理
-    - [寻找色块](./course/image/demo_find_green_blob.md)
-    - [二维码识别]
+    - [寻找色块](./course/image/find_color_blob.md)
+    - [二维码识别](course/image/find_qrcodes.md)
   * 音频处理
     - [FFT频谱图]
     - [声场成像]
@@ -180,7 +180,7 @@
 * [media](./api_reference/machine_vision/README.md)
   - [lcd](./api_reference/machine_vision/lcd.md)
   - [sensor](./api_reference/machine_vision/sensor.md)
-  - [image](./api_reference/machine_vision/image.md)
+  - [image](api_reference/machine_vision/image/image.md)
   - [video](./course/others/video.md)
   - [nes](./course/others/nes.md)
   - [lvgl](./course/others/lvgl.md)

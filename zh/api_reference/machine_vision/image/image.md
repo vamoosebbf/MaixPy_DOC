@@ -857,7 +857,7 @@ class image.qrcode
 
 若二维码的数据类型为日本汉字，则返回True。设置为True后，您就需要自行解码字符串，因为日本汉字符号每个字符是10位，而MicroPython不支持解析这类文本。
 
-##AprilTag类 – AprilTag对象
+## AprilTag类 – AprilTag对象
 
 AprilTag对象是由 `image.find_apriltags` 返回的。
 
