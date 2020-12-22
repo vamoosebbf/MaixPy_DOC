@@ -88,7 +88,7 @@
     - [寻找色块](./course/image/find_color_blob.md)
     - [二维码识别](course/image/find_qrcodes.md)
   * 音频处理
-    - [FFT频谱图]
+    - [FFT频谱图](course/image/fft_spectrum.md)
     - [声场成像]
     - [关键词识别](./course/speech/recognizer_mfcc.md)
 * 外设
@@ -105,7 +105,7 @@
     - [TOF 测距](./modules/sp_mod/sp_tof.md)
     - [Eink 电子墨水屏](./modules/sp_mod/sp_eink.md)
     - [Lcd1.14 ips屏](./modules/sp_mod/sp_lcd1.14.md)
-    - [Weather 天气模块](./modules/sp_mod/sp_weather.md)
+    - [Weather 气象模块](./modules/sp_mod/sp_weather.md)
   * Grove
     - [超声波]
     - [RGB LED 链]

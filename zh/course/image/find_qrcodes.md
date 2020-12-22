@@ -1,21 +1,20 @@
 MaixPy 查找二维码
 =======
 
+从图片中识别二维码, 常见的二维码为 QR Code, QR 全称 Quick Response, 它比传统的条形码(Bar Code)能存更多的信息, 也能表示更多的数据类型.
+
 ## 使用方法
 
-* 相关方法位于 image 模块中, 导入 image
+image 模块中已经实现有查找二维码方法, 需要准备一个二维码, 可以用[草料二维码](https://cli.im/)生成你想要的内容.
+
+* 从摄像头获取图片, 将摄像头对准二维码
 
 ```python
-import image
-```
-
-* 从摄像头获取图片
-
-```python
+import image, sensor
 img=sensor.snapshot()
 ```
 
-* 从图片中获取所有二维码对象(image.qrcode)
+* 从图片中查找所有二维码对象(image.qrcode)列表
 
 ```python
 res = img.find_qrcodes()
@@ -29,6 +28,33 @@ res = img.find_qrcodes()
 print(res[0].payload())
 ```
 
-## 示例
+详细 API 介绍请查看[API-Image](../../api_reference/machine_vision/image/image.md).
 
-获取示例和详细 API 介绍请查看[API-Image](../../api_reference/machine_vision/image/image.md).
+## 例程
+
+识别二维码
+
+```python
+import sensor
+import image
+import lcd
+import time
+
+clock = time.clock()
+lcd.init()
+sensor.reset()
+sensor.set_pixformat(sensor.RGB565)
+sensor.set_framesize(sensor.QVGA)
+sensor.set_vflip(1)
+sensor.run(1)
+sensor.skip_frames(30)
+while True:
+    clock.tick()
+    img = sensor.snapshot()
+    res = img.find_qrcodes()
+    fps =clock.fps()
+    if len(res) > 0:
+        img.draw_string(2,2, res[0].payload(), color=(0,128,0), scale=2)
+        print(res[0].payload())
+    lcd.display(img)
+```
