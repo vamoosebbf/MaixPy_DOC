@@ -1,7 +1,7 @@
 HTPA 热红外测温模组(modules.htpa)
 ====
 
-海曼 HTPA 32x32 热红外测问模组
+海曼 HTPA 32x32 热红外测温模组
 
 ![](../../../assets/htpa.png)
 

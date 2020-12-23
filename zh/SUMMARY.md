@@ -32,11 +32,11 @@
 * 开发环境准备
   - [安装驱动](./get_started/env_install_driver.md)
     - [Maix Dock](./get_started/install_driver/dock.md)
-    - [Maix Bit]
-    - [Maix Amigo]
-    - [Maix Cube]
-    - [Maix Go]
-    - [Maix Nano]
+    - [Maix Bit](get_started/install_driver/bit.md)
+    - [Maix Amigo](get_started/install_driver/amigo.md)
+    - [Maix Cube](get_started/install_driver/cube.md)
+    - [Maix Go](get_started/install_driver/go.md)
+    - [Maix Nano](get_started/install_driver/nano.md)
   - [更新 MaixPy 固件](./get_started/upgrade_maixpy_firmware.md)
   - [使用串口终端工具](./get_started/env_serial_tools.md)
   - [MaixPy IDE 使用说明](./get_started/env_maixpyide.md)
@@ -112,10 +112,10 @@
     - [RGB LED Ring 灯条](modules/grove/grove_rgb_led_ring.md)
   * 更多外设
     - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
-    - [双摄模块]
-    - [MLX90640 串口红外镜头模块]
-    - [HTPA 红外镜头]
-    - [舵机]
+    - [双摄模块](modules/others/binocular_camera.md)
+    - [MLX90640 串口红外镜头模块](modules/others/mlx90640.md)
+    - [HTPA 红外镜头](modules/others/htpa.md)
+    - [舵机](modules/others/servo.md)
     - [ESP32 ADC](./modules/others/esp32_read_adc.md)
 * 更多功能
   * 系统

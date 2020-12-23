@@ -14,7 +14,6 @@
 * [ws2812](./ws2812.md): WS2812单总线灯带
 * [热红外温度传感器](./htpa.md)
 * [超声波](./ultrasonic.md)
-* [Grove 链式 RGB LED](./grove_chainable_rgb_led.md)
 
 
 
