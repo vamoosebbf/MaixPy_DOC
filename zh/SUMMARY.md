@@ -88,8 +88,8 @@
     - [寻找色块](./course/image/find_color_blob.md)
     - [二维码识别](course/image/find_qrcodes.md)
   * 音频处理
-    - [FFT频谱图](course/image/fft_spectrum.md)
-    - [声场成像]
+    - [FFT](course/speech/fft.md)
+    - [FFT 瀑布图]
     - [关键词识别](./course/speech/recognizer_mfcc.md)
 * 外设
   * 片上外设
@@ -104,12 +104,12 @@
     - [RFID 射频识别](./modules/sp_mod/sp_rfid.md)
     - [TOF 测距](./modules/sp_mod/sp_tof.md)
     - [Eink 电子墨水屏](./modules/sp_mod/sp_eink.md)
-    - [Lcd1.14 ips屏](./modules/sp_mod/sp_lcd1.14.md)
+    - [Lcd1.14 IPS屏](./modules/sp_mod/sp_lcd1.14.md)
     - [Weather 气象模块](./modules/sp_mod/sp_weather.md)
   * Grove
-    - [超声波]
-    - [RGB LED 链]
-    - [ws2812 灯条]
+    - [Ultrasonic Ranger 测距](modules/grove/grove_ultrasonic_ranger.md)
+    - [Chainable RGB LED 灯](modules/grove/grove_chainable_rgb_led.md)
+    - [RGB LED Ring 灯条](modules/grove/grove_rgb_led_ring.md)
   * 更多外设
     - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
     - [双摄模块]
@@ -189,7 +189,6 @@
   - [modules.ultrasonic](./api_reference/extend/ultrasonic.md)
   - [modules.ws2812](./api_reference/extend/ws2812.md)
   - [modules.htpa](./api_reference/extend/htpa.md)
-  - [Grove RGB LED](./api_reference/extend/grove_chainable_rgb_led.md)
 
 
 ## 常见问题 FAQ
