@@ -18,14 +18,14 @@
 
    使用 USB 转串口模块，按照下表连接之后上电
 
-   | M1W                                    | USB 模块 | 说明 |
-   | -------------------------------------- | -------- | ---- |
-   | M1W GND                                | GND      | 共地 |
-   | K210 (IO6)/ESP8285 TX                 | RX       |      |
-   | K210 (IO7)/ESP8285 RX                  | TX       |      |
-   | k210 RST(上电之前接地，全过程拉低 RST) | GND      |      |
+| M1W                                    | USB 模块 | 说明 |
+| -------------------------------------- | -------- | ---- |
+| M1W GND                                | GND      | 共地 |
+| K210 (IO6)/ESP8285 TX                 | RX       |      |
+| K210 (IO7)/ESP8285 RX                  | TX       |      |
+| k210 RST(上电之前接地，全过程拉低 RST) | GND      |      |
 
-   上电之后板子会在串口输出(这里使用 XCOM) 来验证 ESP8285 是否正常启动
+   上电之后板子会在串口输出(这里使用 XCOM, 波特率 115200) 来验证 ESP8285 是否正常启动
    ![image-20200805175207487](../../assets/hardware/module_esp8285/image-20200805175207487.png)
 
 
@@ -69,12 +69,16 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 | Flash 运行模式 | 高        | 高   | 低     | 高    | 高    | 高   |
 | Chip 测试模式  | -         | -    | -      | -     | -     | 低   |
 
+即 ESP8285 进入 UART 下载模式，启动信息 mode 第一位应该为 mode:(1, X)，如下：
+
+>  ets	Jan		8	2013,rst	cause:1,	boot	mode:(1,1)
+
 
 而以 MaixDock 为例，可以看到 MaixDock 原理图如下：
 
-![](../../assets/hardware/module_esp8285/20200915170043.png)
-![](../../assets/hardware/module_esp8285/20200915170032.png)
+![](../../assets/hardware/maix_dock/sipeed_maix_dock_sch_wifi.png)
 
+![](../../assets/hardware/maix_dock/sipeed_maix_dock_sch_wifi_spi.png)
 
 ### 准备
 
@@ -95,9 +99,7 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 
    ![](../../assets/hardware/module_esp8285/20200911002752.png)
 
-
-
-### 更新（这里以 MaixDock 为例）：
+### Windows 使用 flash_download_tools 更新 ES8285（这里以 MaixDock 为例）：
 
 1. 按照下面配置，连接 MaixDock,
 
@@ -115,12 +117,32 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 6. 点击 **Start** 更新固件，并等待完成更新
 
 7. 验证更新是否完成
-   - 使用 XCOM, 打开 ESP8285 串口，点击 RST 复位 ESP，如图即刷入成功
-      ![.png](../../assets/hardware/module_esp8285/image-20200504164747839.png)
+   - 使用 XCOM 波特率 115200, 打开 ESP8285 串口，输出 `AT\r\n`,如图提示 `OK` 即刷入成功
+    ![esp8285_at.png](../../assets/hardware/maix_dock/esp8285_at.png)
+
+### LINUX 使用 esp_tool 更新 ES8285（这里以 MaixDock 为例）：
 
 
+1. 按照下面配置，连接 MaixDock,
 
+   ![](../../assets/hardware/maix_dock/sipeed_maix_dock_m1w_2.png)
 
+2. 安装 esptool
+
+```shell
+pip3 install esptool
+```
+
+3. 下载 **MaixDock ESP8285 固件**
+
+```
+ls /dev/ttyUSB* # 查看 USB 串口
+esptool --port /dev/ttyUSB0 write_flash 0x0 ESP8285-AT-V1.7.4_8Mbit_40Mhz.bin # 烧录固件
+```
+
+7. 验证更新是否完成
+   - 使用 XCOM 波特率 115200, 打开 ESP8285 串口，输出 `AT\r\n`,如图提示 `OK` 即刷入成功
+    ![esp8285_at.png](../../assets/hardware/maix_dock/esp8285_at.png)
 
 
 ### MaixPy 例程测试：
@@ -131,7 +153,7 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 import network, time
 from machine import UART
 from Maix import GPIO
-from fpioa_manager import fm, board_info
+from fpioa_manager import fm
 
 # En SEP8285 rst
 #fm.register(8, fm.fpioa.GPIOHS0, force=True)
@@ -187,7 +209,3 @@ for ap in ap_info:
 
 
 ```
-
-![MaixGO](../../assets/hardware/module_esp8285/image-20200807162617059.png)
-
-----
