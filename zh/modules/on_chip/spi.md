@@ -1,7 +1,7 @@
 SPI 的使用
 =========
 
-关于 SPI 详细介绍请参考[SPI-API介绍](../../api_reference/machine/spi.md).
+关于 SPI 详细介绍请参考[SPI-API 文档](../../api_reference/machine/spi.md).
 
 ## 使用方法
 

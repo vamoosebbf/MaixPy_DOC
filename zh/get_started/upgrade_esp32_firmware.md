@@ -13,7 +13,7 @@ MaixPy 系列的开发板中 MaixDuino 板载了一块 ESP32 WIFI SOC，在默�
 - 软件: ESPFLASH
 
 - ESP32 固件更新工具：ESP32 **flash_download_tools**
-  - 下载链接：[**flash_download_tools**]()
+  - 下载链接：[**flash_download_tools**](https://www.espressif.com/zh-hans/support/download/other-tools)
 - ESP32 MaixDuino 固件：
   - 下载链接：[**flash_download_tools**](https://cn.dl.sipeed.com/MAIX/factory_firmware/)
 

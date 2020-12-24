@@ -1,7 +1,7 @@
 I2C 的使用
 =========
 
-关于 I2C 详细介绍请参考[I2C-API介绍](../../api_reference/machine/i2c.md).
+关于 I2C 详细介绍请参考[I2C-API 文档](../../api_reference/machine/i2c.md).
 
 ## 使用方法
 
