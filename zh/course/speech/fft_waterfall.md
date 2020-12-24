@@ -22,10 +22,11 @@ fft_res = FFT.run(audio.to_bytes(),fft_points)
 fft_amp = FFT.amplitude(fft_res)
 ```
 
-* 绘制（由于 FFT 结果的对称性，只需要绘制其中一部分即可）
+* 绘制在 image （由于 FFT 结果的对称性，只需要绘制其中一部分即可）
 
 ```python
 hist_x_num = 128
+img = image.Image(size=(128,128))
 for i in range(hist_x_num):
         img[i] = fft_amp[i]
 ```
