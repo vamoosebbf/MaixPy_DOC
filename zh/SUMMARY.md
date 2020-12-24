@@ -89,7 +89,7 @@
     - [二维码识别](course/image/find_qrcodes.md)
   * 音频处理
     - [FFT](course/speech/fft.md)
-    - [FFT 瀑布图]
+    - [FFT 瀑布图](course/speech/fft_waterfall.md)
     - [关键词识别](./course/speech/recognizer_mfcc.md)
 * 外设
   * 片上外设
@@ -113,7 +113,7 @@
   * 更多外设
     - [Sipeed 麦克风阵列](./develop_kit_board/module_microphone.md)
     - [双摄模块](modules/others/binocular_camera.md)
-    - [MLX90640 串口红外镜头模块](modules/others/mlx90640.md)
+    - [MLX90640 串口红外镜头](modules/others/mlx90640.md)
     - [HTPA 红外镜头](modules/others/htpa.md)
     - [舵机](modules/others/servo.md)
     - [ESP32 ADC](./modules/others/esp32_read_adc.md)

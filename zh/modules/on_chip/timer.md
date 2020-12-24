@@ -1,7 +1,7 @@
 Timer 的使用
 =========
 
-关于 Timer 详细介绍请参考[Timer-API介绍](../../api_reference/machine/timer.md).
+关于 Timer 详细介绍请参考[Timer-API 文档](../../api_reference/machine/timer.md).
 
 ## 使用方法
 
