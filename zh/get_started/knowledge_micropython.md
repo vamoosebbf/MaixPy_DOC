@@ -1,20 +1,22 @@
-### MicroPython 背景知识
+## MicroPython 背景知识
 
-由于 **MaixPy** 是基于 **MicroPython** 之上进行开发构建的, 
-提供给用户最终的接口是 **Micropython** ,所以在使用 MaixPy 开发之初我们需要熟悉下 `MicroPython` 的语法
+由于 **MaixPy** 是基于 **MicroPython** 之上进行开发构建的,
+提供给用户最终的接口是 **Micropython** ，所以在使用 MaixPy 开发之初我们需要熟悉下 `MicroPython` 的基础知识与语法
 
-不用考虑内存的申请和释放,有很多 MicroPython 库可以直接用(并不直接兼容 PC 上的 Python 模块)
-Python, 是一个很常用的语言, 在图像处理, 机器学习, 网络编程中都使用非常广.而且 Python 是一个非常容易上手的语言, 如果你有其他语言编程基础(例如C, C++, Java), 会更容易上手.
 
-如果之前有 **C/C++/Java** (或任何其他语言)的编程经验, 推荐
+### 关于 MicroPython:
+
+MicrotPython 是编程语言 Python3 的精简高效实现，语法和 Python3 保持一致，但只实现了 Python 标准库的一小部分，并且经过优化，可以在 MCU ， WIFI SOC 上等资源受限的环境中使用，所以我们在使用 MicroPython 需要了解其语法。
+
+如果之前有 **C/C++/Java** (或任何其他语言)的编程经验，推荐
 [《廖雪峰的 Python 教程》]()
 
-如果之前没有任何编程经验, 推荐
-[《笨方法学 Python 》]()
+如果之前没有任何编程经验，推荐
+[《笨方法学 Python》]()
 
 ## REPL 和 串口
 
-首先, 断开开发板 与 MaixPy IDE 的连接, 否则串口会冲突！
+首先，断开开发板与 MaixPy IDE 的连接，否则串口会冲突！
 
 打开 MaixPy IDE 中的终端窗口
 
@@ -26,11 +28,11 @@ print('The quick brown fox', 'jumps over', 'the lazy dog')
 The quick brown fox jumps over the lazy dog
 ```
 
-print() 会依次打印每个字符串, 遇到逗号“,”会输出一个空格, 因此, 输出的字符串是这样拼起来的:
+print() 会依次打印每个字符串，遇到逗号“,”会输出一个空格，因此，输出的字符串是这样拼起来的：
 
 > The quick brown fox jumps over the lazy dog
 
-print() 也可以打印整数, 或者计算结果:
+print() 也可以打印整数，或者计算结果：
 
 ```python
 print(300)
@@ -46,11 +48,12 @@ print('100 + 200 =', 100 + 200)
 100 + 200 = 300
 ```
 
-注意, 对于 100 + 200, Python 解释器自动计算出结果 300, 但是, '100 + 200 =' 是字符串而非数学公式, Python 把它视为字符串.
+注意, 对于 100 + 200, Python 解释器自动计算出结果 300，但是 '100 + 200 =' 是字符串而非数学公式，Python 把它视为字符串。
 
+## MicroPython 基于语法
 ### 变量
 
-在 Python 中, 等号 `=` 是赋值语句, 可以把任意数据类型赋值给变量, 同一个变量可以反复赋值, 而且可以是不同类型的值, 例如:
+在 Python 中，等号 `=` 是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量，例如：
 
 ```python
 a = 123 # a是整数
@@ -59,19 +62,19 @@ a = 'ABC' # a变为字符串
 print(a)
 ```
 
-这种变量本身类型不固定的语言称之为**动态语言**, 与之对应的是 **静态语言**. 
-静态语言在定义变量时必须指定变量类型, 如果赋值的时候类型不匹配, 就会报错.例如 Java 是静态语言, 赋值语句如下(// 表示注释):
+这种变量本身类型不固定的语言称之为**动态语言**，与之对应的是 **静态语言**。
+静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如 Java 是静态语言，赋值语句如下(// 表示注释)：
 
 ```java
 int a = 123; // a是整数类型变量
 a = "ABC";// 错误:不能把字符串赋给整型变量
 ```
 
-和静态语言相比, 动态语言更灵活, 就是这个原因.
+和静态语言相比，动态语言更灵活，就是这个原因。
 
 ### list 列表
 
-Python 内置的一种数据类型是**列表**: **list**.<br/>
+Python 内置的一种数据类型是**列表**：**list**.<br/>
 **list** 是一种有序的集合, 可以随时添加和删除其中的元素.
 比如, 列出班里所有同学的名字, 就可以用一个 **list** 表示:
 
@@ -82,7 +85,7 @@ classmates
 ```
 
 变量 classmates 就是一个 `list`.<br/>
-用 `len()` 函数可以获得list元素的个数:
+用 `len()` 函数可以获得 list 元素的个数:
 
 ```python
 len(classmates)
@@ -104,16 +107,16 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
-当索引超出了范围时, Python 会报一个 IndexError 错误, 所以, 要确保索引不要越界, 记得最后一个元素的索引是 len(classmates) - 1.
+当索引超出了范围时，Python 会报一个 IndexError 错误，所以，要确保索引不要越界，记得最后一个元素的索引是 len(classmates) - 1。
 
-如果要取最后一个元素, 除了计算索引位置外, 还可以用 -1 做索引, 直接获取最后一个元素:
+如果要取最后一个元素，除了计算索引位置外，还可以用 -1 做索引，直接获取最后一个元素：
 
 ```python
 classmates[-1]
 'Tracy'
 ```
 
-以此类推, 可以获取倒数第2个、倒数第3个:
+以此类推，可以获取倒数第2个、倒数第3个：
 
 ```python
 classmates[-2]
@@ -125,9 +128,10 @@ Traceback (most recent call last):
     File "<stdin>", line 1, in <module>
   IndexError: list index out of range
 ```
-当然, 倒数第4个就越界了.
 
-list 是一个**可变**的**有序表**, 所以可以往list中追加元素到末尾:
+当然，倒数第 4 个就越界了。
+
+list 是一个**可变**的**有序表**，所以可以往 list 中追加元素到末尾：
 
 ```python
 classmates.append('Adam')
@@ -135,14 +139,16 @@ classmates
 ['Michael', 'Bob', 'Tracy', 'Adam']
 ```
 
-也可以把元素插入到指定的位置, 比如索引号为1的位置:
+也可以把元素插入到指定的位置，比如索引号为1的位置：
+
 ```python
 classmates.insert(1, 'Jack')
 classmates
 ['Michael', 'Jack', 'Bob', 'Tracy', 'Adam']
 ```
 
-要删除list末尾的元素, 用pop()方法:
+要删除 list 末尾的元素, 用 pop() 方法：
+
 ```python
 classmates.pop()
 'Adam'
@@ -151,18 +157,21 @@ classmates
 ```
 
 要把某个元素替换成别的元素, 可以直接赋值给对应的索引位置:
+
 ```python
 classmates[1] = 'Sarah'
 classmates
 ['Michael', 'Sarah', 'Tracy']
 ```
 
-list里面的元素的数据类型也可以不同, 比如:
+list 里面的元素的数据类型也可以不同, 比如:
+
 ```python
 L = ['Apple', 123, True]
 ```
 
-如果一个list中一个元素也没有, 就是一个空的list, 它的长度为0:
+如果一个 list 中一个元素也没有，就是一个空的 list，它的长度为 0：
+
 ```python
 L = []
 len(L)
@@ -172,16 +181,16 @@ len(L)
 ### tuple 元组
 
 另一种有序列表叫元组: **tuple**.<br/>
-tuple 和 list 非常类似, 但是 `tuple` 一旦初始化就不能修改, 比如同样是列出同学的名字:
+tuple 和 list 非常类似，但是 `tuple` 一旦初始化就不能修改，比如同样是列出同学的名字：
 
 ```python
 classmates = ('Michael', 'Bob', 'Tracy')
 ```
 
-现在, classmates 这个 **tuple** 不能变了, 它也没有 append(), insert() 这样的方法.其他获取元素的方法和 list 是一样的, 你可以正常地使用 classmates[0], classmates[-1], 但不能赋值成另外的元素.
+现在，classmates 这个 **tuple** 不能变了，它也没有 append(), insert() 这样的方法.其他获取元素的方法和 list 是一样的, 你可以正常地使用 classmates[0], classmates[-1], 但不能赋值成另外的元素.
 
-不可变的 tuple 有什么意义?因为 tuple 不可变, 所以代码更安全.
-如果可能, 能用 tuple 代替 list 就尽量用 tuple.
+不可变的 tuple 有什么意义？因为 tuple 不可变, 所以代码更安全。
+如果可能，能用 tuple 代替 list 就尽量用 tuple。
 
 tuple 的陷阱:当你定义一个 tuple 时, 在定义的时候, tuple 的元素就必须被确定下来, 比如:
 
@@ -424,7 +433,8 @@ LED 是一个**类**, red_led 就是一个**对象**, 可以对这个对象进�
 
 为了编写可维护的代码，我们把很多函数分组，放到不同的文件里。在Python 中，一个 `.py` 文件就称之为一个**模块(Module)**.
 
-模块有什么好处? 
+模块有什么好处?
+
 复用代码方便！如果我写了一个模块，你也写了一个模块，我们就有了两个模块。我们把这些模块都组织起来，大家就可以少写很多代码了！
 
 #### 在 MaixPy 中如何使用模块?
@@ -445,5 +455,5 @@ time.sleep_ms(500)
 还有 `from xxx import ooo` 的语句，意思是通过 xxx 模块引入 ooo类，或者通过 xxx 模块引入 ooo 函数。比如上面的程序可以写成:
 
 ```python
-```
 
+```
