@@ -177,9 +177,9 @@ Para_size: the number of bytes of the convolution parameter of the current layer
 
 ### memtest
 
-Print memory usage, including GC memory and system heap memory
+Print memory usage, including `GC` memory and system heap memory
 
-* Note that executing this function will automatically execute gc.collect() for memory recovery once, and then print the remaining memory of GC
+* Note that executing this function will automatically execute `gc.collect()` for memory recovery once, and then print the remaining `GC` memory
 * The system heap memory is only for reference, not necessarily accurate. Sometimes, the memory has been released but it still shows as not released - subject to whether it can actually be allocated to memory
 
 
