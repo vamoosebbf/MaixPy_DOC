@@ -174,6 +174,19 @@ Pool_type: pooling type, 0 is not pooled; 1:2x2 max pooling; 2:...
 Para_size: the number of bytes of the convolution parameter of the current layer
 ```
 
+
+### memtest
+
+Print memory usage, including GC memory and system heap memory
+
+* Note that executing this function will automatically execute gc.collect() for memory recovery once, and then print the remaining memory of GC
+* The system heap memory is only for reference, not necessarily accurate. Sometimes, the memory has been released but it still shows as not released - subject to whether it can actually be allocated to memory
+
+
+```python
+KPU.memtest()
+```
+
 ## Routine
 
 #### Running face recognition demo
