@@ -19,6 +19,8 @@ SP_RFID 的使用
 * 工作电压: 2.2V~3.6V
 * 工作温度: -40°C~85°C
 
+模块详细信息请参考[RFID 规格书与数据手册](http://api.dl.sipeed.com/shareURL/MAIX/HDK/sp_mod/sp_rfid)
+
 ## 使用方法
 
 1. 准备: 已烧录最新固件的开发板, sp_rfid 模块, M1 卡片.

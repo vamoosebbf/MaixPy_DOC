@@ -44,6 +44,18 @@ video 视频
 * `3`： 当前解码的帧是视频帧
 * `4`： 当前解码的帧是音频帧
 
+### capture(img)
+
+捕获视频画面帧（顺序捕获）
+
+### 参数
+
+* `img`: image.Image() 对象
+
+### 返回值
+
+* `0`： 已经达到视频末尾
+* `3`： 捕获到视频画面帧
 
 ### volume(volume)
 
@@ -135,4 +147,24 @@ lcd.clear()
 如果实际帧间隔大于设置的值，则说明实际性能没有达到设置的要求，需要调大设置的帧间隔即减小帧率。 
 另外去掉显示和打印也可以一定程度上增加帧率。
 
+### 例程3: 顺序 `avi` 捕获视频帧并显示
+
+```python
+import lcd
+import video
+import image
+
+lcd.init()
+v = video.open("/sd/badapple_320_240_15fps.avi")
+print(v)
+img = image.Image()
+while True:
+    status = v.capture(img)
+    if status != 0:
+        lcd.display(img)
+    else:
+        print("end")
+        break;
+v.__del__()
+```
 

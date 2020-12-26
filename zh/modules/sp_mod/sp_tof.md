@@ -14,6 +14,8 @@ SP_TOF 所采用的 VL53L0X 是新一代飞行时间(ToF)激光测距模块, 无
 * 工作电压: 2.6V~3.5V
 * 工作温度: -40°C~80°C
 
+模块详细信息请参考[TOF 规格书与数据手册](http://api.dl.sipeed.com/shareURL/MAIX/HDK/sp_mod/sp_tof)
+
 ## 使用方法
 
 1. 准备: 已烧录最新固件的开发板, sp_tof 模块.
