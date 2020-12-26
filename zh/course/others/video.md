@@ -87,7 +87,7 @@ video 视频
 
 首先保证视频是 `320x240` 大小， 视频压缩格式为 `mjpeg`， 音频压缩格式位 `PCM`。
 
-可以在这里下载测试可以用的视频： [badapple.avi](http://dl.sipeed.com/MAIX/MaixPy/assets/badapple_320_240_15fps.avi)
+可以在这里下载测试可以用的视频： [badapple.avi](http://api.dl.sipeed.com/shareURL/MAIX/MaixPy/assets)
 
 ```python
 import video,time
