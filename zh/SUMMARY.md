@@ -106,6 +106,7 @@
     - [Eink 电子墨水屏](./modules/sp_mod/sp_eink.md)
     - [Lcd1.14 IPS屏](./modules/sp_mod/sp_lcd1.14.md)
     - [Weather 气象模块](./modules/sp_mod/sp_weather.md)
+    - [Ethernet 有线网口](modules/sp_mod/sp_ethernet.md)
   * Grove
     - [Ultrasonic Ranger 测距](modules/grove/grove_ultrasonic_ranger.md)
     - [Chainable RGB LED 灯](modules/grove/grove_chainable_rgb_led.md)
