@@ -101,7 +101,7 @@ import nes, lcd
 
 lcd.init(freq=15000000)
 nes.init(nes.KEYBOARD)
-nes.run("/sd/mario.nes")
+nes.load("/sd/mario.nes")
 
 while True:
     nes.loop()
@@ -121,7 +121,7 @@ fm.register(21, fm.fpioa.GPIOHS21)
 
 lcd.init(freq=15000000)
 nes.init(nes.JOYSTICK, cs=fm.fpioa.GPIOHS19, clk=fm.fpioa.GPIOHS18, mosi=fm.fpioa.GPIOHS23, miso=fm.fpioa.GPIOHS21)
-nes.run("/sd/mario.nes")
+nes.load("/sd/mario.nes")
 
 while True:
     nes.loop()
