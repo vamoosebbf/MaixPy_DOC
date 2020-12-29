@@ -23,7 +23,7 @@ NES 游戏模拟器
 * `repeat`： 这个参数只对使用键盘（/串口）时， 指按键的重复率
 * `vol`： 初始化时的音量， 后面可以通过按键调整
 
-### run(nes)
+### 基础示例
 
 运行 `NES` 游戏 `ROM`
 
@@ -31,6 +31,15 @@ NES 游戏模拟器
 
 * `nes`： 游戏 `ROM` 路径， 比如 `/sd/mario.nes`
 
+```python
+try:
+  nes.init(nes.INPUT)
+  nes.load("mario.nes")
+  while True:
+    nes.loop()
+finally:
+  nes.free()
+```
 
 ## 快捷键
 
