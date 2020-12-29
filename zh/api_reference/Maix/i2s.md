@@ -15,7 +15,7 @@ i2s_dev = I2S(device_num)
 
 #### 参数
 
-`device_num` UART号，使用指定的 I2S，可以通过 `I2S.` 按tab键来补全
+`device_num` I2S号，使用指定的 I2S，可以通过 `I2S.` 按tab键来补全
 
 #### 返回值
 
@@ -91,9 +91,14 @@ i2s_dev.play(audio)
 ## 例程
 
 ### 例程1
+
+采集数据并直接播放
+
 ```python
 from Maix import I2S
 import time
+from fpioa_manager import *
+
 fm.register(20,fm.fpioa.I2S0_IN_D0)#GO
 fm.register(19,fm.fpioa.I2S0_WS)
 fm.register(18,fm.fpioa.I2S0_SCLK)
@@ -113,11 +118,16 @@ while True:
 ```
 
 ### 例程2
+
+采集数据转化为 Audio 并播放
+
 ```python
 from Maix import I2S
 from Maix import Audio
 from Maix import FFT
 import time
+from fpioa_manager import *
+
 fm.register(20,fm.fpioa.I2S0_IN_D0)
 fm.register(19,fm.fpioa.I2S0_WS)
 fm.register(18,fm.fpioa.I2S0_SCLK)
