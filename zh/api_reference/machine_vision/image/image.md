@@ -2221,27 +2221,38 @@ zoom 是在对图像进行缩放的数值。默认值为 1.0 。
 
 不支持压缩图像和bayer图像。
 
-#### img.rotation_corr([x_rotation=0.0[, y_rotation=0.0[, z_rotation=0.0[, x_translation=0.0[, y_translation=0.0[, zoom=1.0]]]]]])
+ #### img.rotation_corr([x_rotation=0.0[, y_rotation=0.0[, z_rotation=0.0[, x_translation=0.0[, y_translation=0.0[, zoom=1.0[, fov=60.0[, corners]]]]]]]])
 
-通过执行帧缓冲区的3D旋转来纠正图像中的透视问题。
+通过对帧缓冲区进行3D旋转来纠正图像中的透视问题。
 
-x_rotation 是围绕x轴在帧缓冲器中旋转图像的度数（这使图像上下旋转）。
+`x_rotation` 是图像在帧缓冲区中绕x轴旋转的角度数(也就是图像上下旋转)。
 
-y_rotation 是帧缓冲区中围绕y轴旋转图像的度数（即左右旋转图像）。
+`y_rotation` 是指图像在帧缓冲区中绕y轴旋转的角度数(即左右旋转图像)。
 
-z_rotation 是围绕z轴在帧缓冲器中旋转图像的度数（即，使图像旋转到适当位置）。
+`z_rotation` 是图像在帧缓冲区中绕z轴旋转的角度数(即图像旋转到适当位置)。
 
-x_translation 是旋转后将图像移动到左侧或右侧的单位数。因为这个变换是应用在三维空间的，单位不是像素…
+`x_translation` 是图像旋转后向左或向右移动的单位数。因为这种转换应用于3D空间，所以单位不是像素……
 
-y_translation 是旋转后将图像上移或下移的单位数。因为这个变换是应用在三维空间的，单位不是像素…
+`y_translation` 是图像在旋转后向上或向下移动的单位数。因为这种转换应用于3D空间，所以单位不是像素……
 
-zoom 是通过图像缩放的量。默认情况下1.0。
+`zoom` 是将图像缩放的倍数，默认情况下为1.0。
 
-返回图像对象，以便您可以使用 . 表示法调用另一个方法。
+`fov` 是在进行2D->3D投影时在3D空间旋转图像之前内部使用的视场。当这个值接近0时，图像被放置在距离视口无限远的地方。当这个值接近180时，图像被放置在视口中。通常，你不应该改变这个值，但你可以修改它来改变2D->3D映射效果。
 
-不支持压缩图像和bayer图像。
+`corners` 是一个拥有四个(x, y) tuples 的 list，代表四个 `corner` 用来创建四点对应单应性,将第一个 `corner` 映射到(0,0),第二个 `corner` (image_width-1, 0),第三个 `corner` (image_width-1 image_height-1)和第四个 `corner` (0,image_height-1)。然后在图像被重新映射后应用3D旋转。这个参数允许你使用 rotation_corr 来做一些事情，比如鸟瞰图转换。例如:
 
-此方法在OpenMV Cam M4 上不可用。
+```python
+top_tilt = 10 # if the difference between top/bottom_tilt become to large this method will stop working
+bottom_tilt = 0
+
+points = [(tilt, 0), (img.width()-tilt, 0), (img.width()-1-bottom_tilt, img.height()-1), (bottom_tilt, img.height()-1)]
+
+img.rotation_corr(corners=points)
+```
+
+返回图像对象，以便您可以使用 `.` 调用另一个方法。
+
+不支持压缩图像或拜耳图像。
 
 #### image.get_similarity(image)
 
