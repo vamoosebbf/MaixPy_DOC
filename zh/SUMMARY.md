@@ -21,7 +21,7 @@
     - [Maix Go](./develop_kit_board/maix_go.md)
     - [Maix Nano](./develop_kit_board/maix_nano.md)
   - 外设模组（配件）
-    - [SP-MOD](./modules/sp_mode/README.md)
+    - [SP-MOD](./modules/sp_mod/README.md)
     - [Grove](./modules/grove/README.md)
     - [其它](./modules/others/README.md)
 * 基础知识

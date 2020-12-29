@@ -1,0 +1,13 @@
+SP_MOD（Sipeed module）
+======
+
+采用 sp_mod 标准接口的模块
+
+* [SP_BT 蓝牙透传](./sp_bt.md)
+* [SP_LoRa 无线通信](./sp_lora.md)
+* [SP_RFID 射频识别](./sp_rfid.md)
+* [SP_TOF 测距](./sp_tof.md)
+* [SP_Eink 电子墨水屏](./sp_eink.md)
+* [SP_LCD1.14 IPS屏](./sp_lcd1.14.md)
+* [SP_Weather 气象传感](./sp_weather.md)
+* [SP_Ethernet 有线网口](./sp_ethernet.md)
