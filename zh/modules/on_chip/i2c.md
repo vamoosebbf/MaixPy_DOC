@@ -5,17 +5,8 @@ I2C 的使用
 
 ## 使用方法
 
-* 从 machine 导入 I2C 模块
+### 主机模式
 
-```python
-from machine import I2C
-```
-
-* 创建 I2C 对象
-
-```python
-i2c = I2C(I2C.I2C0, freq=100000, scl=28, sda=29) # software i2c
-```
 
 * 扫描从机, 返回所有从机地址
 
@@ -31,9 +22,34 @@ for device in devices:
     i2c.readfrom(device, 3)
 ```
 
+### 从机模式
+
+* 创建从机回调函数
+
+```python
+count = 0
+def on_receive(data):
+    print("on_receive:",data)
+
+def on_transmit():
+    count = count+1
+    print("on_transmit, send:",count)
+    return count
+
+def on_event(event):
+    print("on_event:",event)
+```
+
+* 创建 I2C 对象
+
+```python
+from machine import I2C
+i2c = I2C(I2C.I2C0, mode=I2C.MODE_SLAVE, scl=28, sda=29, addr=0x24, addr_size=7, on_receive=on_receive, on_transmit=on_transmit, on_event=on_event)
+```
+
 ## 示例
 
-读取所有从机地址并分别收发数据
+* 读取所有从机地址并分别收发数据
 
 ```python
 from machine import I2C
@@ -46,4 +62,25 @@ print(devices)
 for device in devices:
     i2c.writeto(device, b'123')
     i2c.readfrom(device, 3)
+```
+
+* 从机模式示例
+
+```python
+from machine import I2C
+
+count = 0
+
+def on_receive(data):
+    print("on_receive:",data)
+
+def on_transmit():
+    count = count+1
+    print("on_transmit, send:",count)
+    return count
+
+def on_event(event):
+    print("on_event:",event)
+
+i2c = I2C(I2C.I2C0, mode=I2C.MODE_SLAVE, scl=28, sda=29, addr=0x24, addr_size=7, on_receive=on_receive, on_transmit=on_transmit, on_event=on_event)
 ```

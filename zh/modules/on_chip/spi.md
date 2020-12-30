@@ -5,6 +5,8 @@ SPI 的使用
 
 ## 使用方法
 
+### 主机模式
+
 * 从 machine 导入 SPI 模块
 
 ```python
@@ -36,9 +38,13 @@ spi1.write_readinto(w, r)
 cs.value(1)
 ```
 
+### 从机模式
+
+K210 SPI 从机模式只支持三线通信，因此 MaixPy 中并没有实现该模式，需要从机模式可参考[SPI_SLAVE 裸机实现](https://github.com/kendryte/kendryte-standalone-demo/tree/develop/spi_slave)。
+
 ## 示例
 
-选中片选 GPIO 对应从机并收发数据
+* 选中片选 GPIO 对应从机并收发数据
 
 ```python
 from machine import SPI
