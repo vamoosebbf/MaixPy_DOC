@@ -119,6 +119,7 @@
     - [HTPA 红外镜头](modules/others/htpa.md)
     - [舵机](modules/others/servo.md)
     - [ESP32 ADC](./modules/others/esp32_read_adc.md)
+    - [onwire 单总线](modules/others/onewire.md)
 * 更多功能
   * 系统
     - [主频、复位等](./course/others/system.md)
@@ -191,6 +192,7 @@
   - [modules.ultrasonic](./api_reference/extend/ultrasonic.md)
   - [modules.ws2812](./api_reference/extend/ws2812.md)
   - [modules.htpa](./api_reference/extend/htpa.md)
+  - [modules.onewire](./api_reference/extend/onewire.md)
 
 
 ## 常见问题 FAQ
