@@ -87,8 +87,8 @@ fm.unregister(14)
 
 | GPIOHS | 功能| 描述 |
 | ------ | --- | --- |
-| GPIOHS5 | LCD_DC      | LCD 读写信号引脚 |
-| GPIOHS4 | LCD_RST     | LCD 复位芯片脚 |
+| GPIOHS31 | LCD_DC      | LCD 控制信号引脚 |
+| GPIOHS30 | LCD_RST     | LCD 复位芯片脚 |
 | GPIOHS29 | SD_CS       | SD 卡 SPI 片选 |
 | GPIOHS28 | MIC_LED_CLK | SK9822_DAT |
 | GPIOHS27 | MIC_LED_DATA | SK9822_CLK |
