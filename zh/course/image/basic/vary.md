@@ -3,6 +3,18 @@
 
 这里简单介绍一些经常用到的图像的基本变换操作
 
+旋转：
+
+```python
+img.rotation_corr()
+```
+
+改变图像尺寸：
+
+```python
+img.resize()
+```
+
 更多的图像变换请看[image API](/api_reference/machine_vision/image.md)
 
 ## 图像缓冲区介绍

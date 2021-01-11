@@ -6,7 +6,11 @@
 
 ## 第一种， 使用`lcd`模块直接在屏幕上画
 
-```
+```python
+import image, lcd
+
+lcd.init()
+
 lcd.draw_string(0, 0, "hello")
 ```
 

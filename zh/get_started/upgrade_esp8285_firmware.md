@@ -88,7 +88,7 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 - 软件:
 
 - ESP 固件更新工具：ESP8285 **flash_download_tools**
-  - 下载链接：乐鑫官网：[**flash_download_tools**](https://www.espressif.com/zh-hans/support/download/other-tools)
+  - 乐鑫官网下载链接：[**flash_download_tools**](https://www.espressif.com/zh-hans/support/download/other-tools)
 
 - ESP8285 AT 固件：
   - 下载链接：[**ESP8266 AT bin**](https://cn.dl.sipeed.com/MAIX/factory_firmware/)

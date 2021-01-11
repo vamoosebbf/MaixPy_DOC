@@ -53,7 +53,7 @@ MaixPy 文档简介
 ## 关于 MaixPy
 
 
-[**MaixPy**](maixpy.sipeed.com) 是将 [Micropython](http://micropython.org/) 移植到 [K210](https://kendryte.com/)（一款 64 位双核带硬件 FPU、卷积加速器、FFT、Sha256 的 RISC-V CPU ） 的一个项目， 支持 MCU 常规操作， 更集成了硬件加速的 `AI` 机器视觉和麦克风阵列，`1TOPS` 算力 核心模块却不到`￥50`， 以快速开发具有极低成本和体积实用的 `AIOT` 领域智能应用。
+[**MaixPy**](https://maixpy.sipeed.com/zh/maixpy.sipeed.com) 是将 [Micropython](http://micropython.org/) 移植到 [K210](https://canaan-creative.com/product/kendryteai)（一款 64 位双核带硬件 FPU、卷积加速器、FFT、Sha256 的 RISC-V CPU ） 的一个项目， 支持 MCU 常规操作， 更集成了硬件加速的 `AI` 机器视觉和麦克风阵列，`1TOPS` 算力 核心模块却不到`￥50`， 以快速开发具有极低成本和体积实用的 `AIOT` 领域智能应用。
 
 > MicroPython 是基于 Python3 的语法做的一款解析器，包含了 Python3 的大多数基础语法， 主要运行在性能和内存有限的嵌入式芯片上。（注意 Micropython 不包含 Python3 的所有语法）
 
@@ -134,7 +134,7 @@ while True:
 
 首先我们需要选择一款适合自己的开发板，各个型号的 MaixPy 型号请点击：[开发板与配件选购指南](./develop_kit_board/get_hardware.md)，同时目录下也有对应开发板的硬件参数和资料
 
-要获得这些板子，可以访问Sipeed（矽速）官网[www.sipeed.com](https://sipeed.com/)，或者[官方淘宝店](https://sipeed.taobao.com/)
+要获得这些板子，可以访问Sipeed（矽速）官网[www.sipeed.com](https://www.sipeed.com/)，或者[官方淘宝店](https://sipeed.taobao.com/)
 
 
 

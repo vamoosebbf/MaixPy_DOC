@@ -5,7 +5,7 @@ MaixPy 开发板上电
 
 ## 检查硬件
 
-检查硬件是否有损坏， 以及摄像头和屏幕是否接好，排线千万不要接反了，根据前面的开发板描述操作
+检查硬件是否有损坏， 以及摄像头和屏幕是否接好，排线千万不要接反了。
 
 
 ## 连接硬件
@@ -54,7 +54,7 @@ Type "help()" for more information.
 
 ```python
 import sys
-sys.implementation.version
+print(sys.implementation.version)
 ```
 
 如果你在开发过程中遇到了问题， 也可以先尝试更新固件到最新版本

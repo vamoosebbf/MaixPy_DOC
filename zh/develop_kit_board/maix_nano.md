@@ -9,7 +9,7 @@
 |屏幕: | 无屏幕 |
 |摄像头（套餐）: | 30W 像素 GC0328 摄像头 |
 
-[Maix Nano](../../assets/hardware/m1n/sipeed_maix_nano.png)
+![Maix Nano](../../assets/hardware/m1n/sipeed_maix_nano.png)
 
 ### 硬件板载扩展接口
 

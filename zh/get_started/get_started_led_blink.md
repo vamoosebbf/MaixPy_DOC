@@ -7,7 +7,7 @@
 ## 电路
 
 众所周知， 点亮一个 LED 需要一个电源， 一个电阻， 一个 LED 灯泡，
-在 Dan Dock 开发板上， 有三个 LED， 线路如下：
+在 Maix Dock 开发板上， 有三个 LED， 线路如下：
 
 ![](../../assets/hardware/maix_dock/LED_sch.png)
 

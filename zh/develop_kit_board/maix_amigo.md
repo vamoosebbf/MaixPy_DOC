@@ -148,6 +148,7 @@ MaixAmigo 同样使用 MaixPy 入门 AIoT ，由于硬件特殊性，请在[配�
 
   更新方法查看: [更新固件](../get_started/upgrade_maixpy_firmware.md)
 
+  **若使用 amigo 开发板，请烧录大于或等于 v0.6.2_12 版本的专用 amigo 固件（例如：maixpy_v0.6.2_12_gf18990aa3_amigo_tft(ips)_xxxx.bin），它与标准 maixpy 固件的差异在于其内置了 amigo 硬件的配置（config.json），并且屏幕类型分为 ips 和 tft ，烧录任意屏幕类型固件都是可以启动的，但不同屏幕的显示会不正常（正常的是红色的 maixpy 欢迎页），所以根据实际情况都可以烧录一遍确认。**
 
 
 ###  运行第一个程序 `Hello World`
@@ -158,27 +159,10 @@ MaixAmigo 同样使用 MaixPy 入门 AIoT ，由于硬件特殊性，请在[配�
 
 ```python
 # -*- coding: UTF-8 -*-
-import sensor, image, time, utime, lcd
-from machine import I2C
+import sensor, image, time, lcd
 from fpioa_manager import fm
-from Maix import GPIO
-
-'''
-说明: 该例程为 Amigo 前后摄像头切换的 example.
-注意事项: 由于 Amigo 电源管理电路的设计 需要配置 PMU AXP173 的输出电压, 才可以正常使用摄像头
-'''
 
 # -------------
-try:
-  from machine import I2C
-  axp173 = I2C(I2C.I2C3, freq=100000, scl=24, sda=27)
-  axp173.writeto_mem(0x34, 0x27, 0x20, mem_size=8)
-  axp173.writeto_mem(0x34, 0x28, 0x0C, mem_size=8)
-  axp173.writeto_mem(0x34, 0x36, 0xCC, mem_size=8)
-  del axp173
-except Exception as e:
-  print(e)
-
 lcd.init(freq=20000000)
 
 while True:
@@ -187,7 +171,7 @@ while True:
         sensor.set_pixformat(sensor.YUV422)
         sensor.set_framesize(sensor.QVGA)
         sensor.skip_frames(time=2000)
-        for i in range(50):
+        for i in range(100):
             img = sensor.snapshot()
             lcd.display(img)
     except Exception as e:
@@ -198,8 +182,8 @@ while True:
         sensor.set_pixformat(sensor.YUV422)
         sensor.set_framesize(sensor.QVGA)
         sensor.skip_frames(time=2000)
-        for i in range(50):
-            img = sensor.snapshot()
+        for i in range(100):
+            img = sensor.snapshot().rotation_corr(z_rotation = +90)
             lcd.display(img)
 
     except Exception as e:
