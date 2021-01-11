@@ -4,7 +4,7 @@
 
 目前 MaixPy 系列采用 M1W 模块的作为核心模块的开发板有: MaixDock(M1W)， MaixGo
 
-通常情况下我们不需要更新模块内部 WIFI SOC ESP8285 的固件，但是如果使用过程中存在 bug，以及有新版本的固件发布是我们就可以更新固件
+通常情况下我们不需要更新模块内部 WIFI SOC ESP8285 的固件，但是如果使用过程中存在 bug，以及有新版本的固件发布时我们就可以更新固件
 
 > MaixDock、MaixGo 使用的 M1W 模块中的 ESP8285 默认烧录的是  AT 固件
 
@@ -90,29 +90,47 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 - ESP 固件更新工具：ESP8285 **flash_download_tools**
   - 下载链接：乐鑫官网：[**flash_download_tools**](https://www.espressif.com/zh-hans/support/download/other-tools)
 
-   ![flash_download_tools](../../assets/hardware/module_esp8285/20200911000322.png)
-   ![flash_download_tools](../../assets/hardware/module_esp8285/20200911000346.png)
-
 - ESP8285 AT 固件：
   - 下载链接：[**ESP8266 AT bin**](https://cn.dl.sipeed.com/MAIX/factory_firmware/)
  - 乐鑫官方下载链接: [espressif_esp8266-at](https://www.espressif.com/zh-hans/support/download/at?keys=&field_type_tid%5B%5D=14)
 
-   ![](../../assets/hardware/module_esp8285/20200911002752.png)
+   ![](../../assets/hardware/module_esp8285/image-20210105192007.png)
+
+
 
 ### Windows 使用 flash_download_tools 更新 ES8285（这里以 MaixDock 为例）：
 
 1. 按照下面配置，连接 MaixDock,
 
-   ![](../../assets/hardware/maix_dock/sipeed_maix_dock_m1w_2.png)
+    将USB 转串口模块和ESP8285连接，连接方式前面已经介绍
+
+   使用 USB 转串口模块，按照下表连接
+
+    | M1W                                    | USB 模块 | 说明 |
+    | -------------------------------------- | -------- | ---- |
+    | M1W GND                                | GND      | 共地 |
+    | K210 (IO6)/ESP8285 TX                 | RX       |      |
+    | K210 (IO7)/ESP8285 RX                  | TX       |      |
+    | k210 RST(上电之前接地，全过程拉低 RST) | GND      |      |
+
+    上电前 需要将 GPIO0 拉低，即将天线旁左上角的触点接地，进入 UART 下载模式。
+
+    ![](../../assets/hardware/maix_dock/maix_dock_2.jpg)
+
 
 2. 打开 **flash_download_tools**，
 
 3. 下载 **MaixDock ESP8285 固件**
 
+   ![](../../assets/hardware/module_esp8285/flash_download_tool.png)
+
 4. 选择 ESP8285 串口(一般都是串口号比较大的)
 
 5. 设置下载选项:
-   1. 如图配置相应选项, 注意**波特率一定要设置为 115200**
+
+    如图配置相应选项, 注意**波特率一定要设置为 115200**
+
+   ![](../../assets/hardware/module_esp8285/flash_download_tool_ESP8285.png)
 
 6. 点击 **Start** 更新固件，并等待完成更新
 
