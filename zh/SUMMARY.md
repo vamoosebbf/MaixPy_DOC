@@ -99,6 +99,7 @@
     - [Timer](modules/on_chip/timer.md)
     - [UART](modules/on_chip/uart.md)
     - [I2S](modules/on_chip/i2s.md)
+    - [WDT](modules/on_chip/wdt.md)
   * SP-MOD
     - [BT 蓝牙透传](./modules/sp_mod/sp_bt.md)
     - [LoRa 无线通信](./modules/sp_mod/sp_lora.md)
@@ -167,6 +168,7 @@
   - [Timer](./api_reference/machine/timer.md)
   - [UART](./api_reference/machine/uart.md)
   - [network](./api_reference/machine/network.md)
+  - [WDT](api_reference/machine/wdt.md)
 * [Maix](./api_reference/Maix/README.md)
   - [FPIOA](./api_reference/Maix/fpioa.md)
   - [GPIO](./api_reference/Maix/gpio.md)
