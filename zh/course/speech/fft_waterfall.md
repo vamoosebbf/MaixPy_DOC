@@ -42,7 +42,6 @@ for i in range(hist_x_num):
 ```python
 from Maix import GPIO, I2S,  FFT
 import image, lcd, math
-from board import board_info
 from fpioa_manager import fm
 import KPU as kpu
 

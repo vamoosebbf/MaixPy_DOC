@@ -310,7 +310,7 @@ nic.ifconfig()
 #### 参数
 
 * 不传参: 查询网卡信息
-* 传入`(ip, netmask, gateway, dns_server)`元组: 配置网卡, `ip` ip 地址, `netmask`子网掩码, `gateway`网关 IP 地址, `dns_server` DNS 服务 IP 地址.
+* 传入`(ip, netmask, gateway, dns_server)`字符串元组: 配置网卡, `ip` ip 地址, `netmask`子网掩码, `gateway`网关 IP 地址, `dns_server` DNS 服务 IP 地址.
 
 #### 返回值
 
