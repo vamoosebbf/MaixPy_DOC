@@ -1,7 +1,7 @@
 modules.ultrasonic
 ======
 
-超声波传感器
+Grove - Ultrasonic Ranger(超声波测距模块)，只需要单根数据线
 
 ![](../../../assets/ultrasonic.jpg)
 
@@ -10,6 +10,7 @@ modules.ultrasonic
 ### 参数
 
 * `gpiohs`: gpiohs 编号，需要先使用`fm`注册引脚,比如
+
 ```python
 from fpioa_manager import *
 from modules import ultrasonic
