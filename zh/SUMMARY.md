@@ -207,8 +207,9 @@
 
 * 进阶开发
   - [源码目录结构](./course/advance/project_framework.md)
-  * [如何添加一个 C 模块](./course/advance/add_c_module.md)
-  * [打包文件系统](./course/advance/pack_fs.md)
+  - [如何编译 MaixPy 工程](course/advance/compile.md)
+  - [如何添加一个 C 模块](./course/advance/add_c_module.md)
+  - [打包文件系统](./course/advance/pack_fs.md)
 
 * 参与贡献
   - [参与文档编写（规范）](./contribute/doc_convention.md)
