@@ -21,12 +21,12 @@ class machine.I2C(id, mode=I2C.MODE_MASTER, scl=None, sda=None, gscl=None, gsda=
 
 ### 参数
 
-* `id`： I2C ID, [0~2] \(I2C.I2C0~I2C.I2C2\) [3~5] \(I2C.I2C3~I2C.I2C5\) 是软模拟 I2C 的编号
+* `id`： I2C ID, [0~2] \(I2C.I2C0~I2C.I2C2\) [3~5] \(I2C.I2C3~I2C.I2C5, I2C_SOFT\) 是软模拟 I2C 的编号
 * `mode`： 模式， 主机(`I2C.MODE_MASTER`)和从机（`I2C.MODE_SLAVE`)模式
 * `scl`： SCL 引脚，直接传引脚编号即可，取值范围： [0,47]。 可以不设置，而是使用 [fm](../builtin_py/fm.md) 统一管理引脚映射。
 * `sda`： SDA 引脚，直接传引脚编号即可，取值范围： [0,47]。 可以不设置，而是使用 [fm](../builtin_py/fm.md) 统一管理引脚映射。
-* `gscl`: SCL 使用的 GPIOHS 号，使用软件模拟 I2C 时才需要使用。
-* `gsda`: SDA 使用的 GPIOHS 号，使用软件模拟 I2C 时才需要使用。
+* `gscl`: SCL 对应的 GPIOHS，使用软件模拟 I2C 时才需要传入，默认与 `scl` 相同。
+* `gsda`: SDA 对应的 GPIOHS，使用软件模拟 I2C 时才需要传入，默认与 `sda` 相同 。
 * `freq`： I2C通信频率， 支持标准100Kb/s, 快速400Kb/s， 以及更高速率（硬件支持超快速模式1000Kb/s，以及高速模式3.4Mb/s）
 * `timeout`： 超时时间，目前这个参数保留，设置无效
 * `addr`： 从机地址，如果是主机模式不用设置， 从机模式则代表从机（本机）地址
@@ -42,7 +42,7 @@ class machine.I2C(id, mode=I2C.MODE_MASTER, scl=None, sda=None, gscl=None, gsda=
 类似构造函数
 
 ```python
-i2c = I2C.init(id, mode=Timer.MODE_MASTER, scl, sda, freq=400000, timeout=1000, addr=0, addr_size=7, on_recieve=None, on_transmit=None, on_event=None)
+i2c = I2C.init(id, mode=Timer.MODE_MASTER, scl, sda, gscl, gsda, freq=400000, timeout=1000, addr=0, addr_size=7, on_recieve=None, on_transmit=None, on_event=None)
 ```
 
 #### 参数
