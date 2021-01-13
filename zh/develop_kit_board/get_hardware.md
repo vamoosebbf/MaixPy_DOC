@@ -85,7 +85,7 @@
     </tr>
 </table>
 
-开发板详细资料请看 [Wiki](https://wiki.sipeed.com/zh/maix/board/),  选择一款合适自己的开发板～
+开发板详细资料请看 [Wiki](),  选择一款合适自己的开发板～
 
 ### USB Type-C 连接线
 
