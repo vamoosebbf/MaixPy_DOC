@@ -131,7 +131,7 @@ GPIO.disirq()
 
 ### mode
 
-GPIO模式
+设置 GPIO 输入输出模式
 
 ```python
 GPIO.mode(MODE)
@@ -141,31 +141,13 @@ GPIO.mode(MODE)
 
 * MODE
 
-  • `GPIO.IN` 就是输入模式
+  • `GPIO.IN` 输入模式
 
-  • `GPIO.OUT` 就是输出模式
+  • `GPIO.PULL_UP` 上拉输入模式
+  
+  • `GPIO.PULL_DOWN` 下拉输入模式
 
-#### 返回值
-
-无
-
-### pull
-
-GPIO上下拉模式
-
-```python
-GPIO.pull(PULL)
-```
-
-#### 参数
-
-* PULL
-
-  • `GPIO.IRQ_RISING` 上升沿触发
-
-  • `GPIO.IRQ_FALLING` 下降沿触发
-
-  • `GPIO.IRQ_BOTH`  上升沿和下降沿都触发
+  • `GPIO.OUT` 输出模式
 
 #### 返回值
 
@@ -235,7 +217,7 @@ fm.register(board_info.LED_R,fm.fpioa.GPIO0)
 led_r=GPIO(GPIO.GPIO0,GPIO.OUT)
 utime.sleep_ms(500)
 led_r.value()
-fm.unregister(board_info.LED_R,fm.fpioa.GPIO0)
+fm.unregister(board_info.LED_R)
 ```
 
 ### DEMO2: 按键按下点亮 LED
@@ -264,8 +246,8 @@ while True:
 
 led_b.value(1)
 
-fm.unregister(board_info.LED_R,fm.fpioa.GPIOHS0)
-fm.unregister(board_info.BOOT_KEY,fm.fpioa.GPIOHS1)
+fm.unregister(board_info.LED_R)
+fm.unregister(board_info.BOOT_KEY)
 ```
 
 ### DEMO3: 在 3 秒内等待按键触发中断
@@ -287,5 +269,5 @@ key.irq(test_irq, GPIO.IRQ_BOTH, GPIO.WAKEUP_NOT_SUPPORT,7)
 utime.sleep_ms(3000) # 在 3 秒内等待触发
 
 key.disirq() # 禁用中断
-fm.unregister(board_info.BOOT_KEY,fm.fpioa.GPIOHS0)
+fm.unregister(board_info.BOOT_KEY)
 ```
