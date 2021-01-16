@@ -19,7 +19,7 @@
 - TF 卡槽: 多媒体资源扩展，支持大容量储存
 - 摄像头: 搭载 **0V7740** **30W** 像素 **Sensor**
 - Type-C 接口:
-- 三向按键: 
+- 三向按键:
 
 
 ### 板载功能介绍
@@ -81,7 +81,7 @@ Grove模块主要有 4 种接口:
 | pin4 | GND 地               | —    |
 
 
-1. Grove UART :<br/>
+2. Grove UART :<br/>
     The Grove UART 是特殊的一种数字输入输出接口.<br/>
     它使用引脚 1 和引脚 2 进行串行输入和发送. <br/>
     引脚1是 RX 线(用于接收数据，因此是输入)，
@@ -94,7 +94,7 @@ Grove模块主要有 4 种接口:
 | pin3 | VCC      | 供电引脚 5V/3.3V |
 | pin4 | GND      | 地               |
 
-1. Grove I2C:<br/>
+3. Grove I2C:<br/>
     有许多类型的I2C Grove 传感器可用.<br/>MaixCube 上的 Grove 只支持 3.3V 传感器
 
   Grove I2C 连接器具有标准布局.引脚 1 是SCL信号，引脚 2 是SDA信号

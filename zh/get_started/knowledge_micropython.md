@@ -6,13 +6,13 @@
 
 ### 关于 MicroPython:
 
-MicrotPython 是编程语言 Python3 的精简高效实现，语法和 Python3 保持一致，但只实现了 Python 标准库的一小部分，并且经过优化，可以在 MCU ， WIFI SOC 上等资源受限的环境中使用，所以我们在使用 MicroPython 需要了解其语法。
+MicroPython 是编程语言 Python3 的精简高效实现，语法和 Python3 保持一致，但只实现了 Python 标准库的一小部分，并且经过优化，可以在 MCU ， WIFI SOC 上等资源受限的环境中使用，所以我们在使用 MicroPython 需要了解其语法。
 
 如果之前有 **C/C++/Java** (或任何其他语言)的编程经验，推荐
-[《廖雪峰的 Python 教程》]()
+[《廖雪峰的 Python 教程》](https://www.liaoxuefeng.com/wiki/1016959663602400)
 
 如果之前没有任何编程经验，推荐
-[《笨方法学 Python》]()
+[《笨方法学 Python》](https://wizardforcel.gitbooks.io/lpthw/content/)
 
 ## REPL 和 串口
 
@@ -50,7 +50,7 @@ print('100 + 200 =', 100 + 200)
 
 注意, 对于 100 + 200, Python 解释器自动计算出结果 300，但是 '100 + 200 =' 是字符串而非数学公式，Python 把它视为字符串。
 
-## MicroPython 基于语法
+## MicroPython 基本语法
 ### 变量
 
 在 Python 中，等号 `=` 是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量，例如：

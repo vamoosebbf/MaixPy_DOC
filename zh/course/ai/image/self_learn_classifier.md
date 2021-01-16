@@ -10,7 +10,7 @@
 * [在这里](https://dl.sipeed.com/MAIX/MaixPy/release/master/maixpy_v0.5.0_33_gfcd6d8a) 下载版本 >= v0.5.0-33 的固件
 * [下载 kmodel](https://www.maixhub.com/index.php/index/index/detail/id/225.html)
 * 使用 [kflash_gui](https://github.com/sipeed/kflash_gui) 下载固件和模型
-* 运行 [示例脚本](self_learning_classifier.py)
+* 运行 [示例脚本](https://github.com/sipeed/MaixPy_scripts/blob/master/machine_vision/self_learning_classifier/self_learning_classifier.py)
 
 然后运行启动后开始学习物体
 
@@ -24,7 +24,7 @@
 ## 保存/加载学习好的特征
 
 * 使用 `classifier.save(path)` 来保存学习好的特征到`path`文件
-* 使用 `KPU.classifier.load()` 来加载特征, 参考 [self_learning_classifier_load.py](self_learning_classifier_load.py) 文件
+* 使用 `KPU.classifier.load()` 来加载特征, 参考 [self_learning_classifier_load.py](https://github.com/sipeed/MaixPy_scripts/blob/master/machine_vision/self_learning_classifier/self_learning_classifier_load.py) 文件
 
 
 
