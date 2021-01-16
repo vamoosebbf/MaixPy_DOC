@@ -21,9 +21,9 @@
 | M1W                                    | USB 模块 | 说明 |
 | -------------------------------------- | -------- | ---- |
 | M1W GND                                | GND      | 共地 |
-| K210 (IO6)/ESP8285 TX                 | RX       |      |
-| K210 (IO7)/ESP8285 RX                  | TX       |      |
-| k210 RST(上电之前接地，全过程拉低 RST) | GND      |      |
+| K210 (IO6)/ESP8285 TX                  | RX       | -    |
+| K210 (IO7)/ESP8285 RX                  | TX       | -    |
+| k210 RST(上电之前接地，全过程拉低 RST) | GND      | -    |
 
    上电之后板子会在串口输出(这里使用 XCOM, 波特率 115200) 来验证 ESP8285 是否正常启动
    ![image-20200805175207487](../../assets/hardware/module_esp8285/image-20200805175207487.png)
@@ -100,41 +100,38 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 
 ### Windows 使用 flash_download_tools 更新 ES8285（这里以 MaixDock 为例）：
 
-1. 按照下面配置，连接 MaixDock,
+将USB 转串口模块和ESP8285连接，连接方式前面已经介绍，使用 USB 转串口模块，按照下表连接:
 
-    将USB 转串口模块和ESP8285连接，连接方式前面已经介绍
+| M1W                                    | USB 模块 | 说明 |
+| -------------------------------------- | -------- | ---- |
+| M1W GND                                | GND      | 共地 |
+| K210 (IO6)/ESP8285 TX                  | RX       | -    |
+| K210 (IO7)/ESP8285 RX                  | TX       | -    |
+| k210 RST(上电之前接地，全过程拉低 RST) | GND      | -    |
 
-   使用 USB 转串口模块，按照下表连接
+上电前 需要将 GPIO0 拉低，即将天线旁左上角的触点接地，进入 UART 下载模式。
 
-    | M1W                                    | USB 模块 | 说明 |
-    | -------------------------------------- | -------- | ---- |
-    | M1W GND                                | GND      | 共地 |
-    | K210 (IO6)/ESP8285 TX                 | RX       |      |
-    | K210 (IO7)/ESP8285 RX                  | TX       |      |
-    | k210 RST(上电之前接地，全过程拉低 RST) | GND      |      |
-
-    上电前 需要将 GPIO0 拉低，即将天线旁左上角的触点接地，进入 UART 下载模式。
-
-    ![](../../assets/hardware/maix_dock/maix_dock_2.jpg)
+![](../../assets/hardware/maix_dock/maix_dock_2.jpg)
 
 
-2. 打开 **flash_download_tools**，
+1. 打开 **flash_download_tools**
 
-3. 下载 **MaixDock ESP8285 固件**
+2. 下载 **MaixDock ESP8285 固件**
 
-   ![](../../assets/hardware/module_esp8285/flash_download_tool.png)
+    ![](../../assets/hardware/module_esp8285/flash_download_tool.png)
 
-4. 选择 ESP8285 串口(一般都是串口号比较大的)
+3. 选择 ESP8285 串口(一般都是串口号比较大的)
 
-5. 设置下载选项:
+4. 设置下载选项:
 
     如图配置相应选项, 注意**波特率一定要设置为 115200**
 
-   ![](../../assets/hardware/module_esp8285/flash_download_tool_ESP8285.png)
+    ![](../../assets/hardware/module_esp8285/flash_download_tool_ESP8285.png)
 
-6. 点击 **Start** 更新固件，并等待完成更新
+5. 点击 **Start** 更新固件，并等待完成更新
 
-7. 验证更新是否完成
+6. 验证更新是否完成
+
    - 使用 XCOM 波特率 115200, 打开 ESP8285 串口，输出 `AT\r\n`,如图提示 `OK` 即刷入成功
     ![esp8285_at.png](../../assets/hardware/maix_dock/esp8285_at.png)
 
@@ -143,23 +140,24 @@ ESP8285 进入不同模式的 IO 电平请看如下表：
 
 1. 按照下面配置，连接 MaixDock,
 
-   ![](../../assets/hardware/maix_dock/sipeed_maix_dock_m1w_2.png)
+    ![](../../assets/hardware/maix_dock/sipeed_maix_dock_m1w_2.png)
 
 2. 安装 esptool
 
-```shell
-pip3 install esptool
-```
+    ```shell
+    pip3 install esptool
+    ```
 
 3. 下载 **MaixDock ESP8285 固件**
 
-```
-ls /dev/ttyUSB* # 查看 USB 串口
-esptool --port /dev/ttyUSB0 write_flash 0x0 ESP8285-AT-V1.7.4_8Mbit_40Mhz.bin # 烧录固件
-```
+    ```shell
+    ls /dev/ttyUSB* # 查看 USB 串口
+    esptool --port /dev/ttyUSB0 write_flash 0x0 ESP8285-AT-V1.7.4_8Mbit_40Mhz.bin # 烧录固件
+    ```
 
-7. 验证更新是否完成
-   - 使用 XCOM 波特率 115200, 打开 ESP8285 串口，输出 `AT\r\n`,如图提示 `OK` 即刷入成功
+4. 验证更新是否完成
+
+    使用 XCOM 波特率 115200, 打开 ESP8285 串口，输出 `AT\r\n`,如图提示 `OK` 即刷入成功
     ![esp8285_at.png](../../assets/hardware/maix_dock/esp8285_at.png)
 
 
