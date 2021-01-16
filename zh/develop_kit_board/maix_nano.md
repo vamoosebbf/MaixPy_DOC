@@ -23,3 +23,8 @@ SP-MOD 即为 sipeed module, simplify PMOD, super module
 |---|---|
 |SP-MODE 接口描述|![SP-MODE 接口描述](../../assets/hardware/module_spmod/spmod_interface_1.png)|
 |硬件接口|![硬件接口](../../assets/hardware/module_spmod/spmod_interface_2.png)|
+
+### 资料下载
+
+M1n 资料下载: [dl.sipeed.com](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-M1n)
+M1n 原理图下载：[Sipeed M1n Datasheet V1.0.pdf](https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-M1n/Sipeed%20M1n%20Datasheet%20V1.0.pdf)

@@ -190,3 +190,14 @@ while True:
         print(e)
 
 ```
+
+1. 资料下载
+
+Maix-Amigo 资料下载: [Sipeed-Amigo](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Amigo)
+
+Maix-Amigo 规格书下载: [Sipeed-Amigo](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Amigo/ProductSpecification)
+
+Maix-Amigo IPS 版本 原理图下载：[Maix_Amigo_2970(Schematic).pdf](https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-Amigo/2970/Maix_Amigo_2970(Schematic).pdf)
+
+
+Maix-Amigo TFT 版本 原理图下载：[Maix_Amigo_2960(Schematic).pdf](https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-Amigo/2960/Maix_Amigo_2960(Schematic).pdf)

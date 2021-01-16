@@ -13,3 +13,8 @@
 ### 外观一览
 
 ![Maix Go](../../assets/hardware/maix_go/Go.png)
+
+
+1. 资料下载
+
+Sipeed-Maix-Go 资料下载: [Sipeed-Maix-Go](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Maix-GO)

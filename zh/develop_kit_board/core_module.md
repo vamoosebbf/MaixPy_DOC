@@ -22,6 +22,8 @@ M1n 核心模块采用了 M.2 的金手指接口，并板载了24Pin 的 FPC 底
 
 
 1. 资料下载
+
 芯片 K210 Datasheet: Kendryte 官网
 
-M1n 资料下载: [dl.sipeed.com](dl.sipeed.com)
+M1n 资料下载: [dl.sipeed.com](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-M1n)
+M1n 原理图下载：[Sipeed M1n Datasheet V1.0.pdf](https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-M1n/Sipeed%20M1n%20Datasheet%20V1.0.pdf)

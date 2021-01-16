@@ -36,6 +36,10 @@
 MaixDuino 引脚图
 
 
-### 资料相关链接
+1. 资料下载
 
-- [MaixDuino 原理图](https://dl.sipeed.com/MAIX/HDK/Sipeed-Maixduino)
+Sipeed-Maix-Duino 资料下载: [Sipeed-Maix-Duino](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Maixduino/)
+
+Sipeed-Maix-Duino 规格书下载: [Sipeed-Maix-Duino](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Maixduino/Specifications)
+
+Sipeed-Maix-Duino 原理图下载：[Sipeed-Maix-Duino](https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-Maixduino/Maixduino_2832/Maixduino_2832(Schematic).pdf)
