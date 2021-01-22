@@ -35,8 +35,12 @@ for i in range(hist_x_num):
 
 ## 例程
 
-实时采集音频数据并绘制为 FFT 瀑布图
-
 > 以下例程在固件v0.5.1 MaixDock 测试通过
 
+实时采集音频数据并绘制为 FFT 瀑布图
+
 [demo_fft_waterfall.py](https://github.com/sipeed/MaixPy_scripts/blob/master/hardware/demo_fft_waterfall.py)
+
+效果：
+
+![](../../../assets/course/fft_waterfall.gif)

@@ -10,7 +10,7 @@ image 模块中已经实现有查找二维码方法，需要使用非 minimum �
 * 从摄像头获取图片，将摄像头对准二维码
 
 ```python
-import image，sensor
+import image, sensor
 img=sensor.snapshot()
 ```
 
@@ -54,7 +54,7 @@ while True:
     res = img.find_qrcodes()
     fps =clock.fps()
     if len(res) > 0:
-        img.draw_string(2,2，res[0].payload()，color=(0,128,0)，scale=2)
+        img.draw_string(2, 2, res[0].payload(), color=(0,128,0), scale=2)
         print(res[0].payload())
     lcd.display(img)
 ```
