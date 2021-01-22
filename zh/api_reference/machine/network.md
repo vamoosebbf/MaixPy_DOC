@@ -9,7 +9,7 @@ network
 在部分开发板上带了 一个 使用`AT`方式交互的网卡模块，比如`esp8285`，与`k210`通过串口连接
 
 引脚`8`是使能脚，可以创建一个`GPIO`对象来控制它的高低电平来实现使能和失能，也可以用它复位（先低后高），复位后需要等待一小段时间才能操作，
-可以查看例程[wifi_ap_scan.py](https://github.com/sipeed/MaixPy_scripts/blob/master/network/demo_wifi_ap_scan.py)
+可以查看例程[network_espat.py](https://github.com/sipeed/MaixPy_scripts/blob/79a5485ec983e67bb8861305a52418b29e0dc205/network/network_espat.py)
 
 ### [esp32](#ESP32_Module)
 目前在`MaixDuino`开发板中有一个 `esp32` 模块通过 `spi` 与`k210`相连
@@ -85,7 +85,7 @@ nic.isconnected()
 
 ### disconnect
 
-断开wifi连接
+断开 wifi 连接
 
 #### 参数
 
@@ -106,22 +106,22 @@ nic.isconnected()
 #### 返回值
 
 一个 `list`对象， 每个元素包含了一个字符串， 字符串来自`AT`模块的响应，内容和`esp8285`的`AT指令文档`所描述的相同，如下：
-`'<ecn>,<ssid>,<rssi>,<mac>,<channel>,<freq	offset>,<freq cali>,<pairwise_cipher>, <group_cipher>,<bgn>,<wps>'`
+`ecn, ssid, rssi,mac, channel, freq	offset, freq cali, pairwise_cipher, group_cipher, bgn, wps`
 
-* `<ecn>`：加密⽅式
+* `ecn`：加密⽅式
   * 0：OPEN
   * 1：WEP
   * 2：WPA_PSK
   * 3：WPA2_PSK
   * 4：WPA_WPA2_PSK
   * 5：WPA2_Enterprise（⽬前 AT 不⽀持连接这种加密 AP）
-* `<ssid>`：字符串参数，AP 的 SSID
-* `<rssi>`：信号强度
-* `<mac>`：字符串参数，AP 的 MAC 地址
-* `<channel>`：信道号
-* `<freq	offset>`：AP 频偏，单位：kHz。此数值除以 2.4，可得到 ppm 值
-* `<freq	cali>`：频偏校准值
-* `<pairwise_cipher>`:
+* `ssid`：字符串参数，AP 的 SSID
+* `rssi`：信号强度
+* `mac`：字符串参数，AP 的 MAC 地址
+* `channel`：信道号
+* `freq offset`：AP 频偏，单位：kHz。此数值除以 2.4，可得到 ppm 值
+* `freq	cali`：频偏校准值
+* `pairwise_cipher`:
   * 0：CIPHER_NONE
   * 1：CIPHER_WEP40
   * 2：CIPHER_WEP104
@@ -129,10 +129,10 @@ nic.isconnected()
   * 4：CIPHER_CCMP
   * 5：CIPHER_TKIP_CCMP
   * 6：CIPHER_UNKNOWN
-* `<group_cipher>`: 定义与 `<pairwise_cipher>` 相同
-* `<bgn>`: bit0 代表 b 模式; bit1 代表 g 模式; bit2 代表 n 模式
+* `group_cipher`: 定义与 `pairwise_cipher` 相同
+* `bgn`: bit0 代表 b 模式; bit1 代表 g 模式; bit2 代表 n 模式
          若对应 bit 为 1，表示该模式使能；若对应 bit 为 0，则该模式未使能。
-* `<wps>`：0，WPS 未使能；1，WPS 使能
+* `wps`：0，WPS 未使能；1，WPS 使能
 
 比如： 
 ```

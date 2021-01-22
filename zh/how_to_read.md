@@ -65,7 +65,7 @@ http://localhost:4000/zh/how_to_read.html
 
 ## 其它教程
 
-* 除了文档，还可以浏览[博客](http://blog.sipeed.com)看用户写的教程， 或者百度搜索， 以及各个开发者的博客，都会有很多开发教程开发日记等， 都可以参考
+* 除了文档，还可以浏览[博客](http://blog.sipeed.com)，[BBS](https://bbs.sipeed.com)用户写的教程， 或者百度搜索， 以及各个开发者的博客，都会有很多开发教程开发日记等， 都可以参考
 
 ## 提问技巧
 

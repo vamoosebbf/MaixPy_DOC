@@ -1,4 +1,4 @@
-语音识别模块 (maix_asr)
+maix_asr（语音识别模块）
 ===
 
 ## class（类）

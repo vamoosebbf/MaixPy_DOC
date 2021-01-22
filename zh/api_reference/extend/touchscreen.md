@@ -1,4 +1,4 @@
-touchscreen   触摸屏幕
+touchscreen（触摸屏幕）
 =============
 
 `touchscreen` 模块包含了基本的读取触摸屏幕操作

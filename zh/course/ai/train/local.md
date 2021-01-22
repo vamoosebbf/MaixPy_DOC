@@ -14,7 +14,6 @@
 如果你的主力系统是 Windows， 你可以用以下系统环境：
 * 使用虚拟机, `virtual box` 或者 `vmware` 都可以， 系统推荐安装`Ubuntu20.04`
 * 或者安装双系统，安装方法请自行搜索学习，或者看[这个双系统安装教程](https://neucrack.com/p/330)
-* 使用 `Windows 子系统` 安装`Ubuntu 20.04`, 教程看[这里]
 
 你可能想着在 `Windows` 下面进行开发， 但是这里强烈建议使用`Linux`而不是`Windows`：
 * 首先，大多数模型训练框架都是首先支持 `Linux`， 在`Linux`下面开发的难度会比`Windows`下开发更加容易

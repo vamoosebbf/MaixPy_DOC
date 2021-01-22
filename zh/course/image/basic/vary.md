@@ -15,7 +15,7 @@ img.rotation_corr()
 img.resize()
 ```
 
-更多的图像变换请看[image API](/api_reference/machine_vision/image.md)
+更多的图像变换请看[image API](./../../../api_reference/machine_vision/image/image.md)
 
 ## 图像缓冲区介绍
 

@@ -60,6 +60,9 @@ Mic-Array 麦克风阵列，截止 MaixPy 版本 `MicroPython v0.5.0-218-g8053a7
 | LED_DAT | 24 | SK9822 DAT |
 | LED_CLK | 25 | SK9822 CLK |
 
+### 例程
+
+声源定位
 
 ```python
 from Maix import MIC_ARRAY as mic
@@ -78,3 +81,7 @@ while True:
     a = lcd.display(imgc)
 mic.deinit()
 ```
+
+效果：
+
+<iframe width="600" height="350"  src="//player.bilibili.com/player.html?aid=37058760&cid=65120313&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

@@ -6,84 +6,41 @@
 
   软件上 MaixAmigo 默认搭载 MaixPy, 用户可以非常轻松的使用 MicroPython 语法快速进行人脸识别、物体分类等多种 AIoT 开发，同时还预留开发调试接口，也能将其作为一款功能强大的 AI 学习开发板。
 
-## MaixAmigo 外观及功能介绍
+## 外观及功能介绍
 
 ### 外观一览
 
 ![MaixAmigo](../../assets/hardware/maix_amigo/maix_amigo_0.png)
 
-![MaixAmigo](../../assets/hardware/maix_amigo/sipeed_maix_amigo_vi.png)
-
-### 板载硬件功能介绍
+### 板载功能
 
 | 项目 | 说明 |
 | ---- | ---- |
-|CPU: |双核 64bit RISC-V / 400MHz* (双精度FPU集成)|
-|内存: |8MiB 64bit 片上 SRAM|
-|存储: |16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB**)|
-|屏幕: |3.5寸 TFT 显示屏, 分辨率: 320\*480, 支持电容触摸(FT6X36) |
-|摄像头: |OV7740 (后摄)与GC0328(前摄) 各 30W 像素(最大分辨率 VGA:640\*480)|
-|电池: |板载可充电锂聚合物电池 (容量520mAh ) |
+|CPU：|双核 64bit RISC-V / 400MHz* (双精度FPU集成)|
+|内存：|8MiB 64bit 片上 SRAM|
+|存储：|16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB**)|
+|屏幕：|3.5寸 TFT 显示屏, 分辨率：320\*480, 支持电容触摸(FT6X36) |
+|摄像头：|OV7740 (后摄)与GC0328(前摄) 各 30W 像素(最大分辨率 VGA:640\*480)|
+|电池：|板载可充电锂聚合物电池 (容量520mAh ) |
 |板载扬声器与麦克风| 集成单音频控制器 ES8374 1W 8Ω 扬声器|
-|板载接口: |USB-C \*2 (K210 调试供电接口+兼容 STM32 核心板 USB 接口)  Grove \*3 & SPMOD\*3 (可拓展模块)|
-|三轴加速度传感器:| MSA301|
+|板载接口：|USB-C \*2 (K210 调试供电接口+兼容 STM32 核心板 USB 接口) |
+|板载传感器:| MSA301 三轴加速度传感器|
+|TF 卡槽：|多媒体资源扩展，支持大容量储存|
 |电池:| 520mAh 锂电池 |
+
+### 引脚资源
+
+![MaixAmigo](../../assets/hardware/maix_amigo/sipeed_maix_amigo_vi.png)
 
 ### 硬件板载扩展接口
 
-MaixAmigo 对用户开放了两个高度扩展的接口: SP-MOD 与 Grove 接口,
-用户可以很方便的进行 DIY
-
-#### SP-MOD 接口
-
-SP-MOD 即为 sipeed module, simplify PMOD, super module
-
-| 接口 | 接口描述 |
-|---|---|
-|SP-MODE 接口描述|![SP-MODE 接口描述](../../assets/hardware/module_spmod/spmod_interface_1.png)|
-|硬件接口(举例)|![硬件接口](../../assets/hardware/module_spmod/spmod_interface_2.png)|
-
-MaixAmigo 板载了三个 SPMOD 接口
-
-| PIN\NO. | SP-MOD1 | SP-MOD2 | SP-MOD3(游戏手柄) |
-| --- | --- | --- | --- |
-| 1 | GND | GND | GND |
-| 2 | 12  | 29  | --- |
-| 3 | 6   | 28  | --- |
-| 4 | 24  | 22  | IO24 |
-| 5 | 27  | 25  | IO27 |
-| 6 | 10  | 30  | --- |
-| 7 | 11  | 8   | --- |
-| 8 | 3V3 | 3V3 | 3V3 |
-
-#### Grove 接口
-
-- Grove 模块接口
-
-Grove 接口的线缆有 4 种颜色，用户可以根据颜色快速区别
-![](../../assets/hardware/module_grove/grove_interface.jpg)
-
-| Pin | 颜色 | 描述 |
-| --- | --- | --- |
-| 1 | 黄色 | (例如, I2C Grove Connectors 上的SCL) |
-| 2 | 白色 | (例如, I2C Grove Connectors 上的SDA) |
-| 3 | 红色 |   VCC (所有的Grove接口红色都是VCC) |
-| 4 | 黑色 |   GND (所有的Grove接口黑色都是GND) |
-
-MaixAmigo 板载了三个 GROVE 接口
-
-| PIN | GROVE 1 | GROVE 2 | GROVE 3 |
-| --- | --- | --- | --- |
-| 1 | GND | GND | GND |
-| 2 | 3V3 | 3V3 | 3V3 |
-| 3 | IO5 | IO3 | IO1 |
-| 4 | IO4 | IO2 | IO0 |
+MaixAmigo 对用户开放了两种高度扩展的接口：三个 [SP-MOD](./../modules/sp_mod/README.md) 与 三个 [Grove](./../modules/grove/README.md) 接口,用户可以很方便的进行 DIY。
 
 ### 板载 I2C 设备
 
 MaixAmigo 板载 I2C 传感器/IC
 
-| IC | 设备 id | I2C 地址(7位地址) |配置：SCL: IO_24, SDA: IO_27|
+| IC | 设备 id | I2C 地址(7位地址) |配置：SCL：IO_24, SDA：IO_27|
 | --- | --- | --- | --- |
 |---|I2C Address| <<1|MaixPy 读取地址|
 |ES8374|0x08|0x10|D(16)|
@@ -106,22 +63,22 @@ MaixAmigo 同样使用 MaixPy 入门 AIoT ，由于硬件特殊性，请在[配�
 4. 下载并打开最新的 MaixPy IDE
 5. MaixPy IDE 连接开发板 运行 MaixPy 示例程序
 
-#### 软硬件准备
+### 软硬件准备
 
 硬件准备:
 
   - **电脑**一台
   - **MaixAmigo** 开发板
-  - **可靠**的 USB Type-C 数据线一条: 注意一定要**可靠**的数据线
+  - **可靠**的 USB Type-C 数据线一条：注意一定要**可靠**的数据线
 
 软件准备:
 
-  - USB 驱动: **FT2232** ->[[下载链接点这里](https://dl.sipeed.com/MAIX/tools/ftdi_vcp_driver)](https://dl.sipeed.com/MAIX/tools/ftdi_vcp_driver)
-  - Kflash_gui: [https://dl.sipeed.com/MAIX/tools/kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui)
-  - MaixPy IDE : [https://dl.sipeed.com/MAIX/MaixPy/ide/_/v0.2.5](https://dl.sipeed.com/MAIX/MaixPy/ide/_/v0.2.5)
-  - 例程程序库: [https://github.com/sipeed/MaixPy_scripts](https://github.com/sipeed/MaixPy_scripts)
+  - USB 驱动：**FT2232** ->[[下载链接点这里](https://dl.sipeed.com/MAIX/tools/ftdi_vcp_driver)](https://dl.sipeed.com/MAIX/tools/ftdi_vcp_driver)
+  - Kflash_gui：[https://dl.sipeed.com/MAIX/tools/kflash_gui](https://dl.sipeed.com/MAIX/tools/kflash_gui)
+  - MaixPy IDE ：[https://dl.sipeed.com/MAIX/MaixPy/ide/_/v0.2.5](https://dl.sipeed.com/MAIX/MaixPy/ide/_/v0.2.5)
+  - 例程程序库：[https://github.com/sipeed/MaixPy_scripts](https://github.com/sipeed/MaixPy_scripts)
 
-####  安装驱动
+###  安装驱动
 
 我们在拿到 Maix Amigo 并连接到电脑的时候，可以打开设备管理器查看串口驱动是否已经安装，打开设备管理器的方法有:
 - 此电脑(右键) -> 属性 -> 设备管理器
@@ -146,7 +103,7 @@ MaixAmigo 同样使用 MaixPy 入门 AIoT ，由于硬件特殊性，请在[配�
   用户拿到开发板之后，板载的固件默认或许已经不是最新版的，那么在使用过程中会存在或多或少的 bug，
   我们这时候就需要更新固件版本到最新版本
 
-  更新方法查看: [更新固件](../get_started/upgrade_maixpy_firmware.md)
+  更新方法查看：[更新固件](../get_started/upgrade_maixpy_firmware.md)
 
   **若使用 amigo 开发板，请烧录大于或等于 v0.6.2_12 版本的专用 amigo 固件（例如：maixpy_v0.6.2_12_gf18990aa3_amigo_tft(ips)_xxxx.bin），它与标准 maixpy 固件的差异在于其内置了 amigo 硬件的配置（config.json），并且屏幕类型分为 ips 和 tft ，烧录任意屏幕类型固件都是可以启动的，但不同屏幕的显示会不正常（正常的是红色的 maixpy 欢迎页），所以根据实际情况都可以烧录一遍确认。**
 
@@ -158,7 +115,7 @@ MaixAmigo 同样使用 MaixPy 入门 AIoT ，由于硬件特殊性，请在[配�
 
 
 ```python
-# -*- coding: UTF-8 -*-
+# -*- coding：UTF-8 -*-
 import sensor, image, time, lcd
 from fpioa_manager import fm
 
@@ -191,13 +148,15 @@ while True:
 
 ```
 
-1. 资料下载
+## 资料下载
 
-Maix-Amigo 资料下载: [Sipeed-Amigo](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Amigo)
+Maix-Amigo 资料下载：[Sipeed-Amigo](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Amigo)
 
-Maix-Amigo 规格书下载: [Sipeed-Amigo](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Amigo/ProductSpecification)
+Maix-Amigo 规格书下载：[Sipeed-Amigo](https://dl.sipeed.com/shareURL/MAIX/HDK/Sipeed-Amigo/ProductSpecification)
 
-Maix-Amigo IPS 版本 原理图下载：[Maix_Amigo_2970(Schematic).pdf](https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-Amigo/2970/Maix_Amigo_2970(Schematic).pdf)
+Maix-Amigo IPS 版本 原理图下载：[Maix_Amigo_2970(Schematic).pdf][Maix_Amigo_2970(Schematic).pdf]
 
+Maix-Amigo TFT 版本 原理图下载：[Maix_Amigo_2960(Schematic).pdf][Maix_Amigo_2960(Schematic).pdf]
 
-Maix-Amigo TFT 版本 原理图下载：[Maix_Amigo_2960(Schematic).pdf](https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-Amigo/2960/Maix_Amigo_2960(Schematic).pdf)
+[Maix_Amigo_2970(Schematic).pdf]: https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-Amigo/2970/Maix_Amigo_2970(Schematic).pdf
+[Maix_Amigo_2960(Schematic).pdf]: https://dl.sipeed.com/fileList/MAIX/HDK/Sipeed-Amigo/2960/Maix_Amigo_2960(Schematic).pdf

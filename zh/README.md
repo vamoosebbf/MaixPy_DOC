@@ -118,6 +118,25 @@ while True:
     lcd.display(img)
 ```
 
+**AI 物体检测**:
+
+```python
+import KPU as kpu
+import sensor
+
+sensor.reset()
+sensor.set_pixformat(sensor.RGB565)
+sensor.set_framesize(sensor.QVGA)
+sensor.set_windowing((224, 224))
+
+model = kpu.load("/sd/mobilenet.kmodel")  # load model
+while(True):
+    img = sensor.snapshot()               # take picture by camera
+    out = kpu.forward(task, img)[:]       # inference, get one-hot output
+    print(max(out))                       # print max probability object ID
+```
+please read doc before run it!
+
 ## 这篇文档的内容
 
 所有关于 MaixPy 的内容， 包括：
@@ -145,7 +164,7 @@ while True:
 
 MaixPy 源码托管在 [github](https://github.com/sipeed/MaixPy)
 
-本项目主要由 &copy;</p><a href="https://www.sipeed.com" style="color: #f14c42">Sipeed</a> Co.,Ltd. 维护， 并接受来自开源社区的贡献， 具体贡献这见[贡献者列表](https://github.com/sipeed/MaixPy/graphs/contributors)
+本项目主要由 &copy;<a href="https://www.sipeed.com" style="color: #f14c42">Sipeed</a> Co.,Ltd. 维护， 并接受来自开源社区的贡献， 具体贡献这见[贡献者列表](https://github.com/sipeed/MaixPy/graphs/contributors)
 
 ## MaixPy 文档源码
 

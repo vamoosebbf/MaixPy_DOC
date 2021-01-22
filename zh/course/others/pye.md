@@ -19,7 +19,7 @@ print("hello maixpy")
 
 **注意**： 使用这款编辑器对使用的串口工具有一定要求, 必须将 `BackSpace` 按键设置为 `DEL` 功能, 否则按 `BackSpace` 调用的是 `Ctrl+H` 一样的功能（即字符替换）。
 
-Linux 下推荐使用 `minicom`, 需要使用 `sudo minicom -s` 来设置,参考[前面的教程](env_serial_tools.md)
+Linux 下推荐使用 `minicom`, 需要使用 `sudo minicom -s` 来设置,参考[前面的教程](./../../get_started/env_serial_tools.md)
 
 Windows 下也一样, 根据自己使用的工具上网搜设置方法, 比如 `xshell` 搜 `xshell如何设置backspace为del` 得到结果：
 

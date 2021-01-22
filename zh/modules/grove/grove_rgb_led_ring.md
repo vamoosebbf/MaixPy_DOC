@@ -5,7 +5,7 @@ Grove - RGB LED Ring(LED 灯条)
 <img src="../../../assets/hardware/module_grove/grove_led_ring.jpg">
 </div>
 
-Grove-RGB LED环采用3535尺寸的 LED，LED 内嵌有嵌入式微控制器。每个 WS2813 驱动芯片均可寻址并且位于 LED 内部。每个LED都有恒定电流驱动，因此即使电压变化，颜色也将非常一致。
+Grove-RGB LED 环采用3535尺寸的 LED，LED 内嵌有嵌入式微控制器。每个 WS2813 驱动芯片均可寻址并且位于 LED 内部。每个 LED 都有恒定电流驱动，因此即使电压变化，颜色也将非常一致。
 
 ## 参数
 

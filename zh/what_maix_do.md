@@ -1,4 +1,4 @@
-Powerful Maix Board(k210) Can Do
+MaixPy 能做哪些事
 ===========
 
 大多数是在 MaixPy 上已经有 API， 部分可能来自 [Maixduino](https://Maixduino.sipeed.com) 或者其它开发者～
@@ -20,6 +20,10 @@ Powerful Maix Board(k210) Can Do
 
 <iframe width="600" height="350" src="//player.bilibili.com/player.html?aid=77466790&amp;cid=132521878&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+* 情绪识别
+
+<iframe width="600" height="350" src="//player.bilibili.com/player.html?aid=627513525&bvid=BV1Jt4y1i755&cid=247518143&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 * 识别颜色值、找形状、找直线、面部识别等
 
 <iframe width="600" height="350" src="//player.bilibili.com/player.html?aid=48652548&cid=85200171&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -30,6 +34,13 @@ Powerful Maix Board(k210) Can Do
 
 <iframe width="600" height="350"  src="//player.bilibili.com/player.html?aid=46663492&cid=81742916&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+* 车牌识别
+
+<iframe width="600" height="350" src="//player.bilibili.com/player.html?aid=628060482&bvid=BV1it4y1Y7zc&cid=263532620&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+* 分拣系统
+
+<iframe width="600" height="350" src="//player.bilibili.com/player.html?aid=927463889&bvid=BV1pT4y1w7Aq&cid=246175512&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 * Feature map 显示
 
@@ -60,12 +71,6 @@ Powerful Maix Board(k210) Can Do
 
 [源码](https://github.com/elect-gombe/quake-k210)
 
-
-* 游戏 Doom
-
-
-[源码](https://github.com/elect-gombe/k210-doom)
-
 * MMD 3D 实时渲染
 
 <iframe width="600" height="350" src="//player.bilibili.com/player.html?aid=48656998&cid=85206967&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -83,8 +88,6 @@ Powerful Maix Board(k210) Can Do
 * 麦克风阵列
 
 <iframe width="600" height="350"  src="//player.bilibili.com/player.html?aid=37058760&cid=65120313&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-
 
 * FFT 频谱图
 

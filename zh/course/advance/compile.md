@@ -1,18 +1,7 @@
-## 开源 MaixPy 项目开发指南
+开源 MaixPy 项目开发指南
+=====
 
 本文是为了帮助一些想要成为开发者的用户而写的开源项目の开发文档。
-
-[toc]
-
-- 获取 maixpy 开源项目
-  - 命令行连接硬件 & 运行代码
-  - 编译 maixpy 开源项目
-  - 烧录 maixpy 固件到你的硬件
-- MaixPy 项目应用说明
-  - 介绍 cmake 的工程编译方法
-  - 如何打包 micropython spiffs 文件系统分享出来
-  - MaixPy 的持续集成服务（Travis CI）
-  - 如何更好的阅读开源项目源代码
 
 ## 获取 maixpy 开源项目
 
@@ -215,7 +204,7 @@ register_component()
 
 需要知道 MicroPython 是从 0x0 开始的程序，在程序中会通过 spiffs 在 Flash 的 [0xD00000, (0xD00000 + 0x300000)) 区间构建 VFS （虚拟文件系统），是由 maixpy/projects/maixpy_xxxxx/config_defaults.mk 中定义得到的。
 
-```mk
+```makefile
 CONFIG_SPIFFS_SIZE=0x300000
 CONFIG_SPIFFS_START_ADDR=0xD00000
 ```

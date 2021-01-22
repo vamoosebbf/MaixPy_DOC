@@ -125,7 +125,6 @@
   * 系统
     - [主频、复位等](./course/others/system.md)
     - [内存配置与查看](./course/others/mem.md)
-    - [Flash 分区表](./course/others/flash.md)
   * GUI
     - [中文等多国语言支持](./course/image/image_draw_font/image_draw_font.md)
     - [Maix UI](./course/others/maixui.md)
@@ -135,10 +134,10 @@
     - [配置 network 网卡](./course/network/network_config.md)
     - [使用 socket 通信](./course/network/socket_usage.md)
   * 多媒体
-    - [Audio](./api_reference/Maix/audio.md)
-    - [video](./course/others/video.md)
+    - [audio](./course/media/audio.md)
+    - [video](./course/media/video.md)
   * 游戏
-    - [NES 游戏机](./course/others/nes.md)
+    - [NES 游戏机](./api_reference/media/nes.md)
 
 ## API手册
 
@@ -156,7 +155,6 @@
   - [ujson](./api_reference/standard/ujson.md)
   - [uos](./api_reference/standard/uos.md)
   - [ure](./api_reference/standard/ure.md)
-  - [uselect](./api_reference/standard/uselect.md)
   - [usocket](./api_reference/standard/usocket.md)
   - [ustruct](./api_reference/standard/ustruct.md)
   - [utime](./api_reference/standard/utime.md)
@@ -175,7 +173,6 @@
   - [KPU](./api_reference/Maix/kpu.md)
   - [FFT](./api_reference/Maix/fft.md)
   - [I2S](./api_reference/Maix/i2s.md)
-  - [Audio](./api_reference/Maix/audio.md)
   - [freq](./api_reference/Maix/freq.md)
   - [utils](./api_reference/Maix/utils.md)
 * [helper](./api_reference/builtin_py/README.md)
@@ -186,9 +183,12 @@
   - [lcd](./api_reference/machine_vision/lcd.md)
   - [sensor](./api_reference/machine_vision/sensor.md)
   - [image](api_reference/machine_vision/image/image.md)
-  - [video](./course/others/video.md)
-  - [nes](./course/others/nes.md)
+  - [video](./api_reference/media/video.md)
+  - [audio](./api_reference/media/audio.md)
+  - [nes](./api_reference/media/nes.md)
   - [lvgl](./course/others/lvgl.md)
+  - [isolated_word](./api_reference/machine_vision/isolated_word.md)
+  - [maix_asr](./api_reference/machine_vision/maix_asr.md)
 * [extend](./api_reference/extend/README.md)
   - [touchscreen](./api_reference/extend/touchscreen.md)
   - [modules.ultrasonic](./api_reference/extend/ultrasonic.md)

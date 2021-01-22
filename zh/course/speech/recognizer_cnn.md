@@ -1,4 +1,4 @@
-maix asr
+maix asr（自动语音识别）
 =======
 
 > **本文档在 MaixPy 0.5.1_128 minimum_speech_with_ide_support 固件测试通过，使用前请确保录音功能/调用模型可用。**
@@ -35,9 +35,7 @@ rx.set_sample_rate(16000)
 print(rx)
 ```
 
-- 运行示例代码
-
-请将代码拉到底，这里创建了一个 maix_asr 的辅助类，可以跳过不看。
+- 创建 maix_asr 的辅助类，可以跳过不看。
 
 ```python
 
@@ -129,4 +127,4 @@ finally:
 
 也就是你对着麦克风在 6 秒内，说【你-好-鸭】、【好-的-鸭】、【小-爱-鸭】就可以完成识别了，配置项为两个字段，第一个字段长度不超过六组拼音，第二个字段表示识别的最低门限，也就是匹配值的阈值，低于该值就丢弃。
 
-最开始测试的时候，说话可以大声一点，具体效果看[演示视频](https://www.bilibili.com/video/BV1C5411L7JC/)。
+最开始测试的时候，说话可以大声一点，具体效果看[演示视频](https://www.bilibili.com/video/BV1C5411L7JC/), 完整示例: [test_maix_asr.py](https://github.com/sipeed/MaixPy_scripts/blob/d1d95a4d2fbe4c4b87d683c5fb79fda1fe3f9aae/multimedia/speech_recognizer/test_maix_asr.py)

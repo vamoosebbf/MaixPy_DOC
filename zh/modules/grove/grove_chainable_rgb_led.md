@@ -5,7 +5,7 @@ Grove - Chainable RGB LED(可链接 LED 灯)
 <img src="../../../assets/hardware/module_grove/grove_rgb_led.jpg">
 </div>
 
-Grove - Chainable RGB LED 使用2线传输（数据和时钟）与MCU通信。 这种2线传输可用于级联多个模块。 内置 clock regeneration 可延长传输距离。 该Grove模块适用于任何基于彩色LED的项目。 
+Grove - Chainable RGB LED 使用2线传输（数据和时钟）与 MCU 通信。 这种2线传输可用于级联多个模块。 内置 clock regeneration 可延长传输距离。 该Grove模块适用于任何基于彩色LED的项目。 
 
 ## 参数
 

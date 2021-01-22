@@ -1,4 +1,4 @@
-孤立词 MFCC 模块 (isolated_word)
+isolated_word（孤立词 MFCC 模块）
 ===
 
 ## 类 （class）
@@ -7,10 +7,10 @@
 
 isolated_word 构造参数如下：
 
-- [dmac] 录音所使用的 DMA 通道，默认使用【通道 2】。
-- [i2s] 录音设备，默认使用 I2S.DEVICE_0 。
-- [size] 词汇模板容量，表示可以加载的模板总数，默认为 10 个。
-- [shift] 声道选择，Maix 系列的硬件录音设备通常为单声道输入，设置 0 为左声道，所以 1 为右声道。
+- `dmac`: 录音所使用的 DMA 通道，默认使用【通道 2】。
+- `i2s`: 录音设备，默认使用 I2S.DEVICE_0 。
+- `size`: 词汇模板容量，表示可以加载的模板总数，默认为 10 个。
+- `shift`: 声道选择，Maix 系列的硬件录音设备通常为单声道输入，设置 0 为左声道，所以 1 为右声道。
 
 ```python
 from speech_recognizer import isolated_word
@@ -145,7 +145,7 @@ sr.reset()
 
 #### 返回值
 
-* dis :累计匹配距离（int） 
+* `dis`:累计匹配距离（int） 
 
 ```python
 from speech_recognizer import isolated_word

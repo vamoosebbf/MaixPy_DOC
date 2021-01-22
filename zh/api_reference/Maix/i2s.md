@@ -53,7 +53,7 @@ i2s_dev.set_sample_rate(sample_rate)
 ```
 #### 参数
 
-`sample_rate`: 
+`sample_rate`: int 类型，采样率
 
 #### 返回值
 

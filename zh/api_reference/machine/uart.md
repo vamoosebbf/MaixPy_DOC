@@ -69,7 +69,7 @@ uart.read(num)
 
 ### readline
 
-用于读取串口缓冲数据的一航
+用于读取串口缓冲数据的一行
 
 ```
 uart.readline(num)

@@ -1,10 +1,11 @@
-## MicroPython 背景知识
+MicroPython 背景知识
+======
 
 由于 **MaixPy** 是基于 **MicroPython** 之上进行开发构建的,
 提供给用户最终的接口是 **Micropython** ，所以在使用 MaixPy 开发之初我们需要熟悉下 `MicroPython` 的基础知识与语法
 
 
-### 关于 MicroPython:
+## 关于 MicroPython:
 
 MicroPython 是编程语言 Python3 的精简高效实现，语法和 Python3 保持一致，但只实现了 Python 标准库的一小部分，并且经过优化，可以在 MCU ， WIFI SOC 上等资源受限的环境中使用，所以我们在使用 MicroPython 需要了解其语法。
 
@@ -316,8 +317,7 @@ Python 内置的常用函数还包括数据类型转换函数, 比如 int() 函�
 '100'
 >>> bool(1)
 True
->>> bool('')
-False
+from machine import GPIO
 ```
 ### 函数
 
@@ -437,23 +437,16 @@ LED 是一个**类**, red_led 就是一个**对象**, 可以对这个对象进�
 
 复用代码方便！如果我写了一个模块，你也写了一个模块，我们就有了两个模块。我们把这些模块都组织起来，大家就可以少写很多代码了！
 
-#### 在 MaixPy 中如何使用模块?
+#### 如何使用模块?
 
 ```python
-from machine import GPIO
 import time
 
-LED_RED = GPIO(GPIO.GPIOHS0, GPIOHS.PP_OUT)
-LCD_RED.value(0)
-time.sleep_ms(500)
-LCD_RED.value(1)
 time.sleep_ms(500)
 ```
 
 `import time` 就是引入 `time` 这个模块。通过 `import` 语句，就可以引入模块。
 
-还有 `from xxx import ooo` 的语句，意思是通过 xxx 模块引入 ooo类，或者通过 xxx 模块引入 ooo 函数。比如上面的程序可以写成:
+### 更多
 
-```python
-
-```
+更多 MicroPython 基础语法教程请自行搜索。

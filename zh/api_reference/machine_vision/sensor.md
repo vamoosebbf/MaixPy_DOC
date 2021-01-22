@@ -1,4 +1,4 @@
-sensor
+sensor（摄像头）
 =========
 
 sensor 传感器模块(这里特指摄像头模块)，进行摄像头配置及图像抓取等，用于控制开发板摄像头完成摄像任务。
@@ -386,6 +386,17 @@ sensor.__read_reg(address)
 
 > 请参阅摄像头数据手册以获取详细信息
 
+### set_jb_quality
+
+设置传送给 IDE 图像的质量
+
+```
+sensor.set_jb_quality(quality)
+```
+
+#### 参数
+
+`quality`：`int` 类型，图像质量百分比（0~100），数字越大质量越好
 
 ## 例程
 

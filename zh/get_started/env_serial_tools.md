@@ -18,7 +18,7 @@
 
 ### Windows
 
-Windows 常用的串口终端软件有 [putty](https://www.putty.org/), [mobaxterm](https://mobaxterm.mobatek.net/) [xshell](https://xshell.en.softonic.com/) 等工具
+Windows 常用的串口终端软件有 [putty](https://www.putty.org/)，[mobaxterm](https://mobaxterm.mobatek.net/)，[xshell](https://xshell.en.softonic.com/) 等工具
 
 - Putty
 
@@ -72,7 +72,7 @@ sudo minicom
 
 这里按 `A` 和 `R` 将设置切换为图中的设置一样， 第一个是为了后面使用 `pye` 编辑器快捷键不冲突， 第二个自动换行的设置是为了能显示完全输出
 
-设置完后保存退出，下次就不需要再设置了，只需要执行 `sudo minicom` 即可, 如果不想每次都使用`sudo`命令， 执行`sudo usermod -a -G dialout $(whoami)` 将自己添加到`dialout`用户组即可，可能需要注销或者重启才能生效，注意`sudo minicom -s` 如果需要修改默认配置文件还是需要 `sudo`
+设置完后保存退出，下次就不需要再设置了，只需要执行 `sudo minicom` 即可， 如果不想每次都使用`sudo`命令， 执行`sudo usermod -a -G dialout $(whoami)` 将自己添加到`dialout`用户组即可，可能需要注销或者重启才能生效，注意`sudo minicom -s` 如果需要修改默认配置文件还是需要 `sudo`
 
 进入`minicom`后点击回车键或者开发板的复位按钮，即可看到 MaixPy 的交互界面了
 

@@ -32,7 +32,7 @@
 
 ## 如何食用？
 
-来，我们从最简单的入口代码开始说起，完整的代码在这里 [app_main.py](app/app_main.py) 。
+来，我们从最简单的入口代码开始说起，完整的代码在这里 [app_main.py](https://github.com/sipeed/MaixUI/blob/master/app/app_main.py) 。
 
 ```python
 # This file is part of MaixUI
@@ -79,7 +79,7 @@ except ImportError as e:
 
 这两段代码是用来 import 加载到不同区域（在 Flash/SD 的根目录或文件夹下）的代码，所以你知道怎么 import 代码了就行。
 
-- 可以使用 MaixPy IDE 发送文件，也可以使用 [mpfshell-lite](github.com/junhuanchen/mpfshell-lite) put 文件到硬件的 flash 或 sd 中。
+- 可以使用 MaixPy IDE 发送文件，也可以使用 [mpfshell-lite](https://github.com/junhuanchen/mpfshell-lite) put 文件到硬件的 flash 或 sd 中。
 - 可以使用 SD 读卡器，把整个 maixui 仓库下的文件夹放到 SD 卡中启动即可。
 
 ### 定义 UI 应用

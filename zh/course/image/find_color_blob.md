@@ -5,7 +5,7 @@ MaixPy 查找色块
 
 ## 使用方法
 
-MaixPy 已经在 image 模块中实现有查找色块方法.
+MaixPy 已经在 image 模块中实现有查找色块方法，需要使用非 minimum 固件版本。
 
 * 从摄像头获取图片
 

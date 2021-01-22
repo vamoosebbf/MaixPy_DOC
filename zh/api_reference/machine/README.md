@@ -10,7 +10,7 @@ machine 库主要包含了与硬件相关的各种接口，如下：
 * [UART](uart.md)
 
 
-## 方法 unique_id()
+## 方法 machine.unique_id()
 
 获取唯一 ID
 
@@ -19,7 +19,7 @@ machine 库主要包含了与硬件相关的各种接口，如下：
 
 32 字节的唯一ID
 
-## 方法 reset()
+## 方法 machine.reset()
 
 重启
 

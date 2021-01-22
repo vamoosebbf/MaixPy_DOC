@@ -1,9 +1,12 @@
-modules.ultrasonic
+modules.ultrasonic（超声波测距模块）
 ======
 
 Grove - Ultrasonic Ranger(超声波测距模块)，只需要单根数据线
 
-![](../../../assets/ultrasonic.jpg)
+<div class="grove_pic">
+<img src="./../../../assets/hardware/module_grove/ultrasonic.jpg">
+</div>
+
 
 ## 构造方法 ultrasonic(gpiohs)
 

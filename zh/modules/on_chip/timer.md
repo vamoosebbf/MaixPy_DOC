@@ -1,4 +1,4 @@
-Timer 的使用
+Timer（定时器） 的使用
 =========
 
 关于 Timer 详细介绍请参考[Timer-API 文档](../../api_reference/machine/timer.md).

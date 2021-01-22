@@ -1,4 +1,4 @@
-audio
+audio（音频）
 ============
 
 抽象的音频对象，该对象可以被当做参数传入也可以直接使用其方法来播放音频
@@ -60,7 +60,7 @@ wav_info = test_audio.play_process(i2s_dev)
 
 ####  返回值
 
-该 wav 文件的头部信息 ,`list`类型，分别是`numchannels`, `samplerate`, `byterate`, `blockalign`, `bitspersample`, `datasize`
+该 wav 文件的头部信息 ,`list`类型，分别是`numchannels`（声道数）, `samplerate`（采样率）, `byterate`（每秒数据字节数=samplerate * numchannels * bitspersample / 8）, `blockalign`（每个采样所需的字节数 = numchannels * bitspersample / 8）, `bitspersample`（每个采样存储的bit数，8：8bit，16：16bit，32：32bit）, `datasize`（音频数据长度）
 
 ### play: 播放函数
 

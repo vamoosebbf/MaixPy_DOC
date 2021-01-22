@@ -5,7 +5,7 @@ Grove - Ultrasonic Ranger(超声波测距)
 <img src="../../../assets/hardware/module_grove/ultrasonic.jpg">
 </div>
 
-Grove-Ultrasonic Ranger是一个非接触式测距模块，工作频率为40KHz。Grove_Ultrasonic_Ranger的触发和回波信号共享1个SIG引脚。  
+Grove-Ultrasonic Ranger 是一个非接触式测距模块，工作频率为 40KHz。Grove_Ultrasonic_Ranger 的触发和回波信号共享1个 SIG 引脚。  
 
 ## 参数
 

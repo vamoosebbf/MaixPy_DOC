@@ -1,4 +1,4 @@
-onewire 单总线(modules.onewire)
+modules.onewire（单总线）
 =====
 
 单总线即只有单根信号线，该线即传输数据也传输时钟，并且数据传输也为双向，节约 IO 口。

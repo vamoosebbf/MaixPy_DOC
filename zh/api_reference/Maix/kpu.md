@@ -97,7 +97,24 @@ KPU.load(offset, file_path)
 
 * `kpu_net`: kpu 网络对象
 
+### load_flash
 
+与 load 方法作用相同，
+
+```python
+kpu.load_flash(model_addr, is_dual_buf, batch_size, spi_speed)
+```
+
+#### 参数
+
+* `model_addr`：Flash addr 经过预处理的模型烧录到 flash 中的偏移地址。注意，这里需要预处理模型文件[说明](https://github.com/sipeed/MaixPy_scripts/blob/master/machine_vision/load_big_model/README_ZH.md)。
+* `is_dual_buf`：`0`,单一缓冲区加载，使用较少的 RAM 和较慢的速度动态加载该模型文件； `1`，开启双缓冲加载，需要更大的 RAM， 运行速度相对较快。
+* `batch_size`：将 `is_dual_buf` 设置为 1 时，需要设置 load batch_size，建议值为 `0x4000~0x10000`，可以测试出模型的最佳值。如果 `is_dual_buf` 为 0 则设置为 0
+* `spi_speed`：使用 SPI flash 加载模型文件时，我们会暂时将 flash 设置为高速模式，并设置所需的 spi 时钟频率。该值应 <= 80000000(实际频率，设值可能不等于实际频率。)
+
+#### 返回值
+
+* `kpu_net`: kpu 网络对象
 
 ### init_yolo2
 
@@ -312,6 +329,39 @@ success = set_outputs(kput_net, out_idx, width, height, channel)
 ```python
 KPU.memtest()
 ```
+### face_encode
+
+将 `forward` 返回的特征图进行量化，更多详情请查看：[kpu issue](https://github.com/sipeed/MaixPy/issues/342)
+
+```python
+feature = kpu.face_encode(fmap[:])
+```
+
+#### 参数
+
+`fmap[:]`：`list` 类型，将 `forward` 函数返回值转化为列表所得到的
+
+#### 返回值
+
+`feature`：`list` 类型，量化后的列表
+
+### face_compare
+
+将 face_encode 返回的量化值与已录入的人脸进行比较
+
+```python
+score = kpu.face_compare(record_ftrs[j], feature)
+```
+
+#### 参数
+
+`record_ftrs[j] `：`list` 类型，以录入的人脸数据
+`feature`：`list` 类型，需要比较的人脸数据， `face_encode` 的返回值
+
+#### 返回值
+
+`score`：`int` 类型，比较得分（0~100），得分越高相似度越大
+
 
 
 
