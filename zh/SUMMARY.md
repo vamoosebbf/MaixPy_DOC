@@ -47,7 +47,7 @@
   - [上电](/get_started/get_started_power_on.md)
   - [第一个程序: 使用屏幕和摄像头](./get_started/get_started_cam_lcd.md)
   - [第二个程序: 点亮 LED](./get_started/get_started_led_blink.md)
-  - [文件系统介绍](./get_started/get_started_fs.md)
+  - [存储系统介绍](./get_started/get_started_fs.md)
   - [编辑并运行脚本](./get_started/get_started_edit_file.md)
   - [上传脚本到开发板](./get_started/get_started_upload_script.md)
   - [开机自动运行脚本](./get_started/get_started_boot.md)
@@ -100,7 +100,7 @@
     - [UART](modules/on_chip/uart.md)
     - [I2S](modules/on_chip/i2s.md)
     - [WDT](modules/on_chip/wdt.md)
-  * SP-MOD
+  * [SP-MOD](./modules/sp_mod/README.md)
     - [BT 蓝牙透传](./modules/sp_mod/sp_bt.md)
     - [LoRa 无线通信](./modules/sp_mod/sp_lora.md)
     - [RFID 射频识别](./modules/sp_mod/sp_rfid.md)
@@ -109,7 +109,7 @@
     - [Lcd1.14 IPS屏](./modules/sp_mod/sp_lcd1.14.md)
     - [Weather 气象模块](./modules/sp_mod/sp_weather.md)
     - [Ethernet 有线网口](modules/sp_mod/sp_ethernet.md)
-  * Grove
+  * [Grove](./modules/grove/README.md)
     - [Ultrasonic Ranger 测距](modules/grove/grove_ultrasonic_ranger.md)
     - [Chainable RGB LED 灯](modules/grove/grove_chainable_rgb_led.md)
     - [RGB LED Ring 灯条](modules/grove/grove_rgb_led_ring.md)

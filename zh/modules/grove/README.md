@@ -1,15 +1,12 @@
 Grove
 =====
 
-采用 Grove 标准接口的模块，Grove 为 Seeed 公司使用的统一接口系统， 
+采用 Grove 标准接口的模块，Grove 为 Seeed 团队使用的统一接口系统，目前以支持大量模块。 
+
 ## Grove 接口
 
-#### Grove 接口
-
-- Grove 模块接口
-
 Grove 接口的线缆有 4 种颜色，用户可以根据颜色快速区别
-![](../../assets/hardware/module_grove/grove_interface.jpg)
+![](../../../assets/hardware/module_grove/grove_interface.jpg)
 
 | ---   | 颜色 | 描述                                |
 | ----- | ---- | ----------------------------------- |
@@ -61,6 +58,8 @@ Grove模块主要有 4 种接口:
 详情请参考：[Grove_System](https://wiki.seeedstudio.com/cn/Grove_System/)
 
 ## 外设模块
+
+以下外设均采用 Grove 接口
 
 * [Ultrasonic Ranger 测距](./grove_ultrasonic_ranger.md)
 * [Chainable RGB LED 灯](./grove_chainable_rgb_led.md)
