@@ -14,18 +14,18 @@ MaixDuino
 
 ### 板载功能
 
-| 项目 | 说明 |
-| ---- | ---- |
-|CPU：|双核 64bit RISC-V / 400MHz* (双精度FPU集成)|
-|内存：|8MiB 64bit 片上 SRAM|
-|存储：|16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB**)|
-|屏幕（套餐）：|2.4 寸 TFT, 电容触摸屏幕分辨率：320\*240 |
-|摄像头（套餐）：| 30W 像素 GC0328 摄像头 |
-|DVP：|标准 Camera DVP 24PIN 接口|
-|电源+USB：|USB Type-C 接口|
-|ESP32：|ESP32 SPI 连接(ESP32 支持 WIFI 与 蓝牙)，PAM8403A|
-|DAC：|I2C DAC|
-|TF 卡槽：|多媒体资源扩展，支持大容量储存|
+| 项目             | 说明                                              |
+| ---------------- | ------------------------------------------------- |
+| CPU：            | 双核 64bit RISC-V / 400MHz* (双精度FPU集成)       |
+| 内存：           | 8MiB 64bit 片上 SRAM                              |
+| 存储：           | 16MiB Flash, 支持 micro SDXC 拓展存储 (最大128GB) |
+| 屏幕（套餐）：   | 2.4 寸 TFT, 电容触摸屏幕分辨率：320\*240          |
+| 摄像头（套餐）： | 30W 像素 GC0328 摄像头                            |
+| DVP：            | 标准 Camera DVP 24PIN 接口                        |
+| 电源+USB：       | USB Type-C 接口                                   |
+| ESP32：          | ESP32 SPI 连接(ESP32 支持 WIFI 与 蓝牙)，PAM8403A |
+| DAC：            | I2C DAC                                           |
+| TF 卡槽：        | 多媒体资源扩展，支持大容量储存                    |
 
 ### 引脚资源
 
