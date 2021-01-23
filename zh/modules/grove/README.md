@@ -8,7 +8,7 @@ Grove
 Grove 接口的线缆有 4 种颜色，用户可以根据颜色快速区别
 ![](../../../assets/hardware/module_grove/grove_interface.jpg)
 
-| ---   | 颜色 | 描述                                |
+| pin   | 颜色 | 描述                                |
 | ----- | ---- | ----------------------------------- |
 | pin 1 | 黄色 | (例如，I2C Grove Connectors上的SCL) |
 | pin 2 | 白色 | (例如，I2C Grove Connectors上的SDA) |
